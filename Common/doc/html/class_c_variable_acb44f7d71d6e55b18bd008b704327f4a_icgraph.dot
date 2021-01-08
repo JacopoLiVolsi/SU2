@@ -1,0 +1,48 @@
+digraph "CVariable::AddSolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node246 [label="CVariable::AddSolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node246 -> Node247 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node247 [label="CAdjEulerSolver::Explicit\lRK_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a83de159f4bd062c776f07d087414a9cf",tooltip="Update the solution using a Runge-Kutta strategy. "];
+  Node246 -> Node248 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node248 [label="CAdjEulerSolver::Explicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a2863f1ed56105b595204ac31b3dab66b",tooltip="Update the solution using a explicit Euler scheme. "];
+  Node246 -> Node249 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node249 [label="CAdjEulerSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#af64f459bce9498b1d19d8a645d0bc2c3",tooltip="Update the solution using an implicit solver. "];
+  Node246 -> Node250 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node250 [label="CAdjTurbSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_turb_solver.html#a2c2657818c6ecfb7984c70bf079accd3",tooltip="Update the solution using an implicit solver. "];
+  Node246 -> Node251 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node251 [label="CHeatSolverFVM::Explicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#ac72e3e231d74967d368bf1cb7345535a",tooltip="Update the solution using an explicit solver. "];
+  Node246 -> Node252 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node252 [label="CHeatSolverFVM::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#a604f660ae9da06eae59363f83a98843e",tooltip="Update the solution using an implicit solver. "];
+  Node246 -> Node253 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node253 [label="CEulerSolver::ExplicitRK\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac3d1b3a1fee6613906b56a9698bfe680",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node246 -> Node254 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node254 [label="CEulerSolver::ClassicalRK4\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad87a9109a645f0ea9e38336d2a6bf196",tooltip="Update the solution using the classical fourth-order Runge-Kutta scheme. "];
+  Node246 -> Node255 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node255 [label="CEulerSolver::ExplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a1f798a3f88873d6d634b90f8816eccde",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node246 -> Node256 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node256 [label="CEulerSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a4e8277fc44dc97c8d73fbe3347204372",tooltip="Update the solution using an implicit Euler scheme. "];
+  Node246 -> Node257 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node257 [label="CIncEulerSolver::Explicit\lRK_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a2f6c1370f17da44680c1ff1b6be6c9a1",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node246 -> Node258 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node258 [label="CIncEulerSolver::Explicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a66aac46e83451e30828ad808becb1f73",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node246 -> Node259 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node259 [label="CIncEulerSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#ad84dd4225bb9d158c52b26e2f30f6fa7",tooltip="Update the solution using an implicit Euler scheme. "];
+  Node246 -> Node260 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node260 [label="CTransLMSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#aa39c7964d452b56f3f41733ae43d4cc7",tooltip="Update the solution using an implicit solver. "];
+  Node246 -> Node261 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node261 [label="CTurbSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_solver.html#af7a0ab68fbb2925c56863df97b3ea4ee",tooltip="Update the solution using an implicit solver. "];
+  Node246 -> Node262 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node262 [label="CSolver::Add_External\l_To_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a0ece4e9ec78dcbcb3b9d980f01f7b17c",tooltip="Add External to Solution vector. "];
+  Node262 -> Node263 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node263 [label="CDiscAdjMultizoneDriver\l::Add_External_To_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a2cb9b1f8ff31b3a3df43a7ebd415425c",tooltip="Add External_Old vector to Solution. "];
+  Node263 -> Node264 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node264 [label="CDiscAdjMultizoneDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#af996aecdb6d20aa4fc81c9b67295abf5",tooltip="[Overload] Run an discrete adjoint update of all solvers within multiple zones. "];
+  Node264 -> Node265 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node265 [label="CDiscAdjMultizoneDriver\l::StartSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a75de0a1a482ceeed4301a384f1515092",tooltip="[Overload] Launch the computation for discrete adjoint multizone problems. "];
+  Node263 -> Node266 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node266 [label="CDiscAdjMultizoneDriver\l::EvaluateSensitivities",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#ac2789097629674cfb7d4de64954024df",tooltip="Evaluate sensitivites for the current adjoint solution and output files. "];
+  Node266 -> Node264 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

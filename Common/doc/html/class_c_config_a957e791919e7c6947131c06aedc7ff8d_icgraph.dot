@@ -1,0 +1,42 @@
+digraph "CConfig::GetnLevels_TimeAccurateLTS"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node8600 [label="CConfig::GetnLevels\l_TimeAccurateLTS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8600 -> Node8601 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8601 [label="CMeshFEM_DG::CreateFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a1f627fc4d40b545b139486a83396874d",tooltip="Function to create the faces used in the DG formulation. "];
+  Node8601 -> Node8602 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8602 [label="CDriver::Geometrical\l_Preprocessing_DGFEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a2d9ea1c3d957f03fa5e22fa55e3369a6",tooltip="Do the geometrical preprocessing for the DG FEM solver. "];
+  Node8602 -> Node8603 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8603 [label="CDriver::Geometrical\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#ad3d55fa299acdb779a7772bcee249004",tooltip="Construction of the edge-based data structure and the multigrid structure. "];
+  Node8603 -> Node8604 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8604 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node8601 -> Node8605 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8605 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_o_t_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node8600 -> Node8606 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8606 [label="CDummyMeshFEM_DG::CDummy\lMeshFEM_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_dummy_mesh_f_e_m___d_g.html#a292c0e183f7ee0db7badeccc4bd05ac4",tooltip="Constructor of the class. "];
+  Node8600 -> Node8607 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8607 [label="CPhysicalGeometry::\lDetermineTimeLevelElements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a18f63cc49f7dc20241a0599ad1426ba8",tooltip="Determine the time level of the elements when time accurate local time stepping is employed..."];
+  Node8600 -> Node8608 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8608 [label="CFEM_DG_EulerSolver\l::CFEM_DG_EulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a677fa998b78bd489a3f8bee0d56623dd"];
+  Node8600 -> Node8609 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8609 [label="CFEM_DG_EulerSolver\l::SetNondimensionalization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a31316dc2fe564329d9bb372961b10a3a",tooltip="Set the fluid solver nondimensionalization. "];
+  Node8609 -> Node8610 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8610 [label="CFEM_DG_EulerSolver\l::CFEM_DG_EulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a70d30ef9e7cd7620d54ec73f4b1ed28c"];
+  Node8600 -> Node8611 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8611 [label="CFEM_DG_EulerSolver\l::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#aeb9ecebe3a3192fa6a00b0dcdf88d469",tooltip="Compute primitive variables and their gradients. "];
+  Node8611 -> Node8612 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8612 [label="CFEM_DG_EulerSolver\l::ADER_SpaceTimeIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a7f0da04d44069701db2228210b91c59e",tooltip="Function, to carry out the space time integration for ADER with time accurate local time stepping..."];
+  Node8600 -> Node8613 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8613 [label="CFEM_DG_EulerSolver\l::ProcessTaskList_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a651cad1a94f2024c75a1a8be347e3375",tooltip="Function, which processes the list of tasks to be executed by the DG solver. "];
+  Node8613 -> Node8614 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8614 [label="CFEM_DG_EulerSolver\l::ComputeSpatialJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ac59d8dae95e3c3cc3ab3feaeb9be4b22",tooltip="Function, which controls the computation of the spatial Jacobian. "];
+  Node8613 -> Node8612 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8600 -> Node8615 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8615 [label="CFEM_DG_EulerSolver\l::AccumulateSpaceTimeResidual\lADEROwnedElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a0a18dfd035e17379824d2a3a032d3ab3",tooltip="Function, which accumulates the space time residual of the ADER-DG time integration scheme for the ow..."];
+  Node8615 -> Node8613 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8600 -> Node8616 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8616 [label="CFEM_DG_EulerSolver\l::AccumulateSpaceTimeResidual\lADERHaloElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ad69d3dd7fafb9203abbc9e876cbcd7a8",tooltip="Function, which accumulates the space time residual of the ADER-DG time integration scheme for the ha..."];
+  Node8616 -> Node8613 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

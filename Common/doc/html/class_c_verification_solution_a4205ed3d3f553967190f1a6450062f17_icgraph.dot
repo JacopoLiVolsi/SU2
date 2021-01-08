@@ -1,0 +1,41 @@
+digraph "CVerificationSolution::GetLocalError"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node108 [label="CVerificationSolution\l::GetLocalError",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node108 -> Node109 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node109 [label="COutputLegacy::LoadLocal\lData_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a83e5de863b29fe3a222074d93d696d57",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node109 -> Node110 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node110 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+  Node108 -> Node111 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 [label="COutputLegacy::LoadLocal\lData_IncFlow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a2d955089c8894a2eb795970f06e7900d",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node111 -> Node110 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 -> Node112 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node112 [label="COutputLegacy::LoadLocal\lData_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#ad8c05f16577b95ae1bb4bbdd38643ea0",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node112 -> Node110 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 -> Node113 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node113 [label="CEulerSolver::ComputeVerification\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a37498604753b1606c70ff04dddb707b3",tooltip="Compute the global error measures (L2, Linf) for verification cases. "];
+  Node113 -> Node114 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node114 [label="CEulerSolver::ExplicitRK\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac3d1b3a1fee6613906b56a9698bfe680",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node113 -> Node115 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node115 [label="CEulerSolver::ClassicalRK4\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad87a9109a645f0ea9e38336d2a6bf196",tooltip="Update the solution using the classical fourth-order Runge-Kutta scheme. "];
+  Node113 -> Node116 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node116 [label="CEulerSolver::ExplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a1f798a3f88873d6d634b90f8816eccde",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node113 -> Node117 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 [label="CEulerSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a4e8277fc44dc97c8d73fbe3347204372",tooltip="Update the solution using an implicit Euler scheme. "];
+  Node108 -> Node118 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node118 [label="CFEM_DG_EulerSolver\l::ComputeVerificationError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a2a94a8ade876c40822b65e81719d4331",tooltip="Compute the global error measures (L2, Linf) for verification cases. "];
+  Node118 -> Node119 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node119 [label="CFEM_DG_EulerSolver\l::ExplicitRK_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a5f3702ec7e07a248211a10b94068af41",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node118 -> Node120 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node120 [label="CFEM_DG_EulerSolver\l::ClassicalRK4_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#add195fe8af6532465c2b677c7a625b3e",tooltip="Update the solution using the classical fourth-order Runge-Kutta scheme. "];
+  Node108 -> Node121 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="CIncEulerSolver::Compute\lVerificationError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#abadd4cbdfd6257aedf667081237b232a",tooltip="Compute the global error measures (L2, Linf) for verification cases. "];
+  Node121 -> Node122 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node122 [label="CIncEulerSolver::Explicit\lRK_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a2f6c1370f17da44680c1ff1b6be6c9a1",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node121 -> Node123 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node123 [label="CIncEulerSolver::Explicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a66aac46e83451e30828ad808becb1f73",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node121 -> Node124 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node124 [label="CIncEulerSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#ad84dd4225bb9d158c52b26e2f30f6fa7",tooltip="Update the solution using an implicit Euler scheme. "];
+}

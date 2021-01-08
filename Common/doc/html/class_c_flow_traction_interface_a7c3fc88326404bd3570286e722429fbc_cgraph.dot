@@ -1,0 +1,25 @@
+digraph "CFlowTractionInterface::GetDonor_Variable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6 [label="CFlowTractionInterface\l::GetDonor_Variable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CConfig::GetKind_Regime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a66ca7e620390a81cd49cd0a00716128e",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CSolver::GetPressure_Inf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#afeaf42e0257b9b7e1bab7d090b44282f",tooltip="A virtual member. "];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node6 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CVariable::GetPressure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#ad08820234eeedeb13105e603af2c67ad",tooltip="A virtual member. "];
+  Node6 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CVariable::GetLaminarViscosity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a0acbe55ca86de2c0205ae921193e9e95",tooltip="A virtual member. "];
+  Node6 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CVariable::GetGradient\l_Primitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a8b7f4e020a837b1fe639e8d875f964d5",tooltip="A virtual member. "];
+}

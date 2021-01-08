@@ -1,0 +1,18 @@
+digraph "CFluidModel::GetdTde_rho"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node172 [label="CFluidModel::GetdTde_rho",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node172 -> Node173 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node173 [label="CEulerSolver::BC_Riemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a22c21d18fa626d489db9a387234bd9d0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node172 -> Node174 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node174 [label="CEulerSolver::BC_TurboRiemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a0066305803a18511fb89b8951f4e4866",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node172 -> Node175 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node175 [label="CEulerSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aa4c3988e3ce0c18460b5c069650c57b0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node172 -> Node176 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node176 [label="CNSVariable::SetSecondaryVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a574bbbfda4f2191f836d2e3e7e1c8b3e",tooltip="Set all the secondary variables (partial derivatives) for compressible flows. "];
+  Node176 -> Node177 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node177 [label="CNSVariable::SetdktdT_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a3d749ea73bdc0f7dd45aa2ed713e768b",tooltip="Set the derivative of thermal conductivity with respect to temperature (at constant density)..."];
+  Node177 -> Node176 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

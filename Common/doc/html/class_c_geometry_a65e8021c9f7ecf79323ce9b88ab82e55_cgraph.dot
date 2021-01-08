@@ -1,0 +1,17 @@
+digraph "CGeometry::GetGlobalElementAdjacencyMatrix"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node579 [label="CGeometry::GetGlobalElement\lAdjacencyMatrix",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node579 -> Node580 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node580 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node580 -> Node581 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node581 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node579 -> Node582 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node582 [label="CPrimalGrid::GetGlobalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a403a8b285dcea42521ab72b931a83e1a",tooltip="Get the element global index in a parallel computation. "];
+  Node579 -> Node583 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node583 [label="CPrimalGrid::GetnFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a0ed05bb848693e3975e12943d8612029",tooltip="A pure virtual member. "];
+  Node579 -> Node584 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node584 [label="CPrimalGrid::GetNeighbor\l_Elements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#adeebb3c087f7deb2f98cc3059d05e366",tooltip="Get the elements that surround an element. "];
+}

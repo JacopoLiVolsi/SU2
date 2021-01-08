@@ -828,7 +828,26 @@ inline unsigned long CConfig::GetWrt_Con_Freq_DualTime(void) { return Wrt_Con_Fr
 
 inline unsigned short CConfig::GetKind_Solver(void) { return Kind_Solver; }
 
+inline unsigned short CConfig::GetKind_Film_Solver(void) { return Kind_Film_Solver; }
+
 inline void CConfig::SetKind_Solver(unsigned short val_solver) { Kind_Solver = val_solver; }
+
+inline void CConfig::SetKind_Film_Solver(unsigned short val_solver) { Kind_Film_Solver = val_solver; }
+
+inline void CConfig::SetFilm_Hp(unsigned short val_hp){ Film_Hp = val_hp; }
+
+inline unsigned short CConfig::GetFilm_Hp(void){ return Film_Hp;}
+
+inline string CConfig::GetBottom_FileName(void) { return Bottom_FileName; }
+
+inline unsigned short CConfig::GetBottom_Top_Type(void) { return Bottom_Top_Type; }
+
+inline su2double CConfig::GetUniform_Bottom_Value(void) { return Bottom_val[0]; } 
+
+inline su2double  CConfig::GetBottom_Value(unsigned short ii) { return Bottom_val[ii]; } 
+
+inline void CConfig::SetnLayer(unsigned short val_nLayer) { nLayer = val_nLayer;}
+inline unsigned short CConfig::GetnLayer(void) {return nLayer;}
 
 inline unsigned short CConfig::GetKind_MZSolver(void) { return Kind_MZSolver; }
 

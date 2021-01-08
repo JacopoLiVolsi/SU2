@@ -1,0 +1,15 @@
+digraph "CSolver::TurboAverageProcess"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5518 [label="CSolver::TurboAverageProcess",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5518 -> Node5519 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5519 [label="CDriver::Turbomachinery\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a9189caa3851cae4f1c52d5a7a00e5b27",tooltip="Initiate value for static mesh movement such as the gridVel for the ROTATING frame. "];
+  Node5519 -> Node5520 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5520 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node5518 -> Node5521 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5521 [label="CTurboIteration::Preprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turbo_iteration.html#a220ed487ab1375dfbde1cbb5867f9b24",tooltip="Preprocessing to prepare for an iteration of the physics. "];
+  Node5518 -> Node5522 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5522 [label="CTurboIteration::Postprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turbo_iteration.html#ab405adddce2ffaf747cbb33733b0ecf1",tooltip="Postprocesses the fluid system before heading to another physics system or the next iteration..."];
+}

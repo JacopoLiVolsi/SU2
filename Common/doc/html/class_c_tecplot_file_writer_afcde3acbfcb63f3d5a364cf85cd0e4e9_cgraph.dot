@@ -1,0 +1,37 @@
+digraph "CTecplotFileWriter::Write_Data"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="CTecplotFileWriter\l::Write_Data",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CParallelDataSorter\l::GetConnectivitySorted",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_parallel_data_sorter.html#a6341aad43be6d30df98ed389bc855176",tooltip="Check whether the current connectivity is sorted (i.e. if SortConnectivity has been called) ..."];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CParallelDataSorter\l::GetnElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_parallel_data_sorter.html#a4a8041d2f6104f69d5811461974a8c4a",tooltip="Get the global of elements (accumulated from all ranks and element types) "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CParallelDataSorter\l::GetElem_Connectivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_parallel_data_sorter.html#a72dc4de9131fee6f5d4fec3f435c0e93",tooltip="Get the connectivity of specific element.  type - The type of element, ref GEO_TYPE  iElem - The elem..."];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node4 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node4 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CParallelDataSorter\l::GetnPointsGlobal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_parallel_data_sorter.html#af22c6cfbbcfad0cf16af5a62a1f4ca6f",tooltip="Get the global number of points (accumulated from all ranks) "];
+  Node4 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CBaseMPIWrapper::Barrier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a07f24df31c87ac960540ce8ac2b407d2"];
+  Node4 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CParallelDataSorter\l::GetnPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_parallel_data_sorter.html#a1afb1c7c56ca79148dd703dc6fc3ce28",tooltip="Get the number of points the local rank owns. "];
+  Node4 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="CParallelDataSorter\l::GetData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_parallel_data_sorter.html#adefe6c1b192cff0292738bf72557eb06",tooltip="Get the value of the linear partitioned data.  iField - the output field ID.  iPoint - the point ID..."];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="CFileWriter::Determine\l_Filesize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_file_writer.html#a9981be870ccfb9b46a7b37870c4a7490",tooltip="Determine the file size. "];
+}

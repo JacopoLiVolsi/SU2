@@ -1,0 +1,21 @@
+digraph "CInterpolator::Collect_VertexInfo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node23 [label="CInterpolator::Collect\l_VertexInfo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node23 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node23 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node23 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="CPoint::GetGlobalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ab546170a5a03ef210a75fc5531910050",tooltip="Get the global index in a parallel computation. "];
+  Node23 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node23 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node23 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="CBaseMPIWrapper::Allgather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a55195abbb7206e08a4933fa53cd41923"];
+  Node29 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+}

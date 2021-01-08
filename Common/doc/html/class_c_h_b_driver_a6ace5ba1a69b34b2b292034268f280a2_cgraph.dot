@@ -1,0 +1,15 @@
+digraph "CHBDriver::ComputeHB_Operator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node48 [label="CHBDriver::ComputeHB\l_Operator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node48 -> Node49 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="CConfig::GetHarmonicBalance\l_Period",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a7d9f0904ed8e25c7d479bb22956ae6fc",tooltip="Retrieves the period of oscillations to be used with Harmonic Balance. "];
+  Node48 -> Node50 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="CConfig::GetTime_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a08a17689e8bcd7b952b530fcb5a44842",tooltip="Get the value of the reference time for non-dimensionalization. "];
+  Node48 -> Node51 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="CConfig::GetOmega_HB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6f53600f4281e7b232136beb14350559",tooltip="Get the Harmonic Balance frequency pointer. "];
+  Node48 -> Node52 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="CConfig::GetOmega_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a75bb1f8aa4d15be6690dd6cc5ab581a7",tooltip="Get the value of the reference angular velocity for non-dimensionalization. "];
+}

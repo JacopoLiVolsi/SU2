@@ -1,0 +1,44 @@
+digraph "AD::SetIndex"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node249 [label="AD::SetIndex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node249 -> Node250 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node250 [label="CPoint::SetIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ab274f24d8f13b31f0150cabb388eac97",tooltip="Set the adjoint vector indices of Coord vector. "];
+  Node250 -> Node251 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node251 [label="CGeometry::RegisterCoordinates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a335405024cbc91d79429d60394d55af2",tooltip="Register the coordinates of the mesh nodes. "];
+  Node251 -> Node252 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node252 [label="CDiscAdjFluidIteration\l::RegisterInput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_fluid_iteration.html#a836fbec1a157ea18b0cf6384a72f081f",tooltip="Registers all output variables of the fluid iteration. "];
+  Node251 -> Node253 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node253 [label="CDiscAdjFEAIteration\l::RegisterInput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_iteration.html#a737678698809cb137576c05e6ca06cde",tooltip="Registers all input variables of the FEM iteration. "];
+  Node253 -> Node254 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node254 [label="CDiscAdjFEAIteration\l::SetRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_iteration.html#ad5f0dcb01d13560ce5245301646dc3bd",tooltip="Record a single iteration of the direct FEM system. "];
+  Node251 -> Node255 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node255 [label="CDiscAdjHeatIteration\l::RegisterInput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_heat_iteration.html#a345926181fbc6119e3686ad67d03f62f",tooltip="Registers all output variables of the fluid iteration. "];
+  Node249 -> Node256 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node256 [label="CDiscAdjMultizoneDriver\l::SetObjFunction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#afda203e78a0e4cfde8c3fbb02ef3fd3e",tooltip="Set the objective function. "];
+  Node256 -> Node257 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node257 [label="CDiscAdjMultizoneDriver\l::SetRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a441f8669a04147aacab7df463e1dd021",tooltip="Record one iteration of the primal problem within each zone. "];
+  Node257 -> Node258 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node258 [label="CDiscAdjMultizoneDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#af996aecdb6d20aa4fc81c9b67295abf5",tooltip="[Overload] Run an discrete adjoint update of all solvers within multiple zones. "];
+  Node258 -> Node259 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node259 [label="CDiscAdjMultizoneDriver\l::StartSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a75de0a1a482ceeed4301a384f1515092",tooltip="[Overload] Launch the computation for discrete adjoint multizone problems. "];
+  Node257 -> Node260 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node260 [label="CDiscAdjMultizoneDriver\l::EvaluateSensitivities",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#ac2789097629674cfb7d4de64954024df",tooltip="Evaluate sensitivites for the current adjoint solution and output files. "];
+  Node260 -> Node258 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node249 -> Node261 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node261 [label="CDiscAdjFEASolver::\lRegisterVariables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#a408757f23c8df6ad6a933589d4ad90de",tooltip="A virtual member. "];
+  Node261 -> Node262 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node262 [label="CDiscAdjFEASolver::\lSetRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#a3aa3cdeeabde58197282da02e36247b5",tooltip="Prepare the solver for a new recording. "];
+  Node249 -> Node263 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node263 [label="CVariable::RegisterSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a5d8ee15634fe43e299092ff882ffa796",tooltip="Register the variables in the solution array as input/output variable. "];
+  Node263 -> Node264 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node264 [label="CDiscAdjSolver::Register\lSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#a6c097e27287f199bcc8972baabd59ae8",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables on the t..."];
+  Node263 -> Node265 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node265 [label="CDiscAdjSolver::Register\lOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#a7ae8400ddf2c185e6c9b01aa08aec792",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables that are..."];
+  Node263 -> Node266 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node266 [label="CDiscAdjFEASolver::\lRegisterSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#ad05585130c1922d463e88540fe5a1bf8",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables on the t..."];
+  Node263 -> Node267 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node267 [label="CDiscAdjFEASolver::\lRegisterOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#a40c2aba093a93b2caf87ab7ced5c3fd0",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables that are..."];
+}

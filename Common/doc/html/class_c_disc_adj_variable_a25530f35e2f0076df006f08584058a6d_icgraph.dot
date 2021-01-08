@@ -1,0 +1,9 @@
+digraph "CDiscAdjVariable::GetGeometry_Direct"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node31 [label="CDiscAdjVariable::GetGeometry\l_Direct",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node31 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="CDiscAdjSolver::SetMesh\l_Recording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#adc826b33b0fc3934d4a3702fca3d3367",tooltip="Prepare the solver for a new recording. "];
+}

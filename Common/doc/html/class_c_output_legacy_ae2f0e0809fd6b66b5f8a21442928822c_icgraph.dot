@@ -1,0 +1,13 @@
+digraph "COutputLegacy::MergeSurfaceConnectivity_FEM"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node616 [label="COutputLegacy::MergeSurface\lConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node616 -> Node617 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node617 [label="COutputLegacy::MergeConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a73ac84a0613171e5b77c86055b8a1487",tooltip="Merge the FEM geometry into a data structure used for output file writing. "];
+  Node617 -> Node618 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node618 [label="COutputLegacy::SetResult\l_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a25b90eb5e2bd0f05f92a89f0768f2181",tooltip="Writes and organizes the all the output files, except the history one, for serial computations with t..."];
+  Node617 -> Node619 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node619 [label="COutputLegacy::SetBaseline\lResult_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a46c1054bac8c154e4f3464cc1913e06f",tooltip="Writes and organizes the all the output files, except the history one, for DG-FEM simulations (SU2_SO..."];
+}

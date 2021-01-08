@@ -31,7 +31,10 @@ const string CParaviewFileWriter::fileExt = ".vtk";
 
 CParaviewFileWriter::CParaviewFileWriter(vector<string> fields, unsigned short nDim,
                                          string fileName, CParallelDataSorter *dataSorter) :
-  CFileWriter(std::move(fields), std::move(fileName), dataSorter, fileExt, nDim){}
+  CFileWriter(std::move(fields), std::move(fileName), dataSorter, fileExt, nDim){
+ multilayer_film = dataSorter->GetMultilayer();
+ nLayer = dataSorter->GetnLayer();
+}
 
 
 CParaviewFileWriter::~CParaviewFileWriter(){}
@@ -86,6 +89,8 @@ void CParaviewFileWriter::Write_Data(){
   Paraview_File.open(fileName.c_str(), ios::out | ios::app);
 
   /*--- Write surface and volumetric point coordinates. ---*/
+  unsigned long npoints = dataSorter->GetnPoints();
+  if(multilayer_film) npoints = dataSorter->GetnPointsGlobal();
 
   for (iProcessor = 0; iProcessor < size; iProcessor++) {
     if (rank == iProcessor) {
@@ -93,7 +98,7 @@ void CParaviewFileWriter::Write_Data(){
       /*--- Write the node data from this proc ---*/
 
 
-      for (iPoint = 0; iPoint < dataSorter->GetnPoints(); iPoint++) {
+      for (iPoint = 0; iPoint < npoints; iPoint++) {
         for (iDim = 0; iDim < nDim; iDim++)
           Paraview_File << scientific << dataSorter->GetData(iDim, iPoint) << "\t";
         if (nDim == 2) Paraview_File << scientific << "0.0" << "\t";
@@ -108,8 +113,9 @@ void CParaviewFileWriter::Write_Data(){
 
   /*--- Reduce the total number of each element. ---*/
 
-  unsigned long nTot_Line, nTot_Tria, nTot_Quad, nTot_Tetr, nTot_Hexa, nTot_Pris, nTot_Pyra;
-  unsigned long nParallel_Line = dataSorter->GetnElem(LINE),
+  unsigned long nTot_Vert, nTot_Line, nTot_Tria, nTot_Quad, nTot_Tetr, nTot_Hexa, nTot_Pris, nTot_Pyra;
+  unsigned long nParallel_Vert = dataSorter->GetnElem(VERTEX),
+                nParallel_Line = dataSorter->GetnElem(LINE),
                 nParallel_Tria = dataSorter->GetnElem(TRIANGLE),
                 nParallel_Quad = dataSorter->GetnElem(QUADRILATERAL),
                 nParallel_Tetr = dataSorter->GetnElem(TETRAHEDRON),
@@ -125,8 +131,9 @@ void CParaviewFileWriter::Write_Data(){
   SU2_MPI::Reduce(&nParallel_Pris, &nTot_Pris, 1, MPI_UNSIGNED_LONG, MPI_SUM, MASTER_NODE, MPI_COMM_WORLD);
   SU2_MPI::Reduce(&nParallel_Pyra, &nTot_Pyra, 1, MPI_UNSIGNED_LONG, MPI_SUM, MASTER_NODE, MPI_COMM_WORLD);
 #else
-  nTot_Line      = nParallel_Line;
 
+  nTot_Vert = nParallel_Vert;
+  nTot_Line = nParallel_Line;
   nTot_Tria = nParallel_Tria;
   nTot_Quad = nParallel_Quad;
   nTot_Tetr = nParallel_Tetr;
@@ -138,7 +145,7 @@ void CParaviewFileWriter::Write_Data(){
   if (rank == MASTER_NODE) {
 
     /*--- Write the header ---*/
-    nGlobal_Elem_Storage = nTot_Line*3 + nTot_Tria*4 + nTot_Quad*5 + nTot_Tetr*5 + nTot_Hexa*9 + nTot_Pris*7 + nTot_Pyra*6;
+    nGlobal_Elem_Storage = nTot_Vert + nTot_Line*3 + nTot_Tria*4 + nTot_Quad*5 + nTot_Tetr*5 + nTot_Hexa*9 + nTot_Pris*7 + nTot_Pyra*6;
 
     Paraview_File << "\nCELLS " << dataSorter->GetnElem() << "\t" << nGlobal_Elem_Storage << "\n";
 
@@ -151,9 +158,15 @@ void CParaviewFileWriter::Write_Data(){
 
   /*--- Write connectivity data. ---*/
 
+ for(unsigned short iLayer = 0; iLayer < nLayer; iLayer++)
   for (iProcessor = 0; iProcessor < size; iProcessor++) {
     if (rank == iProcessor) {
 
+
+      for (iElem = 0; iElem < nParallel_Vert; iElem++) {
+        Paraview_File << N_POINTS_POINT << "\t";
+        Paraview_File << dataSorter->GetElem_Connectivity(VERTEX, iElem, 0)-1 << "\t";
+      }
 
       for (iElem = 0; iElem < nParallel_Line; iElem++) {
         Paraview_File << N_POINTS_LINE << "\t";
@@ -216,7 +229,8 @@ void CParaviewFileWriter::Write_Data(){
         Paraview_File << dataSorter->GetElem_Connectivity(PYRAMID, iElem, 4)-1 << "\t";
       }
 
-    }    Paraview_File.flush();
+    }
+    Paraview_File.flush();
 #ifdef HAVE_MPI
     SU2_MPI::Barrier(MPI_COMM_WORLD);
 #endif
@@ -234,8 +248,10 @@ void CParaviewFileWriter::Write_Data(){
   SU2_MPI::Barrier(MPI_COMM_WORLD);
 #endif
 
+ for(unsigned short iLayer = 0; iLayer < nLayer; iLayer++)
   for (iProcessor = 0; iProcessor < size; iProcessor++) {
     if (rank == iProcessor) {
+      for (iElem = 0; iElem < nParallel_Vert; iElem++) Paraview_File << "1\t";
       for (iElem = 0; iElem < nParallel_Line; iElem++) Paraview_File << "3\t";
       for (iElem = 0; iElem < nParallel_Tria; iElem++) Paraview_File << "5\t";
       for (iElem = 0; iElem < nParallel_Quad; iElem++) Paraview_File << "9\t";
@@ -319,8 +335,10 @@ found = fieldnames[iField].find("_z");
         if (rank == iProcessor) {
 
           /*--- Write the node data from this proc ---*/
+          unsigned long MaxPoint = dataSorter->GetnPoints();
+          if(multilayer_film) MaxPoint = dataSorter->GetnPointsGlobal();
 
-          for (iPoint = 0; iPoint < dataSorter->GetnPoints(); iPoint++) {
+          for (iPoint = 0; iPoint < MaxPoint; iPoint++) {
             Paraview_File << scientific << dataSorter->GetData(VarCounter+0, iPoint) << "\t" << dataSorter->GetData(VarCounter+1, iPoint) << "\t";
             if (nDim == 3) Paraview_File << scientific << dataSorter->GetData(VarCounter+2, iPoint) << "\t";
             if (nDim == 2) Paraview_File << scientific << "0.0" << "\t";
@@ -354,8 +372,10 @@ found = fieldnames[iField].find("_z");
         if (rank == iProcessor) {
 
           /*--- Write the node data from this proc ---*/
+          unsigned long MaxPoint = dataSorter->GetnPoints();
+          if(multilayer_film) MaxPoint = dataSorter->GetnPointsGlobal();
 
-          for (iPoint = 0; iPoint < dataSorter->GetnPoints(); iPoint++) {
+          for (iPoint = 0; iPoint < MaxPoint; iPoint++) {
             Paraview_File << scientific << dataSorter->GetData(VarCounter, iPoint) << "\t";
           }
 

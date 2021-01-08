@@ -45,7 +45,8 @@ private:
   string meshFilename; /*!< \brief Name of the SU2 ASCII mesh file being read. */
   ifstream mesh_file;  /*!< \brief File object for the SU2 ASCII mesh file. */
   
-  bool actuator_disk; /*!< \brief Boolean for whether we have an actuator disk to split. */
+  bool actuator_disk; /*!< \brief Boolean for whether we have an actuator disk to split.  */
+  bool film;          /*!< \brief Boolean for whether we are solving a thin film problem. */
   
   unsigned long ActDiskNewPoints; /*!< \brief Total number of new grid points to add due to actuator disk splitting. */
   

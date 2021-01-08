@@ -1,0 +1,11 @@
+digraph "CDisplacementsInterface::GetDonor_Variable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="CDisplacementsInterface\l::GetDonor_Variable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CVariable::GetSolution_Pred",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#adba4a8e082e70a9a6fe5d1d9c6e5c820",tooltip="A virtual member. Get the value of the solution predictor. "];
+}

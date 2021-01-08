@@ -1,0 +1,26 @@
+digraph "CVerificationSolution::IsManufacturedSolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node162 [label="CVerificationSolution\l::IsManufacturedSolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node162 -> Node163 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node163 [label="CEulerSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ae3c06e120f438249757199a3aa9d7c0b",tooltip="Source term integration. "];
+  Node162 -> Node164 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node164 [label="CFEM_DG_EulerSolver\l::ADER_DG_PredictorStep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a53f3bd445632823baa18657a29553842",tooltip="Function, carries out the predictor step of the ADER-DG time integration. "];
+  Node164 -> Node165 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node165 [label="CFEM_DG_EulerSolver\l::ProcessTaskList_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a651cad1a94f2024c75a1a8be347e3375",tooltip="Function, which processes the list of tasks to be executed by the DG solver. "];
+  Node165 -> Node166 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node166 [label="CFEM_DG_EulerSolver\l::ComputeSpatialJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ac59d8dae95e3c3cc3ab3feaeb9be4b22",tooltip="Function, which controls the computation of the spatial Jacobian. "];
+  Node165 -> Node167 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node167 [label="CFEM_DG_EulerSolver\l::ADER_SpaceTimeIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a7f0da04d44069701db2228210b91c59e",tooltip="Function, to carry out the space time integration for ADER with time accurate local time stepping..."];
+  Node162 -> Node168 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node168 [label="CFEM_DG_EulerSolver\l::Volume_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ae6c2fff0649a4d8fd723ee9776778003",tooltip="Compute the volume contributions to the spatial residual. It is a virtual function, because this function is overruled for Navier-Stokes. "];
+  Node168 -> Node165 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node162 -> Node169 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 [label="CFEM_DG_NSSolver::SetTime_Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a993de2bb61a532e9d1508bae98dd3a12",tooltip="Function to compute the time step for solving the Navier-Stokes equations. "];
+  Node162 -> Node170 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node170 [label="CFEM_DG_NSSolver::Volume\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#ac62df058348ffee37a945bcc3a66745b",tooltip="Compute the volume contributions to the spatial residual. "];
+  Node162 -> Node171 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node171 [label="CIncEulerSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aaa52f2305bb8f93d51fd0910c1ddeec9",tooltip="Source term integration. "];
+}

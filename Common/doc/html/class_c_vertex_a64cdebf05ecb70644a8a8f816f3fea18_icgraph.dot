@@ -1,0 +1,14 @@
+digraph "CVertex::GetAuxVar"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node42 [label="CVertex::GetAuxVar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node42 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="SetProjection_FD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_o_t_8cpp.html#a5c5163a755085e03f1dfa23aeb7e21f2",tooltip="Projection of the surface sensitivity using finite differences (FD). "];
+  Node43 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_o_t_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node42 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="SetProjection_AD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_o_t_8cpp.html#a3fceed882e8eb3d6796c8e8396af7d87",tooltip="Projection of the surface sensitivity using algorithmic differentiation (AD). "];
+  Node45 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

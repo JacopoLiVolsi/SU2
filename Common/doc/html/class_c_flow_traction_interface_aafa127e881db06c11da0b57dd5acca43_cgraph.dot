@@ -1,0 +1,41 @@
+digraph "CFlowTractionInterface::GetPhysical_Constants"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node17 [label="CFlowTractionInterface\l::GetPhysical_Constants",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node17 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="CVariable::Clear_FlowTraction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a1e641f9cf3e167afc7ec3db3d24808ee",tooltip="A virtual member. "];
+  Node17 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="CFlowTractionInterface\l::Preprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_flow_traction_interface.html#af1b576a5e77dd789b1f8b6aa94589780",tooltip="Sets the dimensional factor for pressure and the consistent_interpolation flag. "];
+  Node20 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="CConfig::GetConservative\lInterpolation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aac135ab4447a6308aa6c7e98e6142a25",tooltip="Get option of whether to use conservative interpolation between zones. "];
+  Node20 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="CConfig::GetKindInterpolation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a9260ac2b5460a0b50988b8e47d4ab165",tooltip="Get the interpolation method used for matching between zones. "];
+  Node20 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="CConfig::GetVelocity\l_FreeStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#af0723b9f35c1762a4c8edacb35f98984",tooltip="Get the vector of the dimensionalized freestream velocity. "];
+  Node20 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="CConfig::GetDensity\l_FreeStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae9520958df27678474890ee79980ee24",tooltip="Get the value of the frestream temperature. "];
+  Node20 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="CConfig::GetVelocity\l_FreeStreamND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a13840ca712bf87d32d18917d0c39cfae",tooltip="Get the vector of the non-dimensionalized freestream velocity. "];
+  Node20 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="CConfig::GetDensity\l_FreeStreamND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#acc0e8477d26aab6003845d62cb43b0fa",tooltip="Get the value of the non-dimensionalized freestream density. "];
+  Node17 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="CConfig::GetCurrent\l_DynTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5584bf1acbe7bfce6e649e81a7c62470",tooltip="If we are prforming an unsteady simulation, there is only one value of the time step for the complete..."];
+  Node17 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="CConfig::GetRamp_Load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a93b27c413c597aa5e8fff9a95e275351",tooltip="Check if the user wants to apply the load as a ramp. "];
+  Node17 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="CConfig::GetRamp_Time",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a25cbf98ac2a6de4cb53e1e4b5a37f34e",tooltip="Get the maximum time of the ramp. "];
+  Node17 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="CSolver::Compute_LoadCoefficient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a1c3b5050c1afb50567f58437d150db16",tooltip="A virtual member. "];
+  Node17 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="CConfig::GetTime_Domain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6a11350b3c8d7577318be43cda6f7292",tooltip="Check if the multizone problem is solved for time domain. "];
+  Node17 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="CConfig::GetOuterIter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6e3d471764f8d56e1662bc3f14f70a70",tooltip="Get the current FSI iteration number. "];
+  Node17 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="CConfig::GetnIterFSI_Ramp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aab77e170a861ed4d10f178061e3ffd0f",tooltip="Get the number of subiterations while a ramp is applied. "];
+  Node17 -> Node34 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="CSolver::SetForceCoeff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#afc13c5c294cd82f72f296681565ef936",tooltip="A virtual member. "];
+}

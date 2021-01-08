@@ -1,0 +1,19 @@
+digraph "operator*"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node8 [label="operator*",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="AD::EndExtFunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a0cc02c9a7c0a1db8b254ae8d5a0c62bb",tooltip="Ends an external function section by deleting the structures. "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CSysSolve\< su2double\l \>::Solve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_solve.html#a47c0bf85c252de49cdb04f254c6b2d2f",tooltip="Solve the linear system using a Krylov subspace method. "];
+  Node8 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CSysVector\< su2double\l \>::GetNBlkDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a291257913c3bd91e40f8ab2c154e2d92",tooltip="return the number of blocks (typically number of nodes locally) "];
+  Node8 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CSysVector\< su2double\l \>::operator[]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a02f4ef01bf763a9a19ee3e8ebfea28c5",tooltip="indexing operator with assignment not permitted "];
+  Node8 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="dotProd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_c_sys_vector_8cpp.html#a13301895a65532a8cf2a0abd5805d0eb"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CSysVector\< su2double\l \>::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a55d36be09dfc5bed32246727f25cb7f5",tooltip="the L2 norm of the CSysVector "];
+}

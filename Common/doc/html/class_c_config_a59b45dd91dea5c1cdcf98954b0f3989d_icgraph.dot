@@ -1,0 +1,9 @@
+digraph "CConfig::GetKappa_1st_AdjFlow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4559 [label="CConfig::GetKappa_1st\l_AdjFlow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4559 -> Node4560 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4560 [label="CCentLax_AdjFlow::CCentLax\l_AdjFlow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_cent_lax___adj_flow.html#af3dfa3266fe9ee5f7b7fc9ab7c6a35ff",tooltip="Constructor of the class. "];
+}

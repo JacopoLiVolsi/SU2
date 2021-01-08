@@ -63,6 +63,11 @@ protected:
   int size;
 
   /*!
+   * \brief Multilayer thin film method.
+   */
+  bool multilayer_film = false;
+  unsigned short nLayer = 1;
+  /*!
    * \brief The file extension to be attached to the filename.
    */
   std::string file_ext;

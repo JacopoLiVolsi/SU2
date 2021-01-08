@@ -1,0 +1,34 @@
+digraph "CEulerVariable::CEulerVariable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CEulerVariable::CEulerVariable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="CConfig::GetTime_Marching",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a864d499ce740184803607801c47abda7",tooltip="Provides information about the time integration, and change the write in the output files information..."];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CConfig::GetViscous",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2e9af0bd3e1f5ed865e81b627e94a662",tooltip="Determines if problem is viscous. "];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CConfig::GetWind_Gust",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#abeb1d75666a9d471141c88b5e57458c7",tooltip="Get information about the wind gust. "];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CConfig::GetKind_TimeInt\lScheme_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a20e5fd7b43cfd2bf2bcf5137f12bc635",tooltip="Get the kind of integration scheme (explicit or implicit) for the flow equations. ..."];
+  Node0 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="C2DContainer::resize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c2_d_container.html#adefb48b593f76aa322e228fea8f76127",tooltip="Request a change of size. "];
+  Node0 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CConfig::GetnMGLevels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aea7f78497a5cd863bd065391232329fd",tooltip="Get the number of multigrid levels. "];
+  Node0 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CConfig::GetMG_CorrecSmooth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae9aafd3dfc1a3c7dca73f9a690b8f009",tooltip="Get the number of implicit Jacobi smoothings of the correction in a multigrid strategy. "];
+  Node0 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CConfig::GetKind_ConvNum\lScheme_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a37d84fba27cc0fce5fb4dad75277aa0d",tooltip="Get the kind of convective numerical scheme for the flow equations (centered or upwind). "];
+  Node0 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CVariable::VectorOfMatrix\l::resize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_variable_1_1_vector_of_matrix.html#aec6e4c064e33e18a07ff2a9511963082"];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CConfig::GetReconstruction\lGradientRequired",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6f035f69eedad52f835efb73dccd3dfd",tooltip="Get flag for whether a second gradient calculation is required for upwind reconstruction alone..."];
+  Node0 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CConfig::GetLeastSquares\lRequired",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#afdc8329b2af30084c114199a1543b541",tooltip="Get flag for whether a least-squares gradient method is being applied. "];
+  Node0 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CConfig::GetMultizone\l_Problem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad9233b666b21e43c18592925be61cc9b",tooltip="Get whether the simulation we are running is a multizone simulation. "];
+  Node0 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CVariable::Set_BGSSolution_k",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#aa47456564bac33106a460be201d4c843",tooltip="Set the value of the solution in the previous BGS subiteration. "];
+}

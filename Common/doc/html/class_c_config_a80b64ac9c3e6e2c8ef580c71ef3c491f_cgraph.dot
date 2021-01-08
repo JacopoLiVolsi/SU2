@@ -1,0 +1,13 @@
+digraph "CConfig::SetnZone"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node15172 [label="CConfig::SetnZone",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node15172 -> Node15173 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15173 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node15173 -> Node15174 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15174 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node15172 -> Node15175 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15175 [label="CConfig::GetnZone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad8a83ccc6af7a42273330d6bf596b8c0",tooltip="Provides the number of varaibles. "];
+}

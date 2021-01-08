@@ -136,6 +136,13 @@ public:
   CVariable& operator= (const CVariable&) = delete;
   CVariable& operator= (CVariable&&) = delete;
 
+
+  /*!
+   * \overload
+   * \param[in] ndim - Number of dimensions of the problem.
+   */
+  CVariable(unsigned long ndim);
+
   /*!
    * \overload
    * \param[in] npoint - Number of points/nodes/vertices in the domain.
@@ -174,6 +181,9 @@ public:
    * \param[in] solution - Value of the solution for the index <i>iVar</i>.
    */
   inline void SetSolution(unsigned long iPoint, unsigned long iVar, su2double solution) { Solution(iPoint,iVar) = solution; }
+
+  virtual su2double GetLayerSolution_New(unsigned long iPoint, unsigned long iVar, unsigned short iLayer) {};
+  virtual void SetLayerSolution_New(unsigned long iPoint, unsigned long iVar, su2double solution, unsigned short iLayer) {};
 
   /*!
    * \brief Add the value of the solution vector to the previous solution (incremental approach).
@@ -821,6 +831,28 @@ public:
    * \param[in] iVar - Index of the variable.
    */
   inline virtual su2double GetLimiterPrimitive(unsigned long iPoint, unsigned long val_species, unsigned long iVar) const { return 0.0; }
+
+
+  inline virtual void ImportBottom_Topography(const su2double* topography){};
+
+  inline virtual void InitializeBottom_BC(CConfig *config){};
+
+  /*!
+   * \brief Virtual member re-implemented in Multilayer methods.
+   * \param[in] iPoint - Point index.
+   * \param[in] iVar - Variable index.
+   * \param[in] iLayer - Layer index.
+  */
+  inline virtual su2double GetLayerPrimitive(unsigned long iPoint, unsigned short iVar, unsigned short iLayer){};
+  inline virtual void      SetLayerPrimitive(unsigned long iPoint, unsigned short iVar, su2double prim_val, unsigned short iLayer){};
+
+   /*!
+   * \brief Virtual member re-implemented in Multilayer methods.
+   * \param[in] iPoint - Point index.
+   * \param[in] iVar - Variable index.
+   * \param[in] iLayer - Layer index.
+  */
+  inline virtual su2double* GetLayerSolution(unsigned long iPoint, unsigned short iLayer){};
 
   /*!
    * \brief Set the value of the max solution.

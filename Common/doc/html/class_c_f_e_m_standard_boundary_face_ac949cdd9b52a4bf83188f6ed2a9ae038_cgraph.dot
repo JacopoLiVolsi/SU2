@@ -1,0 +1,9 @@
+digraph "CFEMStandardBoundaryFace::SameStandardBoundaryFace"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node169 [label="CFEMStandardBoundaryFace\l::SameStandardBoundaryFace",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node169 -> Node170 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node170 [label="CFEMStandardElementBase\l::Copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#a16e32741ff913f24f3513dc08804e816",tooltip="Function, which copies the data of the given object into the current object. "];
+}

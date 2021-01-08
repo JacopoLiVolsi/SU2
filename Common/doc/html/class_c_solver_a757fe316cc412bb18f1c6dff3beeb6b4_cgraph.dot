@@ -1,0 +1,36 @@
+digraph "CSolver::SetResidual_RMS"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4793 [label="CSolver::SetResidual_RMS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4793 -> Node4794 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4794 [label="CSolver::GetRes_RMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a1c24b55e0849f7f6ba2f62d15d7e4f8e",tooltip="Get the maximal residual, this is useful for the convergence history. "];
+  Node4793 -> Node4795 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4795 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node4795 -> Node4796 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4796 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node4793 -> Node4797 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4797 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node4793 -> Node4798 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4798 [label="CSolver::SetRes_RMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a6b74eb7a8bc01a4997c9844598f39d2f",tooltip="Set the maximal residual, this is useful for the convergence history. "];
+  Node4793 -> Node4799 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4799 [label="CConfig::GetComm_Level",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab71278d2692ca5217674036650b02923",tooltip="Get the level of MPI communications to be performed. "];
+  Node4793 -> Node4800 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4800 [label="CGeometry::GetnPointDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a4fc7de3bff7b6f8c35717016d6f8fcb2",tooltip="Get number of real points (that belong to the domain). "];
+  Node4793 -> Node4801 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4801 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node4801 -> Node4802 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4802 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node4793 -> Node4803 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4803 [label="CSolver::GetRes_Max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a00c2752e9b098ac63efeac7d14a83779",tooltip="Get the maximal residual, this is useful for the convergence history. "];
+  Node4793 -> Node4804 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4804 [label="CSolver::GetPoint_Max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a255c9ff88cdc5c3bff7a42d2f4c790a5",tooltip="Get the maximal residual, this is useful for the convergence history. "];
+  Node4793 -> Node4805 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4805 [label="CSolver::GetPoint_Max\l_Coord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a65feaf59ab69d663d5202f81a1ba0f08",tooltip="Get the location of the maximal residual, this is useful for the convergence history. "];
+  Node4793 -> Node4806 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4806 [label="CBaseMPIWrapper::Allgather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a55195abbb7206e08a4933fa53cd41923"];
+  Node4806 -> Node4802 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4793 -> Node4807 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4807 [label="CSolver::AddRes_Max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a8068067ba1b56173c95d4799bfb48d9e",tooltip="Adds the maximal residual, this is useful for the convergence history. "];
+}

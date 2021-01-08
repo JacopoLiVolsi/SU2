@@ -44,6 +44,7 @@ su2_cfd_src += files(['output/CAdjElasticityOutput.cpp',
                       'output/CFlowCompOutput.cpp',
                       'output/CFlowCompFEMOutput.cpp',
                       'output/CFlowOutput.cpp',
+                      'output/CFilmOutput.cpp',
                       'output/CFlowIncOutput.cpp',
                       'output/CHeatOutput.cpp',
                       'output/CMeshOutput.cpp',
@@ -87,10 +88,12 @@ su2_cfd_src += files(['variables/CIncNSVariable.cpp',
                       'variables/CNSVariable.cpp',
                       'variables/CAdjTurbVariable.cpp',
                       'variables/CIncEulerVariable.cpp',
-                      'variables/CEulerVariable.cpp'])
+                      'variables/CEulerVariable.cpp',
+                      'variables/CFilmVariable.cpp'])
 
 su2_cfd_src += files(['solvers/CMeshSolver.cpp',
-                      'solvers/CDiscAdjMeshSolver.cpp'])
+                      'solvers/CDiscAdjMeshSolver.cpp',
+                      'solvers/CFilmSolver.cpp'])
 
 su2_cfd_src += files(['numerics/elasticity/CFEAElasticity.cpp',
                       'numerics/elasticity/CFEALinearElasticity.cpp',
@@ -99,7 +102,8 @@ su2_cfd_src += files(['numerics/elasticity/CFEAElasticity.cpp',
                       'numerics/elasticity/CFEM_NeoHookean_Comp.cpp',
                       'numerics/elasticity/CFEM_Knowles_NearInc.cpp',
                       'numerics/elasticity/CFEM_IdealDE.cpp',
-                      'numerics/elasticity/CFEM_DielectricElastomer.cpp'])
+                      'numerics/elasticity/CFEM_DielectricElastomer.cpp',
+                      'numerics/CFilmNumerics.cpp'])
 
 su2_cfd_src += files(['interfaces/CInterface.cpp',
                       'interfaces/cfd/CConservativeVarsInterface.cpp',

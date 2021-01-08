@@ -1,0 +1,11 @@
+digraph "/home/boyd/Scrivania/Thesis/SU2/SU2_CFD/src/interfaces/fsi" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_bc6ca47179aa66d6c6c3669f11c83c84 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="interfaces" fontname="Helvetica", fontsize="10", URL="dir_bc6ca47179aa66d6c6c3669f11c83c84.html"]
+  dir_2fe594c194a8fcee3db878cb3a55d3ed [shape=box, label="fsi", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2fe594c194a8fcee3db878cb3a55d3ed.html"];
+  }
+  dir_3b735dd5547717c34264cbbbba892a8a [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_3b735dd5547717c34264cbbbba892a8a.html"];
+  dir_2fe594c194a8fcee3db878cb3a55d3ed->dir_3b735dd5547717c34264cbbbba892a8a [headlabel="5", labeldistance=1.5 headhref="dir_000032_000015.html"];
+}

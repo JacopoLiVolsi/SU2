@@ -1,0 +1,17 @@
+digraph "CNumerics::SetTransVar"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node852 [label="CNumerics::SetTransVar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node852 -> Node853 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node853 [label="CTransLMSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#a4e77c76f579952f33c3bb16d9b8371c0",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node852 -> Node854 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node854 [label="CTransLMSolver::Viscous\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#aad0850065817447ecce8752ce29683cf",tooltip="Compute the viscous residuals for the turbulent equation. "];
+  Node852 -> Node855 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node855 [label="CTransLMSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#a4e8cc97ad3a16eb277b4fe249666d0b9",tooltip="Source term computation. "];
+  Node852 -> Node856 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node856 [label="CTransLMSolver::BC\l_HeatFlux_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#a0e999dfffce48c1513effbbe7cf348be",tooltip="Impose the Navier-Stokes wall boundary condition. "];
+  Node856 -> Node857 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node857 [label="CTransLMSolver::BC\l_Sym_Plane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#a306459393b26c40177fe9a86473ce030",tooltip="Impose the symmetry condition. "];
+}

@@ -1,0 +1,35 @@
+digraph "CConfig::GetWrt_Vol_Sol"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13913 [label="CConfig::GetWrt_Vol_Sol",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13913 -> Node13914 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13914 [label="COutputLegacy::MergeConnectivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a1fca7d82115b30a586f40c1d8bdc94d3",tooltip="Merge the geometry into a data structure used for output file writing. "];
+  Node13914 -> Node13915 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13915 [label="COutputLegacy::SetResult\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aa817439538e8cf82f82acbfa0bf7e735",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+  Node13914 -> Node13916 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13916 [label="COutputLegacy::SetBaseline\lResult_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aa494f988736bb5a657fcaf9b8e0c2e85",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+  Node13916 -> Node13917 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13917 [label="COutputLegacy::SetSensitivity\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#ab6d1b1d7a16dc1538914c2ca98e2fea7",tooltip="Write the sensitivity (including mesh sensitivity) computed with the discrete adjoint method on the s..."];
+  Node13914 -> Node13918 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13918 [label="COutputLegacy::SetMesh\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9301e0b2ff5e38a8337127ce74c49ac8",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+  Node13913 -> Node13915 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13913 -> Node13916 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13913 -> Node13919 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13919 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+  Node13913 -> Node13920 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13920 [label="COutputLegacy::SortConnectivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#af4fb758e9fa66d19847d369f45fa888c",tooltip="Sort the connectivities (volume and surface) into data structures used for output file writing..."];
+  Node13920 -> Node13919 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13913 -> Node13921 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13921 [label="COutputLegacy::MergeConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a73ac84a0613171e5b77c86055b8a1487",tooltip="Merge the FEM geometry into a data structure used for output file writing. "];
+  Node13921 -> Node13922 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13922 [label="COutputLegacy::SetResult\l_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a25b90eb5e2bd0f05f92a89f0768f2181",tooltip="Writes and organizes the all the output files, except the history one, for serial computations with t..."];
+  Node13921 -> Node13923 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13923 [label="COutputLegacy::SetBaseline\lResult_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a46c1054bac8c154e4f3464cc1913e06f",tooltip="Writes and organizes the all the output files, except the history one, for DG-FEM simulations (SU2_SO..."];
+  Node13913 -> Node13922 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13913 -> Node13923 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13913 -> Node13924 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13924 [label="COutputLegacy::SortConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a03c1f74460acd9a255fc75baab610f33",tooltip="Sort the connectivities (volume and surface) into data structures used for output file writing (DG-FE..."];
+  Node13924 -> Node13919 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

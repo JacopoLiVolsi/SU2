@@ -1,0 +1,15 @@
+digraph "CVariable::SetResidual_Old"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5646 [label="CVariable::SetResidual_Old",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5646 -> Node5647 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5647 [label="CMultiGridIntegration\l::SmoothProlongated_Correction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#a81e4ca17ee9ecfabbad247e0b7e5f046",tooltip="Do an implicit smoothing of the prolongated correction. "];
+  Node5647 -> Node5648 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5648 [label="CMultiGridIntegration\l::MultiGrid_Cycle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#aa9a52a00a3417c465307ae6aea035f41",tooltip="Perform a Full-Approximation Storage (FAS) Multigrid. "];
+  Node5648 -> Node5649 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5649 [label="CMultiGridIntegration\l::MultiGrid_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#af0b4014222a37402257b735d2ca32a81",tooltip="This subroutine calls the MultiGrid_Cycle and also prepare the multigrid levels and the monitoring..."];
+  Node5646 -> Node5650 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5650 [label="CMultiGridIntegration\l::Smooth_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#a349e4bcdcd6dee47d798e23a95629be6",tooltip="Do an implicit smoothing of the solution. "];
+}

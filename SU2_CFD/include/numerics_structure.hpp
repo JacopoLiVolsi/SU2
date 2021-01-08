@@ -40,6 +40,7 @@
 #include "../../Common/include/config_structure.hpp"
 #include "../../Common/include/geometry/elements/CElement.hpp"
 #include "fluid_model.hpp"
+#include "variables/CVariable.hpp"
 
 using namespace std;
 
@@ -345,6 +346,21 @@ public:
    */
   void SetPrimitive(su2double *val_v_i, su2double *val_v_j);
   
+
+  virtual void SetMultilayer_Interaction(CVariable* nodes, unsigned long iPoint, unsigned short iLayer);
+
+  virtual void SetProfileOrder(unsigned short ord);
+
+  /*!
+   * \brief Set pressure profile in normal direction for film problems. 
+   */
+  virtual void SetPressureBC(su2double *p_coeff, su2double delta_k, su2double delta_km1);
+
+  /*!
+   * \brief Set velocity profile in normal direction for film problems. 
+   */
+  virtual void SetStressBC(su2double **v_coeff, su2double delta_k, su2double delta_km1);
+  inline virtual void SetdThick(su2double* coord_km1, su2double* coord_k, su2double delta_km1, su2double delta_k){};
   /*!
    * \brief Set the value of the primitive variables.
    * \param[in] val_v_i - Value of the primitive variable at point i.

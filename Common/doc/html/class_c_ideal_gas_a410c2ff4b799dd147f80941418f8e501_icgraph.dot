@@ -1,0 +1,11 @@
+digraph "CIdealGas::SetTDState_Prho"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node19 [label="CIdealGas::SetTDState_Prho",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="CIdealGas::SetTDState_Ps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_ideal_gas.html#a593137271508338b836781afe7457e63",tooltip="Set the Dimensionless State using Pressure and Entropy. "];
+  Node19 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="CIdealGas::ComputeDerivative\lNRBC_Prho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_ideal_gas.html#a9254da937990595c71302f7d02d158df",tooltip="compute some derivatives of enthalpy and entropy needed for subsonic inflow BC "];
+}

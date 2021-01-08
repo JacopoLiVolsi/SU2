@@ -1,0 +1,19 @@
+digraph "CTurbSolver::BC_Giles"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node12 [label="CTurbSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node12 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CConfig::GetKind_Data\l_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a296131f9cecd77dc13d88f88ef645732",tooltip="Get Kind Data for the Giles BC. "];
+  Node12 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CSolver::BC_Inlet_Turbo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#aea990578809a6729adc89b084a98373d",tooltip="A virtual member. "];
+  Node12 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CConfig::GetBoolTurbMixing\lPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a81ce1c3cae67b878aa2c15d5aebba34f",tooltip="Verify if there is mixing plane interface specified from config file. "];
+  Node12 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="CSolver::BC_Inlet_Mixing\lPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a99caf463dfd5feb35c4873bed9427920",tooltip="A virtual member. "];
+  Node12 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="CSolver::BC_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af7104d67424dc739db4f89207cf2229d",tooltip="A virtual member. "];
+}

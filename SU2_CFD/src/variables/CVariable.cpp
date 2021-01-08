@@ -28,6 +28,9 @@
 
 #include "../../include/variables/CVariable.hpp"
 
+CVariable::CVariable(unsigned long ndim){
+ nDim = ndim;
+}
 
 CVariable::CVariable(unsigned long npoint, unsigned long nvar, CConfig *config) {
 
@@ -59,7 +62,7 @@ CVariable::CVariable(unsigned long npoint, unsigned long ndim, unsigned long nva
   Solution_Old.resize(nPoint,nVar) = su2double(0.0);
 
   if (config->GetTime_Marching() != NO) {
-    Solution_time_n.resize(nPoint,nVar);
+    Solution_time_n.resize(nPoint, nVar);
     Solution_time_n1.resize(nPoint,nVar);
   }
   else if (config->GetTime_Domain()) {
@@ -71,7 +74,7 @@ CVariable::CVariable(unsigned long npoint, unsigned long ndim, unsigned long nva
   }
 
   if(config->GetMultizone_Problem() && config->GetAD_Mode()) {
-    AD_InputIndex.resize(nPoint,nVar) = -1;
+    AD_InputIndex.resize(nPoint,nVar)  = -1;
     AD_OutputIndex.resize(nPoint,nVar) = -1;
   }
 

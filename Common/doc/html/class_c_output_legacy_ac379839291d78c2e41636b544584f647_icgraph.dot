@@ -1,0 +1,11 @@
+digraph "COutputLegacy::MergeBaselineSolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node378 [label="COutputLegacy::MergeBaseline\lSolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node378 -> Node379 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node379 [label="COutputLegacy::SetBaseline\lResult_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aa494f988736bb5a657fcaf9b8e0c2e85",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+  Node379 -> Node380 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node380 [label="COutputLegacy::SetSensitivity\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#ab6d1b1d7a16dc1538914c2ca98e2fea7",tooltip="Write the sensitivity (including mesh sensitivity) computed with the discrete adjoint method on the s..."];
+}

@@ -1,0 +1,13 @@
+digraph "CUpwAUSMPLUSUP_Flow::CUpwAUSMPLUSUP_Flow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CUpwAUSMPLUSUP_Flow\l::CUpwAUSMPLUSUP_Flow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="CConfig::GetMach",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a624138f0bb5ee7494459b8e25c5d6287",tooltip="Get the value of the Mach number (velocity divided by speed of sound). "];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+}

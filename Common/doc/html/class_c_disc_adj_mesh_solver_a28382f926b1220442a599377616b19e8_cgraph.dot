@@ -1,0 +1,11 @@
+digraph "CDiscAdjMeshSolver::RegisterVariables"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node63 [label="CDiscAdjMeshSolver\l::RegisterVariables",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node63 -> Node64 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node63 -> Node65 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 [label="CVariable::Register\l_BoundDisp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a3d0a4850e18a0bcf4c3f4a1492c1a068",tooltip="A virtual member. Register the boundary displacements of the mesh. "];
+}

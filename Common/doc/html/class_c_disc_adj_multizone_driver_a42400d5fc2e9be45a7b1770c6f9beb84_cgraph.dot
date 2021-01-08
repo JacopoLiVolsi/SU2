@@ -1,0 +1,11 @@
+digraph "CDiscAdjMultizoneDriver::Set_BGSSolution_k_To_Solution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node943 [label="CDiscAdjMultizoneDriver\l::Set_BGSSolution_k_To\l_Solution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node943 -> Node944 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node944 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node943 -> Node945 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node945 [label="CVariable::Set_BGSSolution_k",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#aa47456564bac33106a460be201d4c843",tooltip="Set the value of the solution in the previous BGS subiteration. "];
+}

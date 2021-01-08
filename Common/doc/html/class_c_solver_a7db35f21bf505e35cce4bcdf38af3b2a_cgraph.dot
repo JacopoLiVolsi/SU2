@@ -1,0 +1,37 @@
+digraph "CSolver::AdaptCFLNumber"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6 [label="CSolver::AdaptCFLNumber",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CConfig::GetnMGLevels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aea7f78497a5cd863bd065391232329fd",tooltip="Get the number of multigrid levels. "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CConfig::GetCFL_AdaptParam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac3929a736c2eb5b7cedc6d7131709bff",tooltip="Get the values of the CFL adaption parameters. "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CConfig::GetCFL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5a509e57de00494a1cb92e011c1c0dbc",tooltip="Get the Courant Friedrich Levi number for each grid. "];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CSolver::GetResLinSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a70a736b6ae6866e8f245277f4de3ec9f",tooltip="Get the final linear solver residual. "];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CConfig::GetKind_Turb\l_Model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a40aaed07fc5844d505d2c0b7076594d7",tooltip="Get the kind of the turbulence model. "];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CSolver::GetnVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a65c22046b0cf1938ba22648912d04680",tooltip="Get the number of variables of the problem. "];
+  Node6 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CSolver::GetRes_RMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a1c24b55e0849f7f6ba2f62d15d7e4f8e",tooltip="Get the maximal residual, this is useful for the convergence history. "];
+  Node6 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CConfig::GetTimeIter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa659f28a1d71b0924944a9fb248e3d6e",tooltip="Get the current time iteration number. "];
+  Node6 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CGeometry::GetnPointDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a4fc7de3bff7b6f8c35717016d6f8fcb2",tooltip="Get number of real points (that belong to the domain). "];
+  Node6 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node6 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="CVariable::GetLocalCFL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a171dfc3e408be66993fde3da82b5a991",tooltip="Get the value of the local CFL number for the current control volume (CV). "];
+  Node6 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="CVariable::GetUnderRelaxation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a1aa422dc178f8c0a2140c962cb0d6ac0",tooltip="Get the value of the under-relaxation parameter for the current control volume (CV). "];
+  Node6 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="CVariable::SetLocalCFL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a77d2f7f3fb35de75f915725662790060",tooltip="Set the value of the local CFL number for the current control volume (CV). "];
+  Node6 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node20 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+}

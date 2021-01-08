@@ -1,0 +1,38 @@
+digraph "CEulerVariable::GetPressure"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node117 [label="CEulerVariable::GetPressure",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node117 -> Node118 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node118 [label="CEulerSolver::SetUndivided\l_Laplacian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#adc7c82a25b8be22b16b5452c1992744f",tooltip="Compute the undivided laplacian for the solution, except the energy equation. "];
+  Node118 -> Node119 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node119 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node118 -> Node120 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node120 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+  Node117 -> Node121 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="CEulerSolver::SetCentered\l_Dissipation_Sensor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a2f4e3619ae65c63cbda1ef2098441ab4",tooltip="Compute a pressure sensor switch. "];
+  Node121 -> Node119 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 -> Node120 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 -> Node122 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node122 [label="CEulerSolver::Pressure\l_Forces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a98856f91553ab35f30d27bfd0ab46d69",tooltip="Compute the pressure forces and all the adimensional coefficients. "];
+  Node117 -> Node123 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node123 [label="CEulerSolver::BC_Far\l_Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a3cb64b1356f6c0dd43c08df012d99f01",tooltip="Impose the far-field boundary condition using characteristics. "];
+  Node117 -> Node124 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node124 [label="CEulerSolver::Preprocess\lBC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a33402619b740bfe68350c50bba14c6ab",tooltip="It computes Fourier transformation for the needed quantities along the pitch for each span in turboma..."];
+  Node117 -> Node125 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node125 [label="CEulerSolver::BC_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aabbe4c302452f52fcbe5cdf7022e6c9a",tooltip="Impose a subsonic inlet boundary condition. "];
+  Node117 -> Node126 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node126 [label="CEulerSolver::Preprocess\lAverage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ab13b628bfb33a1701ff0807195f953ef",tooltip="It computes average quantities along the span for turbomachinery analysis. "];
+  Node117 -> Node127 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node127 [label="CEulerSolver::TurboAverage\lProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ab408049d3b4fecc224653176c8d7885a",tooltip="It computes average quantities along the span for turbomachinery analysis. "];
+  Node117 -> Node128 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node128 [label="CNSSolver::BC_HeatFlux_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a94ecf958fefe5b9f6135ac0e14d1ea80",tooltip="Impose a constant heat-flux condition at the wall. "];
+  Node117 -> Node129 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node129 [label="CNSSolver::BC_Isothermal_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#acc95e1ac60fd8a27a8e44d1015c7deba",tooltip="Impose the Navier-Stokes boundary condition (strong). "];
+  Node117 -> Node130 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node130 [label="CNSSolver::BC_ConjugateHeat\l_Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#ad7c717280b27282a9e02bb1c0b50480a",tooltip="Impose the Navier-Stokes boundary condition (strong) with values from a CHT coupling. "];
+  Node117 -> Node131 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node131 [label="CNSSolver::SetTauWall_WF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#afeaca8e0c1a6da9eb2c4d2ddd64bc949",tooltip="Computes the wall shear stress (Tau_Wall) on the surface using a wall function. "];
+  Node131 -> Node120 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,33 @@
+digraph "CEulerSolver::BC_NearField_Boundary"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node725 [label="CEulerSolver::BC_NearField\l_Boundary",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node725 -> Node726 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node726 [label="CConfig::GetKind_TimeInt\lScheme_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a20e5fd7b43cfd2bf2bcf5137f12bc635",tooltip="Get the kind of integration scheme (explicit or implicit) for the flow equations. ..."];
+  Node725 -> Node727 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node727 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node725 -> Node728 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node728 [label="CPoint::GetGlobalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ab546170a5a03ef210a75fc5531910050",tooltip="Get the global index in a parallel computation. "];
+  Node725 -> Node729 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node729 [label="CEulerSolver::GetDonorGlobal\lIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a275c14dcde8c2669fb653068427346c4",tooltip="Value of the characteristic global index at the boundaries. "];
+  Node725 -> Node730 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node730 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node725 -> Node731 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node731 [label="CEulerVariable::GetPrimitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_variable.html#ac74de02753701aa447cd3e125d8cab7d",tooltip="Get the primitive variables. "];
+  Node725 -> Node732 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node732 [label="CEulerSolver::GetDonorPrimVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac93abdf2c98721524d5999d50c6f3494",tooltip="Value of the characteristic variables at the boundaries. "];
+  Node725 -> Node733 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node733 [label="CNumerics::SetPrimitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#af72b17d397adf09beed2e99e2daf895c",tooltip="Set the value of the primitive variables. "];
+  Node725 -> Node734 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node734 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node725 -> Node735 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node735 [label="CNumerics::SetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a41903d97957f351cd9ee63ca404985b1",tooltip="Set the value of the normal vector to the face between two points. "];
+  Node725 -> Node736 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node736 [label="CNumerics::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#abe734316e0047f463f059fd77a281958",tooltip="Compute the numerical residual. "];
+  Node725 -> Node737 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node737 [label="CSysVector::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#acd4c36df2ea0b7ad473944cff9bf5d72",tooltip="Add val_residual to the residual. "];
+  Node725 -> Node738 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node738 [label="CSysMatrix::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a85def3109e5aa5307268ca830a8f6522",tooltip="Adds the specified block to the sparse matrix. "];
+}

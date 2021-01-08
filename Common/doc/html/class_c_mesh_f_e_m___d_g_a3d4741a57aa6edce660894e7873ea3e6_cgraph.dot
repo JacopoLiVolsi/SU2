@@ -1,0 +1,13 @@
+digraph "CMeshFEM_DG::MetricTermsMatchingFaces"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node219 [label="CMeshFEM_DG::MetricTerms\lMatchingFaces",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node219 -> Node220 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node220 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node219 -> Node221 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node221 [label="CMeshFEM::ComputeNormalsFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a39cdfd81f63b622abce3ad330dd9a7dc",tooltip="Function, which computes the information of the normals in the integration points of a face..."];
+  Node219 -> Node222 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node222 [label="CMeshFEM::ComputeGradients\lCoordinatesFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a48069591b944b34acf03ae78aa5493c3",tooltip="Function, which computes the gradients of the parametric coordinates w.r.t. the Cartesian coordinates..."];
+}

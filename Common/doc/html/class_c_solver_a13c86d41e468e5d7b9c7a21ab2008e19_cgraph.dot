@@ -1,0 +1,40 @@
+digraph "CSolver::SolveTypicalSectionWingModel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5454 [label="CSolver::SolveTypicalSection\lWingModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5454 -> Node5455 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5455 [label="CConfig::GetAeroelastic\l_Frequency_Pitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2cb6eeb8d14730720c5ee584b8cc7e8b",tooltip="Uncoupled Aeroelastic Frequency Pitch. "];
+  Node5454 -> Node5456 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5456 [label="CConfig::GetAeroelastic\l_Flutter_Speed_Index",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a93afd81e0f5c99ef0632f80b8cb154ed",tooltip="Aeroelastic Flutter Speed Index. "];
+  Node5454 -> Node5457 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5457 [label="CConfig::GetLength\l_Reynolds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a07e07baa3b8259bfa545fd1de2fac74a",tooltip="Get the value of the Reynolds length. "];
+  Node5454 -> Node5458 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5458 [label="CConfig::GetDelta_UnstTimeND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a417b45d0da107126e803258901f57920",tooltip="If we are prforming an unsteady simulation, there is only one value of the time step for the complete..."];
+  Node5454 -> Node5459 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5459 [label="CSolver::SetUpTypicalSection\lWingModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a85ab76dcef372e9cf25c7df9738b364b",tooltip="Sets up the generalized eigenvectors and eigenvalues needed to solve the aeroelastic equations..."];
+  Node5459 -> Node5460 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5460 [label="CConfig::GetAeroelastic\l_Frequency_Plunge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0ec6a5b1cd9d21bce43b0ad95a427687",tooltip="Uncoupled Aeroelastic Frequency Plunge. "];
+  Node5459 -> Node5455 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5459 -> Node5461 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5461 [label="CConfig::GetAeroelastic\l_CG_Location",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#acc4baf536059893600bc566d7b8913e6",tooltip="Aeroelastic center of gravity location. "];
+  Node5459 -> Node5462 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5462 [label="CConfig::GetAeroelastic\l_Radius_Gyration_Squared",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3d4898b381409684e54710f8b8f6f047",tooltip="Aeroelastic radius of gyration squared. "];
+  Node5454 -> Node5463 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5463 [label="CConfig::GetAeroelastic_np1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0b906eb233b861ce7f2f876bbfa9760a",tooltip="Value of Aeroelastic solution coordinate at time n+1. "];
+  Node5454 -> Node5464 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5464 [label="CConfig::GetAeroelastic_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa022e177ff1f274f7bdbfef950c0c448",tooltip="Value of Aeroelastic solution coordinate at time n. "];
+  Node5454 -> Node5465 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5465 [label="CConfig::GetAeroelastic_n1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e410f925eb73adfe30d3b44e589ec26",tooltip="Value of Aeroelastic solution coordinate at time n-1. "];
+  Node5454 -> Node5466 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5466 [label="CConfig::GetAeroelastic\l_pitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57928a763b6b5f41e2dac1992596138d",tooltip="Value of pitching coordinate. "];
+  Node5454 -> Node5467 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5467 [label="CConfig::GetAeroelastic\l_plunge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa28d5164af585f7a1f3fa702fa044a2d",tooltip="Value of plunging coordinate. "];
+  Node5454 -> Node5468 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5468 [label="CConfig::SetAeroelastic\l_pitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a9ba428baa92dc36b447d424450a49b1a",tooltip="Value of pitching coordinate. "];
+  Node5454 -> Node5469 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5469 [label="CConfig::SetAeroelastic\l_plunge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a265f87e00ba2ed387f084082c7f6d1cb",tooltip="Value of plunging coordinate. "];
+  Node5454 -> Node5470 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5470 [label="CConfig::SetAeroelastic_np1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a4705094b6e77c4764878ac83a665f02a",tooltip="Value of Aeroelastic solution coordinate at time n+1. "];
+}

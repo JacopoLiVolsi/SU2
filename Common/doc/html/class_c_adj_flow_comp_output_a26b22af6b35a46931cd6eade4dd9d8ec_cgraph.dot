@@ -1,0 +1,13 @@
+digraph "CAdjFlowCompOutput::SetHistoryOutputFields"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node48 [label="CAdjFlowCompOutput\l::SetHistoryOutputFields",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node48 -> Node49 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="COutput::AddHistoryOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#ad5ee424d364346cbd6dc27ffbab35e0a",tooltip="Add a new field to the history output. "];
+  Node48 -> Node50 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="CConfig::GetFrozen\l_Visc_Disc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb146862f57545364350419287581bbc",tooltip="Provides information about the way in which the turbulence will be treated by the disc..."];
+  Node48 -> Node51 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="CConfig::GetFrozen\l_Visc_Cont",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aec67dda6436453412e8647ee6879108b",tooltip="Provides information about the way in which the turbulence will be treated by the cont..."];
+}

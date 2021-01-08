@@ -1,0 +1,19 @@
+digraph "CEulerSolver::SetPreconditioner"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3439 [label="CEulerSolver::SetPreconditioner",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3439 -> Node3440 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3440 [label="CConfig::GetmaxTurkelBeta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ace023b432f4b4d33108b2bdf792728f5",tooltip="Get the minimum value of Beta for Roe-Turkel preconditioner. "];
+  Node3439 -> Node3441 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3441 [label="CEulerVariable::GetVelocity2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_variable.html#a6ae41547bbd24f1c5106eb826477845b",tooltip="Get the norm 2 of the velocity. "];
+  Node3439 -> Node3442 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3442 [label="CEulerVariable::GetSound\lSpeed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_variable.html#ab2b300dcf4067e7b996d7c9aaa02939f",tooltip="Get the speed of the sound. "];
+  Node3439 -> Node3443 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3443 [label="CConfig::GetMach",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a624138f0bb5ee7494459b8e25c5d6287",tooltip="Get the value of the Mach number (velocity divided by speed of sound). "];
+  Node3439 -> Node3444 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3444 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node3439 -> Node3445 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3445 [label="CEulerVariable::GetEnthalpy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_variable.html#acaf8904fb43c0f0c8600c0da5b5397af",tooltip="Get the enthalpy of the flow. "];
+}

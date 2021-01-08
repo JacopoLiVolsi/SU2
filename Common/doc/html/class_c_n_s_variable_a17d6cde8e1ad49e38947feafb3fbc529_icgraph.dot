@@ -1,0 +1,14 @@
+digraph "CNSVariable::GetEddyViscosity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="CNSVariable::GetEddyViscosity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CNSVariable::SetRoe\l_Dissipation_NTS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#ae8391103a386186f112deaa91e04cee7",tooltip="Set the new solution for Roe Dissipation. "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CNSVariable::SetDES\l_LengthScale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#aca7fe9700e82ef10f56502f373c397e5",tooltip="Set the DES Length Scale. "];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CNSVariable::SetRoe\l_Dissipation_FD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a71e190265f85ef8f0cb414275dba59f7",tooltip="Set the new solution for Roe Dissipation. "];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

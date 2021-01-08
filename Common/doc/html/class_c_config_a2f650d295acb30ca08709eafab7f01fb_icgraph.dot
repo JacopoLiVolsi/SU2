@@ -1,0 +1,27 @@
+digraph "CConfig::GetInlet_Ptotal"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4286 [label="CConfig::GetInlet_Ptotal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4286 -> Node4287 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4287 [label="CHeatSolverFVM::BC\l_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#a3b0b87693870e1b9cf5a16aa644aae8d",tooltip="Impose the inlet boundary condition. "];
+  Node4286 -> Node4288 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4288 [label="CEulerSolver::SetUniform\lInlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a4cad878e307c4d62adb7fc96d4f4c1de",tooltip="Set a uniform inlet profile. "];
+  Node4286 -> Node4289 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4289 [label="CFEM_DG_EulerSolver\l::BoundaryStates_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#af993f01423bbb8e24b8c2bb565bf55eb",tooltip="Function, which computes the boundary states in the integration points of the boundary face by applyi..."];
+  Node4289 -> Node4290 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4290 [label="CFEM_DG_EulerSolver\l::BC_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ade8441a575543603f4e4218fb52e33a2",tooltip="Impose the subsonic inlet boundary condition. It is a virtual function, because for Navier-Stokes it ..."];
+  Node4290 -> Node4291 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4291 [label="CFEM_DG_EulerSolver\l::Boundary_Conditions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ae37f8eba6d7793bc4edb5de6e26f992d",tooltip="Function, which computes the spatial residual for the DG discretization. "];
+  Node4291 -> Node4292 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4292 [label="CFEM_DG_EulerSolver\l::ProcessTaskList_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a651cad1a94f2024c75a1a8be347e3375",tooltip="Function, which processes the list of tasks to be executed by the DG solver. "];
+  Node4292 -> Node4293 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4293 [label="CFEM_DG_EulerSolver\l::ComputeSpatialJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ac59d8dae95e3c3cc3ab3feaeb9be4b22",tooltip="Function, which controls the computation of the spatial Jacobian. "];
+  Node4292 -> Node4294 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4294 [label="CFEM_DG_EulerSolver\l::ADER_SpaceTimeIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a7f0da04d44069701db2228210b91c59e",tooltip="Function, to carry out the space time integration for ADER with time accurate local time stepping..."];
+  Node4289 -> Node4295 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4295 [label="CFEM_DG_NSSolver::BC\l_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a2865905d6ed26dcd2d2d850db9366d05",tooltip="Impose the subsonic inlet boundary condition. "];
+  Node4286 -> Node4296 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4296 [label="CIncEulerSolver::SetUniform\lInlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a0332a68b57b75ed9449b5ee5faae4d13",tooltip="Set a uniform inlet profile. "];
+}

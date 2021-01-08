@@ -1,0 +1,23 @@
+digraph "CNumerics::SetAdjointVarGradient"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node351 [label="CNumerics::SetAdjointVar\lGradient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node351 -> Node352 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node352 [label="CAdjEulerSolver::BC\l_Far_Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a67685dedf5d4651cb25fbf3fc0440d24",tooltip="Impose the boundary condition to the far field using characteristics. "];
+  Node351 -> Node353 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node353 [label="CAdjEulerSolver::BC\l_Supersonic_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#ab5c6ba919fde8e3e473f485bb06b2e9c",tooltip="Impose the supersonic inlet boundary condition. "];
+  Node351 -> Node354 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node354 [label="CAdjEulerSolver::BC\l_Supersonic_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a58543ab410a218129586869573316437",tooltip="Impose the supersonic outlet boundary condition. "];
+  Node351 -> Node355 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node355 [label="CAdjEulerSolver::BC\l_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a29398c2203511586508ff9d43e894e41",tooltip="Impose the inlet boundary condition. "];
+  Node351 -> Node356 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node356 [label="CAdjEulerSolver::BC\l_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a0b3408be5adebd52b79bd3c5227cbe9d",tooltip="Impose the outlet boundary condition. "];
+  Node351 -> Node357 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node357 [label="CAdjNSSolver::Viscous\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#a8f0a8d26c8b3df3f9dbbbf7c98a6a18e",tooltip="Compute the viscous residuals for the adjoint equation. "];
+  Node351 -> Node358 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node358 [label="CAdjNSSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#af2cb5ceadb98384f7504b6f7c6e6840c",tooltip="Source term computation. "];
+  Node351 -> Node359 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node359 [label="CAdjTurbSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_turb_solver.html#a4747f82b90660beb3b54cb04a3b5a9ef",tooltip="Source term computation. "];
+}

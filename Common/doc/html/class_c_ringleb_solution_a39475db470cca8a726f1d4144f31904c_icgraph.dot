@@ -1,0 +1,9 @@
+digraph "CRinglebSolution::GetSolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node19 [label="CRinglebSolution::GetSolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="CRinglebSolution::GetBCState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_ringleb_solution.html#a6bd4e163b7a3c29ad77deae0c7e29667",tooltip="Get the boundary conditions state for an exact solution. "];
+}

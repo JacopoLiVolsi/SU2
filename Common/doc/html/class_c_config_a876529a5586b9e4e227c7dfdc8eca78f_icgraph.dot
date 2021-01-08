@@ -1,0 +1,11 @@
+digraph "CConfig::GetKind_Inlet"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5082 [label="CConfig::GetKind_Inlet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5082 -> Node5083 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5083 [label="CAdjEulerSolver::BC\l_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a29398c2203511586508ff9d43e894e41",tooltip="Impose the inlet boundary condition. "];
+  Node5082 -> Node5084 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5084 [label="CEulerSolver::BC_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aabbe4c302452f52fcbe5cdf7022e6c9a",tooltip="Impose a subsonic inlet boundary condition. "];
+}

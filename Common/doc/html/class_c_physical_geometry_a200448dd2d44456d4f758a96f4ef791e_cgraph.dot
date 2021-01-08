@@ -1,0 +1,27 @@
+digraph "CPhysicalGeometry::SetCoord_Smoothing"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1177 [label="CPhysicalGeometry::\lSetCoord_Smoothing",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1177 -> Node1178 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1178 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node1177 -> Node1179 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1179 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node1177 -> Node1180 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1180 [label="CPoint::SetCoord_Old",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#adf2ad5a32dadb7d620d98434dfc3b930",tooltip="Set the value of the vector Coord_Old for implicit smoothing. "];
+  Node1177 -> Node1181 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1181 [label="CEdge::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#aee33b61d646e3fe59a4e23284ab1bf33",tooltip="Get the nodes of the edge. "];
+  Node1177 -> Node1182 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1182 [label="CPoint::AddCoord_Sum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ada7e05f1f9b373785da92b7545e75677",tooltip="Add the value of the coordinates to the Coord_Sum vector for implicit smoothing. "];
+  Node1177 -> Node1183 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1183 [label="CPoint::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#adbb78f3c01711ed0349897f845e3f2d8",tooltip="Get the number of points that compose the control volume. "];
+  Node1177 -> Node1184 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1184 [label="CPoint::GetCoord_Sum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a0b8f9e969ce9c1deb7b5a64fd458ddec",tooltip="Get the value of the summed coordinates for implicit smoothing. "];
+  Node1177 -> Node1185 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1185 [label="CPoint::GetCoord_Old",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a85ffeb03728dfc550157f98927ae44e4",tooltip="Get the value of the old coordinates for implicit smoothing. "];
+  Node1177 -> Node1186 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1186 [label="CPoint::SetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a65e00c853fad29849662f3a66d56f7e0",tooltip="Set the coordinates for the control volume. "];
+  Node1177 -> Node1187 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1187 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+}

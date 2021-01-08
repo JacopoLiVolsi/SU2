@@ -1,0 +1,17 @@
+digraph "CDiscAdjFluidIteration::Iterate"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node25 [label="CDiscAdjFluidIteration\l::Iterate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node25 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node25 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="CConfig::GetFrozen\l_Visc_Disc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb146862f57545364350419287581bbc",tooltip="Provides information about the way in which the turbulence will be treated by the disc..."];
+  Node25 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="CConfig::GetWeakly\l_Coupled_Heat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb13f6471b2c0bbef919ae9d8fe95f68",tooltip="Get the heat equation. "];
+  Node25 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="CSolver::ExtractAdjoint\l_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a0b7f25a4fd331448b0d5e45687d30744",tooltip="A virtual member. "];
+  Node25 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="CSolver::ExtractAdjoint\l_Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a679c7c6937c728fb502fa1d725947379",tooltip="A virtual member. "];
+}

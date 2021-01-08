@@ -1,0 +1,28 @@
+digraph "CDummyMeshFEM_DG::CDummyMeshFEM_DG"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CDummyMeshFEM_DG::CDummy\lMeshFEM_DG",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="CBaseMPIWrapper::GetSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a1e80850252f6e4bfc8cd5275d6e3a615"];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CBaseMPIWrapper::GetRank",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a801c6612161d6960c5cf25435f244101"];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CConfig::GetnZone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a33f1af516d14a4d3815b577c37398773",tooltip="Gets the number of zones in the mesh file. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node0 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node0 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CConfig::GetnLevels\l_TimeAccurateLTS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a957e791919e7c6947131c06aedc7ff8d",tooltip="Get the number of time levels for time accurate local time stepping. "];
+  Node0 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CConfig::GetnDim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3319ba2443ebe1c18080d12a8e751083",tooltip="Gets the number of dimensions in the mesh file. "];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CConfig::GetMesh_FileName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2c779b77a2bca4ae322c2610db25b6f2",tooltip="Get name of the input grid. "];
+  Node0 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CConfig::GetMesh_FileFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad15c7eadd9c6afcb43f60f8d7c9f27f9",tooltip="Get the format of the input/output grid. "];
+}

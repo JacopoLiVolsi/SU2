@@ -1,0 +1,15 @@
+digraph "CDiscAdjSinglezoneDriver::SetRecording"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node977 [label="CDiscAdjSinglezoneDriver\l::SetRecording",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node977 -> Node978 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node978 [label="CDiscAdjSinglezoneDriver\l::MainRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#af4087bc4859a336b67555336d8f28aaf",tooltip="Record the main computational path. "];
+  Node978 -> Node979 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node979 [label="CDiscAdjSinglezoneDriver\l::Preprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#a2d0785572312526d0bd695a14dd405f2",tooltip="Preprocess the single-zone iteration. "];
+  Node977 -> Node980 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node980 [label="CDiscAdjSinglezoneDriver\l::SecondaryRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#ad328a74dd89ed2e335b22c4bf2b53cb0",tooltip="Record the secondary computational path. "];
+  Node980 -> Node981 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node981 [label="CDiscAdjSinglezoneDriver\l::Postprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#af0ac923c07d86674b252c28df9a115da",tooltip="Postprocess the adjoint iteration for ZONE_0. "];
+}

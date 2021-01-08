@@ -1,0 +1,32 @@
+digraph "CConfig::GetWrt_Residuals"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13855 [label="CConfig::GetWrt_Residuals",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13855 -> Node13856 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13856 [label="COutputLegacy::MergeSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#af30cc9d6a1d32da2af7043901a5914cf",tooltip="Merge the solution into a data structure used for output file writing. "];
+  Node13856 -> Node13857 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13857 [label="COutputLegacy::SetResult\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aa817439538e8cf82f82acbfa0bf7e735",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+  Node13855 -> Node13858 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13858 [label="COutputLegacy::SetRestart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#adadfc4d06c13f5fa3d6c9e21688329f4",tooltip="Write a native SU2 restart file. "];
+  Node13858 -> Node13857 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13858 -> Node13859 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13859 [label="COutputLegacy::SetResult\l_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a25b90eb5e2bd0f05f92a89f0768f2181",tooltip="Writes and organizes the all the output files, except the history one, for serial computations with t..."];
+  Node13855 -> Node13860 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13860 [label="COutputLegacy::LoadLocal\lData_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a83e5de863b29fe3a222074d93d696d57",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node13860 -> Node13861 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13861 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+  Node13855 -> Node13862 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13862 [label="COutputLegacy::LoadLocal\lData_IncFlow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a2d955089c8894a2eb795970f06e7900d",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node13862 -> Node13861 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13855 -> Node13863 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13863 [label="COutputLegacy::LoadLocal\lData_AdjFlow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a37180b5adabfb37cdc540e99cd43e347",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node13863 -> Node13861 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13855 -> Node13864 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13864 [label="COutputLegacy::LoadLocal\lData_Elasticity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#affd55f3cde485db80b04475bec5dd600",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node13864 -> Node13861 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13855 -> Node13865 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13865 [label="COutputLegacy::LoadLocal\lData_Base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#acd1d0d237e417b19c6a4cdb2f3e79a6a",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node13865 -> Node13861 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

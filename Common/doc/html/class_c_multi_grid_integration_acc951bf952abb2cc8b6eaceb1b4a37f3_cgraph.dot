@@ -1,0 +1,31 @@
+digraph "CMultiGridIntegration::SetRestricted_Residual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node544 [label="CMultiGridIntegration\l::SetRestricted_Residual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node544 -> Node545 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node545 [label="CSolver::GetnVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a65c22046b0cf1938ba22648912d04680",tooltip="Get the number of variables of the problem. "];
+  Node544 -> Node546 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node546 [label="CGeometry::GetnPointDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a4fc7de3bff7b6f8c35717016d6f8fcb2",tooltip="Get number of real points (that belong to the domain). "];
+  Node544 -> Node547 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node547 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node544 -> Node548 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node548 [label="CVariable::SetRes_TruncErrorZero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#ac78097c62e9266762a797187b9359133",tooltip="Set the truncation error to zero. "];
+  Node544 -> Node549 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node549 [label="CPoint::GetnChildren_CV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#aa32b71744384b293260648bff1de9a5c",tooltip="Get the number of children of an agglomerated control volume. "];
+  Node544 -> Node550 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node550 [label="CPoint::GetChildren_CV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a821d9feaa7488e42dfca27a349776f0a",tooltip="Get the children control volume of an agglomerated control volume. "];
+  Node544 -> Node551 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node551 [label="CSysVector::GetBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a0f53b910eb47537bbedcade1fa4b7e5e",tooltip="Get the value of the residual. "];
+  Node544 -> Node552 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node552 [label="CVariable::AddRes_TruncError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a5e3d6b7dec34468623c04c0c48ad9046",tooltip="Add a value to the truncation error. "];
+  Node544 -> Node553 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node553 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node544 -> Node554 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node554 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node544 -> Node555 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node555 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node544 -> Node556 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node556 [label="CVariable::SetVel_ResTrunc\lError_Zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a92862deec361a5684a566713972c359f",tooltip="Set the velocity of the truncation error to zero. "];
+}

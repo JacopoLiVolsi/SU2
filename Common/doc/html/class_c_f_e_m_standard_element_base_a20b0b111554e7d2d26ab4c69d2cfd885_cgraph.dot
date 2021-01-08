@@ -1,0 +1,22 @@
+digraph "CFEMStandardElementBase::LagrangianBasisFunctionAndDerivativesTetrahedron"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node282 [label="CFEMStandardElementBase\l::LagrangianBasisFunctionAnd\lDerivativesTetrahedron",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node282 -> Node283 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node283 [label="CFEMStandardElementBase\l::Vandermonde3D_Tetrahedron",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#ac2f155b5affdcbb9a3b6ba942743e724",tooltip="Function, which computes the Vandermonde matrix for a standard tetrahedron. "];
+  Node283 -> Node284 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node284 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node284 -> Node285 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node285 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node282 -> Node286 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node286 [label="CFEMStandardElementBase\l::InverseMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#af353f709009424cbc2a120f9d86c5443",tooltip="Static function, which computes the inverse of the given square matrix. "];
+  Node286 -> Node284 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node282 -> Node287 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node287 [label="CFEMStandardElementBase\l::MatMulRowMajor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#a7125e7dfe720d068372e54aed46612d5",tooltip="Function, which carries out a matrix matrix multiplication to obtain data in points and stores the re..."];
+  Node287 -> Node284 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node282 -> Node288 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node288 [label="CFEMStandardElementBase\l::GradVandermonde3D_Tetrahedron",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#a3e01f18b9815735900ea82f40f2c0937",tooltip="Function, which computes the gradients of the Vandermonde matrix for a standard tetrahedron. "];
+  Node288 -> Node284 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,23 @@
+digraph "CConfig::GetWallFunction_Treatment"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13665 [label="CConfig::GetWallFunction\l_Treatment",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13665 -> Node13666 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13666 [label="CMeshFEM_DG::WallFunction\lPreprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a098dcce939b1b802fc8946cbd4d9d0c6",tooltip="Function, which carries out the preprocessing tasks when wall functions are used. ..."];
+  Node13666 -> Node13667 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13667 [label="CDriver::Geometrical\l_Preprocessing_DGFEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a2d9ea1c3d957f03fa5e22fa55e3369a6",tooltip="Do the geometrical preprocessing for the DG FEM solver. "];
+  Node13667 -> Node13668 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13668 [label="CDriver::Geometrical\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#ad3d55fa299acdb779a7772bcee249004",tooltip="Construction of the edge-based data structure and the multigrid structure. "];
+  Node13668 -> Node13669 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13669 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node13665 -> Node13670 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13670 [label="CPhysicalGeometry::\lDetermineDonorElementsWall\lFunctions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#acef4e18142b580bf09f21e5b71387d5f",tooltip="Determine the donor elements for the boundary elements on viscous wall boundaries when wall functions..."];
+  Node13665 -> Node13671 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13671 [label="CPhysicalGeometry::\lComputeFEMGraphWeights",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#ac8396196dddd6caec922418eaf7d7a2a",tooltip="Compute the weights of the FEM graph for ParMETIS. "];
+  Node13665 -> Node13672 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13672 [label="CIncNSSolver::BC_Isothermal_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#aff9a4fe7596b26665f888b60a39d5076",tooltip="Impose an isothermal temperature condition at the wall. "];
+  Node13665 -> Node13673 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13673 [label="CIncNSSolver::BC_Conjugate\lHeat_Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#a63488a5dc1ba150b2b0d74b389c9cfa7",tooltip="Impose the (received) conjugate heat variables. "];
+}

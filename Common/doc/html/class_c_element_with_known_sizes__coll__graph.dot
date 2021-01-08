@@ -1,0 +1,15 @@
+digraph "CElementWithKnownSizes&lt; NGAUSS, NNODE, NDIM &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="CElementWithKnownSizes\l\< NGAUSS, NNODE, NDIM \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_element.html",tooltip="Abstract class for defining finite elements. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Ks_ab\nNodalExtrap\nCurrentCoord\nKt_a\nMab\nNodalStress\nFDL_a\nRefCoord\nGaussWeight" ,fontname="Helvetica"];
+  Node4 [label="C2DContainer\< su2double \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c2_d_container.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="container_helpers::\lAccessorImpl\< su2double,\l Scalar_t, Store, AlignSize,\l StaticRows, StaticCols \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcontainer__helpers_1_1_accessor_impl.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_data" ,fontname="Helvetica"];
+  Node6 [label="Scalar_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

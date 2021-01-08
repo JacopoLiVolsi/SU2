@@ -1,0 +1,18 @@
+digraph "CConfig::GetKind_FEM_Flow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4913 [label="CConfig::GetKind_FEM_Flow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4913 -> Node4914 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4914 [label="CDriver::Geometrical\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#ad3d55fa299acdb779a7772bcee249004",tooltip="Construction of the edge-based data structure and the multigrid structure. "];
+  Node4914 -> Node4915 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4915 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node4913 -> Node4916 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4916 [label="CDriver::Solver_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#add15058928d0b7462a7b8257417d0914",tooltip="Definition and allocation of all solution classes. "];
+  Node4916 -> Node4915 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4913 -> Node4917 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4917 [label="CDriver::Solver_Restart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#aa80035d9abc789c07b30280d2435dcf6",tooltip="Restart of the solvers from the restart files. "];
+  Node4917 -> Node4915 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4917 -> Node4916 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

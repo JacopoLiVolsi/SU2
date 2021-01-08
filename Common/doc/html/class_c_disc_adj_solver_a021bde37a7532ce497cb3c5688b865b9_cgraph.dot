@@ -1,0 +1,41 @@
+digraph "CDiscAdjSolver::RegisterObj_Func"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node182 [label="CDiscAdjSolver::Register\lObj_Func",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node182 -> Node183 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node183 [label="CConfig::GetnObj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab5f5e64d5919ca8e665c421c9477bb0d",tooltip="Get the total number of objectives in kind_objective list. "];
+  Node182 -> Node184 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node184 [label="CConfig::GetKind_ObjFunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2d4389021feaed9f2e62f0475f73a718",tooltip="Get the kind of objective function. There are several options: Drag coefficient, Lift coefficient..."];
+  Node182 -> Node185 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node185 [label="CSolver::GetTotal_CD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a2de51adfd0ff0405b84131c77015ffd1",tooltip="A virtual member. "];
+  Node182 -> Node186 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node186 [label="CConfig::GetFixed_CL_Mode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#abd97282665d4d8885078aac10735e708",tooltip="Get information about whether to use fixed CL mode. "];
+  Node182 -> Node187 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node187 [label="CConfig::GetdCD_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2711fd3e48037f5972691787f2a5ea78",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node182 -> Node188 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node188 [label="CSolver::GetTotal_CL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a5906c2d5d62b8d42c46eee1c3b10de45",tooltip="A virtual member. "];
+  Node182 -> Node189 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node189 [label="CConfig::GetFixed_CM_Mode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa088e1372bbec7000a6641002ac9c918",tooltip="Get information about whether to use fixed CL mode. "];
+  Node182 -> Node190 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node190 [label="CConfig::GetdCD_dCMy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aad14b8b395e08377d8b7bf4d0bc1e65f",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node182 -> Node191 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node191 [label="CSolver::GetTotal_CMy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a1e2ee41721815352e3a19bb590efa5f7",tooltip="A virtual member. "];
+  Node182 -> Node192 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node192 [label="CSolver::GetTotal_CSF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a8f318a49d72bd8220e1b4b247d40e3ec",tooltip="A virtual member. "];
+  Node182 -> Node193 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node193 [label="CSolver::GetTotal_CEff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a680bce124e33f0b146811cbd6a17977d",tooltip="A virtual member. "];
+  Node182 -> Node194 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node194 [label="CSolver::GetTotal_CMx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ab1b70f2f23cd7182aabed2345acf972a",tooltip="A virtual member. "];
+  Node182 -> Node195 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node195 [label="CSolver::GetTotal_CMz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a1cd31e36c65bd9538dc697a4571c2eeb",tooltip="A virtual member. "];
+  Node182 -> Node196 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node196 [label="CSolver::GetTotal_CEquivArea",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a4ffd2d7583ed3e1ddf9f48980fe67e7e",tooltip="A virtual member. "];
+  Node182 -> Node197 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node197 [label="CSolver::GetTotal_Buffet\l_Metric",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a3ab7a2350fa50c961ee3afdd21c32c03",tooltip="A virtual member. "];
+  Node182 -> Node198 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node198 [label="CSolver::GetTotal_ComboObj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a234f0c31ae1324c6867cbdcb7a787831",tooltip="Provide the total \"combo\" objective (weighted sum of other values). "];
+  Node182 -> Node199 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node199 [label="AD::RegisterOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#ae381e45797545e980376c4aeb3f5afdc",tooltip="Registers the variable as an output. I.e. as the root of the computational graph. ..."];
+}

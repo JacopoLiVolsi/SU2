@@ -1,0 +1,34 @@
+digraph "CMeshFEM_DG::CreateConnectivitiesFace"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node23 [label="CMeshFEM_DG::CreateConnectivitiesFace",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node23 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="CMeshFEM_DG::CreateConnectivities\lLineAdjacentTriangle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#acb7bab4b54a146f20ede3a9166fe588e",tooltip="Function, which computes the correct sequence of the connectivities of a line adjacent to a triangle..."];
+  Node24 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node25 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node23 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="CMeshFEM_DG::CreateConnectivities\lLineAdjacentQuadrilateral",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a4fb3520f706f8d2ba60234d4f24135bf",tooltip="Function, which computes the correct sequence of the connectivities of a line adjacent to a quadrilat..."];
+  Node27 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="CMeshFEM_DG::CreateConnectivities\lTriangleAdjacentTetrahedron",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#ad4130d41eba1f6b79e85b61299634bd7",tooltip="Function, which computes the correct sequence of the connectivities of a triangle adjacent to a tetra..."];
+  Node28 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="CMeshFEM_DG::CreateConnectivities\lTriangleAdjacentPyramid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a4d207fc760ca3407a7c591fc54de5a4e",tooltip="Function, which computes the correct sequence of the connectivities of a triangle adjacent to a pyram..."];
+  Node29 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="CMeshFEM_DG::CreateConnectivities\lQuadrilateralAdjacentPyramid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a6d656891925b1c6b1b578f9c4182f75e",tooltip="Function, which computes the correct sequence of the connectivities of a quad adjacent to a pyramid..."];
+  Node30 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="CMeshFEM_DG::CreateConnectivities\lTriangleAdjacentPrism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#ad79d1f1c8c2a00f6b0d15237e8b8a665",tooltip="Function, which computes the correct sequence of the connectivities of a triangle adjacent to a prism..."];
+  Node31 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="CMeshFEM_DG::CreateConnectivities\lQuadrilateralAdjacentPrism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a353e4cfb3864d403be8f516c07393b79",tooltip="Function, which computes the correct sequence of the connectivities of a quad adjacent to a prism..."];
+  Node32 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="CMeshFEM_DG::CreateConnectivities\lQuadrilateralAdjacentHexahedron",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a5b2b65c1526c671a74628d035a2a3863",tooltip="Function, which computes the correct sequence of the connectivities of a quad adjacent to a hexahedro..."];
+  Node33 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

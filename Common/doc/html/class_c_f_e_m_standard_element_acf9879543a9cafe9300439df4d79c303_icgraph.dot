@@ -1,0 +1,31 @@
+digraph "CFEMStandardElement::GetNDOFsPerSubElem"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node111 [label="CFEMStandardElement\l::GetNDOFsPerSubElem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node111 -> Node112 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node112 [label="CFEMStandardElement\l::GetNSubElemsType1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#a98ec79da0fb17aece3cc0b183f573d35",tooltip="Function, which makes available the number of sub-elements of type 1 for plotting. "];
+  Node112 -> Node113 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node113 [label="CFEMDataSorter::SortConnectivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_data_sorter.html#a64ab49586d00b34fc18ba4f672b9ff10",tooltip="Sort the connectivities (volume and surface) into data structures used for output file writing..."];
+  Node112 -> Node114 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node114 [label="COutputLegacy::MergeVolumetric\lConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aebd7f2340686aea0308fbf38e7a46e72",tooltip="Merge the connectivity for a single element type from all processors for the FEM solver. "];
+  Node114 -> Node115 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node115 [label="COutputLegacy::MergeConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a73ac84a0613171e5b77c86055b8a1487",tooltip="Merge the FEM geometry into a data structure used for output file writing. "];
+  Node115 -> Node116 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node116 [label="COutputLegacy::SetResult\l_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a25b90eb5e2bd0f05f92a89f0768f2181",tooltip="Writes and organizes the all the output files, except the history one, for serial computations with t..."];
+  Node115 -> Node117 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 [label="COutputLegacy::SetBaseline\lResult_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a46c1054bac8c154e4f3464cc1913e06f",tooltip="Writes and organizes the all the output files, except the history one, for DG-FEM simulations (SU2_SO..."];
+  Node112 -> Node118 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node118 [label="COutputLegacy::SortVolumetric\lConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#abc49d710d98d6921d3495de012071ae8",tooltip="Sort the connectivity for a single volume element type into a linear partitioning across all processo..."];
+  Node118 -> Node119 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node119 [label="COutputLegacy::SortConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a03c1f74460acd9a255fc75baab610f33",tooltip="Sort the connectivities (volume and surface) into data structures used for output file writing (DG-FE..."];
+  Node119 -> Node120 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node120 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+  Node111 -> Node121 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="CFEMStandardElement\l::GetNSubElemsType2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#aed0f6668e771b651a934b5b5d3de7d90",tooltip="Function, which makes available the number of sub-elements of type 2 for plotting. "];
+  Node121 -> Node113 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 -> Node114 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 -> Node118 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 -> Node114 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

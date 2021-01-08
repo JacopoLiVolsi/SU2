@@ -1,0 +1,40 @@
+digraph "CSolver::AddRes_Max_BGS"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node82 [label="CSolver::AddRes_Max_BGS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node82 -> Node83 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="CDiscAdjSolver::ComputeResidual\l_Multizone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#a0571227566a9d9d7c6c1e92cae9258cc",tooltip="Compute the multizone residual. "];
+  Node82 -> Node84 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 [label="CDiscAdjFEASolver::\lComputeResidual_Multizone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#a32f5c8be66ec4d2bf848568c37819ca6",tooltip="Compute the multizone residual. "];
+  Node82 -> Node85 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 [label="CSolver::SetResidual_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ad78622b122d602d0759ab940356e328a",tooltip="Communicate the value of the max residual and RMS residual. "];
+  Node85 -> Node83 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 -> Node84 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 -> Node86 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node86 [label="CSolver::ComputeResidual\l_Multizone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#afd38147efa0d4b98523b480945a0df7c",tooltip="Set the value of the max residual and RMS residual. "];
+  Node86 -> Node87 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node87 [label="CDiscAdjMultizoneDriver\l::SetResidual_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a0376ab7c0cb40fa091ff34d3b99e597c",tooltip="Compute BGS residuals. "];
+  Node87 -> Node88 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node88 [label="CDiscAdjMultizoneDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#af996aecdb6d20aa4fc81c9b67295abf5",tooltip="[Overload] Run an discrete adjoint update of all solvers within multiple zones. "];
+  Node88 -> Node89 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node89 [label="CDiscAdjMultizoneDriver\l::StartSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a75de0a1a482ceeed4301a384f1515092",tooltip="[Overload] Launch the computation for discrete adjoint multizone problems. "];
+  Node86 -> Node90 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node90 [label="CDiscAdjFSIDriver::\lBGSConvergence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_s_i_driver.html#a781367e50928b0355cd9cfb145cc7e58",tooltip="Check the convergence of BGS subiteration process. "];
+  Node90 -> Node91 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node91 [label="CDiscAdjFSIDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_s_i_driver.html#a2e965d6e9c4dcfc296077cae225cab21",tooltip="Run a Discrete Adjoint iteration for the FSI problem. "];
+  Node86 -> Node92 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node92 [label="CMultizoneDriver::OuterConvergence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multizone_driver.html#ae72bb40195e4066bc4be4adfb0df29e9",tooltip="Check the convergence at the outer level. "];
+  Node92 -> Node93 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node93 [label="CMultizoneDriver::Run\l_GaussSeidel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multizone_driver.html#a8036223cdbe0c0d4552f17f6bad9189b",tooltip="Run a Block Gauss-Seidel iteration in all physical zones. "];
+  Node93 -> Node94 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node94 [label="CMultizoneDriver::StartSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multizone_driver.html#a03cfc000c383ef0d86d34e1c6aef5ff3",tooltip="[Overload] Launch the computation for multizone problems. "];
+  Node92 -> Node95 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node95 [label="CMultizoneDriver::Run\l_Jacobi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multizone_driver.html#a1bf2824daac5a10e8fb7387676eee338",tooltip="Run a Block-Jacobi iteration in all physical zones. "];
+  Node95 -> Node94 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 -> Node96 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="CDiscAdjMeshSolver\l::ComputeResidual_Multizone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_mesh_solver.html#a2cd1ce7cb9f504db2856980964ccdbb1",tooltip="Set the value of the max residual and RMS residual. "];
+  Node82 -> Node86 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 -> Node96 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

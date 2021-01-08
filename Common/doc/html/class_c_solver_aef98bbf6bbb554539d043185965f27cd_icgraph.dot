@@ -1,0 +1,9 @@
+digraph "CSolver::GetExtAverageNu"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1453 [label="CSolver::GetExtAverageNu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1453 -> Node1454 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1454 [label="CTurbSASolver::BC_Inlet\l_MixingPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_a_solver.html#a75c50cab5888e913ea59dd03c23be8e6",tooltip="Impose the inlet boundary condition. "];
+}

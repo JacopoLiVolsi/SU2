@@ -1,0 +1,19 @@
+digraph "CDiscAdjFEASolver::ExtractAdjoint_CrossTerm_Geometry"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node68 [label="CDiscAdjFEASolver::\lExtractAdjoint_CrossTerm\l_Geometry",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node68 -> Node69 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="CConfig::GetAitkenStatRelax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5b95a87f29d55981d1b951c6b1fb011d",tooltip="Get Aitken&#39;s relaxation parameter for static relaxation cases. "];
+  Node68 -> Node70 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node68 -> Node71 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node71 [label="CVariable::GetAdjointSolution\l_LocalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#ac5984c894a267f112858ea45ec48a544",tooltip="Get the adjoint values of the solution. "];
+  Node71 -> Node72 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="AD::GetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a305f38ce692ce2f4269c05a022fe2ff5",tooltip="Extracts the adjoint value at index. "];
+  Node68 -> Node73 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="CDiscAdjFEAVariable\l::GetGeometry_CrossTerm\l_Derivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_variable.html#a726cf7b0bdbb60e2c5c9ecb9935f55fd",tooltip="A virtual member. Get the geometry solution. "];
+  Node68 -> Node74 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node74 [label="CDiscAdjFEAVariable\l::SetGeometry_CrossTerm\l_Derivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_variable.html#a953c2418cad92aa3a784e7118a044471",tooltip="A virtual member. Set the value of the mesh solution (adjoint). "];
+}

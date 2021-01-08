@@ -1,0 +1,17 @@
+digraph "CUpwTurkel_Flow::ComputeResidual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="CUpwTurkel_Flow::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CNumerics::GetInviscidProjFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a1a9e44996dede2330af84349204dc312",tooltip="Compute the projected inviscid flux vector. "];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CNumerics::GetPrecondJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a2119d12bb28240e3ce984d5bc364cc54",tooltip="Computation of the matrix Td, this matrix diagonalize the preconditioned conservative Jacobians in th..."];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CNumerics::GetinvRinvPe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a78861f15d77ff9051ba74053c78c0c3b",tooltip="Computation of the matrix Rinv*Pe. "];
+  Node10 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CNumerics::GetRMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a3f042c66721e551295800446dd0a607c",tooltip="Computation of the matrix R. "];
+  Node10 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CNumerics::GetInviscidProjJac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#ae0225b473263a9547a2445c423ba7dce",tooltip="Compute the projection of the inviscid Jacobian matrices. "];
+}

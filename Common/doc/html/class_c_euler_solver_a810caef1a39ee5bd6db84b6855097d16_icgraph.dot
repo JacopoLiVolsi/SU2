@@ -1,0 +1,15 @@
+digraph "CEulerSolver::ComputeBackVelocity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1192 [label="CEulerSolver::ComputeBack\lVelocity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1192 -> Node1193 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1193 [label="CEulerSolver::BC_TurboRiemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a0066305803a18511fb89b8951f4e4866",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node1192 -> Node1194 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1194 [label="CEulerSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aa4c3988e3ce0c18460b5c069650c57b0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node1192 -> Node1195 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1195 [label="CEulerSolver::SetFreeStream\l_TurboSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac116e43e6c7eef751bc807908f235c31",tooltip="Set the solution using the Freestream values. "];
+  Node1192 -> Node1196 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1196 [label="CEulerSolver::TurboAverage\lProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ab408049d3b4fecc224653176c8d7885a",tooltip="It computes average quantities along the span for turbomachinery analysis. "];
+}

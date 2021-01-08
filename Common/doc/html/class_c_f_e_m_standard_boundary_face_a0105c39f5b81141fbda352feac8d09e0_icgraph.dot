@@ -1,0 +1,23 @@
+digraph "CFEMStandardBoundaryFace::GetNSubFaces"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node145 [label="CFEMStandardBoundaryFace\l::GetNSubFaces",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node145 -> Node146 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node146 [label="CSurfaceFEMDataSorter\l::SortConnectivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_surface_f_e_m_data_sorter.html#ac9c76b1a4428cb3d4369903e2c501ea0",tooltip="Sort the connectivities (volume and surface) into data structures used for output file writing..."];
+  Node145 -> Node147 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node147 [label="COutputLegacy::MergeSurface\lConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#ae2f0e0809fd6b66b5f8a21442928822c",tooltip="Merge the connectivity for a single element type from all processors for the FEM solver. "];
+  Node147 -> Node148 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node148 [label="COutputLegacy::MergeConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a73ac84a0613171e5b77c86055b8a1487",tooltip="Merge the FEM geometry into a data structure used for output file writing. "];
+  Node148 -> Node149 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node149 [label="COutputLegacy::SetResult\l_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a25b90eb5e2bd0f05f92a89f0768f2181",tooltip="Writes and organizes the all the output files, except the history one, for serial computations with t..."];
+  Node148 -> Node150 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node150 [label="COutputLegacy::SetBaseline\lResult_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a46c1054bac8c154e4f3464cc1913e06f",tooltip="Writes and organizes the all the output files, except the history one, for DG-FEM simulations (SU2_SO..."];
+  Node145 -> Node151 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node151 [label="COutputLegacy::SortSurface\lConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aaea72591e79d4d42ef73da74b0159f6e",tooltip="Sort the connectivity for a single surface element type into a linear partitioning across all process..."];
+  Node151 -> Node152 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node152 [label="COutputLegacy::SortConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a03c1f74460acd9a255fc75baab610f33",tooltip="Sort the connectivities (volume and surface) into data structures used for output file writing (DG-FE..."];
+  Node152 -> Node153 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node153 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+}

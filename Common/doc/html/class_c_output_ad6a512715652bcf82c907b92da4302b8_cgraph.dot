@@ -1,0 +1,21 @@
+digraph "COutput::Convergence_Monitoring"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node114 [label="COutput::Convergence\l_Monitoring",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node114 -> Node115 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node115 [label="CConfig::GetStartConv_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a31f05501521eae78c33bf19374b5e0de",tooltip="Get the number of iterations that are not considered in the convergence criteria. ..."];
+  Node114 -> Node116 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node116 [label="COutput::SetHistoryOutput\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#a1c1f836992f419544472329a44b8836e",tooltip="Set the value of a history output field. "];
+  Node116 -> Node117 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node117 -> Node118 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node118 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node114 -> Node119 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node119 [label="CBaseMPIWrapper::Reduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a860dfcee07be04be175e06d342e0fc68"];
+  Node119 -> Node120 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node120 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node114 -> Node121 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="CBaseMPIWrapper::Bcast",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#ae816a2f124ea5ae95337418462514df5"];
+}

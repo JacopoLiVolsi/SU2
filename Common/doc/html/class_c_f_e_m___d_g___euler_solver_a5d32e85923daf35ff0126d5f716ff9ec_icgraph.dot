@@ -1,0 +1,21 @@
+digraph "CFEM_DG_EulerSolver::BoundaryStates_Euler_Wall"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node805 [label="CFEM_DG_EulerSolver\l::BoundaryStates_Euler_Wall",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node805 -> Node806 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node806 [label="CFEM_DG_EulerSolver\l::BC_Euler_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a8f81a6011b17cbb65c8be69d517e8faf",tooltip="Impose via the residual the Euler wall boundary condition. It is a virtual function, because for Navier-Stokes it is overwritten. "];
+  Node806 -> Node807 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node807 [label="CFEM_DG_EulerSolver\l::Boundary_Conditions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ae37f8eba6d7793bc4edb5de6e26f992d",tooltip="Function, which computes the spatial residual for the DG discretization. "];
+  Node807 -> Node808 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node808 [label="CFEM_DG_EulerSolver\l::ProcessTaskList_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a651cad1a94f2024c75a1a8be347e3375",tooltip="Function, which processes the list of tasks to be executed by the DG solver. "];
+  Node808 -> Node809 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node809 [label="CFEM_DG_EulerSolver\l::ComputeSpatialJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ac59d8dae95e3c3cc3ab3feaeb9be4b22",tooltip="Function, which controls the computation of the spatial Jacobian. "];
+  Node808 -> Node810 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node810 [label="CFEM_DG_EulerSolver\l::ADER_SpaceTimeIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a7f0da04d44069701db2228210b91c59e",tooltip="Function, to carry out the space time integration for ADER with time accurate local time stepping..."];
+  Node805 -> Node811 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node811 [label="CFEM_DG_NSSolver::BC\l_Euler_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a93ed201e11f8456abfc0a57841b781a7",tooltip="Impose via the residual the Euler wall boundary condition. "];
+  Node805 -> Node812 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node812 [label="CFEM_DG_NSSolver::BC\l_HeatFlux_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a7cc49cd695dcd974a1d791de72502323",tooltip="Impose a constant heat-flux condition at the wall. "];
+}

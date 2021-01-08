@@ -1,0 +1,39 @@
+digraph "CFEMDataSorter::SortConnectivity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node15 [label="CFEMDataSorter::SortConnectivity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node15 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node18 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node15 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="CMeshFEM::GetNVolElemOwned",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a665c7319b3d55a66ba83cd074b35f9a5",tooltip="Function, which makes available the number of owned volume elements in the local FEM mesh..."];
+  Node15 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="CMeshFEM::GetVolElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a838a7b4f4ad6edcf019a90113a09b290",tooltip="Function, which makes available the volume elements in the local FEM mesh. "];
+  Node15 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="CMeshFEM_DG::GetStandard\lElementsSol",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a54499dba9b28c04afe4fde40692e13b6",tooltip="Function, which makes available the standard volume elements of the solution. "];
+  Node15 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="CFEMStandardElement\l::GetVTK_Type1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#af8341526567ab110cca6bde3bded9f3a",tooltip="Function, which makes available the type of the element in subConn1ForPlotting. "];
+  Node15 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="CFEMStandardElement\l::GetVTK_Type2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#aceecd4b24a3a260337af723d7bd2ee3a",tooltip="Function, which makes available the type of the element in subConn2ForPlotting. "];
+  Node15 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="CFEMStandardElement\l::GetNSubElemsType1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#a98ec79da0fb17aece3cc0b183f573d35",tooltip="Function, which makes available the number of sub-elements of type 1 for plotting. "];
+  Node25 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="CFEMStandardElement\l::GetNDOFsPerSubElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#acf9879543a9cafe9300439df4d79c303",tooltip="Function, which makes available the number of DOFs of a linear element, used for plotting. "];
+  Node26 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="CFEMStandardElement\l::GetNSubElemsType2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#aed0f6668e771b651a934b5b5d3de7d90",tooltip="Function, which makes available the number of sub-elements of type 2 for plotting. "];
+  Node27 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="CFEMStandardElement\l::GetSubConnType1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#ac0dffdaff16ceaef311c4a98e6f51e45",tooltip="Function, which makes available the the connectivity of the linear elements of type 1 as a const poin..."];
+  Node15 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="CFEMStandardElement\l::GetSubConnType2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#a8a7bcd33a66a45d70d62b72bf8609b85",tooltip="Function, which makes available the the connectivity of the linear elements of type 2 as a const poin..."];
+}

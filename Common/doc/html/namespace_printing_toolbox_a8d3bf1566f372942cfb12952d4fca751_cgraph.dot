@@ -1,0 +1,11 @@
+digraph "PrintingToolbox::trim"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node209 [label="PrintingToolbox::trim",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node209 -> Node210 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node210 [label="PrintingToolbox::ltrim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_printing_toolbox.html#a434608584a5874efeb4799797cdda637"];
+  Node209 -> Node211 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node211 [label="PrintingToolbox::rtrim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_printing_toolbox.html#a60e271bb6995e55d8c0a0522b714940d"];
+}

@@ -1,0 +1,29 @@
+digraph "CNumerics::SetSecondary"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node799 [label="CNumerics::SetSecondary",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node799 -> Node800 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node800 [label="CEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a9cb1da16bea732300854a351ebca2ed3",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node799 -> Node801 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node801 [label="CEulerSolver::BC_Sym\l_Plane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a71ca5f93ed7a83463e87d5b4c27dc345",tooltip="Impose the symmetry boundary condition using the residual. "];
+  Node801 -> Node802 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node802 [label="CEulerSolver::BC_Euler_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad8509337406d93d81c7f11fbf32d0243",tooltip="Impose via the residual the Euler wall boundary condition. "];
+  Node799 -> Node803 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node803 [label="CEulerSolver::BC_Riemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a22c21d18fa626d489db9a387234bd9d0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node799 -> Node804 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node804 [label="CEulerSolver::BC_TurboRiemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a0066305803a18511fb89b8951f4e4866",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node799 -> Node805 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node805 [label="CEulerSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aa4c3988e3ce0c18460b5c069650c57b0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node799 -> Node806 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node806 [label="CEulerSolver::BC_Fluid\l_Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#accb01b3402a9de5c1c23fdaef60c831f",tooltip="Impose the interface state across sliding meshes. "];
+  Node799 -> Node807 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node807 [label="CNSSolver::Viscous\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a4b946463a9868faaa73fa1f40ee5e675",tooltip="Compute the viscous residuals. "];
+  Node799 -> Node808 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node808 [label="CIncEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a935da79a4e1b1fe9c59bc86024164256",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node799 -> Node809 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node809 [label="CIncEulerSolver::BC\l_Sym_Plane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aeba8d18ef3cf25b277fa28c4865746f2",tooltip="Impose the symmetry boundary condition using the residual. "];
+  Node809 -> Node810 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node810 [label="CIncEulerSolver::BC\l_Euler_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a81fb399877303596f6487b890a351036",tooltip="Impose via the residual the Euler wall boundary condition. "];
+}

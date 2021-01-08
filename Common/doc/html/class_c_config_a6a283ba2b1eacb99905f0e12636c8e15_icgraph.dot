@@ -1,0 +1,25 @@
+digraph "CConfig::GetKind_ADER_Predictor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4602 [label="CConfig::GetKind_ADER\l_Predictor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4602 -> Node4603 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4603 [label="CMeshFEM_DG::MetricTerms\lVolumeElements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a4f30fa4373463f802c8d6f685c837263",tooltip="Function, which computes the metric terms of the volume elements. "];
+  Node4603 -> Node4604 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4604 [label="CDriver::Geometrical\l_Preprocessing_DGFEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a2d9ea1c3d957f03fa5e22fa55e3369a6",tooltip="Do the geometrical preprocessing for the DG FEM solver. "];
+  Node4604 -> Node4605 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4605 [label="CDriver::Geometrical\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#ad3d55fa299acdb779a7772bcee249004",tooltip="Construction of the edge-based data structure and the multigrid structure. "];
+  Node4605 -> Node4606 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4606 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node4602 -> Node4607 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4607 [label="CFEM_DG_EulerSolver\l::CFEM_DG_EulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a677fa998b78bd489a3f8bee0d56623dd"];
+  Node4602 -> Node4608 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4608 [label="CFEM_DG_EulerSolver\l::ADER_DG_PredictorStep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a53f3bd445632823baa18657a29553842",tooltip="Function, carries out the predictor step of the ADER-DG time integration. "];
+  Node4608 -> Node4609 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4609 [label="CFEM_DG_EulerSolver\l::ProcessTaskList_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a651cad1a94f2024c75a1a8be347e3375",tooltip="Function, which processes the list of tasks to be executed by the DG solver. "];
+  Node4609 -> Node4610 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4610 [label="CFEM_DG_EulerSolver\l::ComputeSpatialJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ac59d8dae95e3c3cc3ab3feaeb9be4b22",tooltip="Function, which controls the computation of the spatial Jacobian. "];
+  Node4609 -> Node4611 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4611 [label="CFEM_DG_EulerSolver\l::ADER_SpaceTimeIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a7f0da04d44069701db2228210b91c59e",tooltip="Function, to carry out the space time integration for ADER with time accurate local time stepping..."];
+}

@@ -1,0 +1,39 @@
+digraph "CNumerics::SetAdjointVar"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node333 [label="CNumerics::SetAdjointVar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node333 -> Node334 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node334 [label="CAdjEulerSolver::Centered\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#ac56fe0a4cf0b8df7730fab2eea3344ff",tooltip="Compute the spatial integration using a centered scheme for the adjoint equations. "];
+  Node333 -> Node335 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node335 [label="CAdjEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#adb4102935a0144846d17a35a62769c09",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node333 -> Node336 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node336 [label="CAdjEulerSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a7f84ce73b97f6944598308b63ac3c7b1",tooltip="Source term integration. "];
+  Node333 -> Node337 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node337 [label="CAdjEulerSolver::BC\l_Interface_Boundary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#ac54c28f4bac73bebccd34906b727d65d",tooltip="Impose the interface boundary condition using the residual. "];
+  Node333 -> Node338 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node338 [label="CAdjEulerSolver::BC\l_NearField_Boundary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a6c1c40af267be8a86c468da9f997a22e",tooltip="Impose the near-field boundary condition using the residual. "];
+  Node333 -> Node339 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node339 [label="CAdjEulerSolver::BC\l_Far_Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a67685dedf5d4651cb25fbf3fc0440d24",tooltip="Impose the boundary condition to the far field using characteristics. "];
+  Node333 -> Node340 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node340 [label="CAdjEulerSolver::BC\l_Supersonic_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#ab5c6ba919fde8e3e473f485bb06b2e9c",tooltip="Impose the supersonic inlet boundary condition. "];
+  Node333 -> Node341 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node341 [label="CAdjEulerSolver::BC\l_Supersonic_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a58543ab410a218129586869573316437",tooltip="Impose the supersonic outlet boundary condition. "];
+  Node333 -> Node342 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node342 [label="CAdjEulerSolver::BC\l_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a29398c2203511586508ff9d43e894e41",tooltip="Impose the inlet boundary condition. "];
+  Node333 -> Node343 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node343 [label="CAdjEulerSolver::BC\l_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a0b3408be5adebd52b79bd3c5227cbe9d",tooltip="Impose the outlet boundary condition. "];
+  Node333 -> Node344 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node344 [label="CAdjEulerSolver::BC\l_Engine_Inflow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a395d57c7acf725dada7e915365531a55",tooltip="Impose the engine inflow adjoint boundary condition. "];
+  Node333 -> Node345 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node345 [label="CAdjEulerSolver::BC\l_Engine_Exhaust",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a849edf613e9c9756e59648dad6cb102e",tooltip="Impose the engine exhaust boundary condition. "];
+  Node333 -> Node346 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node346 [label="CAdjEulerSolver::BC\l_ActDisk_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#ad0f40712ed34d6f42813fbb82540e851",tooltip="Impose an actuator disk inlet boundary condition. "];
+  Node333 -> Node347 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node347 [label="CAdjEulerSolver::BC\l_ActDisk_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a7a751b3b46dbed8e213bb7090633807d",tooltip="Impose an actuator disk outlet boundary condition. "];
+  Node333 -> Node348 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node348 [label="CAdjNSSolver::Viscous\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#a8f0a8d26c8b3df3f9dbbbf7c98a6a18e",tooltip="Compute the viscous residuals for the adjoint equation. "];
+  Node333 -> Node349 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node349 [label="CAdjNSSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#af2cb5ceadb98384f7504b6f7c6e6840c",tooltip="Source term computation. "];
+}

@@ -1,0 +1,39 @@
+digraph "CIncEulerVariable::GetGradient_Primitive"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node64 [label="CIncEulerVariable::\lGetGradient_Primitive",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node64 -> Node65 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 [label="CIncEulerSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aaa52f2305bb8f93d51fd0910c1ddeec9",tooltip="Source term integration. "];
+  Node64 -> Node66 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node66 [label="CIncEulerSolver::SetPrimitive\l_Gradient_GG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a856a6db100c40b9c3df557d1dfe72c2b",tooltip="Compute the gradient of the primitive variables using Green-Gauss method, and stores the result in th..."];
+  Node66 -> Node67 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node67 [label="CIncEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aabd902b10cc9b41b6b2c406efba0ac41",tooltip="Compute primitive variables and their gradients. "];
+  Node66 -> Node68 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node68 [label="CIncNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#ae84f6e86313acd1da80c505b4eab81e5",tooltip="Restart residual and compute gradients. "];
+  Node64 -> Node69 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="CIncEulerSolver::SetPrimitive\l_Gradient_LS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a3e3355cbeb9d265f4073cca113b9d46e",tooltip="Compute the gradient of the primitive variables using a Least-Squares method, and stores the result i..."];
+  Node69 -> Node67 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 -> Node68 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 -> Node70 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 [label="CIncEulerSolver::SetPrimitive\l_Limiter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a00bd56828c4e41ec3ff1e8753cb320ec",tooltip="Compute the limiter of the primitive variables. "];
+  Node70 -> Node67 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 -> Node68 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node71 [label="CIncEulerSolver::BC\l_Far_Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#abd738a529f7f77c97587c6785b0f40d3",tooltip="Impose the far-field boundary condition using characteristics. "];
+  Node64 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="CIncEulerSolver::BC\l_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a318f79c279e467bbea21276ccd08ca92",tooltip="Impose a subsonic inlet boundary condition. "];
+  Node64 -> Node73 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="CIncEulerSolver::BC\l_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aa64170c7c7a237d0c7427a8359c2967a",tooltip="Impose the outlet boundary condition. "];
+  Node64 -> Node74 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node74 [label="CIncEulerSolver::BC\l_Sym_Plane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aeba8d18ef3cf25b277fa28c4865746f2",tooltip="Impose the symmetry boundary condition using the residual. "];
+  Node74 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node75 [label="CIncEulerSolver::BC\l_Euler_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a81fb399877303596f6487b890a351036",tooltip="Impose via the residual the Euler wall boundary condition. "];
+  Node64 -> Node76 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node76 [label="CIncEulerSolver::BC\l_Fluid_Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aea0b5dfbda9ea8d1f475d35be5e851a0",tooltip="Impose the interface state across sliding meshes. "];
+  Node64 -> Node77 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node77 [label="CIncNSSolver::Viscous\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#aa65d2bbb69dab2bbe40d3495d80da207",tooltip="Compute the viscous residuals. "];
+  Node64 -> Node78 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node78 [label="CIncNSSolver::Friction\l_Forces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#a5a106c634b0c06ac4a68b1a6241f203a",tooltip="Compute the viscous forces and all the addimensional coefficients. "];
+}

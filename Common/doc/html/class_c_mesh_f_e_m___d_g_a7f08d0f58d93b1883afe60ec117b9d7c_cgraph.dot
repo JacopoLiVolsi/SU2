@@ -1,0 +1,18 @@
+digraph "CMeshFEM_DG::MetricTermsSurfaceElements"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node228 [label="CMeshFEM_DG::MetricTerms\lSurfaceElements",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node228 -> Node229 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node229 [label="CMeshFEM_DG::MetricTerms\lMatchingFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a3d4741a57aa6edce660894e7873ea3e6",tooltip="Function, which computes the metric terms for internal matching faces. "];
+  Node229 -> Node230 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node230 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node229 -> Node231 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node231 [label="CMeshFEM::ComputeNormalsFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a39cdfd81f63b622abce3ad330dd9a7dc",tooltip="Function, which computes the information of the normals in the integration points of a face..."];
+  Node229 -> Node232 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node232 [label="CMeshFEM::ComputeGradients\lCoordinatesFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a48069591b944b34acf03ae78aa5493c3",tooltip="Function, which computes the gradients of the parametric coordinates w.r.t. the Cartesian coordinates..."];
+  Node228 -> Node233 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node233 [label="CMeshFEM::MetricTermsBoundary\lFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#aaeee8619d2ccd25d5d35332f2afd13b7",tooltip="Function, which computes the metric terms of the faces of a physical boundary. "];
+  Node233 -> Node230 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

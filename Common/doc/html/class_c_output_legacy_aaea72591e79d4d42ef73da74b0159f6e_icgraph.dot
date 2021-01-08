@@ -1,0 +1,11 @@
+digraph "COutputLegacy::SortSurfaceConnectivity_FEM"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2039 [label="COutputLegacy::SortSurface\lConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2039 -> Node2040 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2040 [label="COutputLegacy::SortConnectivity_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a03c1f74460acd9a255fc75baab610f33",tooltip="Sort the connectivities (volume and surface) into data structures used for output file writing (DG-FE..."];
+  Node2040 -> Node2041 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2041 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+}

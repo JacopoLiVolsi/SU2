@@ -1,0 +1,19 @@
+digraph "CVariable::GetAuxVar"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node453 [label="CVariable::GetAuxVar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node453 -> Node454 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node454 [label="CAdjEulerSolver::Inviscid\l_Sensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a35fcc75148b249c56e3625ba23196856",tooltip="Compute the inviscid sensitivity of the functional. "];
+  Node453 -> Node455 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node455 [label="CSolver::SetAuxVar\l_Gradient_GG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a4831cdf2f3fdb7f6d3d84dca312e75eb",tooltip="Compute the Green-Gauss gradient of the auxiliary variable. "];
+  Node455 -> Node456 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node456 [label="CIncEulerSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aaa52f2305bb8f93d51fd0910c1ddeec9",tooltip="Source term integration. "];
+  Node453 -> Node457 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node457 [label="CSolver::SetAuxVar\l_Gradient_LS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ad1e68e5025fe328093b12e61f4bffe60",tooltip="Compute the Least Squares gradient of the auxiliary variable. "];
+  Node457 -> Node456 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node453 -> Node458 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node458 [label="CSolver::SetAuxVar\l_Surface_Gradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a6b28903b085c98aa8e6581246dd6bb94",tooltip="Compute the Least Squares gradient of an auxiliar variable on the profile surface. "];
+  Node458 -> Node454 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

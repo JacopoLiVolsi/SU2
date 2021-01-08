@@ -1,0 +1,33 @@
+digraph "CTransLMSolver::Upwind_Residual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node303 [label="CTransLMSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node303 -> Node304 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node304 [label="CGeometry::GetnEdge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a7d6e1e1d1e46da8f55ecbe1a9380530a",tooltip="Get number of edges. "];
+  Node303 -> Node305 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node305 [label="CEdge::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#aee33b61d646e3fe59a4e23284ab1bf33",tooltip="Get the nodes of the edge. "];
+  Node303 -> Node306 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node306 [label="CNumerics::SetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a41903d97957f351cd9ee63ca404985b1",tooltip="Set the value of the normal vector to the face between two points. "];
+  Node303 -> Node307 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node307 [label="CEdge::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#ada210a6f0643f444e7e491fc4ed9e662",tooltip="Copy the the normal vector of a face. "];
+  Node303 -> Node308 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node308 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node303 -> Node309 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node309 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node303 -> Node310 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node310 [label="CNumerics::SetConservative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a604ce85ec9e2d43769acacc7d03ae0f7",tooltip="Set the value of the conservative variables. "];
+  Node303 -> Node311 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node311 [label="CNumerics::SetTransVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#aa7f127e3c401dc4dba39f043ddbd9dda",tooltip="Set the value of the turbulent variable. "];
+  Node303 -> Node312 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node312 [label="CNumerics::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#abe734316e0047f463f059fd77a281958",tooltip="Compute the numerical residual. "];
+  Node303 -> Node313 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node313 [label="CSysVector::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#acd4c36df2ea0b7ad473944cff9bf5d72",tooltip="Add val_residual to the residual. "];
+  Node303 -> Node314 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node314 [label="CSysVector::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a732b302ca148d38b442bfe7e096a81be",tooltip="Subtract val_residual to the residual. "];
+  Node303 -> Node315 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node315 [label="CSysMatrix::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a85def3109e5aa5307268ca830a8f6522",tooltip="Adds the specified block to the sparse matrix. "];
+  Node303 -> Node316 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node316 [label="CSysMatrix::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#af913d33707e948c30fff5a62773ef5c6",tooltip="Subtracts the specified block to the sparse matrix. "];
+}

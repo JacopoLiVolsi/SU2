@@ -1,0 +1,47 @@
+digraph "CHeatSolverFVM::Centered_Residual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node207 [label="CHeatSolverFVM::Centered\l_Residual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node207 -> Node208 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node208 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node207 -> Node209 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node209 [label="CSolver::GetnVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a65c22046b0cf1938ba22648912d04680",tooltip="Get the number of variables of the problem. "];
+  Node207 -> Node210 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node210 [label="CGeometry::GetnEdge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a7d6e1e1d1e46da8f55ecbe1a9380530a",tooltip="Get number of edges. "];
+  Node207 -> Node211 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node211 [label="CEdge::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#aee33b61d646e3fe59a4e23284ab1bf33",tooltip="Get the nodes of the edge. "];
+  Node207 -> Node212 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node212 [label="CNumerics::SetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a41903d97957f351cd9ee63ca404985b1",tooltip="Set the value of the normal vector to the face between two points. "];
+  Node207 -> Node213 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node213 [label="CEdge::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#ada210a6f0643f444e7e491fc4ed9e662",tooltip="Copy the the normal vector of a face. "];
+  Node207 -> Node214 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node214 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node207 -> Node215 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node215 [label="CVariable::GetPrimitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#abe38982ec51efc8391ef27fc434f37ad",tooltip="A virtual member. "];
+  Node207 -> Node216 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node216 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node207 -> Node217 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node217 [label="CNumerics::SetUndivided\l_Laplacian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a8818257f545fe207ff69f6c0337f3b26",tooltip="Set the value of undivided laplacian. "];
+  Node207 -> Node218 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node218 [label="CVariable::GetUndivided\l_Laplacian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a1dd90f7826e65b6b9fe15becaf82b1af",tooltip="Get the undivided laplacian of the solution. "];
+  Node207 -> Node219 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node219 [label="CNumerics::SetNeighbor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a3a325233fabba63421dd5d0596b6a7ca",tooltip="Set the number of neighbor to a point. "];
+  Node207 -> Node220 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node220 [label="CPoint::GetnNeighbor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a73ffb61e70753ea46e80edba22cf39a4",tooltip="Get the number of neighbor of a point. "];
+  Node207 -> Node221 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node221 [label="CNumerics::SetPrimitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#af72b17d397adf09beed2e99e2daf895c",tooltip="Set the value of the primitive variables. "];
+  Node207 -> Node222 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node222 [label="CNumerics::SetTemperature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a42f988dfe419c655c6162802ff355bc2",tooltip="Set the value of the temperature. "];
+  Node207 -> Node223 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node223 [label="CNumerics::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#abe734316e0047f463f059fd77a281958",tooltip="Compute the numerical residual. "];
+  Node207 -> Node224 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node224 [label="CSysVector::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#acd4c36df2ea0b7ad473944cff9bf5d72",tooltip="Add val_residual to the residual. "];
+  Node207 -> Node225 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node225 [label="CSysVector::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a732b302ca148d38b442bfe7e096a81be",tooltip="Subtract val_residual to the residual. "];
+  Node207 -> Node226 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node226 [label="CSysMatrix::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a85def3109e5aa5307268ca830a8f6522",tooltip="Adds the specified block to the sparse matrix. "];
+  Node207 -> Node227 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node227 [label="CSysMatrix::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#af913d33707e948c30fff5a62773ef5c6",tooltip="Subtracts the specified block to the sparse matrix. "];
+}

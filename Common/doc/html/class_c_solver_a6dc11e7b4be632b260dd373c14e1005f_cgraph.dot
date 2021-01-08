@@ -1,0 +1,9 @@
+digraph "CSolver::UpdateSolution_BGS"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5538 [label="CSolver::UpdateSolution_BGS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5538 -> Node5539 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5539 [label="CVariable::Set_BGSSolution_k",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#aa47456564bac33106a460be201d4c843",tooltip="Set the value of the solution in the previous BGS subiteration. "];
+}

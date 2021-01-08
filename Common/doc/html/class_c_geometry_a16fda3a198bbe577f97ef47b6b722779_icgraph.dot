@@ -1,0 +1,15 @@
+digraph "CGeometry::SetMultiGridWallHeatFlux"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2801 [label="CGeometry::SetMultiGridWall\lHeatFlux",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2801 -> Node2802 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2802 [label="CGeometry::UpdateCustomBoundary\lConditions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a65d6e849b384ed08a35930f360aedda6",tooltip="Update the multi-grid structure for the customized boundary conditions. "];
+  Node2802 -> Node2803 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2803 [label="CDriver::PythonInterface\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#aff17f90d1f041cac6ddaf9d3f7450dbe",tooltip="Initialize Python interface functionalities. "];
+  Node2803 -> Node2804 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2804 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node2802 -> Node2805 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2805 [label="CFluidDriver::BoundaryConditions\lUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_driver.html#a8b928c1cdfe3939f98c61e0fc5eea91b",tooltip="Process the boundary conditions and update the multigrid structure. "];
+}

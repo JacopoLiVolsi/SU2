@@ -1,0 +1,24 @@
+digraph "COutputLegacy::MergeCoordinates_FEM"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node480 [label="COutputLegacy::MergeCoordinates_FEM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node480 -> Node481 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node481 [label="CGeometry::GetnDim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a2af01006c0c4f74ba089582f1a3587fe",tooltip="Get number of coordinates. "];
+  Node480 -> Node482 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node482 [label="CMeshFEM::GetNVolElemOwned",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a665c7319b3d55a66ba83cd074b35f9a5",tooltip="Function, which makes available the number of owned volume elements in the local FEM mesh..."];
+  Node480 -> Node483 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node483 [label="CMeshFEM::GetVolElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a838a7b4f4ad6edcf019a90113a09b290",tooltip="Function, which makes available the volume elements in the local FEM mesh. "];
+  Node480 -> Node484 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node484 [label="CConfig::GetSystemMeasurements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#afbc5c2467fd51eafa6e05e5bda7d3d3e",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node480 -> Node485 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node485 [label="CConfig::GetKind_SU2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a47df59fbfd882e2fa8fc71691292659b",tooltip="Get the kind of SU2 software component. "];
+  Node480 -> Node486 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node486 [label="CBaseMPIWrapper::Gather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a39e59958c13f7fefc74062ba2ff149f1"];
+  Node486 -> Node487 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node487 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node480 -> Node488 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node488 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node488 -> Node487 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

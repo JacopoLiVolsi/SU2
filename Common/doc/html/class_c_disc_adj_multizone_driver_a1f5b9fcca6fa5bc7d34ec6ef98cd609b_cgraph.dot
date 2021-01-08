@@ -1,0 +1,13 @@
+digraph "CDiscAdjMultizoneDriver::ComputeAdjoints"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node43 [label="CDiscAdjMultizoneDriver\l::ComputeAdjoints",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node43 -> Node44 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="AD::ClearAdjoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a6ccf47c72e8115f9e31054b4c06271c4",tooltip="Clears the currently stored adjoints but keeps the computational graph. "];
+  Node43 -> Node45 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="CIteration::InitializeAdjoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_iteration.html#a18fa7f7314e6b88f8c69e4fee4ba0f11"];
+  Node43 -> Node46 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="AD::ComputeAdjoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a02ec06d93629cdd0724d268318d4dfe7",tooltip="Computes the adjoints, i.e. the derivatives of the output with respect to the input variables..."];
+}

@@ -1,0 +1,15 @@
+digraph "CMultizoneOutput::WriteScreen_Output"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node34 [label="CMultizoneOutput::WriteScreen\l_Output",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node34 -> Node35 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="CConfig::GetScreen\l_Wrt_Freq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ade360779f0fcdd59ba60da1a35efe2ec",tooltip="GetScreen_Wrt_Freq_Inner. "];
+  Node34 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="COutput::PrintOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#af0c23405e1093223066c9c79ee13985a",tooltip="Check whether we should print output. "];
+  Node34 -> Node37 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="CConfig::GetnTime_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ace224394bbd9137de2367a6bd1cc9dcd",tooltip="Get the number of time iterations. "];
+  Node34 -> Node38 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="CConfig::GetnOuter_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac064f9d284f2fd5d74beaf2f046f82fd",tooltip="Get the number of outer iterations. "];
+}

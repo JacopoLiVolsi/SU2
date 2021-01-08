@@ -1,0 +1,15 @@
+digraph "CFEM_DG_EulerSolver::SetInitialCondition"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1549 [label="CFEM_DG_EulerSolver\l::SetInitialCondition",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1549 -> Node1550 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1550 [label="CVerificationSolution\l::GetInitialCondition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_verification_solution.html#ae0d9099de6019292409ff4a51ec0be4e",tooltip="Get the exact solution at the current position and t = 0. "];
+  Node1550 -> Node1551 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1551 [label="CVerificationSolution\l::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_verification_solution.html#ab164e273b6f703a9a3439db2dcd82c2d",tooltip="Get the exact solution at the current position and time. "];
+  Node1551 -> Node1552 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1552 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node1552 -> Node1553 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1553 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+}

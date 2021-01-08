@@ -1,0 +1,43 @@
+digraph "CDiscAdjSinglezoneDriver::DirectRun"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node30 [label="CDiscAdjSinglezoneDriver\l::DirectRun",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node30 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="CIteration::SetMesh\l_Deformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_iteration.html#a7bc004221a3dacd43e122779bd4e43b8",tooltip="Run the mesh deformation algorithms. "];
+  Node31 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="CConfig::GetDeform_Mesh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab43e0c11962342e0026903eb68c44417",tooltip="Get information about whether the mesh will be deformed using pseudo linear elasticity. "];
+  Node31 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="CConfig::GetMultizone\l_Problem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad9233b666b21e43c18592925be61cc9b",tooltip="Get whether the simulation we are running is a multizone simulation. "];
+  Node31 -> Node34 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="AD::TapeActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#ae36087cd7b6b57c78d7baf0357a19d10",tooltip="Check if the tape is active. "];
+  Node31 -> Node35 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="AD::StopRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a97670077955608a47f6cc7ee3548e424",tooltip="Stops the recording of the operations and variables. "];
+  Node31 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="CSolver::SetMesh_Stiffness",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a84c04afa2750b5f4db24c69973662182",tooltip="A virtual member. "];
+  Node31 -> Node37 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="CSolver::DeformMesh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a2e03b9113fa7287f4060e28807a21e0b",tooltip="A virtual member. "];
+  Node31 -> Node38 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="AD::StartRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#aa411ae358859e654be30b522fdf7a7ba",tooltip="Start the recording of the operations and involved variables. If called, the computational graph of a..."];
+  Node30 -> Node39 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="CIteration::Preprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_iteration.html#af1d75d5451aaca89dc18a7ce3dac1f0d",tooltip="A virtual member. "];
+  Node30 -> Node40 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="CIteration::Iterate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_iteration.html#ac2bfb6eea40949bb8c99db679ff8503e",tooltip="A virtual member. "];
+  Node30 -> Node41 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="CIteration::Postprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_iteration.html#aec4ebac21acef1f59bbf60f123d35c07",tooltip="A virtual member. "];
+  Node30 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="CDiscAdjSinglezoneDriver\l::Print_DirectResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#a35029eecec59cd17b9a6d307d2f9ccb7",tooltip="Print out the direct residuals. "];
+  Node42 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node42 -> Node44 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="CGeometry::GetnDim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a2af01006c0c4f74ba089582f1a3587fe",tooltip="Get number of coordinates. "];
+  Node42 -> Node45 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="CConfig::GetKind_Turb\l_Model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a40aaed07fc5844d505d2c0b7076594d7",tooltip="Get the kind of the turbulence model. "];
+  Node42 -> Node46 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="CConfig::GetFrozen\l_Visc_Disc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb146862f57545364350419287581bbc",tooltip="Provides information about the way in which the turbulence will be treated by the disc..."];
+  Node42 -> Node47 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="CConfig::GetWeakly\l_Coupled_Heat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb13f6471b2c0bbef919ae9d8fe95f68",tooltip="Get the heat equation. "];
+  Node42 -> Node48 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="CConfig::GetGeometricConditions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac036c2fe542984a827ea2f21b3b4d4a6",tooltip="Geometric conditions for the structural solver. "];
+}

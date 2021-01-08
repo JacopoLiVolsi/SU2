@@ -1,0 +1,39 @@
+digraph "CGeneralAvgGrad_Flow::ComputeResidual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="CGeneralAvgGrad_Flow\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="AD::StartPreacc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a2a1e9c4b109fd751e84132c9495de3ff",tooltip="Starts a new preaccumulation section and sets the input variables. "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="AD::SetPreaccIn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#aad703f3a82e509c88b92ae638f75383c",tooltip="Sets the scalar input of a preaccumulation section. "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CAvgGrad_Base::CorrectGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#a470c512dfe09e88794803e92446f0818",tooltip="Apply a correction to the gradient to reduce the truncation error. "];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CAvgGrad_Base::SetReynolds\lStressMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#abb9a6cb2c20f802800015908cadec4d9",tooltip="Initialize the Reynolds Stress Matrix. "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CAvgGrad_Base::GetMeanRate\lOfStrainMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#adbd319d8eedb2de5e0c1432eb35fade0",tooltip="Get the mean rate of strain matrix based on velocity gradients. "];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CAvgGrad_Base::SetPerturbedRSM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#ab2505232ec88f7ef79d1575537fee1ea",tooltip="Perturb the Reynolds stress tensor based on parameters. "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CNumerics::EigenDecomposition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a8d238ff66beb884300d488c39c3fac96",tooltip="Decomposes the symmetric matrix A_ij, into eigenvectors and eigenvalues. "];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CNumerics::tred2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#acd1d6d16d5ec49ae0bf895999a2ac8b0",tooltip="tred2 "];
+  Node11 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CNumerics::tql2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#add21b152c88506f60551ae5ea65c9831",tooltip="tql2 "];
+  Node10 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CNumerics::EigenRecomposition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#af2ee3fa8edacef9e0279f7ac0c323a57",tooltip="Recomposes the eigenvectors and eigenvalues into a matrix. "];
+  Node4 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CAvgGrad_Base::SetStress\lTensor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#a78834d71888152df8585815995703abc",tooltip="Calculate the viscous + turbulent stress tensor. "];
+  Node4 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CAvgGrad_Base::GetViscous\lProjFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#ac6bc0860c8904a418a3189d04615c9fa",tooltip="Compute the projection of the viscous fluxes into a direction. "];
+  Node4 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="CAvgGrad_Base::SetTauJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#ac67127ab3c3a68aaab1ae8060e36556c",tooltip="Calculate the Jacobian of the viscous + turbulent stress tensor. "];
+  Node4 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="CAvgGrad_Base::GetViscous\lProjJacs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#a7d3df94e33f6f421be59457d22c94551",tooltip="TSL-Approximation of Viscous NS Jacobians. "];
+  Node4 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="AD::SetPreaccOut",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#ab3a80e24a5c8c2beb01131c57dcae4b2",tooltip="Sets the scalar output of a preaccumulation section. "];
+  Node4 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="AD::EndPreacc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a309d057a92faa60a3a760254678ec9ea",tooltip="Ends a preaccumulation section and computes the local Jacobi matrix of a code section using the varia..."];
+}

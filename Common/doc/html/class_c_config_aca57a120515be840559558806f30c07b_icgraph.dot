@@ -1,0 +1,46 @@
+digraph "CConfig::GetKind_Gradient_Method_Recon"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4988 [label="CConfig::GetKind_Gradient\l_Method_Recon",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4988 -> Node4989 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4989 [label="CAdjEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a4ae0ed840dc8335fd921399625ba794f",tooltip="Initialize the residual vectors. "];
+  Node4988 -> Node4990 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4990 [label="CAdjNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#ac16dab76e2c1d86bc7d70ca9f41fd668",tooltip="Restart residual and compute gradients. "];
+  Node4988 -> Node4991 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4991 [label="CHeatSolverFVM::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#a0c89f1dbe5cd5a16caaa9a08200e91fd",tooltip="Restart residual and compute gradients. "];
+  Node4988 -> Node4992 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4992 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node4988 -> Node4993 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4993 [label="CEulerSolver::SetPrimitive\l_Gradient_LS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a734d5bd064215fb722477f39993155d4",tooltip="Compute the gradient of the primitive variables using a Least-Squares method, and stores the result i..."];
+  Node4993 -> Node4992 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4993 -> Node4994 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4994 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+  Node4988 -> Node4994 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4988 -> Node4995 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4995 [label="CIncEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aabd902b10cc9b41b6b2c406efba0ac41",tooltip="Compute primitive variables and their gradients. "];
+  Node4988 -> Node4996 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4996 [label="CIncEulerSolver::SetPrimitive\l_Gradient_LS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a3e3355cbeb9d265f4073cca113b9d46e",tooltip="Compute the gradient of the primitive variables using a Least-Squares method, and stores the result i..."];
+  Node4996 -> Node4995 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4996 -> Node4997 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4997 [label="CIncNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#ae84f6e86313acd1da80c505b4eab81e5",tooltip="Restart residual and compute gradients. "];
+  Node4988 -> Node4997 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4988 -> Node4998 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4998 [label="CTurbSASolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_a_solver.html#a225518dc5f0ca6ed894add826aaa16ea",tooltip="Restart residual and compute gradients. "];
+  Node4988 -> Node4999 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4999 [label="CTurbSSTSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_s_t_solver.html#a653cf05307f24374fda6f523ce3130bf",tooltip="Restart residual and compute gradients. "];
+  Node4988 -> Node5000 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5000 [label="CSolver::SetSolution\l_Gradient_LS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ac4d9cf9609d7bdb52e7f1dc9cc8b4c1f",tooltip="Compute the Least Squares gradient of the solution. "];
+  Node5000 -> Node4989 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5000 -> Node4990 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5000 -> Node5001 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5001 [label="CAdjTurbSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_turb_solver.html#abde54ee8e9643c4ee460855be166a80f",tooltip="Initializate the residual vectors. "];
+  Node5000 -> Node4991 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5000 -> Node5002 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5002 [label="CTransLMSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#ac319a1f0946ca2806dbe02c4c9bea65b",tooltip="Restart residual and compute gradients. "];
+  Node5000 -> Node4998 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5000 -> Node4999 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5000 -> Node5003 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5003 [label="CTurbSSTSolver::Postprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_s_t_solver.html#aa5306eec5b89c3c229c2a4c41846eb4d",tooltip="Computes the eddy viscosity. "];
+}

@@ -1,0 +1,23 @@
+digraph "CIncNSSolver::SetPrimitive_Variables"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node696 [label="CIncNSSolver::SetPrimitive\l_Variables",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node696 -> Node697 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node697 [label="CConfig::GetKind_Turb\l_Model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a40aaed07fc5844d505d2c0b7076594d7",tooltip="Get the kind of the turbulence model. "];
+  Node696 -> Node698 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node698 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node696 -> Node699 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node699 [label="CVariable::GetmuT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#ad35ee29420764dda0bbb574f7a7253e7",tooltip="Get the value of the eddy viscosity. "];
+  Node696 -> Node700 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node700 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node696 -> Node701 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node701 [label="CConfig::GetKind_HybridRANSLES",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2dae056d1f8e3385d25e6fbc251f0100",tooltip="Get the Kind of Hybrid RANS/LES. "];
+  Node696 -> Node702 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node702 [label="CVariable::GetDES_Length\lScale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a063db38a4dba2d53a2d76eedfce3e6a0",tooltip="A virtual member. "];
+  Node696 -> Node703 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node703 [label="CVariable::SetDES_Length\lScale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a6d5cc5cc96f650554012b9ec7bcaf605",tooltip="A virtual member. "];
+  Node696 -> Node704 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node704 [label="CSysVector::SetBlock_Zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a9dedcec16bd6d95575de5b99e7a07e78",tooltip="Set the residual to zero. "];
+}

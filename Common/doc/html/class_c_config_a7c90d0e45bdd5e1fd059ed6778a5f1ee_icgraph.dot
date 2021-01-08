@@ -1,0 +1,33 @@
+digraph "CConfig::GetKind_Linear_Solver_Prec"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5089 [label="CConfig::GetKind_Linear\l_Solver_Prec",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5089 -> Node5090 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5090 [label="CSysMatrix\< su2double\l \>::Initialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a26223555fd7147cfd6309a8030d40209",tooltip="Initializes sparse matrix system. "];
+  Node5089 -> Node5091 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5091 [label="CSysSolve\< su2double\l \>::Solve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_solve.html#a47c0bf85c252de49cdb04f254c6b2d2f",tooltip="Solve the linear system using a Krylov subspace method. "];
+  Node5089 -> Node5092 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5092 [label="CAdjEulerSolver::CAdjEuler\lSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a0a739888df9436d4707665d152a7af1a"];
+  Node5089 -> Node5093 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5093 [label="CAdjNSSolver::CAdjNSSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#a323f1dc7c0b9fe00d1911eeeea365d46"];
+  Node5089 -> Node5094 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5094 [label="CAdjTurbSolver::CAdjTurb\lSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_turb_solver.html#a621bdae0b081f25a67425cc037cd90a2"];
+  Node5089 -> Node5095 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5095 [label="CHeatSolverFVM::CHeatSolverFVM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#a42af03c3f465c905fbc3ecbee398f5be",tooltip="Constructor of the class. "];
+  Node5089 -> Node5096 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5096 [label="CEulerSolver::CEulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ae1e74218b4e943111b100d7ddcbd4db9"];
+  Node5089 -> Node5097 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5097 [label="CNSSolver::CNSSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a2a8ad49c42b4546696e631cf44b7788b"];
+  Node5089 -> Node5098 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5098 [label="CIncEulerSolver::CIncEuler\lSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a91f644b8f9a00215bac5bcd31dfc06d8"];
+  Node5089 -> Node5099 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5099 [label="CIncNSSolver::CIncNSSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#a82152ac7e91fb1c5c073d98a1f08e2aa"];
+  Node5089 -> Node5100 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5100 [label="CTransLMSolver::CTransLMSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#a4975cbf30f2954e3da1244832999eda0"];
+  Node5089 -> Node5101 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5101 [label="CTurbSASolver::CTurbSASolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_a_solver.html#a06a8b09d1563dd48f364ff6e97c25cd8"];
+  Node5089 -> Node5102 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5102 [label="CTurbSSTSolver::CTurbSSTSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_s_t_solver.html#a84beba65418c7c2ca4f4843b989b360a"];
+}

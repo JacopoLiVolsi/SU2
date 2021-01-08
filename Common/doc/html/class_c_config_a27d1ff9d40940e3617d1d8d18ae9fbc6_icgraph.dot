@@ -1,0 +1,13 @@
+digraph "CConfig::GetDamp_Correc_Prolong"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1607 [label="CConfig::GetDamp_Correc\l_Prolong",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1607 -> Node1608 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1608 [label="CMultiGridIntegration\l::SetProlongated_Correction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#a5d0d450972f5c004596b3f0abdae3015",tooltip="Set the value of the corrected fine grid solution. "];
+  Node1608 -> Node1609 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1609 [label="CMultiGridIntegration\l::MultiGrid_Cycle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#aa9a52a00a3417c465307ae6aea035f41",tooltip="Perform a Full-Approximation Storage (FAS) Multigrid. "];
+  Node1609 -> Node1610 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1610 [label="CMultiGridIntegration\l::MultiGrid_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#af0b4014222a37402257b735d2ca32a81",tooltip="This subroutine calls the MultiGrid_Cycle and also prepare the multigrid levels and the monitoring..."];
+}

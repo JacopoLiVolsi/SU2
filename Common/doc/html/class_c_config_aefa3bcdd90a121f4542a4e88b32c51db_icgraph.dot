@@ -1,0 +1,24 @@
+digraph "CConfig::GetNew_Elem_Adapt"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node8471 [label="CConfig::GetNew_Elem\l_Adapt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8471 -> Node8472 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8472 [label="CGridAdaptation::SetIndicator_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_grid_adaptation.html#a3212acb4ef87d1b62e0f7bc752122be1",tooltip="Do a complete adaptation of the computational grid. "];
+  Node8472 -> Node8473 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8473 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___m_s_h_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node8471 -> Node8474 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8474 [label="CGridAdaptation::SetIndicator_Adj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_grid_adaptation.html#ac267e271af49d371ca5b36caf55416a0",tooltip="Do a complete adaptation of the computational grid. "];
+  Node8474 -> Node8473 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8471 -> Node8475 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8475 [label="CGridAdaptation::SetIndicator\l_FlowAdj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_grid_adaptation.html#a8819a8390c6e8411a99959ef2b65d46b",tooltip="Do a complete adaptation of the computational grid. "];
+  Node8475 -> Node8473 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8471 -> Node8476 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8476 [label="CGridAdaptation::SetIndicator\l_Robust",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_grid_adaptation.html#afba3648a0e8272b4e4f7374ac66e577a",tooltip="Read the flow solution from the restart file. "];
+  Node8471 -> Node8477 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8477 [label="CGridAdaptation::SetIndicator\l_Computable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_grid_adaptation.html#ae1e4e9e20c447d5407b4363715dbb401",tooltip="Read the flow solution from the restart file. "];
+  Node8477 -> Node8473 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8471 -> Node8478 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8478 [label="CGridAdaptation::SetIndicator\l_Computable_Robust",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_grid_adaptation.html#adfc1f21d5e022c4d02aae3be6cf40645",tooltip="Read the flow solution from the restart file. "];
+}

@@ -1,0 +1,25 @@
+digraph "COutput::Postprocess_HistoryData"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node460 [label="COutput::Postprocess\l_HistoryData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node460 -> Node461 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node461 [label="Signal_Processing::\lAverage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_signal___processing.html#aec2994f4f2c021bc2888a3d0b23a6a6c"];
+  Node460 -> Node462 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node462 [label="COutput::SetInit_Residuals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#a645d669c1ee8eb8a56b92da70d9580af",tooltip="Check whether the base values for relative residuals should be initialized. "];
+  Node460 -> Node463 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node463 [label="COutput::SetHistoryOutput\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#a1c1f836992f419544472329a44b8836e",tooltip="Set the value of a history output field. "];
+  Node463 -> Node464 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node464 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node464 -> Node465 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node465 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node460 -> Node466 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node466 [label="COutput::SetUpdate\l_Averages",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#a93124da0c600a906813ff48a7c0d86ed",tooltip="Check whether the averaged values should be updated. "];
+  Node460 -> Node467 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node467 [label="CConfig::GetTime_Domain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6a11350b3c8d7577318be43cda6f7292",tooltip="Check if the multizone problem is solved for time domain. "];
+  Node460 -> Node468 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node468 [label="CConfig::GetDirectDiff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a16fdb3ee7c760f2f129778f6162a1fe4",tooltip="Get the direct differentation method. "];
+  Node460 -> Node469 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node469 [label="SU2_TYPE::GetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#aaf4331164217013b2f05dda28329fcb1",tooltip="Get the derivative value of the datatype (needs to be implemented for each new type). "];
+}

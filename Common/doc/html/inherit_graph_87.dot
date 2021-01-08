@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CThermalConductivityModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_thermal_conductivity_model.html",tooltip="Main class for defining the Transport-Physical Model a child class for each particular Model (Prandtl..."];
+}

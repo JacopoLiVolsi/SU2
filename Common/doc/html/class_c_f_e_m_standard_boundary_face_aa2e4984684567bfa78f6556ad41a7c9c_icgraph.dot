@@ -1,0 +1,9 @@
+digraph "CFEMStandardBoundaryFace::GetPenaltyConstant"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node155 [label="CFEMStandardBoundaryFace\l::GetPenaltyConstant",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node155 -> Node156 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node156 [label="CFEM_DG_NSSolver::BC\l_Custom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a8e27fad06f1bde21670f2e2990d3027e",tooltip="Impose the user customized boundary condition. "];
+}

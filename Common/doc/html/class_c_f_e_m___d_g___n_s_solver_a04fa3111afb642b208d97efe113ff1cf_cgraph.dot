@@ -1,0 +1,15 @@
+digraph "CFEM_DG_NSSolver::Shock_Capturing_DG_Persson"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node369 [label="CFEM_DG_NSSolver::Shock\l_Capturing_DG_Persson",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node369 -> Node370 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node370 [label="CFEMStandardElement\l::GetNPoly",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#a007e03cd4cc6bd8f37e54411eaf0b23f",tooltip="Function, which makes available the polynomial degree for this standard element. "];
+  Node369 -> Node371 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node371 [label="CFEMStandardElement\l::GetMatVandermondeInv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#a614a01f0feddc3faadac991c7ffc267c",tooltip="Function, which makes available the matrix storage of the inverse of Vandermonde matrix of solution D..."];
+  Node369 -> Node372 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node372 [label="CFluidModel::SetTDState_rhoe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a90fdefd3a55d97d55d5211988c9a7ab1",tooltip="virtual member that would be different for each gas model implemented "];
+  Node369 -> Node373 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node373 [label="CFluidModel::GetSoundSpeed2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a8c0910de10905f2ddcf02f1a9bb7ff61",tooltip="Get fluid speed of sound squared. "];
+}

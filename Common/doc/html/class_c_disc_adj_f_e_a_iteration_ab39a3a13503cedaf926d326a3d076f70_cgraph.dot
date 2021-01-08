@@ -1,0 +1,15 @@
+digraph "CDiscAdjFEAIteration::Iterate"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node19 [label="CDiscAdjFEAIteration\l::Iterate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="CConfig::GetTime_Domain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6a11350b3c8d7577318be43cda6f7292",tooltip="Check if the multizone problem is solved for time domain. "];
+  Node19 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="CSolver::ExtractAdjoint\l_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a0b7f25a4fd331448b0d5e45687d30744",tooltip="A virtual member. "];
+  Node19 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="CSolver::ExtractAdjoint\l_Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a679c7c6937c728fb502fa1d725947379",tooltip="A virtual member. "];
+  Node19 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="CIntegration::SetConvergence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_integration.html#a5f5e3b9ec398e7d4aef31982f90bfc67",tooltip="Set the indicator of the convergence. "];
+}

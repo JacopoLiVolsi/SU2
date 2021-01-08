@@ -1,0 +1,30 @@
+digraph "CSolver::SetResidual_BGS"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4761 [label="CSolver::SetResidual_BGS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4761 -> Node4762 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4762 [label="CSolver::SetRes_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a19d46e6c1923fb176ea88a7edd7e385b",tooltip="Set the residual for BGS subiterations. "];
+  Node4761 -> Node4763 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4763 [label="CSolver::GetRes_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a83cd1ade482300b90aa8ccc6aad03acd",tooltip="Get the residual for BGS subiterations. "];
+  Node4761 -> Node4764 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4764 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node4761 -> Node4765 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4765 [label="CGeometry::GetnPointDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a4fc7de3bff7b6f8c35717016d6f8fcb2",tooltip="Get number of real points (that belong to the domain). "];
+  Node4761 -> Node4766 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4766 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node4766 -> Node4767 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4767 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node4761 -> Node4768 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4768 [label="CSolver::GetRes_Max_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a0663639c53a377bdaa1c66b8ad026ace",tooltip="Get the maximal residual for BGS subiterations. "];
+  Node4761 -> Node4769 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4769 [label="CSolver::GetPoint_Max_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ad858890f4a6dac8b7be18e9cee0e6440",tooltip="Get the maximal residual, this is useful for the convergence history. "];
+  Node4761 -> Node4770 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4770 [label="CSolver::GetPoint_Max\l_Coord_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a593491f3d8806bb331eb35fc7b254663",tooltip="Get the location of the maximal residual, this is useful for the convergence history. "];
+  Node4761 -> Node4771 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4771 [label="CBaseMPIWrapper::Allgather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a55195abbb7206e08a4933fa53cd41923"];
+  Node4771 -> Node4767 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4761 -> Node4772 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4772 [label="CSolver::AddRes_Max_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a0d731347241e2f7c587d5132ebf2019d",tooltip="Adds the maximal residual for BGS subiterations. "];
+}

@@ -1,0 +1,37 @@
+digraph "CFEASolver::Set_ElementProperties"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1129 [label="CFEASolver::Set_ElementProperties",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1129 -> Node1130 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1130 [label="CConfig::GetiZone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac09e21f44792b38adb3f933a4426b25f",tooltip="Provides the number of varaibles. "];
+  Node1129 -> Node1131 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1131 [label="CGeometry::GetnZone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a9c19673865bedc65b6f3a27ba7b81967",tooltip="Get number of zones. "];
+  Node1129 -> Node1132 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1132 [label="CConfig::GetTopology\l_Optimization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aaf3e38ba9bf594bc2d636158d1dbf305",tooltip="Get topology optimization. "];
+  Node1129 -> Node1133 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1133 [label="CConfig::GetFEA_FileName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a03b738830fef0dc39082f4329e59dbb6",tooltip="Get the name of the file with the element properties for structural problems. "];
+  Node1129 -> Node1134 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1134 [label="CConfig::GetMultizone\l_FileName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#af4d81fc4ec805bb4a89f3739048d8824",tooltip="Append the zone index to the restart or the solution files. "];
+  Node1134 -> Node1135 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1135 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node1135 -> Node1136 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1136 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node1129 -> Node1137 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1137 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node1137 -> Node1138 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1138 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node1129 -> Node1139 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1139 [label="CGeometry::GetGlobal\l_nElemDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a5147a23b78a0b45cfb25d76c17ed552d",tooltip="A virtual member. "];
+  Node1129 -> Node1140 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1140 [label="CPrimalGrid::GetGlobalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a403a8b285dcea42521ab72b931a83e1a",tooltip="Get the element global index in a parallel computation. "];
+  Node1129 -> Node1141 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1141 [label="CConfig::GetDE_Effects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8ad45b179ddabec5652dbf4b517fbbf0",tooltip="Decide whether to apply DE effects to the model. "];
+  Node1129 -> Node1142 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1142 [label="CProperty::SetDesignDensity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_property.html#a8f6b49dba6a07054bd15ce5c8efeca95",tooltip="Set the Design density (topology optimization variable). "];
+  Node1129 -> Node1143 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1143 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node1143 -> Node1144 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1144 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+}

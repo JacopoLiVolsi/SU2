@@ -540,7 +540,8 @@ void CConfig::SetPointersNull(void) {
   Dirichlet_Value = NULL;    Isothermal_Temperature = NULL;
   Heat_Flux       = NULL;    Displ_Value            = NULL;    Load_Value = NULL;
   FlowLoad_Value  = NULL;    Damper_Constant        = NULL;
-  
+  Bottom_val      = NULL;
+
   /*--- Inlet Outlet Boundary Condition settings ---*/
 
   Inlet_Ttotal    = NULL;    Inlet_Ptotal      = NULL;
@@ -824,7 +825,12 @@ void CConfig::SetConfig_Options() {
   default_body_force         = new su2double[3];
   default_sineload_coeff     = new su2double[3];
   default_nacelle_location   = new su2double[5];
-  default_wrt_freq             = new su2double[3];
+  default_wrt_freq           = new su2double[3];
+
+  unsigned short nBottomCoeff = 3;  
+  default_bottom_val = new su2double[nBottomCoeff];
+  for (unsigned short iBot = 0; iBot < nBottomCoeff; iBot++)
+    default_bottom_val[iBot] = 0.0;
   
   /*--- All temperature polynomial fits for the fluid models currently
    assume a quartic form (5 coefficients). For example,
@@ -908,10 +914,23 @@ void CConfig::SetConfig_Options() {
   /*!\brief SYSTEM_MEASUREMENTS \n DESCRIPTION: System of measurements \n OPTIONS: see \link Measurements_Map \endlink \n DEFAULT: SI \ingroup Config*/
   addEnumOption("SYSTEM_MEASUREMENTS", SystemMeasurements, Measurements_Map, SI);
 
+  /*!\par CONFIG_CATEGORY: Thin Film definition \ingroup Config */
+
+  /*!\brief FILM_SOLVER \n DESCRIPTION: Type of solver for thin film \n Options: see \link Film_Solver_Map \endlink \n DEFAULT: NAVIER_STOKES_FILM \ingroup Config*/
+  addEnumOption("FILM_SOLVER", Kind_Film_Solver, Film_Solver_Map, NAVIER_STOKES_FILM);
+  /*!\brief NLAYER \n DESCRIPTION: Nr of layers \n Options: \n DEFAULT: 3 \ingroup Config*/
+  addUnsignedShortOption("NLAYER", nLayer, 1);
+/*!\brief FILM_HP \n DESCRIPTION: Type of hypothesis \n Options: see \link Film_Hp_Map \endlink \n DEFAULT: PE \ingroup Config*/
+  addEnumOption("FILM_HP", Film_Hp, Film_Hp_Map, PE);
+  /* DESCRIPTION:  Bottom topgraphy filename */
+  addStringOption("BOTTOM_FILENAME", Bottom_FileName, string("default_bottom.dat"));
+  addEnumOption("BOTTOM_TOPOGRAPHY", Bottom_Top_Type, Bottom_Topography_Map, UNIFORM);
+  addDoubleArrayOption("BOTTOM_VALUE", nBottomCoeff, Bottom_val, default_bottom_val);
+
+
   /*!\par CONFIG_CATEGORY: FluidModel \ingroup Config*/
   /*!\brief FLUID_MODEL \n DESCRIPTION: Fluid model \n OPTIONS: See \link FluidModel_Map \endlink \n DEFAULT: STANDARD_AIR \ingroup Config*/
   addEnumOption("FLUID_MODEL", Kind_FluidModel, FluidModel_Map, STANDARD_AIR);
-
 
   /*!\par CONFIG_CATEGORY: Freestream Conditions \ingroup Config*/
   /*--- Options related to freestream specification ---*/
@@ -2921,7 +2940,8 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
 
   if (Kind_Solver == INC_EULER ||
       Kind_Solver == INC_NAVIER_STOKES ||
-      Kind_Solver == INC_RANS) {
+      Kind_Solver == INC_RANS  ||
+      Kind_Solver == THIN_FILM ) {
 
     /*--- Compute x-velocity with a safegaurd for 0.0. ---*/
 
@@ -3120,7 +3140,8 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
     Kind_Regime = COMPRESSIBLE;
   } else if (Kind_Solver == INC_EULER ||
              Kind_Solver == INC_NAVIER_STOKES ||
-             Kind_Solver == INC_RANS){
+             Kind_Solver == INC_RANS ||
+             Kind_Solver == THIN_FILM){
     Kind_Regime = INCOMPRESSIBLE;
   }  else {
     Kind_Regime = NO_FLOW;
@@ -4020,7 +4041,9 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
              ( Kind_Solver == FEM_RANS               ) ||
              ( Kind_Solver == FEM_LES                ) ||
              ( Kind_Solver == INC_NAVIER_STOKES      ) ||
-             ( Kind_Solver == INC_RANS               ) );
+             ( Kind_Solver == INC_RANS               ) ||
+             ( Kind_Solver == THIN_FILM && Kind_Film_Solver == NAVIER_STOKES_FILM ) || 
+             ( Kind_Solver == THIN_FILM && Kind_Film_Solver == MULTI_LAYER_ASYMP && GetFilm_Hp() == PEV2 ) );
 
   /*--- To avoid boundary intersections, let's add a small constant to the planes. ---*/
 
@@ -4211,7 +4234,7 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
 
   /*--- Default values should recover original incompressible behavior (for old config files). ---*/
 
-  if (Kind_Solver == INC_EULER || Kind_Solver == INC_NAVIER_STOKES || Kind_Solver == INC_RANS) {
+  if (Kind_Solver == INC_EULER || Kind_Solver == INC_NAVIER_STOKES || Kind_Solver == INC_RANS || Kind_Solver == THIN_FILM) {
     if ((Kind_DensityModel == CONSTANT) || (Kind_DensityModel == BOUSSINESQ))
       Kind_FluidModel = CONSTANT_DENSITY;
   }
@@ -4233,7 +4256,7 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
     }
   }
 
-  if (Kind_Solver != INC_EULER && Kind_Solver != INC_NAVIER_STOKES && Kind_Solver != INC_RANS) {
+  if (Kind_Solver != INC_EULER && Kind_Solver != INC_NAVIER_STOKES && Kind_Solver != THIN_FILM && Kind_Solver != INC_RANS) {
     if ((Kind_FluidModel == CONSTANT_DENSITY) || (Kind_FluidModel == INC_IDEAL_GAS) || (Kind_FluidModel == INC_IDEAL_GAS_POLY)) {
       SU2_MPI::Error("Fluid model not compatible with compressible flows.\n CONSTANT_DENSITY/INC_IDEAL_GAS/INC_IDEAL_GAS_POLY are for incompressible only.", CURRENT_FUNCTION);
     }
@@ -4290,7 +4313,7 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
 
   /*--- Check that the non-dim type is valid. ---*/
 
-  if ((Kind_Solver == INC_EULER || Kind_Solver == INC_NAVIER_STOKES || Kind_Solver == INC_RANS)) {
+  if ((Kind_Solver == INC_EULER || Kind_Solver == INC_NAVIER_STOKES || Kind_Solver == THIN_FILM || Kind_Solver == INC_RANS)) {
     if ((Ref_Inc_NonDim != INITIAL_VALUES) && (Ref_Inc_NonDim != REFERENCE_VALUES) && (Ref_Inc_NonDim != DIMENSIONAL)) {
       SU2_MPI::Error("Incompressible non-dim. scheme invalid.\n Must use INITIAL_VALUES, REFERENCE_VALUES, or DIMENSIONAL.", CURRENT_FUNCTION);
     }
@@ -4298,7 +4321,7 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
   
   /*--- Check that the incompressible inlets are correctly specified. ---*/
   
-  if ((Kind_Solver == INC_EULER || Kind_Solver == INC_NAVIER_STOKES || Kind_Solver == INC_RANS) && (nMarker_Inlet != 0)) {
+  if ((Kind_Solver == INC_EULER || Kind_Solver == INC_NAVIER_STOKES || Kind_Solver == THIN_FILM ||Kind_Solver == INC_RANS) && (nMarker_Inlet != 0)) {
     if (nMarker_Inlet != nInc_Inlet) {
       SU2_MPI::Error("Inlet types for incompressible problem improperly specified.\n Use INC_INLET_TYPE= VELOCITY_INLET or PRESSURE_INLET.\n Must list a type for each inlet marker, including duplicates, e.g.,\n INC_INLET_TYPE= VELOCITY_INLET VELOCITY_INLET PRESSURE_INLET", CURRENT_FUNCTION);
     }
@@ -4309,9 +4332,9 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
     }
   }
   
-  /*--- Check that the incompressible inlets are correctly specified. ---*/
+  /*--- Check that the incompressible outlets are correctly specified. ---*/
   
-  if ((Kind_Solver == INC_EULER || Kind_Solver == INC_NAVIER_STOKES || Kind_Solver == INC_RANS) && (nMarker_Outlet != 0)) {
+  if ((Kind_Solver == INC_EULER || Kind_Solver == THIN_FILM || Kind_Solver == INC_NAVIER_STOKES || Kind_Solver == INC_RANS) && (nMarker_Outlet != 0)) {
     if (nMarker_Outlet != nInc_Outlet) {
       SU2_MPI::Error("Outlet types for incompressible problem improperly specified.\n Use INC_OUTLET_TYPE= PRESSURE_OUTLET or MASS_FLOW_OUTLET.\n Must list a type for each inlet marker, including duplicates, e.g.,\n INC_OUTLET_TYPE= PRESSURE_OUTLET PRESSURE_OUTLET MASS_FLOW_OUTLET", CURRENT_FUNCTION);
     }
@@ -4583,6 +4606,7 @@ void CConfig::SetPostprocessing(unsigned short val_software, unsigned short val_
                    (Kind_Solver == INC_RANS) ||
                    (Kind_Solver == EULER) ||
                    (Kind_Solver == NAVIER_STOKES) ||
+                   (Kind_Solver == THIN_FILM) ||
                    (Kind_Solver == RANS) ||
                    (Kind_Solver == DISC_ADJ_EULER) ||
                    (Kind_Solver == DISC_ADJ_RANS) ||
@@ -5773,7 +5797,7 @@ void CConfig::SetOutput(unsigned short val_software, unsigned short val_izone) {
 
 		if (SmoothNumGrid) cout << "There are some smoothing iterations on the grid coordinates." << endl;
 
-    if ((Kind_Solver == EULER)          || (Kind_Solver == NAVIER_STOKES)          || (Kind_Solver == RANS) ||
+    if ((Kind_Solver == EULER)          || (Kind_Solver == NAVIER_STOKES)          || (Kind_Solver == RANS) || (Kind_Solver == THIN_FILM) ||
         (Kind_Solver == INC_EULER)      || (Kind_Solver == INC_NAVIER_STOKES)      || (Kind_Solver == INC_RANS) ||
         (Kind_Solver == DISC_ADJ_EULER) || (Kind_Solver == DISC_ADJ_NAVIER_STOKES) || (Kind_Solver == DISC_ADJ_RANS) ) {
 
@@ -6081,7 +6105,7 @@ void CConfig::SetOutput(unsigned short val_software, unsigned short val_izone) {
 		}
 	}
 
-    if ((Kind_Solver == EULER) || (Kind_Solver == NAVIER_STOKES) || (Kind_Solver == RANS) ||
+    if ((Kind_Solver == EULER) || (Kind_Solver == NAVIER_STOKES) || (Kind_Solver == RANS) || (Kind_Solver == THIN_FILM) ||
         (Kind_Solver == INC_EULER) || (Kind_Solver == INC_NAVIER_STOKES) || (Kind_Solver == INC_RANS) ||
         (Kind_Solver == DISC_ADJ_INC_EULER) || (Kind_Solver == DISC_ADJ_INC_NAVIER_STOKES) || (Kind_Solver == DISC_ADJ_INC_RANS) ||
         (Kind_Solver == DISC_ADJ_EULER) || (Kind_Solver == DISC_ADJ_NAVIER_STOKES) || (Kind_Solver == DISC_ADJ_RANS) ||
@@ -7494,7 +7518,9 @@ CConfig::~CConfig(void) {
   if (default_sineload_coeff!= NULL) delete [] default_sineload_coeff;
   if (default_nacelle_location    != NULL) delete [] default_nacelle_location;
   if (default_wrt_freq != NULL) delete [] default_wrt_freq;
-  
+
+  if (default_bottom_val != NULL) delete [] default_bottom_val;
+   
   if (default_cp_polycoeffs != NULL) delete [] default_cp_polycoeffs;
   if (default_mu_polycoeffs != NULL) delete [] default_mu_polycoeffs;
   if (default_kt_polycoeffs != NULL) delete [] default_kt_polycoeffs;
@@ -9491,7 +9517,7 @@ void CConfig::SetMultizone(CConfig *driver_config, CConfig **config_container){
   /*--- If there is at least a fluid and a structural zone ---*/
   for (iZone = 0; iZone < nZone; iZone++){
     switch (config_container[iZone]->GetKind_Solver()) {
-    case EULER: case NAVIER_STOKES: case RANS:
+    case EULER: case NAVIER_STOKES: case RANS: case THIN_FILM:
     case INC_EULER: case INC_NAVIER_STOKES: case INC_RANS:    
       fluid_zone = true;
       break;

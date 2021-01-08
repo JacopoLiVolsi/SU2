@@ -1,0 +1,26 @@
+digraph "CSolver::UpdateSolution_BGS"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5540 [label="CSolver::UpdateSolution_BGS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5540 -> Node5541 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5541 [label="CDiscAdjMultizoneDriver\l::Set_BGSSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a80924942343a9b9511a272e3292ac151",tooltip="Saves the current (adjoint) Solution vector to Solution_BGS_k. "];
+  Node5541 -> Node5542 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5542 [label="CDiscAdjMultizoneDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#af996aecdb6d20aa4fc81c9b67295abf5",tooltip="[Overload] Run an discrete adjoint update of all solvers within multiple zones. "];
+  Node5542 -> Node5543 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5543 [label="CDiscAdjMultizoneDriver\l::StartSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a75de0a1a482ceeed4301a384f1515092",tooltip="[Overload] Launch the computation for discrete adjoint multizone problems. "];
+  Node5540 -> Node5544 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5544 [label="CDiscAdjFSIDriver::\lBGSConvergence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_s_i_driver.html#a781367e50928b0355cd9cfb145cc7e58",tooltip="Check the convergence of BGS subiteration process. "];
+  Node5544 -> Node5545 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5545 [label="CDiscAdjFSIDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_s_i_driver.html#a2e965d6e9c4dcfc296077cae225cab21",tooltip="Run a Discrete Adjoint iteration for the FSI problem. "];
+  Node5540 -> Node5546 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5546 [label="CMultizoneDriver::OuterConvergence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multizone_driver.html#ae72bb40195e4066bc4be4adfb0df29e9",tooltip="Check the convergence at the outer level. "];
+  Node5546 -> Node5547 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5547 [label="CMultizoneDriver::Run\l_GaussSeidel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multizone_driver.html#a8036223cdbe0c0d4552f17f6bad9189b",tooltip="Run a Block Gauss-Seidel iteration in all physical zones. "];
+  Node5547 -> Node5548 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5548 [label="CMultizoneDriver::StartSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multizone_driver.html#a03cfc000c383ef0d86d34e1c6aef5ff3",tooltip="[Overload] Launch the computation for multizone problems. "];
+  Node5546 -> Node5549 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5549 [label="CMultizoneDriver::Run\l_Jacobi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multizone_driver.html#a1bf2824daac5a10e8fb7387676eee338",tooltip="Run a Block-Jacobi iteration in all physical zones. "];
+  Node5549 -> Node5548 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

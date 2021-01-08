@@ -1,0 +1,27 @@
+digraph "COutputLegacy::COutputLegacy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="COutputLegacy::COutputLegacy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="CBaseMPIWrapper::GetRank",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a801c6612161d6960c5cf25435f244101"];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CBaseMPIWrapper::GetSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a1e80850252f6e4bfc8cd5275d6e3a615"];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CConfig::GetnZone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a33f1af516d14a4d3815b577c37398773",tooltip="Gets the number of zones in the mesh file. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node0 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CConfig::GetBoolTurbomachinery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5c0d08193d1a4f60421afc6dc7f6cc79",tooltip="Verify if there is Turbomachinery performance option specified from config file. "];
+  Node0 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CConfig::GetnSpanMaxAllZones",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5f9d28d610a51f1c4bdb50d366d510c8",tooltip="number span-wise sections to compute performance for turbomachinery. "];
+  Node0 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CConfig::GetnMarker\l_TurboPerformance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a9a665d90306ed49db16ac85e4d7acbb4",tooltip="number Turbomachinery performance option specified from config file. "];
+  Node0 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CConfig::GetFlowAngleIn_BC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6ceac95c87535964d33e2e2aefb9d773",tooltip="Get the inlet flow angle imposed as BC for internal flow. "];
+  Node0 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CConfig::GetPressureOut_BC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a1c4a96655aa5877ae1ccdde58f8a22ee",tooltip="Get the outlet pressure imposed as BC for internal flow. "];
+}

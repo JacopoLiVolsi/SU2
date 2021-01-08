@@ -1,0 +1,43 @@
+digraph "CFEM_DG_EulerSolver::ADER_DG_PredictorStep"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node401 [label="CFEM_DG_EulerSolver\l::ADER_DG_PredictorStep",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node401 -> Node402 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node402 [label="CConfig::GetnTimeDOFsADER_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab110ba67babf383e40ac4896bc65a599",tooltip="Get the number time DOFs for ADER-DG. "];
+  Node401 -> Node403 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node403 [label="CConfig::GetnTimeIntegration\lADER_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae7e9d4b942d0db4b72f461c180ade3a4",tooltip="Get the number time integration points for ADER-DG. "];
+  Node401 -> Node404 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node404 [label="CConfig::GetWeightsIntegration\lADER_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab61a5a25dc9a2d37c22d4744d26b690d",tooltip="Get the weights of the time integration points for ADER-DG. "];
+  Node401 -> Node405 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node405 [label="CConfig::GetKind_ADER\l_Predictor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6a283ba2b1eacb99905f0e12636c8e15",tooltip="Get the kind of scheme (aliased or non-aliased) to be used in the predictor step of ADER-DG..."];
+  Node401 -> Node406 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node406 [label="CConfig::GetSizeMatMulPadding",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aea5478f0851e4cb4d11c262fb6c6e8c4",tooltip="Function to make available the matrix size in vectorization in order to optimize the gemm performance..."];
+  Node401 -> Node407 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node407 [label="CBlasStructure::gemm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_blas_structure.html#a40a585307895af828a7f51cd0ccbf81d",tooltip="Function, which carries out a dense matrix product. It is a limited version of the BLAS gemm function..."];
+  Node407 -> Node408 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node408 [label="CConfig::GEMM_Tick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2628e094b67a6d5cb410710aa00fa69b",tooltip="Start the timer for profiling subroutines. "];
+  Node407 -> Node409 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node409 [label="CConfig::GEMM_Tock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae8d24548bd977c6a76e06ed9814418bb",tooltip="Stop the timer for the GEMM profiling and store results. "];
+  Node401 -> Node410 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node410 [label="CFEMStandardElementBase\l::GetNIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#aa5ad06a05a1d7b66bccca65521168a3b",tooltip="Function, which makes available the number of integration points for this standard element..."];
+  Node401 -> Node411 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node411 [label="CFEMStandardElement\l::GetMatBasisFunctionsIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#a6fbf928e9b9fa2fd9dab46309e0ed6b6",tooltip="Function, which makes available the matrix storage of the basis functions in the integration points..."];
+  Node401 -> Node412 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node412 [label="CFEMStandardElement\l::GetBasisFunctionsIntegration\lTrans",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#a0d8111ae54b825086ea24a9241a361f1",tooltip="Function, which makes available the transpose of the basis functions in the integration points..."];
+  Node401 -> Node413 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node413 [label="CFEMStandardElementBase\l::GetWeightsIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#abf33578c3a19de596dc704d3d4d00039",tooltip="Function, which makes available the weights in the integration points. "];
+  Node401 -> Node414 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node414 [label="CFluidModel::SetTDState_rhoe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a90fdefd3a55d97d55d5211988c9a7ab1",tooltip="virtual member that would be different for each gas model implemented "];
+  Node401 -> Node415 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node415 [label="CFluidModel::GetPressure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a169d9e9a0c7f8b5d35642940c62c4ecb",tooltip="Get fluid pressure. "];
+  Node401 -> Node416 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node416 [label="CConfig::GetBody_Force",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a9af4200d2cd764653d2707da4acc7847",tooltip="Get information about the body force. "];
+  Node401 -> Node417 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node417 [label="CConfig::GetBody_Force\l_Vector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa6f6ce87c87183da706c9e5521c1b812",tooltip="Get a pointer to the body force vector. "];
+  Node401 -> Node418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node418 [label="CVerificationSolution\l::IsManufacturedSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_verification_solution.html#ae5a41206f55ba338ba300537b46827ba",tooltip="Whether or not this verification solution is a manufactured solution. "];
+  Node401 -> Node419 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node419 [label="CVerificationSolution\l::GetMMSSourceTerm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_verification_solution.html#ac9d8e5f8800e95f9b5831b4ff8c6c27d",tooltip="Get the source term for the manufactured solution (MMS). "];
+}

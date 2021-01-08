@@ -1,0 +1,23 @@
+digraph "CEulerVariable::SetPrimVar"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node355 [label="CEulerVariable::SetPrimVar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node355 -> Node356 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node356 [label="CEulerVariable::SetEnthalpy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_variable.html#ae090e3adc40d949b8dca77043daccddd",tooltip="Set the value of the enthalpy. "];
+  Node356 -> Node355 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node356 -> Node357 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node357 [label="CNSVariable::SetPrimVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a0db8c1ede5090174259a69548d20c9fe",tooltip="Set all the primitive variables for compressible flows. "];
+  Node357 -> Node358 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node358 [label="CNSVariable::SetdktdT_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a3d749ea73bdc0f7dd45aa2ed713e768b",tooltip="Set the derivative of thermal conductivity with respect to temperature (at constant density)..."];
+  Node358 -> Node359 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node359 [label="CNSVariable::SetSecondaryVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a574bbbfda4f2191f836d2e3e7e1c8b3e",tooltip="Set all the secondary variables (partial derivatives) for compressible flows. "];
+  Node359 -> Node358 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node355 -> Node360 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node360 [label="CEulerSolver::SetPrimitive\l_Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aedaa1fe91dbde649b457ce89a82e7ab4",tooltip="Compute the velocity^2, SoundSpeed, Pressure, Enthalpy, Viscosity. "];
+  Node360 -> Node361 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node361 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node355 -> Node362 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node362 [label="CEulerSolver::SetFreeStream\l_TurboSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac116e43e6c7eef751bc807908f235c31",tooltip="Set the solution using the Freestream values. "];
+}

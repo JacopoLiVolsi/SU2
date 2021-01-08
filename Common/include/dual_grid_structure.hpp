@@ -893,6 +893,15 @@ public:
 	su2double GetVolume(su2double *val_coord_Edge_CG, su2double *val_coord_Elem_CG, su2double *val_coord_Point);
 	
 	/*! 
+	 * \overload
+	 * \param[in] val_coord_Edge_CG - Coordinates of the centre of gravity of the edge.
+	 * \param[in] val_coord_Elem_CG - Coordinates of the centre of gravity of the element.
+	 * \param[in] val_coord_Point - Coordinates of the point that form the control volume.
+	 * \return Local volume associated to the edge.
+	 */
+	su2double GetVolume(su2double *val_coord_Elem_CG, su2double *val_coord_Point);
+
+	/*! 
 	 * \brief Set the face that correspond to an edge.
 	 * \param[in] val_coord_Edge_CG - Coordinates of the centre of gravity of the edge.
 	 * \param[in] val_coord_FaceElem_CG - Coordinates of the centre of gravity of the face of an element.

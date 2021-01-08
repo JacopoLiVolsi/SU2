@@ -1,0 +1,43 @@
+digraph "CAdjTurbSolver::Source_Residual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node302 [label="CAdjTurbSolver::Source\l_Residual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node302 -> Node303 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node303 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node302 -> Node304 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node304 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node302 -> Node305 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node305 [label="CNumerics::SetConservative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a604ce85ec9e2d43769acacc7d03ae0f7",tooltip="Set the value of the conservative variables. "];
+  Node302 -> Node306 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node306 [label="CVariable::GetGradient\l_Primitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a8b7f4e020a837b1fe639e8d875f964d5",tooltip="A virtual member. "];
+  Node302 -> Node307 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node307 [label="CNumerics::SetPrimVarGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a22772ccb1c59b1267152d4cc9825a98a",tooltip="Set the gradient of the primitive variables. "];
+  Node302 -> Node308 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node308 [label="CNumerics::SetLaminarViscosity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a0d3d722905b8615ef2cb5d59c4b95fb3",tooltip="Set the laminar viscosity. "];
+  Node302 -> Node309 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node309 [label="CNumerics::SetTurbVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a694708b330c1e25e59f3b3ee8be64fbb",tooltip="Set the value of the turbulent variable. "];
+  Node302 -> Node310 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node310 [label="CVariable::GetGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a7b58da4a928d622e7c2d4b4db047769d",tooltip="Get the value of the solution gradient. "];
+  Node302 -> Node311 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node311 [label="CNumerics::SetTurbVarGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a42a39ae6557a400a4d811820c61de3cb",tooltip="Set the gradient of the turbulent variables. "];
+  Node302 -> Node312 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node312 [label="CNumerics::SetTurbAdjointVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#aa1653854225eaa24a152d9c2813e99b4",tooltip="Set the value of the adjoint turbulent variable. "];
+  Node302 -> Node313 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node313 [label="CNumerics::SetAdjointVar\lGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a26cad383dccd67b3c9b3da85348c78e2",tooltip="Set the gradient of the adjoint variables. "];
+  Node302 -> Node314 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node314 [label="CNumerics::SetVolume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a53c24228ba235c1a0c2e4509243e5e88",tooltip="Set the value of the volume of the control volume. "];
+  Node302 -> Node315 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node315 [label="CPoint::GetVolume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a3c526a15e767c7de9cf163800aa581e5",tooltip="Get area or volume of the control volume. "];
+  Node302 -> Node316 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node316 [label="CNumerics::SetDistance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a9c9dd8be231884769f29c799db2404be",tooltip="Set the value of the distance from the nearest wall. "];
+  Node302 -> Node317 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node317 [label="CPoint::GetWall_Distance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a2ec241bcb847e4bae03e8df907a18b15",tooltip="Get the value of the distance to the nearest wall. "];
+  Node302 -> Node318 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node318 [label="CNumerics::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#abe734316e0047f463f059fd77a281958",tooltip="Compute the numerical residual. "];
+  Node302 -> Node319 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node319 [label="CSysVector::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#acd4c36df2ea0b7ad473944cff9bf5d72",tooltip="Add val_residual to the residual. "];
+  Node302 -> Node320 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node320 [label="CSysMatrix::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a85def3109e5aa5307268ca830a8f6522",tooltip="Adds the specified block to the sparse matrix. "];
+}

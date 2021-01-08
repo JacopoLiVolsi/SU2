@@ -1,0 +1,27 @@
+digraph "CNSUnitQuadSolution::CNSUnitQuadSolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="CNSUnitQuadSolution\l::CNSUnitQuadSolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CConfig::GetGamma",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5f01bbbd9c331ecea38eebbe9cc9cd4e",tooltip="Get the value of the Gamma of fluid (ratio of specific heats). "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CConfig::GetAoA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6020a5df7025ffb286f9b9f55f3f2773",tooltip="Get the angle of attack of the body. This is the angle between a reference line on a lifting body (of..."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CConfig::GetMu_ConstantND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab8374bd6eab3ea2e8c240ab8e702a508",tooltip="Get the value of the non-dimensional constant viscosity. "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CConfig::GetTime_Marching",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a864d499ce740184803607801c47abda7",tooltip="Provides information about the time integration, and change the write in the output files information..."];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CConfig::GetKind_FluidModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac36fbf73af5ad628f510769c556717d3",tooltip="Fluid model that we are using. "];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CConfig::GetKind_Viscosity\lModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#af6fbd87066353c64a6a7e97d77c237db",tooltip="Get the value of the viscosity model. "];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CConfig::GetKind_Conductivity\lModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a21815dd5c18f4d1029a1717de952ebea",tooltip="Get the value of the thermal conductivity model. "];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CConfig::GetPrandtl_Lam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a619cb1400d6c944e83ad0ffe82deb021",tooltip="Get the value of the laminar Prandtl number. "];
+}

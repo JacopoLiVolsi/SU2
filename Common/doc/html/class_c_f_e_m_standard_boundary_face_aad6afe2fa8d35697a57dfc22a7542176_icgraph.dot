@@ -1,0 +1,15 @@
+digraph "CFEMStandardBoundaryFace::GetNDOFsElem"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node95 [label="CFEMStandardBoundaryFace\l::GetNDOFsElem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node95 -> Node96 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="CFEM_DG_EulerSolver\l::CFEM_DG_EulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a677fa998b78bd489a3f8bee0d56623dd"];
+  Node95 -> Node97 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node97 [label="CFEM_DG_NSSolver::Friction\l_Forces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a15cec95ab40ebb36ee69bc5f58840cf3",tooltip="Compute the viscous forces and all the addimensional coefficients. "];
+  Node95 -> Node98 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node98 [label="CFEM_DG_NSSolver::BC\l_Sym_Plane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a148134abb8821df7c68a8f9adedbe851",tooltip="Impose the symmetry boundary condition using the residual. "];
+  Node95 -> Node99 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 [label="CFEM_DG_NSSolver::BC\l_Custom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a8e27fad06f1bde21670f2e2990d3027e",tooltip="Impose the user customized boundary condition. "];
+}

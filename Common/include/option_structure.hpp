@@ -145,7 +145,8 @@ const unsigned short COMM_TYPE_CHAR           = 5;  /*!< \brief Communication ty
 const unsigned short COMM_TYPE_SHORT          = 6;  /*!< \brief Communication type for short. */
 const unsigned short COMM_TYPE_INT            = 7;  /*!< \brief Communication type for int. */
 
-const unsigned short N_ELEM_TYPES = 7;           /*!< \brief General output & CGNS defines. */
+const unsigned short N_ELEM_TYPES = 8;           /*!< \brief General output & CGNS defines. */
+const unsigned short N_POINTS_POINT = 1;          /*!< \brief General output & CGNS defines. */
 const unsigned short N_POINTS_LINE = 2;          /*!< \brief General output & CGNS defines. */
 const unsigned short N_POINTS_TRIANGLE = 3;      /*!< \brief General output & CGNS defines. */
 const unsigned short N_POINTS_QUADRILATERAL = 4; /*!< \brief General output & CGNS defines. */
@@ -202,7 +203,7 @@ enum ENUM_SOLVER {
   DISC_ADJ_NAVIER_STOKES = 17,      /*!< \brief Definition of the discrete adjoint Navier-Stokes' solver. */
   DISC_ADJ_INC_EULER = 18,          /*!< \brief Definition of the discrete adjoint incompressible Euler solver. */
   DISC_ADJ_INC_RANS = 19,           /*!< \brief Definition of the discrete adjoint imcompressible Reynolds-averaged Navier-Stokes' (RANS) solver. */
-  DISC_ADJ_INC_NAVIER_STOKES = 20,  /*!< \brief Definition of the doscrete adjoint imcompressible Navier-Stokes'. */
+  DISC_ADJ_INC_NAVIER_STOKES = 20,  /*!< \brief Definition of the discrete adjoint imcompressible Navier-Stokes'. */
   DISC_ADJ_HEAT = 21,               /*!< \brief Definition of the discrete adjoint heat solver. */
   DISC_ADJ_FEM_EULER = 22,          /*!< \brief Definition of the discrete adjoint FEM Euler solver. */
   DISC_ADJ_FEM_RANS = 23,           /*!< \brief Definition of the discrete adjoint FEM Reynolds-averaged Navier-Stokes' (RANS) solver. */
@@ -212,7 +213,8 @@ enum ENUM_SOLVER {
   FEM_NAVIER_STOKES = 27,           /*!< \brief Definition of the finite element Navier-Stokes' solver. */
   FEM_RANS = 28,                    /*!< \brief Definition of the finite element Reynolds-averaged Navier-Stokes' (RANS) solver. */
   FEM_LES = 29,                     /*!< \brief Definition of the finite element Large Eddy Simulation Navier-Stokes' (LES) solver. */
-  MULTIPHYSICS = 30
+  MULTIPHYSICS = 30,
+  THIN_FILM = 31		    /*!< \brief Definition of thin film problem, numerical method defined through the option FILM_SOLVER */
 };
 /* BEGIN_CONFIG_ENUMS */
 static const map<string, ENUM_SOLVER> Solver_Map = CCreateMap<string, ENUM_SOLVER>
@@ -245,7 +247,48 @@ static const map<string, ENUM_SOLVER> Solver_Map = CCreateMap<string, ENUM_SOLVE
 ("DISC_ADJ_FEM", DISC_ADJ_FEM)
 ("FLUID_STRUCTURE_INTERACTION", FLUID_STRUCTURE_INTERACTION)
 ("TEMPLATE_SOLVER", TEMPLATE_SOLVER)
-("MULTIPHYSICS", MULTIPHYSICS);
+("MULTIPHYSICS", MULTIPHYSICS)
+("THIN_FILM", THIN_FILM);
+
+/*!
+ * \brief different solver types for thin film problem.
+ */
+enum ENUM_FILM_SOLVER {
+  NAVIER_STOKES_FILM = 0,   /*!< \brief Complete NS solver. */
+  MULTI_LAYER_ASYMP = 1     /*!< \brief Multi-layer asymptotic method solver. */
+};
+/* BEGIN_CONFIG_ENUMS */
+static const map<string, ENUM_FILM_SOLVER> Film_Solver_Map = CCreateMap<string, ENUM_FILM_SOLVER>
+("NAVIER_STOKES_FILM", NAVIER_STOKES_FILM)
+("MULTI_LAYER_ASYMP", MULTI_LAYER_ASYMP);
+
+/*!
+ * \brief different hypothesis for thin film problem.
+ */
+enum ENUM_FILM_HP {
+ PE = 0,     /*!< \brief Hydrostatic pressure. */
+ PEV2 = 1    /*!< \brief Hydrostatic pressure with vertical viscosity. */
+};                    
+/* BEGIN_CONFIG_ENUMS */
+static const map<string, ENUM_FILM_HP> Film_Hp_Map = CCreateMap<string, ENUM_FILM_HP>
+("PE", PE)
+("PEV2", PEV2);
+
+/*!
+ * \brief Type of bottom topography.
+ */
+enum ENUM_BOTTOM_TOP{
+ UNIFORM = 0,
+ STRAIGHT= 1,
+ PLANE= 2,
+ REAL_DATA = 3
+};
+/* BEGIN_CONFIG_ENUMS */
+static const map<string, ENUM_BOTTOM_TOP> Bottom_Topography_Map = CCreateMap<string, ENUM_BOTTOM_TOP>
+("UNIFORM", UNIFORM)
+("STRAIGHT", STRAIGHT)
+("PLANE", PLANE)
+("REAL_DATA", REAL_DATA);
 
 /*!
  * \brief different solver types for the multizone environment component

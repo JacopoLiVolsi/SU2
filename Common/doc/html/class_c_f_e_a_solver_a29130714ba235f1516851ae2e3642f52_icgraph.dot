@@ -1,0 +1,11 @@
+digraph "CFEASolver::GetWAitken_Dyn"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node700 [label="CFEASolver::GetWAitken_Dyn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node700 -> Node701 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node701 [label="CFEASolver::ComputeAitken\l_Coefficient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_solver.html#acd4cf27002608bdb084324e0077fb1fb",tooltip="Computation of Aitken&#39;s coefficient. "];
+  Node700 -> Node702 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node702 [label="CFEASolver::SetAitken\l_Relaxation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_solver.html#a470f19d181ea34a811f82c309d261244",tooltip="Aitken&#39;s relaxation of the solution. "];
+}

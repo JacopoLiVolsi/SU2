@@ -1,0 +1,9 @@
+digraph "CVariable::Register_femSolution_time_n"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3993 [label="CVariable::Register\l_femSolution_time_n",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3993 -> Node3994 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3994 [label="CDiscAdjFEASolver::\lRegisterSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#ad05585130c1922d463e88540fe5a1bf8",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables on the t..."];
+}

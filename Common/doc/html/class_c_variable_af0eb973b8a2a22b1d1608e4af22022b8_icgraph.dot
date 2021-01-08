@@ -1,0 +1,13 @@
+digraph "CVariable::SetNon_Physical"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5587 [label="CVariable::SetNon_Physical",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5587 -> Node5588 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5588 [label="CAdjEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#adb4102935a0144846d17a35a62769c09",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node5587 -> Node5589 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5589 [label="CEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a9cb1da16bea732300854a351ebca2ed3",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node5587 -> Node5590 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5590 [label="CIncEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a935da79a4e1b1fe9c59bc86024164256",tooltip="Compute the spatial integration using a upwind scheme. "];
+}

@@ -1,0 +1,47 @@
+digraph "CDiscAdjFEAIteration::Preprocess"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node100 [label="CDiscAdjFEAIteration\l::Preprocess",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node100 -> Node101 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node101 [label="CConfig::GetTimeIter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa659f28a1d71b0924944a9fb248e3d6e",tooltip="Get the current time iteration number. "];
+  Node100 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 [label="CConfig::GetTime_Domain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6a11350b3c8d7577318be43cda6f7292",tooltip="Check if the multizone problem is solved for time domain. "];
+  Node100 -> Node103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node103 -> Node104 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node100 -> Node105 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node105 [label="CDiscAdjFEAIteration\l::LoadDynamic_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_iteration.html#a312063449cadd5734b05111d3f406577",tooltip="load solution for dynamic problems "];
+  Node105 -> Node106 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node106 [label="CSolver::LoadRestart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a61c87a4ff51926361e18797c49204e72",tooltip="A virtual member. "];
+  Node105 -> Node107 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node105 -> Node108 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 [label="CSolver::GetnVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a65c22046b0cf1938ba22648912d04680",tooltip="Get the number of variables of the problem. "];
+  Node105 -> Node109 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node109 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node105 -> Node110 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node110 [label="CVariable::SetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a22fbbd7bc6491672843000644a05c6a5",tooltip="Set the value of the solution, all variables. "];
+  Node105 -> Node111 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 [label="CVariable::SetSolution\l_Accel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#af87029baec777039085fb1ff17ee9555",tooltip="Set the value of the acceleration (Structural Analysis). "];
+  Node105 -> Node112 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node112 [label="CVariable::SetSolution_Vel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a5c1430d98acd399f1371f23e6fae053f",tooltip="Set the value of the velocity (Structural Analysis). "];
+  Node100 -> Node109 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node100 -> Node113 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node113 [label="CVariable::Set_Solution\l_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#abf55f051089ec13d9c0422ed3389a9dc",tooltip="Set the variable solution at time n. "];
+  Node100 -> Node114 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node114 [label="CVariable::SetSolution\l_Accel_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a3448962f8d6a3867336dd139d552b225",tooltip="Set the value of the acceleration (Structural Analysis) at time n. "];
+  Node100 -> Node115 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node115 [label="CVariable::SetSolution\l_Vel_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a889d87f62b6ffa72ca8b3f7cec792753",tooltip="Set the value of the velocity (Structural Analysis) at time n. "];
+  Node100 -> Node107 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node100 -> Node116 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node116 [label="CVariable::SetSolution\l_Direct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a9f3ef1f059e9a051019e34b2510e4873",tooltip="A virtual member. Set the direct solution for the adjoint solver. "];
+  Node100 -> Node117 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 [label="CVariable::SetSolution\l_Accel_Direct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#ab53103abcd5f7d0f13b1d9f2aafd7bd6",tooltip="A virtual member. Set the direct acceleration solution for the adjoint solver. "];
+  Node100 -> Node118 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node118 [label="CVariable::SetSolution\l_Vel_Direct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#aca87560872da5f2996f083d7b4263335",tooltip="A virtual member. Set the direct velocity solution for the adjoint solver. "];
+  Node100 -> Node119 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node119 [label="CSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a5c530a5946aeeceb039c841115dd4b9b",tooltip="A virtual member. "];
+}

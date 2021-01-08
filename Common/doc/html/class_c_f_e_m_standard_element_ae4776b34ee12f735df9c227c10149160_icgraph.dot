@@ -1,0 +1,9 @@
+digraph "CFEMStandardElement::GetMat2ndDerBasisFunctionsInt"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node85 [label="CFEMStandardElement\l::GetMat2ndDerBasisFunctionsInt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node85 -> Node86 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node86 [label="CFEM_DG_NSSolver::SetTime_Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a993de2bb61a532e9d1508bae98dd3a12",tooltip="Function to compute the time step for solving the Navier-Stokes equations. "];
+}

@@ -1,0 +1,11 @@
+digraph "CSolver::GetConstants"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1325 [label="CSolver::GetConstants",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1325 -> Node1326 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1326 [label="CDriver::Numerics_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a5c0a3e0cf9f6c3931d307aef1aba7bf4",tooltip="Definition and allocation of all solver classes. "];
+  Node1326 -> Node1327 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1327 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+}

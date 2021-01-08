@@ -1,0 +1,35 @@
+digraph "CAdjFlowCompOutput::LoadHistoryData"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node12 [label="CAdjFlowCompOutput\l::LoadHistoryData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="COutput::SetHistoryOutput\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#a1c1f836992f419544472329a44b8836e",tooltip="Set the value of a history output field. "];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node12 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CSolver::GetRes_RMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a1c24b55e0849f7f6ba2f62d15d7e4f8e",tooltip="Get the maximal residual, this is useful for the convergence history. "];
+  Node12 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="CGeometry::GetnDim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a2af01006c0c4f74ba089582f1a3587fe",tooltip="Get number of coordinates. "];
+  Node12 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="CConfig::GetFrozen\l_Visc_Disc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb146862f57545364350419287581bbc",tooltip="Provides information about the way in which the turbulence will be treated by the disc..."];
+  Node12 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="CConfig::GetFrozen\l_Visc_Cont",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aec67dda6436453412e8647ee6879108b",tooltip="Provides information about the way in which the turbulence will be treated by the cont..."];
+  Node12 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="CSolver::GetRes_Max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a00c2752e9b098ac63efeac7d14a83779",tooltip="Get the maximal residual, this is useful for the convergence history. "];
+  Node12 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="CSolver::GetRes_BGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a83cd1ade482300b90aa8ccc6aad03acd",tooltip="Get the residual for BGS subiterations. "];
+  Node12 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="CSolver::GetTotal_Sens_Geo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a73fc70f85d31a55a8464e5ce6fd334f0",tooltip="A virtual member. "];
+  Node12 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="CSolver::GetTotal_Sens_AoA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a5ffddb54c116f5bf56b83a075d4437d3",tooltip="A virtual member. "];
+  Node12 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="CSolver::GetTotal_Sens_Mach",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a08d670974b1e5423ff294f417db770ff",tooltip="A virtual member. "];
+  Node12 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="CSolver::GetTotal_Sens\l_Press",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#adc78fb34373eafc7501e9805b515f152",tooltip="Set the total farfield pressure sensitivity coefficient. "];
+  Node12 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="CSolver::GetTotal_Sens_Temp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a0d6457354307c1118990c5bd3123427e",tooltip="Set the total farfield temperature sensitivity coefficient. "];
+}

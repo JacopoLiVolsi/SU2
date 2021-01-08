@@ -1,0 +1,21 @@
+digraph "CGeometry"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node7 [label="CGeometry",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" turbovertex" ,fontname="Helvetica"];
+  Node8 [label="CTurboVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turbo_vertex.html",tooltip="Class for vertex definition for turbomachinery (equivalent to edges, but for the boundaries). "];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html",tooltip="Class for vertex definition (equivalent to edges, but for the boundaries). "];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CDualGrid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_dual_grid.html",tooltip="Class for controlling the dual volume definition. The dual volume is compose by three main elements: ..."];
+  Node11 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" newBound\nbound\nface\nelem" ,fontname="Helvetica"];
+  Node11 [label="CPrimalGrid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html",tooltip="Class to define the numerical primal grid. "];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vertex" ,fontname="Helvetica"];
+  Node12 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" edge" ,fontname="Helvetica"];
+  Node12 [label="CEdge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html",tooltip="Class for defining an edge. "];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" node" ,fontname="Helvetica"];
+  Node13 [label="CPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html",tooltip="Class for point definition (including control volume definition). "];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

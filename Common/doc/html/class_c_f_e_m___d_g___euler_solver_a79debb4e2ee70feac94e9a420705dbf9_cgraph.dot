@@ -1,0 +1,19 @@
+digraph "CFEM_DG_EulerSolver::LeftStatesIntegrationPointsBoundaryFace"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1259 [label="CFEM_DG_EulerSolver\l::LeftStatesIntegrationPoints\lBoundaryFace",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1259 -> Node1260 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1260 [label="CFEMStandardElementBase\l::GetNIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#aa5ad06a05a1d7b66bccca65521168a3b",tooltip="Function, which makes available the number of integration points for this standard element..."];
+  Node1259 -> Node1261 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1261 [label="CFEMStandardBoundaryFace\l::GetNDOFsFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_boundary_face.html#a26266f4d68d95c22bbb949fe6d8f5db6",tooltip="Function, which makes available the number of DOFs of the face. "];
+  Node1259 -> Node1262 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1262 [label="CFEMStandardBoundaryFace\l::GetBasisFaceIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_boundary_face.html#a283dc8babad462022e4621afe0251929",tooltip="Function, which makes available the face basis functions in the integration points. "];
+  Node1259 -> Node1263 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1263 [label="CBlasStructure::gemm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_blas_structure.html#a40a585307895af828a7f51cd0ccbf81d",tooltip="Function, which carries out a dense matrix product. It is a limited version of the BLAS gemm function..."];
+  Node1263 -> Node1264 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1264 [label="CConfig::GEMM_Tick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2628e094b67a6d5cb410710aa00fa69b",tooltip="Start the timer for profiling subroutines. "];
+  Node1263 -> Node1265 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1265 [label="CConfig::GEMM_Tock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae8d24548bd977c6a76e06ed9814418bb",tooltip="Stop the timer for the GEMM profiling and store results. "];
+}

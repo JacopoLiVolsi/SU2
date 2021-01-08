@@ -1,0 +1,19 @@
+digraph "CConfig::GetKind_TimeIntScheme_AdjTurb"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5629 [label="CConfig::GetKind_TimeInt\lScheme_AdjTurb",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5629 -> Node5630 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5630 [label="CUpwLin_AdjTurb::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_lin___adj_turb.html#a586f979fa272a2e3181faea84a89202f",tooltip="Compute the adjoint upwind flux between two nodes i and j. "];
+  Node5629 -> Node5631 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5631 [label="CUpwSca_AdjTurb::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_sca___adj_turb.html#af0a035273c70fd76877f1cea8c4f56bc"];
+  Node5629 -> Node5632 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5632 [label="CAvgGradCorrected_AdjTurb\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad_corrected___adj_turb.html#a519400edf197a7d64cdb53af8d771077",tooltip="Compute the adjoint turbulent residual using average of gradients and a derivative correction..."];
+  Node5629 -> Node5633 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5633 [label="CAvgGrad_AdjTurb::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___adj_turb.html#a966a759aa6a5933128a6a00f8e637193",tooltip="Compute the adjoint turbulent residual using average of gradients and a derivative correction..."];
+  Node5629 -> Node5634 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5634 [label="CSourcePieceWise_AdjTurb\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_source_piece_wise___adj_turb.html#aa05da39768b27c31284576862b49259c",tooltip="Source term integration of the adjoint turbulence equation. "];
+  Node5629 -> Node5635 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5635 [label="CSourceConservative\l_AdjTurb::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_source_conservative___adj_turb.html#a65fe7e7d87912a40de3abfd81f2da196",tooltip="Source term integration using a conservative scheme. "];
+}

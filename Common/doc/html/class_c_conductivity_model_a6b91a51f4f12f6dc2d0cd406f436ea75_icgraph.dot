@@ -1,0 +1,28 @@
+digraph "CConductivityModel::SetDerConductivity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node53 [label="CConductivityModel\l::SetDerConductivity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node53 -> Node54 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node54 [label="CFluidModel::GetThermalConductivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a1b4858b3dc8a65fa2e8c868689191e56",tooltip="Get fluid thermal conductivity. "];
+  Node54 -> Node55 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node55 [label="CWallModelLogLaw::WallShear\lStressAndHeatFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_wall_model_log_law.html#a64e925c7f877a70fec7057cb92582853",tooltip="Function, which computes the wall shear stress and heat flux from the data at the exchange location..."];
+  Node54 -> Node56 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node56 [label="CEulerSolver::BC_Riemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a22c21d18fa626d489db9a387234bd9d0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node54 -> Node57 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node57 [label="CEulerSolver::BC_TurboRiemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a0066305803a18511fb89b8951f4e4866",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node54 -> Node58 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node58 [label="CEulerSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aa4c3988e3ce0c18460b5c069650c57b0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node54 -> Node59 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node59 [label="CIncNSVariable::SetPrimVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_variable.html#ae1b2f543bae5e6067ad855deef0233ef",tooltip="Set all the primitive variables for incompressible flows. "];
+  Node59 -> Node60 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node60 [label="CIncNSVariable::GetStrainMag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_variable.html#a7d5ba854a99c0432be51115078bfa036",tooltip="Get the value of the magnitude of rate of strain. "];
+  Node54 -> Node61 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node61 [label="CNSVariable::SetPrimVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a0db8c1ede5090174259a69548d20c9fe",tooltip="Set all the primitive variables for compressible flows. "];
+  Node61 -> Node62 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node62 [label="CNSVariable::SetdktdT_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a3d749ea73bdc0f7dd45aa2ed713e768b",tooltip="Set the derivative of thermal conductivity with respect to temperature (at constant density)..."];
+  Node62 -> Node63 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node63 [label="CNSVariable::SetSecondaryVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a574bbbfda4f2191f836d2e3e7e1c8b3e",tooltip="Set all the secondary variables (partial derivatives) for compressible flows. "];
+  Node63 -> Node62 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

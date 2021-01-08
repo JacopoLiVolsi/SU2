@@ -1,0 +1,13 @@
+digraph "CConfig::GetMarker_HeatFlux_TagBound"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node7299 [label="CConfig::GetMarker\l_HeatFlux_TagBound",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7299 -> Node7300 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7300 [label="CHeatSolverFVM::Set\l_Heatflux_Areas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#a1746cdf2e4dadde9ec3ba0bae059d9a7",tooltip="A virtual member. "];
+  Node7300 -> Node7301 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7301 [label="CHeatSolverFVM::CHeatSolverFVM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#a42af03c3f465c905fbc3ecbee398f5be",tooltip="Constructor of the class. "];
+  Node7299 -> Node7302 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7302 [label="CHeatSolverFVM::BC\l_HeatFlux_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#ae37f2deac6090f973d605975790f32f1",tooltip="Impose a constant heat-flux condition at the wall. "];
+}

@@ -95,6 +95,61 @@ public:
   void axpy(const int n,    const su2double a,  const su2double *x,
             const int incx, su2double *y,       const int incy);
 
+  /*!
+   * \brief Function to solve a general linear system with LU factorization.
+   * \param[in] N       - order of the matrix. 
+   * \param[in] NRHS    - column of the right-hand side. 
+   * \param[in] A       - input matrix, col major order. 
+   * \param[inout] x    - in input x is the rhs, in output it contains the solution. 
+   */
+  void dgetrs(const int N, const int NRHS, su2double *A, su2double *x);
+
+  /*!
+   * \brief Function to solve iteratively a linear system.
+   * \param[in] N       - order of the matrix. 
+   * \param[in] NRHS    - column of the right-hand side. 
+   * \param[in] A       - input matrix, col major order. 
+   * \param[inout] x    - in input x is the rhs, in output it contains the solution. 
+   */
+  void Iterative_Solve(const int N, const int NRHS, su2double *A, su2double *x);
+
+  /*!
+   * \brief Function to solve iteratively a linear system.
+   * \param[in] N       - order of the matrix. 
+   * \param[in] NRHS    - column of the right-hand side. 
+   * \param[in] A       - input matrix, col major order. 
+   * \param[inout] x    - in input x is the rhs, in output it contains the solution. 
+   */
+  void Conjugate_Gradient(const int N, const int NRHS, const su2double *A, su2double *x);
+
+  /*!
+   * \brief Function to compute the norm of a vector.
+   */
+  su2double Norm2(const int N, su2double* x);
+
+  /*!
+   * \brief Function to compute the scalar product of 
+   *        two vectors of dimension N.
+   */
+  su2double Scalar(su2double *a, su2double *b, int N);
+
+  /*!
+   * \brief Function to solve iteratively a linear system.
+   * \param[in] Mrow    - row nr of the matrix. 
+   * \param[in] Ncol    - column nr of the matrix. 
+   * \param[in] A       - input matrix, col major order. 
+   * \param[inout] x    - in input x is the rhs, in output it contains the solution. 
+   */
+  void dgels(const int Mrow, const int Ncol, su2double* A, su2double* b, su2double* x);
+
+  /*!
+   * \brief Function to compute the determinant of matrix A.
+   * \param[in]  Ncol   - row&column nr of the matrix. 
+   * \param[in]  A      - input matrix, col major order. 
+   * \param[out] det    - determinant of the matrix. 
+   */
+  su2double Determinant(su2double* A, int N);
+ 
 private:
 
 #if !(defined(HAVE_LIBXSMM) || defined(HAVE_BLAS) || defined(HAVE_MKL)) || (defined(CODI_REVERSE_TYPE) || defined(CODI_FORWARD_TYPE))

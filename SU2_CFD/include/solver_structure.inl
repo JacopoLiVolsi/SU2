@@ -35,6 +35,8 @@ inline void CSolver::SetNondimensionalization(CConfig *config, unsigned short iM
 
 inline bool CSolver::GetAdjoint(void) { return adjoint; }
 
+inline CMultilayerPoint* CSolver::GetLayerNode(unsigned short iLayer, unsigned long iPoint) { }
+ 
 inline unsigned short CSolver::GetIterLinSolver(void) { return IterLinSolver; }
 
 inline su2double CSolver::GetCSensitivity(unsigned short val_marker, unsigned long val_vertex) { return 0; }

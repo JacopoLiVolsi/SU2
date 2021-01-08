@@ -1,0 +1,21 @@
+digraph "CConfig::GetKind_FEM_DG_Shock"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4904 [label="CConfig::GetKind_FEM\l_DG_Shock",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4904 -> Node4905 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4905 [label="CDriver::Solver_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#add15058928d0b7462a7b8257417d0914",tooltip="Definition and allocation of all solution classes. "];
+  Node4905 -> Node4906 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4906 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node4904 -> Node4907 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4907 [label="CFEM_DG_EulerSolver\l::Shock_Capturing_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a8811f2fe9d2efb93b2fcdedf228083d1",tooltip="Compute the artificial viscosity for shock capturing in DG. It is a virtual function, because this function is overruled for Navier-Stokes. "];
+  Node4907 -> Node4908 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4908 [label="CFEM_DG_EulerSolver\l::ProcessTaskList_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a651cad1a94f2024c75a1a8be347e3375",tooltip="Function, which processes the list of tasks to be executed by the DG solver. "];
+  Node4908 -> Node4909 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4909 [label="CFEM_DG_EulerSolver\l::ComputeSpatialJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ac59d8dae95e3c3cc3ab3feaeb9be4b22",tooltip="Function, which controls the computation of the spatial Jacobian. "];
+  Node4908 -> Node4910 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4910 [label="CFEM_DG_EulerSolver\l::ADER_SpaceTimeIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a7f0da04d44069701db2228210b91c59e",tooltip="Function, to carry out the space time integration for ADER with time accurate local time stepping..."];
+  Node4904 -> Node4911 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4911 [label="CFEM_DG_NSSolver::Shock\l_Capturing_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a6c6944d7036c9cb3e9664f938543b52b",tooltip="Compute the artificial viscosity for shock capturing in DG. "];
+}

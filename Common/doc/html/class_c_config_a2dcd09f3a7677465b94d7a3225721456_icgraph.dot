@@ -1,0 +1,11 @@
+digraph "CConfig::GetLinear_Solver_Restart_Frequency"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6178 [label="CConfig::GetLinear\l_Solver_Restart_Frequency",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6178 -> Node6179 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6179 [label="CSysSolve\< su2double\l \>::Solve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_solve.html#a47c0bf85c252de49cdb04f254c6b2d2f",tooltip="Solve the linear system using a Krylov subspace method. "];
+  Node6178 -> Node6180 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6180 [label="CSysSolve\< su2double\l \>::Solve_b",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_solve.html#a5c501b77244d683ef143ee3146fe0a84",tooltip="Solve the adjoint linear system using a Krylov subspace method. "];
+}

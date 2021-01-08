@@ -1,0 +1,21 @@
+digraph "CEulerVariable::SetGradient_PrimitiveZero"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node303 [label="CEulerVariable::SetGradient\l_PrimitiveZero",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node303 -> Node304 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node304 [label="CEulerVariable::AddSolution_New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_variable.html#aeb53fd51ed2279bdb2d5b9f6beba5599",tooltip="Add a value to the new solution container for Classical RK4. "];
+  Node304 -> Node305 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node305 [label="CEulerSolver::ClassicalRK4\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad87a9109a645f0ea9e38336d2a6bf196",tooltip="Update the solution using the classical fourth-order Runge-Kutta scheme. "];
+  Node303 -> Node306 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node306 [label="CEulerSolver::SetPrimitive\l_Gradient_GG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a74fb3b502b83371fcf0728ec546e039b",tooltip="Compute the gradient of the primitive variables using Green-Gauss method, and stores the result in th..."];
+  Node306 -> Node307 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node307 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node306 -> Node308 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node308 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+  Node303 -> Node309 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node309 [label="CEulerSolver::SetPrimitive\l_Gradient_LS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a734d5bd064215fb722477f39993155d4",tooltip="Compute the gradient of the primitive variables using a Least-Squares method, and stores the result i..."];
+  Node309 -> Node307 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node309 -> Node308 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

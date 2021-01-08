@@ -1,0 +1,28 @@
+digraph "CConductivityModel::GetdktdT_rho"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node29 [label="CConductivityModel\l::GetdktdT_rho",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node29 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="CFluidModel::GetThermalConductivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a1b4858b3dc8a65fa2e8c868689191e56",tooltip="Get fluid thermal conductivity. "];
+  Node30 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="CWallModelLogLaw::WallShear\lStressAndHeatFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_wall_model_log_law.html#a64e925c7f877a70fec7057cb92582853",tooltip="Function, which computes the wall shear stress and heat flux from the data at the exchange location..."];
+  Node30 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="CEulerSolver::BC_Riemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a22c21d18fa626d489db9a387234bd9d0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node30 -> Node33 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="CEulerSolver::BC_TurboRiemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a0066305803a18511fb89b8951f4e4866",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node30 -> Node34 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="CEulerSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aa4c3988e3ce0c18460b5c069650c57b0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node30 -> Node35 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="CIncNSVariable::SetPrimVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_variable.html#ae1b2f543bae5e6067ad855deef0233ef",tooltip="Set all the primitive variables for incompressible flows. "];
+  Node35 -> Node36 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="CIncNSVariable::GetStrainMag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_variable.html#a7d5ba854a99c0432be51115078bfa036",tooltip="Get the value of the magnitude of rate of strain. "];
+  Node30 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="CNSVariable::SetPrimVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a0db8c1ede5090174259a69548d20c9fe",tooltip="Set all the primitive variables for compressible flows. "];
+  Node37 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="CNSVariable::SetdktdT_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a3d749ea73bdc0f7dd45aa2ed713e768b",tooltip="Set the derivative of thermal conductivity with respect to temperature (at constant density)..."];
+  Node38 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="CNSVariable::SetSecondaryVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a574bbbfda4f2191f836d2e3e7e1c8b3e",tooltip="Set all the secondary variables (partial derivatives) for compressible flows. "];
+  Node39 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,27 @@
+digraph "CDiscAdjFEASolver::ExtractAdjoint_Variables"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node124 [label="CDiscAdjFEASolver::\lExtractAdjoint_Variables",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node124 -> Node125 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node125 [label="CConfig::GetMultizone\l_Problem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad9233b666b21e43c18592925be61cc9b",tooltip="Get whether the simulation we are running is a multizone simulation. "];
+  Node124 -> Node126 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node126 [label="AD::GetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a305f38ce692ce2f4269c05a022fe2ff5",tooltip="Extracts the adjoint value at index. "];
+  Node124 -> Node127 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node127 [label="SU2_TYPE::GetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#aaf4331164217013b2f05dda28329fcb1",tooltip="Get the derivative value of the datatype (needs to be implemented for each new type). "];
+  Node124 -> Node128 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node128 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node128 -> Node129 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node129 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node124 -> Node130 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node130 [label="CConfig::GetnMarker\l_Fluid_Load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3cc19e152ee9623de76d631d819b2999",tooltip="Get the total number of markers in which the flow load is computed/employed. "];
+  Node124 -> Node131 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node131 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node124 -> Node132 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node132 [label="CVariable::ExtractFlowTraction\l_Sensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a14d3efe3121700ec1a681ab23a171a80",tooltip="A virtual member. "];
+  Node124 -> Node133 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node133 [label="CDiscAdjFEABoundVariable\l::SetFlowTractionSensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_bound_variable.html#a9358dd32f3e5984341f96146dba1f8bd",tooltip="Set the FSI force sensitivity at the node. "];
+  Node133 -> Node134 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node134 [label="CVertexMap::GetVertexIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex_map.html#ae62665f7065cb9e31c2aec1ec90c0afc",tooltip="Convert a point index to vertex index. "];
+}

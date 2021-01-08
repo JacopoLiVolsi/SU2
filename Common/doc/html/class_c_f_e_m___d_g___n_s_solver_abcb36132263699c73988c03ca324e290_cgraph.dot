@@ -1,0 +1,34 @@
+digraph "CFEM_DG_NSSolver::BC_Isothermal_Wall"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node114 [label="CFEM_DG_NSSolver::BC\l_Isothermal_Wall",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node114 -> Node115 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node115 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node114 -> Node116 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node116 [label="CConfig::GetIsothermal\l_Temperature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a714590a2565d2a339ee22009ada1c7f9",tooltip="Get the wall temperature (static) at an isothermal boundary. "];
+  Node114 -> Node117 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 [label="CConfig::GetTemperature_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8ec4a0951d9a432dadffad665a9892b3",tooltip="Get the value of the reference temperature for non-dimensionalization. "];
+  Node114 -> Node118 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node118 [label="CConfig::GetGas_ConstantND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6d835a954bb5e99c5a3de6db5ed24ff3",tooltip="Get the value of specific gas constant. "];
+  Node114 -> Node119 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node119 [label="CConfig::GetSizeMatMulPadding",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aea5478f0851e4cb4d11c262fb6c6e8c4",tooltip="Function to make available the matrix size in vectorization in order to optimize the gemm performance..."];
+  Node114 -> Node120 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node120 [label="CFEM_DG_EulerSolver\l::MetaDataChunkOfElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ad358fa06c0e5b2762ad3258eb2c677e2",tooltip="Template function, which determines some meta data for the chunk of elements/faces that must be treat..."];
+  Node114 -> Node121 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="CFEMStandardElementBase\l::GetNIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#aa5ad06a05a1d7b66bccca65521168a3b",tooltip="Function, which makes available the number of integration points for this standard element..."];
+  Node114 -> Node122 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node122 [label="CFEM_DG_EulerSolver\l::LeftStatesIntegrationPoints\lBoundaryFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a79debb4e2ee70feac94e9a420705dbf9",tooltip="Function, which computes the left state of a boundary face. "];
+  Node122 -> Node121 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node122 -> Node123 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node123 [label="CFEMStandardBoundaryFace\l::GetNDOFsFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_boundary_face.html#a26266f4d68d95c22bbb949fe6d8f5db6",tooltip="Function, which makes available the number of DOFs of the face. "];
+  Node122 -> Node124 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node124 [label="CFEMStandardBoundaryFace\l::GetBasisFaceIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_boundary_face.html#a283dc8babad462022e4621afe0251929",tooltip="Function, which makes available the face basis functions in the integration points. "];
+  Node122 -> Node125 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node125 [label="CBlasStructure::gemm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_blas_structure.html#a40a585307895af828a7f51cd0ccbf81d",tooltip="Function, which carries out a dense matrix product. It is a limited version of the BLAS gemm function..."];
+  Node125 -> Node126 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node126 [label="CConfig::GEMM_Tick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2628e094b67a6d5cb410710aa00fa69b",tooltip="Start the timer for profiling subroutines. "];
+  Node125 -> Node127 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node127 [label="CConfig::GEMM_Tock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae8d24548bd977c6a76e06ed9814418bb",tooltip="Stop the timer for the GEMM profiling and store results. "];
+}

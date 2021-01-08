@@ -297,6 +297,11 @@ void COutput::AllocateDataSorters(CConfig *config, CGeometry *geometry){
 
   }
 
+ /*--- Set nLayer in volume data sorter --- */
+ if( (config->GetKind_Solver() == THIN_FILM) && (volumeDataSorter != nullptr)){
+  volumeDataSorter->SetnLayer(config->GetnLayer());
+ }
+
 }
 
 void COutput::Load_Data(CGeometry *geometry, CConfig *config, CSolver** solver_container){
@@ -572,7 +577,7 @@ bool COutput::SetResult_Files(CGeometry *geometry, CConfig *config, CSolver** so
                               unsigned long iter, bool force_writing){
 
   bool writeFiles = WriteVolume_Output(config, iter, force_writing);
-
+  bool multilayer_film  = (config->GetKind_Solver()==THIN_FILM)&&(config->GetKind_Film_Solver()==MULTI_LAYER_ASYMP);
   /*--- Check if the data sorters are allocated, if not, allocate them. --- */
 
   AllocateDataSorters(config, geometry);
@@ -604,13 +609,15 @@ bool COutput::SetResult_Files(CGeometry *geometry, CConfig *config, CSolver** so
 
     for (unsigned short iFile = 0; iFile < nVolumeFiles; iFile++){
 
+     if(!multilayer_film)
       WriteToFile(config, geometry, VolumeFiles[iFile]);
 
     }
 
     if (rank == MASTER_NODE && nVolumeFiles != 0){
+     if(!multilayer_film)
       fileWritingTable->PrintFooter();
-      headerNeeded = true;
+     headerNeeded = true;
     }
 
     /*--- Write any additonal files defined in the child class ----*/

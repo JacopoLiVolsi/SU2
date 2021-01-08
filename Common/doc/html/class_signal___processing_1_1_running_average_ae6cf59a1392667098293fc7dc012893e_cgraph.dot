@@ -1,0 +1,9 @@
+digraph "Signal_Processing::RunningAverage::RunningAverage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Signal_Processing::\lRunningAverage::RunningAverage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Signal_Processing::\lRunningAverage::Reset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_signal___processing_1_1_running_average.html#af604d58f625557302a9fb5f08b3deac5"];
+}

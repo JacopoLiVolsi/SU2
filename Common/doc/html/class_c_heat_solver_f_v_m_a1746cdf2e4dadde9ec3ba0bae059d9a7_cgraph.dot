@@ -1,0 +1,25 @@
+digraph "CHeatSolverFVM::Set_Heatflux_Areas"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node632 [label="CHeatSolverFVM::Set\l_Heatflux_Areas",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node632 -> Node633 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node633 [label="CConfig::GetnMarker\l_HeatFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a32440bdf444c3187c2b45f6f6d509a86",tooltip="Get the total number of heat flux markers. "];
+  Node632 -> Node634 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node634 [label="CConfig::GetMarker\l_All_Monitoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a942619938b389de95268bce31434c276",tooltip="Get the monitoring information for a marker val_marker. "];
+  Node632 -> Node635 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node635 [label="CConfig::GetMarker\l_HeatFlux_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae6abb511ad2253421790537537101753",tooltip="Get the name of the surface defined in the geometry file. "];
+  Node632 -> Node636 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node636 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node632 -> Node637 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node637 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node632 -> Node638 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node638 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node632 -> Node639 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node639 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node632 -> Node640 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node640 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node640 -> Node641 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node641 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+}

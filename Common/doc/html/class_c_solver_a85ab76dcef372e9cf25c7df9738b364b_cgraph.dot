@@ -1,0 +1,15 @@
+digraph "CSolver::SetUpTypicalSectionWingModel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5386 [label="CSolver::SetUpTypicalSection\lWingModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5386 -> Node5387 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5387 [label="CConfig::GetAeroelastic\l_Frequency_Plunge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0ec6a5b1cd9d21bce43b0ad95a427687",tooltip="Uncoupled Aeroelastic Frequency Plunge. "];
+  Node5386 -> Node5388 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5388 [label="CConfig::GetAeroelastic\l_Frequency_Pitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2cb6eeb8d14730720c5ee584b8cc7e8b",tooltip="Uncoupled Aeroelastic Frequency Pitch. "];
+  Node5386 -> Node5389 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5389 [label="CConfig::GetAeroelastic\l_CG_Location",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#acc4baf536059893600bc566d7b8913e6",tooltip="Aeroelastic center of gravity location. "];
+  Node5386 -> Node5390 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5390 [label="CConfig::GetAeroelastic\l_Radius_Gyration_Squared",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3d4898b381409684e54710f8b8f6f047",tooltip="Aeroelastic radius of gyration squared. "];
+}

@@ -1,0 +1,47 @@
+digraph "CHeatSolverFVM::BC_ConjugateHeat_Interface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node101 [label="CHeatSolverFVM::BC\l_ConjugateHeat_Interface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node101 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 [label="CConfig::GetKind_TimeInt\lScheme_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a20e5fd7b43cfd2bf2bcf5137f12bc635",tooltip="Get the kind of integration scheme (explicit or implicit) for the flow equations. ..."];
+  Node101 -> Node103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node101 -> Node104 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="CConfig::GetTemperature_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8ec4a0951d9a432dadffad665a9892b3",tooltip="Get the value of the reference temperature for non-dimensionalization. "];
+  Node101 -> Node105 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node105 [label="CConfig::GetDensity\l_Solid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#abdcc61f1a8497480834447acc74cb897",tooltip="Get the value of the solid density. "];
+  Node101 -> Node106 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node106 [label="CConfig::GetSpecific\l_Heat_Cp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a712ecbd9da6efeaccd98680b56c098d9",tooltip="Get the value of specific heat at constant pressure. "];
+  Node101 -> Node107 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node101 -> Node108 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node101 -> Node109 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node109 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node101 -> Node110 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node110 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node101 -> Node111 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node101 -> Node112 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node112 [label="CHeatSolverFVM::GetConjugate\lHeatVariable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#ad7266c9d7bcc016a3465b3cfc9a66275",tooltip="Set the conjugate heat variables. "];
+  Node101 -> Node113 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node113 [label="CVariable::SetSolution_Old",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a6ee4d8d450971204cc054a33d6473732",tooltip="Set the value of the old solution. "];
+  Node101 -> Node114 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node114 [label="CSysVector::SetBlock_Zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a9dedcec16bd6d95575de5b99e7a07e78",tooltip="Set the residual to zero. "];
+  Node101 -> Node115 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node115 [label="CVariable::SetRes_TruncErrorZero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#ac78097c62e9266762a797187b9359133",tooltip="Set the truncation error to zero. "];
+  Node101 -> Node116 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node116 [label="CSysMatrix::DeleteValsRowi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a9473b0224c9b9a2749571db0bbd22a70",tooltip="Deletes the values of the row i of the sparse matrix. "];
+  Node101 -> Node117 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 [label="CConfig::GetCHT_Robin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a274c136af7bf2cd4b7a46fbf46c65836",tooltip="Get the boundary condition method for CHT. "];
+  Node101 -> Node118 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node118 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node101 -> Node119 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node119 [label="CConfig::GetHeat_Flux_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab15b7c9cc25b9bbb52b08dbbf319f26e",tooltip="Get the reference value for the heat flux. "];
+  Node101 -> Node120 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node120 [label="CSysVector::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a732b302ca148d38b442bfe7e096a81be",tooltip="Subtract val_residual to the residual. "];
+  Node101 -> Node121 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="CSysMatrix::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#af913d33707e948c30fff5a62773ef5c6",tooltip="Subtracts the specified block to the sparse matrix. "];
+}

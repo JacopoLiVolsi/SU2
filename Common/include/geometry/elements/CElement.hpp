@@ -585,6 +585,32 @@ public:
 };
 
 /*!
+ * \class CLINE1
+ * \brief Fictitious 2D line element with 1 Gauss Points
+ * \author J. Li Volsi
+ */
+class CLINE1 final : public CElementWithKnownSizes<1,2,2> {
+private:
+  enum : unsigned short {NGAUSS = 1};
+  enum : unsigned short {NNODE = 2};
+  enum : unsigned short {NDIM = 2};
+
+public:
+  /*!
+   * \brief Constructor of the class.
+   */
+  CLINE1();
+
+  /*!
+   * \brief Compute the value of the area of the element.
+   * \param[in] mode - Type of coordinates to consider in the computation.
+   * \return Area of the element.
+   */
+  su2double ComputeArea(const FrameType mode = REFERENCE) const override;
+
+};
+
+/*!
  * \class CTRIA1
  * \brief Tria element with 1 Gauss Points
  * \author R. Sanchez

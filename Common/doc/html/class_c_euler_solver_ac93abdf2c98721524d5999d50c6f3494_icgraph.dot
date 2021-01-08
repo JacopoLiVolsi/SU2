@@ -1,0 +1,23 @@
+digraph "CEulerSolver::GetDonorPrimVar"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1626 [label="CEulerSolver::GetDonorPrimVar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1626 -> Node1627 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1627 [label="CEulerSolver::SetActDisk\l_BCThrust",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a147d5ae75cf7de115e4be2c23ba95f6d",tooltip="Update the AoA and freestream velocity at the farfield. "];
+  Node1627 -> Node1628 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1628 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node1627 -> Node1629 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1629 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+  Node1626 -> Node1630 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1630 [label="CEulerSolver::BC_Interface\l_Boundary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a27824d8f047f10dfc6ab700af585d7d9",tooltip="Impose the interface boundary condition using the residual. "];
+  Node1626 -> Node1631 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1631 [label="CEulerSolver::BC_NearField\l_Boundary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8ef676e57b01dac975572a12f4c2f683",tooltip="Impose the near-field boundary condition using the residual. "];
+  Node1626 -> Node1632 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1632 [label="CEulerSolver::BC_ActDisk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#acab63d0bb72e6245b440c015e8c1de04",tooltip="Impose the engine inflow boundary condition. "];
+  Node1632 -> Node1633 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1633 [label="CEulerSolver::BC_ActDisk\l_Inlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#af919c89cdb2d5b8059d38a95f9c79edb",tooltip="Impose the engine inflow boundary condition. "];
+  Node1632 -> Node1634 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1634 [label="CEulerSolver::BC_ActDisk\l_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a6cf759ff3e1608b5df71ea77441034c7",tooltip="Impose the engine exhaust boundary condition. "];
+}

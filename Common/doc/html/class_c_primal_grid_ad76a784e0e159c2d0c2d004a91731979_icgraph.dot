@@ -1,0 +1,35 @@
+digraph "CPrimalGrid::GetFaces"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node56 [label="CPrimalGrid::GetFaces",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node56 -> Node57 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node57 [label="CPhysicalGeometry::\lFindFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#af8b4bd2aea9eddaf5ff681b58e829612",tooltip="Find repeated nodes between two elements to identify the common face. "];
+  Node57 -> Node58 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node58 [label="CPhysicalGeometry::\lSetElement_Connectivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a1d2928a8458030d593acda3bd75d9cec",tooltip="Set elements which surround an element. "];
+  Node58 -> Node59 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node59 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___m_s_h_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node56 -> Node60 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node60 [label="CGridAdaptation::SetHomothetic\l_Adaptation3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_grid_adaptation.html#a9f2b95697dbf07724fae0b65e19323b7",tooltip="Do a complete adaptation of the computational grid using a homothetic technique (3D). "];
+  Node60 -> Node59 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node56 -> Node61 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node61 [label="CInterpolator::Determine\l_ArraySize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_interpolator.html#a9e320a9ed782dd9aa75afee58bfe683f",tooltip="Determine array sizes used to collect and send coordinate and global point information. "];
+  Node61 -> Node62 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node62 [label="CNearestNeighbor::Set\l_TransferCoeff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_nearest_neighbor.html#a0b3fe23b89f2a19c25d4d3eaeca0b322",tooltip="Set up transfer matrix defining relation between two meshes. "];
+  Node62 -> Node63 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node63 [label="CNearestNeighbor::CNearest\lNeighbor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_nearest_neighbor.html#a04b3ab16218eb4da6122c25fd1c01d41",tooltip="Constructor of the class. "];
+  Node61 -> Node64 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 [label="CIsoparametric::Set\l_TransferCoeff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_isoparametric.html#ad5d5a03e5de530698f9fb1baf8ba583c",tooltip="Set up transfer matrix defining relation between two meshes. "];
+  Node64 -> Node65 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 [label="CIsoparametric::CIsoparametric",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_isoparametric.html#a2b63c225b190b0ffcb16332ea9f18a3b",tooltip="Constructor of the class. "];
+  Node61 -> Node66 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node66 [label="CRadialBasisFunction\l::Set_TransferCoeff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_radial_basis_function.html#a913cab8d07b872d2b545fd1b8c0c91d3",tooltip="Set up transfer matrix defining relation between two meshes. "];
+  Node66 -> Node67 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node67 [label="CRadialBasisFunction\l::CRadialBasisFunction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_radial_basis_function.html#a390e7399b8fd35938449c1da47a79321",tooltip="Constructor of the class. "];
+  Node56 -> Node64 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node56 -> Node68 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node68 [label="CPrimalGrid::SetCoord_CG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a9260a73f9354e77125fb9c3e40489498",tooltip="Set the center of gravity of an element (including edges). "];
+  Node68 -> Node69 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="CPhysicalGeometry::\lSetCoord_CG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#aee78e23035731a714dda6a73e6de8838",tooltip="Set the center of gravity of the face, elements and edges. "];
+}

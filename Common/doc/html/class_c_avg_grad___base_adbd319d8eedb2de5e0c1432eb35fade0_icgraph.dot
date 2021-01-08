@@ -1,0 +1,13 @@
+digraph "CAvgGrad_Base::GetMeanRateOfStrainMatrix"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node19 [label="CAvgGrad_Base::GetMeanRate\lOfStrainMatrix",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="CAvgGrad_Base::SetReynolds\lStressMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___base.html#abb9a6cb2c20f802800015908cadec4d9",tooltip="Initialize the Reynolds Stress Matrix. "];
+  Node20 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="CAvgGrad_Flow::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___flow.html#a1c12e066648de65a083bc9aea10df100",tooltip="Compute the viscous flow residual using an average of gradients. "];
+  Node20 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="CGeneralAvgGrad_Flow\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_general_avg_grad___flow.html#a5785be0eced1e0e614adec2cbe7a96d4",tooltip="Compute the viscous flow residual using an average of gradients. "];
+}

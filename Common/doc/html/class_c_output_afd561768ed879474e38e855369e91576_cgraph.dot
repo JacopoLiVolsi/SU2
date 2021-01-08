@@ -1,0 +1,15 @@
+digraph "COutput::SetHistoryFile_Header"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node824 [label="COutput::SetHistoryFile\l_Header",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node824 -> Node825 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node825 [label="PrintingToolbox::CTablePrinter\l::AddColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#af3ddbf0da1a37cc37be7caac031dd4c4",tooltip="Add a column to the table by specifiying the header name and the width. "];
+  Node824 -> Node826 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node826 [label="CConfig::GetTabular\l_FileFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ada7c747b29da89590dfbcc33e62e8f3e",tooltip="Get the format of the output solution. "];
+  Node824 -> Node827 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node827 [label="PrintingToolbox::CTablePrinter\l::PrintHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#a475fafce69bdc78e973a2546e6e6be76",tooltip="Print the header. "];
+  Node827 -> Node828 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node828 [label="PrintingToolbox::CTablePrinter\l::GetNumColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#ace0a256a0479f734c338ae3648f28ed3",tooltip="Get number of columns of the table. "];
+}

@@ -1,0 +1,34 @@
+digraph "CIteration::Preprocess"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node130 [label="CIteration::Preprocess",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node130 -> Node131 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node131 [label="CDiscAdjMultizoneDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#af996aecdb6d20aa4fc81c9b67295abf5",tooltip="[Overload] Run an discrete adjoint update of all solvers within multiple zones. "];
+  Node131 -> Node132 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node132 [label="CDiscAdjMultizoneDriver\l::StartSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a75de0a1a482ceeed4301a384f1515092",tooltip="[Overload] Launch the computation for discrete adjoint multizone problems. "];
+  Node130 -> Node133 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node133 [label="CDiscAdjMultizoneDriver\l::DirectIteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a86d4f9ec474ef91e8ae14a39b72aad9e",tooltip="Run one direct iteration in a zone. "];
+  Node133 -> Node134 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node134 [label="CDiscAdjMultizoneDriver\l::SetRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a441f8669a04147aacab7df463e1dd021",tooltip="Record one iteration of the primal problem within each zone. "];
+  Node134 -> Node131 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node134 -> Node135 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node135 [label="CDiscAdjMultizoneDriver\l::EvaluateSensitivities",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#ac2789097629674cfb7d4de64954024df",tooltip="Evaluate sensitivites for the current adjoint solution and output files. "];
+  Node135 -> Node131 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node130 -> Node136 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node136 [label="CDiscAdjSinglezoneDriver\l::Preprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#a2d0785572312526d0bd695a14dd405f2",tooltip="Preprocess the single-zone iteration. "];
+  Node130 -> Node137 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node137 [label="CDiscAdjSinglezoneDriver\l::DirectRun",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#a59918e5ae5359c05f4d1f7d934ecbe6f",tooltip="Run one iteration of the solver. "];
+  Node137 -> Node138 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node138 [label="CDiscAdjSinglezoneDriver\l::SetRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#a7e519f0f189a3a102b0630edaaa9d233",tooltip="Record one iteration of a flow iteration in within multiple zones. "];
+  Node138 -> Node139 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node139 [label="CDiscAdjSinglezoneDriver\l::MainRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#af4087bc4859a336b67555336d8f28aaf",tooltip="Record the main computational path. "];
+  Node139 -> Node136 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node138 -> Node140 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node140 [label="CDiscAdjSinglezoneDriver\l::SecondaryRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#ad328a74dd89ed2e335b22c4bf2b53cb0",tooltip="Record the secondary computational path. "];
+  Node140 -> Node141 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node141 [label="CDiscAdjSinglezoneDriver\l::Postprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#af0ac923c07d86674b252c28df9a115da",tooltip="Postprocess the adjoint iteration for ZONE_0. "];
+  Node130 -> Node142 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node142 [label="CTurbomachineryDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turbomachinery_driver.html#a4c5a1aaddfe1130684fbcdcacd7eb83f",tooltip="Run a single iteration of the physics within multiple zones. "];
+}

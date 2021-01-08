@@ -1,0 +1,15 @@
+digraph "CConfig::SetMarker_All_MixingPlaneInterface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14872 [label="CConfig::SetMarker\l_All_MixingPlaneInterface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14872 -> Node14873 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14873 [label="CPhysicalGeometry::\lSetBoundaries",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a1350e4d05928db566e3d14fa5dc2587a",tooltip="Set the send receive boundaries of the grid. "];
+  Node14872 -> Node14874 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14874 [label="CPhysicalGeometry::\lLoadUnpartitionedSurfaceElements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a23692062ec01893ef6b5ae53fcbbf022",tooltip="Loads the boundary elements (markers) from the mesh reader object into the primal element data struct..."];
+  Node14874 -> Node14875 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14875 [label="CPhysicalGeometry::\lRead_Mesh_FVM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#ad4096218a43c6a5ec4c56576c0c30e5b",tooltip="Reads the geometry of the grid and adjust the boundary conditions with the configuration file in para..."];
+  Node14875 -> Node14876 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14876 [label="CPhysicalGeometry::\lCPhysicalGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a075a737b341a64de5463ddd41096692e",tooltip="Reads the geometry of the grid and adjust the boundary conditions with the configuration file..."];
+}

@@ -1,0 +1,30 @@
+digraph "CConfig::GetWeight_ObjFunc"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13722 [label="CConfig::GetWeight\l_ObjFunc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13722 -> Node13723 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13723 [label="CAdjEulerSolver::CAdjEuler\lSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a0a739888df9436d4707665d152a7af1a"];
+  Node13722 -> Node13724 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13724 [label="CAdjEulerSolver::SetForce\lProj_Vector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a814d69e54f24c9fef36e3493a2230973",tooltip="Created the force projection vector for adjoint boundary conditions. "];
+  Node13724 -> Node13725 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13725 [label="CAdjEulerSolver::SetFarfield_AoA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a5265a44e6c43dee677c9f26333148432",tooltip="Update the AoA and freestream velocity at the farfield. "];
+  Node13725 -> Node13726 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13726 [label="CAdjEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a4ae0ed840dc8335fd921399625ba794f",tooltip="Initialize the residual vectors. "];
+  Node13725 -> Node13727 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13727 [label="CAdjNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#ac16dab76e2c1d86bc7d70ca9f41fd668",tooltip="Restart residual and compute gradients. "];
+  Node13722 -> Node13728 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13728 [label="CAdjEulerSolver::BC\l_Outlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a0b3408be5adebd52b79bd3c5227cbe9d",tooltip="Impose the outlet boundary condition. "];
+  Node13722 -> Node13729 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13729 [label="CAdjNSSolver::CAdjNSSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#a323f1dc7c0b9fe00d1911eeeea365d46"];
+  Node13722 -> Node13730 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13730 [label="CAdjNSSolver::BC_Isothermal_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#a20cd2fa256386da7791e11f40b701003",tooltip="Impose via the residual or brute force the Navier-Stokes adjoint boundary condition (heat flux)..."];
+  Node13722 -> Node13731 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13731 [label="CEulerSolver::Evaluate\l_ObjFunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a08e74ee3f041c5fbe83200b2bbc56c64",tooltip="Compute weighted-sum \"combo\" objective output. "];
+  Node13731 -> Node13732 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13732 [label="CNSSolver::Evaluate\l_ObjFunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a81c4befad9303937288e9a7394a9eeb6",tooltip="Compute weighted-sum \"combo\" objective output. "];
+  Node13722 -> Node13732 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13722 -> Node13733 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13733 [label="CIncEulerSolver::Evaluate\l_ObjFunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#ad6fafab9cf231870b47a6a8153de64f9",tooltip="Compute weighted-sum \"combo\" objective output. "];
+}

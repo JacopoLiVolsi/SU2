@@ -1,0 +1,15 @@
+digraph "CConfig::GetKappa_4th_AdjFlow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4579 [label="CConfig::GetKappa_4th\l_AdjFlow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4579 -> Node4580 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4580 [label="CCentJST_AdjFlow::CCentJST\l_AdjFlow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_cent_j_s_t___adj_flow.html#a7822739aeee9c8ee0f0fd72b28858572",tooltip="Constructor of the class. "];
+  Node4579 -> Node4581 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4581 [label="CAdjEulerSolver::SetCentered\l_Dissipation_Sensor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#af1b72ed76900f821d2f51942cb4252db",tooltip="Compute the sensor for higher order dissipation control in rotating problems. "];
+  Node4581 -> Node4582 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4582 [label="CAdjEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a4ae0ed840dc8335fd921399625ba794f",tooltip="Initialize the residual vectors. "];
+  Node4581 -> Node4583 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4583 [label="CAdjNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#ac16dab76e2c1d86bc7d70ca9f41fd668",tooltip="Restart residual and compute gradients. "];
+}

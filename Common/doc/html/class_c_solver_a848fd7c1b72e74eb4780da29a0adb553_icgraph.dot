@@ -1,0 +1,13 @@
+digraph "CSolver::GetAveragePressure"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1267 [label="CSolver::GetAveragePressure",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1267 -> Node1268 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1268 [label="CMixingPlaneInterface\l::GetDonor_Variable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mixing_plane_interface.html#a47c80593df6c75c4c0bc92cfc7ba2f83",tooltip="Retrieve the variable that will be sent from donor mesh to target mesh. "];
+  Node1267 -> Node1269 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1269 [label="CTurbSASolver::BC_Inlet\l_Turbo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_a_solver.html#a2e05ecc017b2b3716bfc6728e4a734e8",tooltip="Impose the inlet boundary condition. "];
+  Node1267 -> Node1270 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1270 [label="CTurbSSTSolver::BC\l_Inlet_Turbo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_s_t_solver.html#a8957c42841a00d3880fb5886e2f4de3c",tooltip="Impose the inlet boundary condition. "];
+}

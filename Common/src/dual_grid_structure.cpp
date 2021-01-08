@@ -559,6 +559,28 @@ su2double CEdge::GetVolume(su2double *val_coord_Edge_CG, su2double *val_coord_El
 
 }
 
+su2double CEdge::GetVolume(su2double *val_coord_Elem_CG, su2double *val_coord_Point){
+
+  unsigned short iDim;
+  su2double vec_a[2] = {0.0,0.0}, Local_Volume;
+
+  AD::StartPreacc();
+  AD::SetPreaccIn(val_coord_Elem_CG, nDim);
+  AD::SetPreaccIn(val_coord_Point, nDim);
+
+  for (iDim = 0; iDim < nDim; iDim++)
+   vec_a[iDim] = val_coord_Elem_CG[iDim] - val_coord_Point[iDim];
+
+  Local_Volume = sqrt(vec_a[0]*vec_a[0] + vec_a[1]*vec_a[1]);
+
+  AD::SetPreaccOut(Local_Volume);
+  AD::EndPreacc();
+
+  return Local_Volume;
+
+}
+
+
 void CEdge::SetNodes_Coord(su2double *val_coord_Edge_CG, su2double *val_coord_FaceElem_CG, su2double *val_coord_Elem_CG) {
 
   unsigned short iDim;

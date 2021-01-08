@@ -1,0 +1,43 @@
+digraph "CAdjNSSolver::Viscous_Residual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node385 [label="CAdjNSSolver::Viscous\l_Residual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node385 -> Node386 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node386 [label="CConfig::GetKind_TimeInt\lScheme_AdjFlow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab9d0e23db2d8f044b0b09915e92ef003",tooltip="Get the kind of integration scheme (explicit or implicit) for the adjoint flow equations. "];
+  Node385 -> Node387 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node387 [label="CGeometry::GetnEdge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a7d6e1e1d1e46da8f55ecbe1a9380530a",tooltip="Get number of edges. "];
+  Node385 -> Node388 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node388 [label="CEdge::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#aee33b61d646e3fe59a4e23284ab1bf33",tooltip="Get the nodes of the edge. "];
+  Node385 -> Node389 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node389 [label="CNumerics::SetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a5fa1089c7228d6d49677a633bbe3c890",tooltip="Set coordinates of the points. "];
+  Node385 -> Node390 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node390 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node385 -> Node391 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node391 [label="CNumerics::SetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a41903d97957f351cd9ee63ca404985b1",tooltip="Set the value of the normal vector to the face between two points. "];
+  Node385 -> Node392 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node392 [label="CEdge::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#ada210a6f0643f444e7e491fc4ed9e662",tooltip="Copy the the normal vector of a face. "];
+  Node385 -> Node393 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node393 [label="CNumerics::SetPrimitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#af72b17d397adf09beed2e99e2daf895c",tooltip="Set the value of the primitive variables. "];
+  Node385 -> Node394 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node394 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node385 -> Node395 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node395 [label="CNumerics::SetAdjointVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a4eb3867ed99a8fd200f96da877e64313",tooltip="Set the value of the adjoint variable. "];
+  Node385 -> Node396 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node396 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node385 -> Node397 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node397 [label="CNumerics::SetAdjointVar\lGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a26cad383dccd67b3c9b3da85348c78e2",tooltip="Set the gradient of the adjoint variables. "];
+  Node385 -> Node398 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node398 [label="CVariable::GetGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a7b58da4a928d622e7c2d4b4db047769d",tooltip="Get the value of the solution gradient. "];
+  Node385 -> Node399 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node399 [label="CNumerics::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#abe734316e0047f463f059fd77a281958",tooltip="Compute the numerical residual. "];
+  Node385 -> Node400 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node400 [label="CSysVector::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a732b302ca148d38b442bfe7e096a81be",tooltip="Subtract val_residual to the residual. "];
+  Node385 -> Node401 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node401 [label="CSysVector::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#acd4c36df2ea0b7ad473944cff9bf5d72",tooltip="Add val_residual to the residual. "];
+  Node385 -> Node402 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node402 [label="CSysMatrix::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#af913d33707e948c30fff5a62773ef5c6",tooltip="Subtracts the specified block to the sparse matrix. "];
+  Node385 -> Node403 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node403 [label="CSysMatrix::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a85def3109e5aa5307268ca830a8f6522",tooltip="Adds the specified block to the sparse matrix. "];
+}

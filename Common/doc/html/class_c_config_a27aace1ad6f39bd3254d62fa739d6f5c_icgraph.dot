@@ -1,0 +1,9 @@
+digraph "CConfig::GetRelaxation_Factor_CHT"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node11067 [label="CConfig::GetRelaxation\l_Factor_CHT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node11067 -> Node11068 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11068 [label="CConjugateHeatInterface\l::SetTarget_Variable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_conjugate_heat_interface.html#a6e59bebaecbb5dfdd6630144e8da90f9",tooltip="Set the variable that has been received from the target mesh into the target mesh. "];
+}

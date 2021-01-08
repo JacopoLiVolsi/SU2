@@ -1,0 +1,28 @@
+digraph "CUpwAUSMPLUS_SLAU_Base_Flow::ComputeResidual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node24 [label="CUpwAUSMPLUS_SLAU_Base\l_Flow::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node24 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="AD::StartPreacc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a2a1e9c4b109fd751e84132c9495de3ff",tooltip="Starts a new preaccumulation section and sets the input variables. "];
+  Node24 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="AD::SetPreaccIn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#aad703f3a82e509c88b92ae638f75383c",tooltip="Sets the scalar input of a preaccumulation section. "];
+  Node24 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="CUpwAUSMPLUS_SLAU_Base\l_Flow::ComputeMassAndPressure\lFluxes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_a_u_s_m_p_l_u_s___s_l_a_u___base___flow.html#a1c0d38583edd0cac53df12ed269ae75f",tooltip="Compute the mass flux and pressure based on Primitives_i/j, derived classes must implement this metho..."];
+  Node24 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="AD::SetPreaccOut",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#ab3a80e24a5c8c2beb01131c57dcae4b2",tooltip="Sets the scalar output of a preaccumulation section. "];
+  Node24 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="AD::EndPreacc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a309d057a92faa60a3a760254678ec9ea",tooltip="Ends a preaccumulation section and computes the local Jacobi matrix of a code section using the varia..."];
+  Node24 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="CUpwAUSMPLUS_SLAU_Base\l_Flow::AccurateJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_a_u_s_m_p_l_u_s___s_l_a_u___base___flow.html#a609b294c295441cf81e8b06fb8016a59",tooltip="Compute the flux Jacobians using a mix of finite differences and manual differentiation. "];
+  Node30 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="CUpwAUSMPLUS_SLAU_Base\l_Flow::ApproximateJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_a_u_s_m_p_l_u_s___s_l_a_u___base___flow.html#aa7dc3470a927c6b9e31d8b6dcef00b96",tooltip="Compute the flux Jacobians of the Roe scheme to use as an approximation. "];
+  Node31 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="CNumerics::GetPMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a4c0be4ab3aa0dd899babe4c96d7a0c02",tooltip="Computation of the matrix P for a generic fluid model. "];
+  Node31 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="CNumerics::GetPMatrix_inv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a04a93dceeb13c4738d6c9ce357575257",tooltip="Computation of the matrix P^{-1}, this matrix diagonalize the conservative Jacobians in the form $P^{..."];
+  Node31 -> Node34 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="CNumerics::GetInviscidProjJac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#ae0225b473263a9547a2445c423ba7dce",tooltip="Compute the projection of the inviscid Jacobian matrices. "];
+}

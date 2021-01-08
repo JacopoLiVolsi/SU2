@@ -1,0 +1,35 @@
+digraph "CFEANonlinearElasticity::CFEANonlinearElasticity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="CFEANonlinearElasticity\l::CFEANonlinearElasticity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CConfig::GetMaterialCompressibility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa390083ca0a8cb156a80abede3a59ddf",tooltip="Compressibility/incompressibility of the solids analysed using the structural solver. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CConfig::GetDE_Effects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8ad45b179ddabec5652dbf4b517fbbf0",tooltip="Decide whether to apply DE effects to the model. "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CConfig::Get_Electric\l_Field_Dir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3c5bee7f75a13fcbecf900ce28e8fc36",tooltip="Get the direction of the electric field in reference configuration. "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CConfig::GetElectric\l_Constant",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6f2656fb9f03b185d2aedb0b963aca7c",tooltip="Get the value of the DE modulus. "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CConfig::GetnDim_Electric\l_Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e3186d58d81d53336cf7a06069bfbd5",tooltip="Get the dimensionality of the electric field. "];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CConfig::GetnElectric\l_Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a55654c927972cc090937f273f3fce30e",tooltip="Get the number of different values for the modulus of the electric field. "];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CConfig::Get_Electric\l_Field_Mod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a44ce90a34e24b5841bfbd61ade7db154",tooltip="Get the values for the electric field modulus. "];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CConfig::GetnElectric\l_Constant",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a21163f768e8253ee7e7ef60acaae0767",tooltip="Get the number of different electric constants. "];
+  Node2 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CConfig::GetDV_FEA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a76b87a4b23cfd858b5473d9b9650eb1a",tooltip="Get the kind of design variable for FEA. "];
+  Node2 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CConfig::GetDirectDiff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a16fdb3ee7c760f2f129778f6162a1fe4",tooltip="Get the direct differentation method. "];
+  Node2 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="SU2_TYPE::SetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0d7db8cc5630100477a515061684a341",tooltip="Set the derivative value of the datatype (needs to be implemented for each new type). "];
+  Node2 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CConfig::GetnID_DV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0cf334d197b81c08c54982f6b24dc574",tooltip="Get the ID for the FEA region that we want to compute the gradient for using direct differentiation..."];
+}

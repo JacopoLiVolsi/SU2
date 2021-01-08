@@ -1,0 +1,13 @@
+digraph "CFreeFormDefBox::GetDerivative3"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node282 [label="CFreeFormDefBox::GetDerivative3",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node282 -> Node283 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node283 [label="CFreeFormDefBox::GetDerivative1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#aaef410c4157d3f039d097500364779c3",tooltip="An auxiliary routine to help us compute the gradient of F(u, v, w) = ||X(u, v, w)-(x, y, z)||^2 = (Sum_ijk^lmn P1_ijk Bi Bj Bk -x)^2+(Sum_ijk^lmn P2_ijk Bi Bj Bk -y)^2+(Sum_ijk^lmn P3_ijk Bi Bj Bk -z)^2 Input: val_t, val_diff (to identify the index of the Bernstein polynomail we differentiate), the i, j, k , l, m, n E.G.: val_diff=2 => we differentiate w.r.t. w (val_diff=0,1, or 2) Output: d [B_i^l*B_j^m *B_k^n] / d val_diff (val_u, val_v, val_w). "];
+  Node283 -> Node284 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node284 [label="CFreeFormBlending::\lGetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_blending.html#ae3882399de59f18384f128cf353def97",tooltip="A pure virtual member. "];
+  Node283 -> Node285 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node285 [label="CFreeFormBlending::\lGetBasis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_blending.html#ac31d71e2b7e31d7c9e377845be61b9c3",tooltip="A pure virtual member. "];
+}

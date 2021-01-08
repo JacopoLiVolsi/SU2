@@ -1,0 +1,43 @@
+digraph "CHeatSolverFVM::Heat_Fluxes"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node319 [label="CHeatSolverFVM::Heat\l_Fluxes",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node319 -> Node320 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node320 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node319 -> Node321 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node321 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node319 -> Node322 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node322 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node319 -> Node323 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node323 [label="CConfig::GetMarker\l_All_Monitoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a942619938b389de95268bce31434c276",tooltip="Get the monitoring information for a marker val_marker. "];
+  Node319 -> Node324 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node324 [label="CConfig::GetIsothermal\l_Temperature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a714590a2565d2a339ee22009ada1c7f9",tooltip="Get the wall temperature (static) at an isothermal boundary. "];
+  Node319 -> Node325 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node325 [label="CConfig::GetTemperature_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8ec4a0951d9a432dadffad665a9892b3",tooltip="Get the value of the reference temperature for non-dimensionalization. "];
+  Node319 -> Node326 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node326 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node319 -> Node327 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node327 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node319 -> Node328 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node328 [label="CVertex::GetNormal\l_Neighbor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a8d2bce3a6ee62007179e688dc2b9b182",tooltip="Get the value of the closest neighbor. "];
+  Node319 -> Node329 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node329 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node319 -> Node330 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node330 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node319 -> Node331 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node331 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node319 -> Node332 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node332 [label="CConfig::GetViscosity\l_FreeStreamND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2ede918fd25217170b85049ddf07408b",tooltip="Get the value of the non-dimensionalized freestream viscosity. "];
+  Node319 -> Node333 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node333 [label="CConfig::GetPrandtl_Lam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a619cb1400d6c944e83ad0ffe82deb021",tooltip="Get the value of the laminar Prandtl number. "];
+  Node319 -> Node334 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node334 [label="CConfig::GetThermalDiffusivity\l_Solid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a35f241f4201017665617b572dc456f33",tooltip="Get the value of the thermal diffusivity for solids. "];
+  Node319 -> Node335 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node335 [label="CConfig::GetHeat_Flux_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab15b7c9cc25b9bbb52b08dbbf319f26e",tooltip="Get the reference value for the heat flux. "];
+  Node319 -> Node336 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node336 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node336 -> Node337 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node337 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+}

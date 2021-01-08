@@ -1,0 +1,11 @@
+digraph "CFEMStandardElementBase::SubConnForPlottingLine"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node324 [label="CFEMStandardElementBase\l::SubConnForPlottingLine",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node324 -> Node325 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node325 [label="CFEMStandardElement\l::SameStandardElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#a81ce632b76ad1e704b34455809686b4f",tooltip="Function, which checks if the function arguments correspond to this standard element. "];
+  Node324 -> Node326 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node326 [label="CFEMStandardBoundaryFace\l::CFEMStandardBoundaryFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_boundary_face.html#a5a92fa174c37322a3ebd640d12ab8b3b",tooltip="Alternative constructor. "];
+}

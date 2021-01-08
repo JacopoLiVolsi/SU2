@@ -49,6 +49,7 @@ void CMultiGridIntegration::MultiGrid_Iteration(CGeometry ****geometry,
                        (config[iZone]->GetKind_Solver() == FEM_EULER)                     ||
                        (config[iZone]->GetKind_Solver() == FEM_NAVIER_STOKES)             ||
                        (config[iZone]->GetKind_Solver() == FEM_RANS)                      ||
+                       (config[iZone]->GetKind_Solver() == THIN_FILM)                     ||
                        (config[iZone]->GetKind_Solver() == FEM_LES)                       ||
                        (config[iZone]->GetKind_Solver() == DISC_ADJ_EULER)                ||
                        (config[iZone]->GetKind_Solver() == DISC_ADJ_NAVIER_STOKES)        ||

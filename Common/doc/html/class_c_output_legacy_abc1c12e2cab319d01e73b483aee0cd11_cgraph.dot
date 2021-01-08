@@ -1,0 +1,45 @@
+digraph "COutputLegacy::SetHeatFlux_InverseDesign"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1158 [label="COutputLegacy::SetHeatFlux\l_InverseDesign",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1158 -> Node1159 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1159 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node1158 -> Node1160 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1160 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node1160 -> Node1161 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1161 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node1158 -> Node1162 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1162 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node1158 -> Node1163 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1163 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node1158 -> Node1164 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1164 [label="CGeometry::GetnVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a55427e474834af1941e13750b17975be",tooltip="Get number of vertices. "];
+  Node1158 -> Node1165 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1165 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node1158 -> Node1166 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1166 [label="CPoint::GetGlobalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ab546170a5a03ef210a75fc5531910050",tooltip="Get the global index in a parallel computation. "];
+  Node1158 -> Node1167 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1167 [label="CGeometry::GetnPointDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a4fc7de3bff7b6f8c35717016d6f8fcb2",tooltip="Get number of real points (that belong to the domain). "];
+  Node1158 -> Node1168 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1168 [label="CSolver::SetHeatFluxTarget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#aa5ec9b3f7be6cf9e9c4081925a81f031",tooltip="A virtual member. "];
+  Node1158 -> Node1169 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1169 [label="CConfig::GetTime_Marching",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a864d499ce740184803607801c47abda7",tooltip="Provides information about the time integration, and change the write in the output files information..."];
+  Node1158 -> Node1170 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1170 [label="CConfig::GetTime_Domain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6a11350b3c8d7577318be43cda6f7292",tooltip="Check if the multizone problem is solved for time domain. "];
+  Node1158 -> Node1171 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1171 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node1171 -> Node1172 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1172 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node1158 -> Node1173 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1173 [label="CGeometry::GetnDim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a2af01006c0c4f74ba089582f1a3587fe",tooltip="Get number of coordinates. "];
+  Node1158 -> Node1174 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1174 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node1158 -> Node1175 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1175 [label="CSolver::GetHeatFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a4e7a9b1a990f63294b7923396cc8924a",tooltip="A virtual member. "];
+  Node1158 -> Node1176 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1176 [label="CSolver::GetHeatFluxTarget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a26ba9929dcd74e5ebc359116ecd5028f",tooltip="A virtual member. "];
+  Node1158 -> Node1177 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1177 [label="CSolver::SetTotal_HeatFluxDiff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a04d2377fb28fc23175c468a326dda3cd",tooltip="A virtual member. "];
+}

@@ -1,0 +1,12 @@
+digraph "CDiscAdjFEAVariable::Set_OldSolution_Accel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node69 [label="CDiscAdjFEAVariable\l::Set_OldSolution_Accel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node69 -> Node70 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 [label="CDiscAdjFEAVariable\l::SetSolution_Vel_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_variable.html#a4ae6b95165ca276da8a851edc9a7b4b2",tooltip="Set the value of the adjoint velocity (Structural Analysis) at time n. "];
+  Node70 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node71 [label="CDiscAdjFEASolver::\lExtractAdjoint_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#a976facb0e6a13e97f663c74a863b350d",tooltip="Sets the adjoint values of the input variables of the flow (+turb.) iteration after tape has been eva..."];
+  Node69 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

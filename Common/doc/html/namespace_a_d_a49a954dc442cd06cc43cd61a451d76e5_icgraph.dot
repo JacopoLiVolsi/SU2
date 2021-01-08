@@ -1,0 +1,24 @@
+digraph "AD::SetDerivative"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node223 [label="AD::SetDerivative",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node223 -> Node224 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node224 [label="CPoint::SetAdjointCoord\l_LocalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#abcecd3182635ac12c030609c1b66aabb",tooltip="Set the adjoint values of the coordinates. "];
+  Node223 -> Node225 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node225 [label="CPoint::SetAdjointSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#aea63991e0c7abaf938b52e658cd14bb8",tooltip="Set the adjoint values of the (geometric) coordinates. "];
+  Node223 -> Node226 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node226 [label="CVariable::SetAdjointSolution\l_LocalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#aa45da2c5f488d3afbebffcd4c8623370",tooltip="Set the adjoint values of the solution. "];
+  Node226 -> Node227 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node227 [label="CDiscAdjSolver::SetAdjoint\l_Output",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#a853239f367f921866a73df8a4f33f475",tooltip="Sets the adjoint values of the output of the flow (+turb.) iteration before evaluation of the tape..."];
+  Node223 -> Node228 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node228 [label="CDiscAdjMultizoneDriver\l::SetAdj_ObjFunction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a87bb701d98c2be2f71d8752925815e43",tooltip="Initialize the adjoint value of the objective function. "];
+  Node228 -> Node229 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node229 [label="CDiscAdjMultizoneDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#af996aecdb6d20aa4fc81c9b67295abf5",tooltip="[Overload] Run an discrete adjoint update of all solvers within multiple zones. "];
+  Node229 -> Node230 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node230 [label="CDiscAdjMultizoneDriver\l::StartSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#a75de0a1a482ceeed4301a384f1515092",tooltip="[Overload] Launch the computation for discrete adjoint multizone problems. "];
+  Node228 -> Node231 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node231 [label="CDiscAdjMultizoneDriver\l::EvaluateSensitivities",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_multizone_driver.html#ac2789097629674cfb7d4de64954024df",tooltip="Evaluate sensitivites for the current adjoint solution and output files. "];
+  Node231 -> Node229 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

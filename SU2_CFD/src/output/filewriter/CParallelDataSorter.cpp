@@ -35,6 +35,7 @@ CParallelDataSorter::CParallelDataSorter(CConfig *config, unsigned short nFields
 
   GlobalField_Counter = nFields;
 
+  nParallel_Vertex = 0;
   nParallel_Hexa = 0;
   nParallel_Line = 0;
   nParallel_Quad = 0;
@@ -43,6 +44,7 @@ CParallelDataSorter::CParallelDataSorter(CConfig *config, unsigned short nFields
   nParallel_Pyra = 0;
   nParallel_Tria = 0;
 
+  Conn_Vertex_Par = NULL;
   Conn_Line_Par = NULL;
   Conn_Hexa_Par = NULL;
   Conn_Pris_Par = NULL;
@@ -70,6 +72,8 @@ CParallelDataSorter::CParallelDataSorter(CConfig *config, unsigned short nFields
 
   linearPartitioner = NULL;
 
+  nLayer = 1;
+  multilayer_film = false;
 }
 
 CParallelDataSorter::~CParallelDataSorter(){
@@ -79,6 +83,7 @@ CParallelDataSorter::~CParallelDataSorter(){
 
   /*--- Deallocate memory for connectivity data on each processor. ---*/
 
+  if (nParallel_Vertex > 0 && Conn_Vertex_Par != NULL) delete [] Conn_Vertex_Par;
   if (nParallel_Line > 0 && Conn_Line_Par != NULL) delete [] Conn_Line_Par;
   if (nParallel_Tria > 0 && Conn_Tria_Par != NULL) delete [] Conn_Tria_Par;
   if (nParallel_Quad > 0 && Conn_Quad_Par != NULL) delete [] Conn_Quad_Par;
@@ -96,6 +101,9 @@ CParallelDataSorter::~CParallelDataSorter(){
 unsigned long CParallelDataSorter::GetnElem(GEO_TYPE type){
 
   switch (type) {
+    case VERTEX:
+      return nParallel_Vertex;
+      break;
     case LINE:
       return nParallel_Line;
       break;
@@ -286,6 +294,12 @@ void CParallelDataSorter::SortOutputData() {
                      MPI_UNSIGNED_LONG, MPI_SUM, MPI_COMM_WORLD);
 #endif
 
+ /*--- Increasing size for multi-layer case. ---
+  if(multilayer_film){
+   nParallel_Poin   *= nLayer;
+   nGlobal_Poin_Par *= nLayer;
+  }
+ */
   /*--- Free temporary memory from communications ---*/
 
   delete [] idRecv;
@@ -341,6 +355,14 @@ void CParallelDataSorter::PrepareSendBuffers(std::vector<unsigned long>& globalI
     nPoint_Recv[ii+1] += nPoint_Recv[ii];
   }
 
+  /*--- Increasing size for multi-layer case. ---*/
+  if(multilayer_film){
+   for (int ii = 0; ii < size; ii++) {
+    nPoint_Send[ii] *= nLayer; // previously ii +1
+    nPoint_Recv[ii] *= nLayer;
+   }
+  }
+   
   /*--- Allocate memory to hold the connectivity that we are
    sending. ---*/
 
@@ -370,7 +392,10 @@ void CParallelDataSorter::PrepareSendBuffers(std::vector<unsigned long>& globalI
   unsigned long *idIndex = new unsigned long[size]();
   for (int ii=0; ii < size; ii++) idIndex[ii] = nPoint_Send[ii];
 
-  Index = new unsigned long[nLocalPoint_Sort]();
+  if(nLayer > 1)
+   Index = new unsigned long[nLocalPoint_Sort*nLayer]();
+  else
+   Index = new unsigned long[nLocalPoint_Sort]();
 
   /*--- Loop through our elements and load the elems and their
    additional data that we will send to the other procs. ---*/
@@ -406,6 +431,9 @@ void CParallelDataSorter::PrepareSendBuffers(std::vector<unsigned long>& globalI
 unsigned long CParallelDataSorter::GetElem_Connectivity(GEO_TYPE type, unsigned long iElem, unsigned long iNode) {
 
   switch (type) {
+    case VERTEX:
+      return Conn_Vertex_Par[iElem*N_POINTS_POINT + iNode];
+      break;
     case LINE:
       return Conn_Line_Par[iElem*N_POINTS_LINE + iNode];
       break;

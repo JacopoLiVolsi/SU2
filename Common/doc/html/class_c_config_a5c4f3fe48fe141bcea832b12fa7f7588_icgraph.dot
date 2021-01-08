@@ -1,0 +1,26 @@
+digraph "CConfig::GetMarker_All_PyCustom"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6767 [label="CConfig::GetMarker\l_All_PyCustom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6767 -> Node6768 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6768 [label="CGeometry::SetCustomBoundary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a15dd9fe9352493c70f21b217bab034ea",tooltip="Set the data containers for customized boundary conditions. "];
+  Node6768 -> Node6769 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6769 [label="CDriver::PythonInterface\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#aff17f90d1f041cac6ddaf9d3f7450dbe",tooltip="Initialize Python interface functionalities. "];
+  Node6769 -> Node6770 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6770 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node6767 -> Node6771 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6771 [label="CGeometry::UpdateCustomBoundary\lConditions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a65d6e849b384ed08a35930f360aedda6",tooltip="Update the multi-grid structure for the customized boundary conditions. "];
+  Node6771 -> Node6769 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6771 -> Node6772 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6772 [label="CFluidDriver::BoundaryConditions\lUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_driver.html#a8b928c1cdfe3939f98c61e0fc5eea91b",tooltip="Process the boundary conditions and update the multigrid structure. "];
+  Node6767 -> Node6773 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6773 [label="CDriver::GetAllInletMarkersTag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#aaf7ed6df4e3633c16b4ee7cafa054f3c",tooltip="Get all the (subsonic) inlet boundary markers tags. "];
+  Node6767 -> Node6774 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6774 [label="CEulerSolver::UpdateCustom\lBoundaryConditions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#adcf751e6338e750ea4d9ff4121c1dd5a",tooltip="Update the multi-grid structure for the customized boundary conditions. "];
+  Node6767 -> Node6775 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6775 [label="CNSSolver::BC_HeatFlux_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a94ecf958fefe5b9f6135ac0e14d1ea80",tooltip="Impose a constant heat-flux condition at the wall. "];
+  Node6767 -> Node6776 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6776 [label="CNSSolver::BC_Isothermal_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#acc95e1ac60fd8a27a8e44d1015c7deba",tooltip="Impose the Navier-Stokes boundary condition (strong). "];
+}

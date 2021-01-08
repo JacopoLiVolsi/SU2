@@ -5034,9 +5034,12 @@ void CSolver::LoadInletProfile(CGeometry **geometry,
     profile_filename = config->GetMultizone_FileName(profile_filename, iZone, ".dat");
 
   /*--- Modify file name for an unsteady restart ---*/
+  bool film_inlet = (config->GetKind_Solver()==THIN_FILM)&&(config->GetKind_Film_Solver()==MULTI_LAYER_ASYMP);
 
-  if (dual_time || time_stepping)
+  if ((dual_time || time_stepping) && !film_inlet)
     profile_filename = config->GetUnsteady_FileName(profile_filename, val_iter, ".dat");
+  if(film_inlet)
+   profile_filename = config->GetInlet_FileName();
 
     /*--- Read the profile data from an ASCII file. ---*/
 
@@ -5229,6 +5232,7 @@ void CSolver::ComputeVertexTractions(CGeometry *geometry, CConfig *config){
   // Check whether the problem is viscous
   bool viscous_flow = ((config->GetKind_Solver() == NAVIER_STOKES) ||
                        (config->GetKind_Solver() == INC_NAVIER_STOKES) ||
+                       (config->GetKind_Solver() == THIN_FILM) ||
                        (config->GetKind_Solver() == RANS) ||
                        (config->GetKind_Solver() == INC_RANS) ||
                        (config->GetKind_Solver() == DISC_ADJ_NAVIER_STOKES) ||

@@ -32,9 +32,16 @@ CFVMDataSorter::CFVMDataSorter(CConfig *config, CGeometry *geometry, unsigned sh
 
   std::vector<unsigned long> globalID;
 
+  // Original code
   nGlobalPoint_Sort = geometry->GetGlobal_nPointDomain();
   nLocalPoint_Sort  = geometry->GetnPointDomain();
-
+  //
+  nLayer = config->GetnLayer();
+  multilayer_film = (config->GetKind_Solver() == THIN_FILM && config->GetKind_Film_Solver() == MULTI_LAYER_ASYMP);
+  //
+  nGlobalPoint_Sort = nLayer*geometry->GetGlobal_nPointDomain();
+  nLocalPoint_Sort  = nLayer*geometry->GetnPointDomain();
+  //
   Local_Halo = new int[geometry->GetnPoint()]();
 
   for (unsigned long iPoint = 0; iPoint < geometry->GetnPoint(); iPoint++){
@@ -46,6 +53,11 @@ CFVMDataSorter::CFVMDataSorter(CConfig *config, CGeometry *geometry, unsigned sh
     Local_Halo[iPoint] = !geometry->node[iPoint]->GetDomain();
   }
 
+  if(multilayer_film){
+   for(unsigned short iLayer = 1; iLayer < config->GetnLayer(); iLayer++)
+    for (unsigned long iPoint = 0; iPoint < geometry->GetnPoint(); iPoint++)
+     globalID.push_back(geometry->node[iPoint]->GetGlobalIndex() + iLayer*geometry->node[geometry->GetnPoint()-1]->GetGlobalIndex());
+  }
 
   /*--- Search all send/recv boundaries on this partition for halo cells. In
    particular, consider only the recv conditions (these are the true halo
@@ -118,13 +130,17 @@ void CFVMDataSorter::SortConnectivity(CConfig *config, CGeometry *geometry, bool
   SortVolumetricConnectivity(config, geometry, HEXAHEDRON,    val_sort);
   SortVolumetricConnectivity(config, geometry, PRISM,         val_sort);
   SortVolumetricConnectivity(config, geometry, PYRAMID,       val_sort);
-
+  /*--- For average equations, fictitious LINE volume ---*/
+  SortVolumetricConnectivity(config, geometry, LINE,          val_sort);
 
   /*--- Reduce the total number of cells we will be writing in the output files. ---*/
 
-  unsigned long nTotal_Elem = nParallel_Tria + nParallel_Quad + nParallel_Tetr + nParallel_Hexa + nParallel_Pris + nParallel_Pyra;
+  unsigned long nTotal_Elem = nParallel_Line +nParallel_Tria + nParallel_Quad + nParallel_Tetr + nParallel_Hexa +
+                              nParallel_Pris + nParallel_Pyra;
 #ifndef HAVE_MPI
   nGlobal_Elem_Par = nTotal_Elem;
+  if(multilayer_film)
+   nGlobal_Elem_Par *= nLayer;
 #else
   SU2_MPI::Allreduce(&nTotal_Elem, &nGlobal_Elem_Par, 1, MPI_UNSIGNED_LONG, MPI_SUM, MPI_COMM_WORLD);
 #endif
@@ -157,6 +173,9 @@ void CFVMDataSorter::SortVolumetricConnectivity(CConfig *config,
    the current partition. ---*/
 
   switch (Elem_Type) {
+    case LINE:
+      NODES_PER_ELEMENT = N_POINTS_LINE;
+      break;
     case TRIANGLE:
       NODES_PER_ELEMENT = N_POINTS_TRIANGLE;
       break;
@@ -489,6 +508,11 @@ void CFVMDataSorter::SortVolumetricConnectivity(CConfig *config,
    and set the class data pointer to the connectivity array. ---*/
 
   switch (Elem_Type) {
+    case LINE:
+      nParallel_Line = nElem_Total;
+      if (Conn_Line_Par != NULL) delete [] Conn_Line_Par;
+      if (nParallel_Line > 0) Conn_Line_Par = Conn_Elem;
+      break;
     case TRIANGLE:
       nParallel_Tria = nElem_Total;
       if (Conn_Tria_Par != NULL) delete [] Conn_Tria_Par;

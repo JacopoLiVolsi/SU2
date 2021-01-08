@@ -140,6 +140,8 @@ endif
 
 # compile common library
 subdir('Common/src')
+# compile Mesh Extractor executable
+subdir('Mesh_Extractor/src')
 # compile SU2_CFD executable
 subdir('SU2_CFD/src')
 # compile SU2_DOT executable

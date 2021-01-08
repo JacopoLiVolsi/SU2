@@ -1,0 +1,23 @@
+digraph "CNumerics::GetInviscidProjFlux"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node233 [label="CNumerics::GetInviscidProjFlux",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node233 -> Node234 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node234 [label="CCentBase_Flow::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_cent_base___flow.html#ab3d38a73e882f7eade3cfc0daf3e3520",tooltip="Compute the flow residual using a centered method with artificial dissipation. "];
+  Node233 -> Node235 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node235 [label="CUpwCUSP_Flow::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_c_u_s_p___flow.html#ab88b56f4d818225b47b7fe855a18326a",tooltip="Compute the flow residual using a JST method. "];
+  Node233 -> Node236 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node236 [label="CUpwRoeBase_Flow::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_roe_base___flow.html#ac4fcfe9dea7d4e5fc2d12fd5bb261ad4",tooltip="Compute the flux from node i to node j, part common to most Roe schemes. "];
+  Node233 -> Node237 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node237 [label="CUpwGeneralRoe_Flow\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_general_roe___flow.html#ac7f91b1543d87015361d69539cfecfe9",tooltip="Compute the Roe&#39;s flux between two nodes i and j. "];
+  Node233 -> Node238 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node238 [label="CUpwTurkel_Flow::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_turkel___flow.html#aa6bf45c213d035cf98a3b355af37def2",tooltip="Compute the Roe&#39;s flux between two nodes i and j. "];
+  Node233 -> Node239 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node239 [label="CConvective_Template\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_convective___template.html#af3b4a6e55cab59b0585989dbc9f71c5c",tooltip="Compute the Roe&#39;s flux between two nodes i and j. "];
+  Node233 -> Node240 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node240 [label="CEulerSolver::BC_Riemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a22c21d18fa626d489db9a387234bd9d0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node233 -> Node241 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node241 [label="CEulerSolver::BC_TurboRiemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a0066305803a18511fb89b8951f4e4866",tooltip="Impose the boundary condition using characteristic recostruction. "];
+}

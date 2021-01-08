@@ -1,0 +1,27 @@
+digraph "CSolver::GetKineIn"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1567 [label="CSolver::GetKineIn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1567 -> Node1568 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1568 [label="CMixingPlaneInterface\l::SetAverageValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mixing_plane_interface.html#ae3766c4aade9be744a13e797d21b1207",tooltip="Store all the turboperformance in the solver in ZONE_0. "];
+  Node1567 -> Node1569 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1569 [label="COutputLegacy::ComputeTurbo\lPerformance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a870a4170d6099c1f7c589596e20d2079",tooltip="Compute . "];
+  Node1569 -> Node1570 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1570 [label="CDiscAdjSinglezoneDriver\l::SetObjFunction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#aea0513ac808106c6a92be610b3b17a6a",tooltip="Set the objective function. "];
+  Node1570 -> Node1571 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1571 [label="CDiscAdjSinglezoneDriver\l::SetRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#a7e519f0f189a3a102b0630edaaa9d233",tooltip="Record one iteration of a flow iteration in within multiple zones. "];
+  Node1571 -> Node1572 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1572 [label="CDiscAdjSinglezoneDriver\l::MainRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#af4087bc4859a336b67555336d8f28aaf",tooltip="Record the main computational path. "];
+  Node1572 -> Node1573 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1573 [label="CDiscAdjSinglezoneDriver\l::Preprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#a2d0785572312526d0bd695a14dd405f2",tooltip="Preprocess the single-zone iteration. "];
+  Node1571 -> Node1574 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1574 [label="CDiscAdjSinglezoneDriver\l::SecondaryRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#ad328a74dd89ed2e335b22c4bf2b53cb0",tooltip="Record the secondary computational path. "];
+  Node1574 -> Node1575 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1575 [label="CDiscAdjSinglezoneDriver\l::Postprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_singlezone_driver.html#af0ac923c07d86674b252c28df9a115da",tooltip="Postprocess the adjoint iteration for ZONE_0. "];
+  Node1569 -> Node1576 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1576 [label="CTurbomachineryDriver\l::SetTurboPerformance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turbomachinery_driver.html#a5f79f6d56a18a557d1afce41629ec743",tooltip="Set Mixing Plane interface within multiple zones. "];
+  Node1576 -> Node1577 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1577 [label="CTurbomachineryDriver::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turbomachinery_driver.html#a4c5a1aaddfe1130684fbcdcacd7eb83f",tooltip="Run a single iteration of the physics within multiple zones. "];
+}

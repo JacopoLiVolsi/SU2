@@ -1,0 +1,21 @@
+digraph "CIntegration::Adjoint_Setup"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node7 [label="CIntegration::Adjoint\l_Setup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CConfig::GetnMGLevels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aea7f78497a5cd863bd065391232329fd",tooltip="Get the number of multigrid levels. "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CSolver::SetTime_Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#abb9dfa70f98661b517b4cf8598d29c12",tooltip="A virtual member. "];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CSolver::SetTotal_CD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ae3063dcd94ded2e6901097012c406d58",tooltip="A virtual member. "];
+  Node7 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CSolver::SetTotal_CL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a72ecb34d3fb8ed9f2a964e32c244c6ce",tooltip="A virtual member. "];
+  Node7 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CSolver::SetTotal_CT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a7e21f13f00990f01b15217877dbb9b68",tooltip="A virtual member. "];
+  Node7 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CSolver::SetTotal_CQ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a68424c37a9f3b149277645f81e070530",tooltip="A virtual member. "];
+  Node7 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CIntegration::SetRestricted\l_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_integration.html#aa020508047ae1a7c653115705d00bc52",tooltip="A virtual member. "];
+}

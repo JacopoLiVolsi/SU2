@@ -1,0 +1,21 @@
+digraph "CEulerVariable::GetProjVel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node168 [label="CEulerVariable::GetProjVel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node168 -> Node169 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 [label="CEulerSolver::SetTime_Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aeed500154a5961eb2bfbd2e646a9b25f",tooltip="Compute the time step for solving the Euler equations. "];
+  Node168 -> Node170 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node170 [label="CEulerSolver::SetMax\l_Eigenvalue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a76f7fdf349ae41c6f0cf4df82b571fb1",tooltip="Compute the max eigenvalue. "];
+  Node170 -> Node171 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node171 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node170 -> Node172 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node172 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+  Node168 -> Node173 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node173 [label="CEulerSolver::BC_Sym\l_Plane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a71ca5f93ed7a83463e87d5b4c27dc345",tooltip="Impose the symmetry boundary condition using the residual. "];
+  Node173 -> Node174 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node174 [label="CEulerSolver::BC_Euler_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad8509337406d93d81c7f11fbf32d0243",tooltip="Impose via the residual the Euler wall boundary condition. "];
+  Node168 -> Node175 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node175 [label="CNSSolver::SetTime_Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a340a62e197f7386736db85967e586804",tooltip="Compute the time step for solving the Navier-Stokes equations with turbulence model. "];
+}

@@ -138,13 +138,14 @@ void CParaviewBinaryFileWriter::Write_Data(){
   fwrite(coord_buf, sizeof(float), 3*GlobalPoint, fhw);
   file_size += sizeof(char)*3*GlobalPoint;
 
-  delete [] coord_buf;
+  if(coord_buf != NULL) delete [] coord_buf;
 
   /*--- Write the connectivity data. ---*/
 
-  unsigned long nTot_Line;
+  unsigned long nTot_Vertex, nTot_Line;
   unsigned long nTot_Tria, nTot_Quad;
   unsigned long nTot_Tetr, nTot_Hexa, nTot_Pris, nTot_Pyra;
+  nTot_Vertex = dataSorter->GetnElem(VERTEX);
   nTot_Line = dataSorter->GetnElem(LINE);
   nTot_Tria = dataSorter->GetnElem(TRIANGLE);
   nTot_Quad = dataSorter->GetnElem(QUADRILATERAL);
@@ -152,8 +153,8 @@ void CParaviewBinaryFileWriter::Write_Data(){
   nTot_Hexa = dataSorter->GetnElem(HEXAHEDRON);
   nTot_Pris = dataSorter->GetnElem(PRISM);
   nTot_Pyra = dataSorter->GetnElem(PYRAMID);
-  nGlobal_Elem_Storage = (nTot_Line*3 + nTot_Tria*4 + nTot_Quad*5 + nTot_Tetr*5 +
-                          nTot_Hexa*9 + nTot_Pris*7 + nTot_Pyra*6);
+  nGlobal_Elem_Storage = (nTot_Vertex + nTot_Line*3 + nTot_Tria*4 + nTot_Quad*5 + 
+                          nTot_Tetr*5 + nTot_Hexa*9 + nTot_Pris*7 + nTot_Pyra*6);
 
   int *conn_buf = NULL;
 
@@ -167,6 +168,16 @@ void CParaviewBinaryFileWriter::Write_Data(){
 
   /*--- Load/write 1D buffers for the connectivity of each element type. ---*/
 
+  for (iElem = 0; iElem < nTot_Vertex; iElem++) {
+    iNode2 = iElem*(N_POINTS_POINT+1);
+    conn_buf[iNode2+0] = N_POINTS_POINT;
+    conn_buf[iNode2+1] = dataSorter->GetElem_Connectivity(VERTEX, iElem, 0)-1;
+  }
+  if (!BigEndian) SwapBytes((char *)conn_buf, sizeof(int),
+                            nTot_Vertex*(N_POINTS_POINT+1));
+  fwrite(conn_buf, sizeof(int),
+         nTot_Vertex*(N_POINTS_POINT+1), fhw);
+  file_size += sizeof(int)*nTot_Vertex*(N_POINTS_POINT+1);
 
   for (iElem = 0; iElem < nTot_Line; iElem++) {
     iNode2 = iElem*(N_POINTS_LINE+1);
@@ -284,6 +295,14 @@ void CParaviewBinaryFileWriter::Write_Data(){
   int *type_buf = NULL;
 
   type_buf = new int[dataSorter->GetnElem()];
+
+  for (iElem = 0; iElem < nTot_Vertex; iElem++) {
+    type_buf[iElem] = VERTEX;
+  }
+  if (!BigEndian)
+    SwapBytes((char *)type_buf, sizeof(int), nTot_Vertex);
+  fwrite(type_buf, sizeof(int), nTot_Vertex, fhw);
+  file_size += sizeof(int)*nTot_Vertex;
 
   for (iElem = 0; iElem < nTot_Line; iElem++) {
     type_buf[iElem] = LINE;
@@ -410,7 +429,7 @@ void CParaviewBinaryFileWriter::Write_Data(){
       fwrite(vec_buf, sizeof(float), NCOORDS*GlobalPoint, fhw);
       file_size += sizeof(float)*NCOORDS*GlobalPoint;
 
-      delete [] vec_buf;
+      if (vec_buf != NULL) delete [] vec_buf;
 
       VarCounter++;
 
@@ -440,7 +459,7 @@ void CParaviewBinaryFileWriter::Write_Data(){
       fwrite(scalar_buf, sizeof(float), GlobalPoint, fhw);
       file_size += sizeof(float)*GlobalPoint;
 
-      delete [] scalar_buf;
+      if (scalar_buf != NULL) delete [] scalar_buf;
 
       VarCounter++;
     }
@@ -606,7 +625,7 @@ void CParaviewBinaryFileWriter::Write_Data(){
   /*--- Free the derived datatype and coordinate array. ---*/
 
   MPI_Type_free(&filetype);
-  delete [] coord_buf;
+  if (coord_buf != NULL) delete [] coord_buf;
 
   /*--- Compute our local number of elements, the required storage,
    and reduce the total number of elements and storage globally. ---*/
@@ -807,7 +826,7 @@ void CParaviewBinaryFileWriter::Write_Data(){
   /*--- Free the derived datatype. ---*/
 
   MPI_Type_free(&filetype);
-  delete [] conn_buf;
+  if (conn_buf != NULL) delete [] conn_buf;
 
   /*--- Load/write the cell type for all elements in the file. ---*/
 
@@ -1001,7 +1020,7 @@ void CParaviewBinaryFileWriter::Write_Data(){
       /*--- Free the derived datatype and coordinate array. ---*/
 
       MPI_Type_free(&filetype);
-      delete [] vec_buf; vec_buf = NULL;
+      if (vec_buf != NULL) delete [] vec_buf; vec_buf = NULL;
 
       VarCounter++;
 
@@ -1073,7 +1092,7 @@ void CParaviewBinaryFileWriter::Write_Data(){
       /*--- Free the derived datatype and coordinate array. ---*/
 
       MPI_Type_free(&filetype);
-      delete [] scalar_buf; scalar_buf = NULL;
+      if (scalar_buf != NULL) delete [] scalar_buf; scalar_buf = NULL;
 
       VarCounter++;
     }
@@ -1108,9 +1127,12 @@ void CParaviewBinaryFileWriter::Write_Data(){
 
   /*--- Delete the offset counters that we needed for MPI IO. ---*/
 
-  delete [] nElem_Snd;        delete [] nElem_Cum;
-  delete [] nElemStorage_Snd; delete [] nElemStorage_Cum;
-  delete [] nPoint_Snd;       delete [] nPoint_Cum;
+  if(nElem_Snd != NULL) delete [] nElem_Snd;        
+  if(nElem_Cum != NULL) delete [] nElem_Cum;
+  if(nElemStorage_Snd != NULL) delete [] nElemStorage_Snd;
+  if(nElemStorage_Cum != NULL) delete [] nElemStorage_Cum;
+  if(nPoint_Snd != NULL) delete [] nPoint_Snd;       
+  if(nPoint_Cum != NULL) delete [] nPoint_Cum;
 
 #endif
 }

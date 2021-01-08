@@ -1,0 +1,21 @@
+digraph "CConfig::GetMarker_CfgFile_DV"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node7160 [label="CConfig::GetMarker\l_CfgFile_DV",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7160 -> Node7161 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7161 [label="CPhysicalGeometry::\lSetBoundaries",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a1350e4d05928db566e3d14fa5dc2587a",tooltip="Set the send receive boundaries of the grid. "];
+  Node7160 -> Node7162 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7162 [label="CPhysicalGeometry::\lLoadUnpartitionedSurfaceElements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a23692062ec01893ef6b5ae53fcbbf022",tooltip="Loads the boundary elements (markers) from the mesh reader object into the primal element data struct..."];
+  Node7162 -> Node7163 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7163 [label="CPhysicalGeometry::\lRead_Mesh_FVM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#ad4096218a43c6a5ec4c56576c0c30e5b",tooltip="Reads the geometry of the grid and adjust the boundary conditions with the configuration file in para..."];
+  Node7163 -> Node7164 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7164 [label="CPhysicalGeometry::\lCPhysicalGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a075a737b341a64de5463ddd41096692e",tooltip="Reads the geometry of the grid and adjust the boundary conditions with the configuration file..."];
+  Node7160 -> Node7165 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7165 [label="CPhysicalGeometry::\lRead_SU2_Format_Parallel_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a8fb5c62d5c61dd689ea5d51d4f174831",tooltip="Reads for the FEM solver the geometry of the grid and adjust the boundary conditions with the configu..."];
+  Node7165 -> Node7164 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7160 -> Node7166 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7166 [label="CPhysicalGeometry::\lRead_CGNS_Format_Parallel_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a5fa5c4805d03646f8bfbf8622265f958",tooltip="Reads for the FEM solver the geometry of the grid and adjust the boundary conditions with the configu..."];
+  Node7166 -> Node7164 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,11 @@
+digraph "CFEAVariable::RegisterSolution_Vel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node91 [label="CFEAVariable::RegisterSolution_Vel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node91 -> Node92 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node92 [label="AD::RegisterInput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a05310227c195f7e83d394ce9cae8b73e",tooltip="Registers the variable as an input and saves internal data (indices). I.e. as a leaf of the computati..."];
+  Node91 -> Node93 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node93 [label="AD::RegisterOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#ae381e45797545e980376c4aeb3f5afdc",tooltip="Registers the variable as an output. I.e. as the root of the computational graph. ..."];
+}

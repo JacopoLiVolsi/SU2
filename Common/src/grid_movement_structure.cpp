@@ -5610,6 +5610,9 @@ void CSurfaceMovement::Moving_Walls(CGeometry *geometry, CConfig *config,
   /*--- Local variables ---*/
   unsigned short iMarker, jMarker, iDim, nDim = geometry->GetnDim();
   unsigned long iPoint, iVertex;
+  bool multilayer_film = (config->GetKind_Solver() == THIN_FILM && 
+                          config->GetKind_Film_Solver() == MULTI_LAYER_ASYMP);
+  if(multilayer_film) config->SetOmega_Ref(1.0);
   su2double xDot[3] = {0.0,0.0,0.0}, *Coord, Center[3] = {0.0,0.0,0.0}, Omega[3] = {0.0,0.0,0.0}, r[3] = {0.0,0.0,0.0}, GridVel[3] = {0.0,0.0,0.0};
   su2double L_Ref     = config->GetLength_Ref();
   su2double Omega_Ref = config->GetOmega_Ref();

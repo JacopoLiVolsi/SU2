@@ -77,7 +77,7 @@ CMultizoneDriver::CMultizoneDriver(char* confFile,
   /*--- If there is at least a fluid and a structural zone ---*/
   for (iZone = 0; iZone < nZone; iZone++){
     switch (config_container[iZone]->GetKind_Solver()) {
-    case EULER: case NAVIER_STOKES: case RANS:
+    case EULER: case NAVIER_STOKES: case RANS: case THIN_FILM:
     case INC_EULER: case INC_NAVIER_STOKES: case INC_RANS:
       fluid_zone = true;
       break;
@@ -240,6 +240,7 @@ void CMultizoneDriver::Preprocess(unsigned long TimeIter) {
     /*--- For FSI, this is set after the mesh has been moved. --------------------------------------*/
     if ((config_container[iZone]->GetKind_Solver() ==  EULER) ||
         (config_container[iZone]->GetKind_Solver() ==  NAVIER_STOKES) ||
+        (config_container[iZone]->GetKind_Solver() ==  THIN_FILM) ||
         (config_container[iZone]->GetKind_Solver() ==  RANS) ||
         (config_container[iZone]->GetKind_Solver() ==  INC_EULER) ||
         (config_container[iZone]->GetKind_Solver() ==  INC_NAVIER_STOKES) ||

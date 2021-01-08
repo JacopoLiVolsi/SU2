@@ -1,0 +1,30 @@
+digraph "CFEM_DG_EulerSolver::SetResidual_RMS_FEM"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1720 [label="CFEM_DG_EulerSolver\l::SetResidual_RMS_FEM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1720 -> Node1721 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1721 [label="CSolver::SetRes_RMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a6b74eb7a8bc01a4997c9844598f39d2f",tooltip="Set the maximal residual, this is useful for the convergence history. "];
+  Node1720 -> Node1722 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1722 [label="CSolver::SetRes_Max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#adf14c8391575b286636b04e66f0b5ca7",tooltip="Set the maximal residual, this is useful for the convergence history. "];
+  Node1720 -> Node1723 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1723 [label="CSolver::AddRes_RMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a41bc448daf37985882cb2cf27ab1ffd4",tooltip="Adds the maximal residual, this is useful for the convergence history. "];
+  Node1720 -> Node1724 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1724 [label="CSolver::AddRes_Max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a8068067ba1b56173c95d4799bfb48d9e",tooltip="Adds the maximal residual, this is useful for the convergence history. "];
+  Node1720 -> Node1725 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1725 [label="CConfig::GetComm_Level",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab71278d2692ca5217674036650b02923",tooltip="Get the level of MPI communications to be performed. "];
+  Node1720 -> Node1726 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1726 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node1726 -> Node1727 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1727 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node1720 -> Node1728 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1728 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node1728 -> Node1729 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1729 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node1720 -> Node1730 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1730 [label="CBaseMPIWrapper::Allgather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a55195abbb7206e08a4933fa53cd41923"];
+  Node1730 -> Node1727 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1720 -> Node1731 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1731 [label="CSolver::GetRes_RMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a1c24b55e0849f7f6ba2f62d15d7e4f8e",tooltip="Get the maximal residual, this is useful for the convergence history. "];
+}

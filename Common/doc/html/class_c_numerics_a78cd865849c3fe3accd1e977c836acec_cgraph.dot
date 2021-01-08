@@ -1,0 +1,23 @@
+digraph "CNumerics::ComputeResJacobianGiles"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node162 [label="CNumerics::ComputeResJacobian\lGiles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node162 -> Node163 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node163 [label="CFluidModel::ComputeDerivative\lNRBC_Prho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#ab04cf03715d3492c04e7325de844720e",tooltip="virtual member that would be different for each gas model implemented "];
+  Node162 -> Node164 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node164 [label="CFluidModel::GetSoundSpeed2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a8c0910de10905f2ddcf02f1a9bb7ff61",tooltip="Get fluid speed of sound squared. "];
+  Node162 -> Node165 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node165 [label="CFluidModel::Getdhdrho_P",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#afb3b014f5a7b1ebbbd670e0e0bca6a14",tooltip="Get fluid pressure partial derivative. "];
+  Node162 -> Node166 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node166 [label="CFluidModel::GetdhdP_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a76eb9ee1ffc8ad2cc2f8289be1484882",tooltip="Get fluid pressure partial derivative. "];
+  Node162 -> Node167 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node167 [label="CFluidModel::Getdsdrho_P",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a921785cfac383add8c99cb1b40111a87",tooltip="Get fluid temperature partial derivative. "];
+  Node162 -> Node168 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node168 [label="CFluidModel::GetdsdP_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a158aaefc52042cd936d1cd6fa5404551",tooltip="Get fluid temperature partial derivative. "];
+  Node162 -> Node169 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 [label="CNumerics::InvMatrix3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a72f1e3f5e61a4b3ad8f172ce921bda13",tooltip="Computate the inverse of a 3x3 matrix. "];
+  Node162 -> Node170 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node170 [label="CNumerics::InvMatrix4D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a271f11d139c5c639046715665dcaaffb",tooltip="Computate the inverse of a 4x4 matrix. "];
+}

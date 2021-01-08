@@ -450,27 +450,35 @@ private:
   short *FFD_Fix_IDir,
   *FFD_Fix_JDir, *FFD_Fix_KDir;	      /*!< \brief Exact sections. */
   unsigned short *MG_PreSmooth,	      /*!< \brief Multigrid Pre smoothing. */
-  *MG_PostSmooth,					  /*!< \brief Multigrid Post smoothing. */
-  *MG_CorrecSmooth;					  /*!< \brief Multigrid Jacobi implicit smoothing of the correction. */
+  *MG_PostSmooth,	              /*!< \brief Multigrid Post smoothing. */
+  *MG_CorrecSmooth;		      /*!< \brief Multigrid Jacobi implicit smoothing of the correction. */
   su2double *LocationStations;        /*!< \brief Airfoil sections in wing slicing subroutine. */
   su2double *NacelleLocation;         /*!< \brief Definition of the nacelle location. */
+  
+  unsigned short Kind_Film_Solver, /*!< \brief Specific solver for thin film problems. */
+                 Film_Hp;          /*!< \brief Hypothesis for vertical velocity of the film. */
+  unsigned short nLayer;           /*!< \brief Nr of layers for multi-layer problem */
+  unsigned short Bottom_Top_Type;  /*!< \brief Bottom topography type. */  
+  string Bottom_FileName;          /*!< \brief Bottom topography filename. */
+  su2double* Bottom_val;           /*!< \brief Normal coordinate of the bottom. */   
+  su2double* default_bottom_val;   /*!< \brief Default bottom coefficient value. */
 
   unsigned short Kind_Solver,      /*!< \brief Kind of solver Euler, NS, Continuous adjoint, etc.  */
   Kind_MZSolver,                   /*!< \brief Kind of multizone solver.  */
-  Kind_FluidModel,			       /*!< \brief Kind of the Fluid Model: Ideal or Van der Walls, ... . */
-  Kind_ViscosityModel,		       /*!< \brief Kind of the Viscosity Model*/
-  Kind_ConductivityModel,	       /*!< \brief Kind of the Thermal Conductivity Model*/
+  Kind_FluidModel,		   /*!< \brief Kind of the Fluid Model: Ideal or Van der Walls, ... . */
+  Kind_ViscosityModel,		   /*!< \brief Kind of the Viscosity Model*/
+  Kind_ConductivityModel,	   /*!< \brief Kind of the Thermal Conductivity Model*/
   Kind_ConductivityModel_Turb,     /*!< \brief Kind of the Turbulent Thermal Conductivity Model*/
-  Kind_FreeStreamOption,	       /*!< \brief Kind of free stream option to choose if initializing with density or temperature  */
-  Kind_InitOption,			       /*!< \brief Kind of Init option to choose if initializing with Reynolds number or with thermodynamic conditions   */
-  Kind_GasModel,			       /*!< \brief Kind of the Gas Model. */
-  Kind_DensityModel,		       /*!< \brief Kind of the density model for incompressible flows. */
+  Kind_FreeStreamOption,	   /*!< \brief Kind of free stream option to choose if initializing with density or temperature  */
+  Kind_InitOption,		   /*!< \brief Kind of Init option to choose if initializing with Reynolds number or with thermodynamic conditions   */
+  Kind_GasModel,		   /*!< \brief Kind of the Gas Model. */
+  Kind_DensityModel,		   /*!< \brief Kind of the density model for incompressible flows. */
   Kind_GridMovement,               /*!< \brief Kind of the static mesh movement. */
   *Kind_SurfaceMovement,           /*!< \brief Kind of the static mesh movement. */
   nKind_SurfaceMovement,           /*!< \brief Kind of the dynamic mesh movement. */
-  Kind_Gradient_Method,		       /*!< \brief Numerical method for computation of spatial gradients. */
-  Kind_Gradient_Method_Recon,    /*!< \brief Numerical method for computation of spatial gradients used for upwind reconstruction. */
-  Kind_Deform_Linear_Solver,             /*!< Numerical method to deform the grid */
+  Kind_Gradient_Method,		   /*!< \brief Numerical method for computation of spatial gradients. */
+  Kind_Gradient_Method_Recon,      /*!< \brief Numerical method for computation of spatial gradients used for upwind reconstruction. */
+  Kind_Deform_Linear_Solver,       /*!< Numerical method to deform the grid */
   Kind_Deform_Linear_Solver_Prec,        /*!< \brief Preconditioner of the linear solver. */
   Kind_Linear_Solver,		             /*!< \brief Numerical solver for the implicit scheme. */
   Kind_Linear_Solver_FSI_Struc,	         /*!< \brief Numerical solver for the structural part in FSI problems. */
@@ -3734,6 +3742,12 @@ public:
    * \return Governing equation that we are solving.
    */
   unsigned short GetKind_Solver(void);
+
+  /*!
+   * \brief Governing equations of the film.
+   * \return Governing equation that we are solving.
+   */
+  unsigned short GetKind_Film_Solver(void);
   
   /*!
    * \brief Governing equations of the flow (it can be different from the run time equation).
@@ -3741,7 +3755,24 @@ public:
    * \return Governing equation that we are solving.
    */
   void SetKind_Solver(unsigned short val_solver);
+
+  /*!
+   * \brief Governing equations of the film.
+   * \param[in] val_solver - Value of the solver applied.
+   */
+  void SetKind_Film_Solver(unsigned short val_solver);
   
+  unsigned short GetFilm_Hp(void);
+  void SetFilm_Hp(unsigned short val_hp);
+
+  unsigned short GetnLayer(void);
+  void SetnLayer(unsigned short val_nLayer);
+
+  unsigned short GetBottom_Top_Type(void);
+  string  GetBottom_FileName(void);
+  su2double GetUniform_Bottom_Value(void);
+  su2double GetBottom_Value(unsigned short ii);
+
   /*!
    * \brief Kind of Multizone Solver.
    * \return Governing equation that we are solving.

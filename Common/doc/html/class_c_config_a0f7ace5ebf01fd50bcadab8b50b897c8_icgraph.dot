@@ -1,0 +1,34 @@
+digraph "CConfig::GetEntropyFix_Coeff"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2841 [label="CConfig::GetEntropyFix\l_Coeff",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2841 -> Node2842 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2842 [label="CUpwCUSP_Flow::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_c_u_s_p___flow.html#ab88b56f4d818225b47b7fe855a18326a",tooltip="Compute the flow residual using a JST method. "];
+  Node2841 -> Node2843 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2843 [label="CUpwRoeBase_Flow::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_roe_base___flow.html#ac4fcfe9dea7d4e5fc2d12fd5bb261ad4",tooltip="Compute the flux from node i to node j, part common to most Roe schemes. "];
+  Node2841 -> Node2844 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2844 [label="CUpwGeneralRoe_Flow\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_general_roe___flow.html#ac7f91b1543d87015361d69539cfecfe9",tooltip="Compute the Roe&#39;s flux between two nodes i and j. "];
+  Node2841 -> Node2845 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2845 [label="CFEM_DG_EulerSolver\l::ComputeInviscidFluxesFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a4851d39829e12202592d85c36ea36489",tooltip="Function, which computes the inviscid fluxes in face points. "];
+  Node2845 -> Node2846 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2846 [label="CFEM_DG_EulerSolver\l::InviscidFluxesInternalMatchingFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ab7546cb31b73191bbac2b338c88cfbc4",tooltip="Function, which computes the inviscid fluxes in the face integration points of a chunk of matching in..."];
+  Node2846 -> Node2847 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2847 [label="CFEM_DG_EulerSolver\l::ResidualFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a8875e58364f55e735fc3732f545d5f29",tooltip="Compute the spatial residual for the given range of faces. It is a virtual function, because this function is overruled for Navier-Stokes. "];
+  Node2847 -> Node2848 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2848 [label="CFEM_DG_EulerSolver\l::ProcessTaskList_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a651cad1a94f2024c75a1a8be347e3375",tooltip="Function, which processes the list of tasks to be executed by the DG solver. "];
+  Node2848 -> Node2849 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2849 [label="CFEM_DG_EulerSolver\l::ComputeSpatialJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ac59d8dae95e3c3cc3ab3feaeb9be4b22",tooltip="Function, which controls the computation of the spatial Jacobian. "];
+  Node2848 -> Node2850 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2850 [label="CFEM_DG_EulerSolver\l::ADER_SpaceTimeIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a7f0da04d44069701db2228210b91c59e",tooltip="Function, to carry out the space time integration for ADER with time accurate local time stepping..."];
+  Node2846 -> Node2851 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2851 [label="CFEM_DG_NSSolver::Residual\lFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a5afc06c0edede6e3917a6b24158930ba",tooltip="Compute the spatial residual for the given range of faces. "];
+  Node2845 -> Node2852 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2852 [label="CFEM_DG_EulerSolver\l::BC_Custom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a0e63fc77fc810025d45bfd8e0bf4d6dd",tooltip="Impose the user customized boundary condition. It is a virtual function, because for Navier-Stokes it..."];
+  Node2852 -> Node2853 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2853 [label="CFEM_DG_EulerSolver\l::Boundary_Conditions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#ae37f8eba6d7793bc4edb5de6e26f992d",tooltip="Function, which computes the spatial residual for the DG discretization. "];
+  Node2853 -> Node2848 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2845 -> Node2854 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2854 [label="CFEM_DG_NSSolver::BC\l_Custom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a8e27fad06f1bde21670f2e2990d3027e",tooltip="Impose the user customized boundary condition. "];
+}

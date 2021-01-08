@@ -1,0 +1,15 @@
+digraph "CFEMStandardElement::GetNSubElemsType2"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node145 [label="CFEMStandardElement\l::GetNSubElemsType2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node145 -> Node146 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node146 [label="CFEMStandardElement\l::GetNDOFsPerSubElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#acf9879543a9cafe9300439df4d79c303",tooltip="Function, which makes available the number of DOFs of a linear element, used for plotting. "];
+  Node146 -> Node147 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node147 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node147 -> Node148 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node148 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node145 -> Node149 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node149 [label="CFEMStandardElement\l::GetVTK_Type2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element.html#aceecd4b24a3a260337af723d7bd2ee3a",tooltip="Function, which makes available the type of the element in subConn2ForPlotting. "];
+}

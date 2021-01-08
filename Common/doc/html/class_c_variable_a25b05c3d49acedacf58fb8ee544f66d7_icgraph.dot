@@ -1,0 +1,14 @@
+digraph "CVariable::SetPrimVar"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5616 [label="CVariable::SetPrimVar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5616 -> Node5617 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5617 [label="CIncNSVariable::GetStrainMag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_variable.html#a7d5ba854a99c0432be51115078bfa036",tooltip="Get the value of the magnitude of rate of strain. "];
+  Node5616 -> Node5618 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5618 [label="CNSVariable::SetdktdT_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a3d749ea73bdc0f7dd45aa2ed713e768b",tooltip="Set the derivative of thermal conductivity with respect to temperature (at constant density)..."];
+  Node5618 -> Node5619 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5619 [label="CNSVariable::SetSecondaryVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_variable.html#a574bbbfda4f2191f836d2e3e7e1c8b3e",tooltip="Set all the secondary variables (partial derivatives) for compressible flows. "];
+  Node5619 -> Node5618 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

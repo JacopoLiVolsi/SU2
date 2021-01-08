@@ -1,0 +1,11 @@
+digraph "CConfig::GetKind_DiscAdj_Linear_Solver"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4897 [label="CConfig::GetKind_DiscAdj\l_Linear_Solver",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4897 -> Node4898 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4898 [label="CSysMatrix\< su2double\l \>::Initialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a26223555fd7147cfd6309a8030d40209",tooltip="Initializes sparse matrix system. "];
+  Node4897 -> Node4899 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4899 [label="CSysSolve\< su2double\l \>::Solve_b",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_solve.html#a5c501b77244d683ef143ee3146fe0a84",tooltip="Solve the adjoint linear system using a Krylov subspace method. "];
+}

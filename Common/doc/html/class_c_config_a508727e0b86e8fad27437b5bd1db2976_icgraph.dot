@@ -1,0 +1,21 @@
+digraph "CConfig::GetQuadrature_Factor_Curved"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10675 [label="CConfig::GetQuadrature\l_Factor_Curved",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10675 -> Node10676 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10676 [label="CMeshFEM::CMeshFEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#ae74b12670fb49ad4d28836d9fc2aab8d",tooltip="Redistributes the grid over the ranks and creates the halo layer. "];
+  Node10675 -> Node10677 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10677 [label="CMeshFEM_DG::CreateFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a1f627fc4d40b545b139486a83396874d",tooltip="Function to create the faces used in the DG formulation. "];
+  Node10677 -> Node10678 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10678 [label="CDriver::Geometrical\l_Preprocessing_DGFEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a2d9ea1c3d957f03fa5e22fa55e3369a6",tooltip="Do the geometrical preprocessing for the DG FEM solver. "];
+  Node10678 -> Node10679 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10679 [label="CDriver::Geometrical\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#ad3d55fa299acdb779a7772bcee249004",tooltip="Construction of the edge-based data structure and the multigrid structure. "];
+  Node10679 -> Node10680 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10680 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node10677 -> Node10681 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10681 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_o_t_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node10675 -> Node10682 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10682 [label="CFEMStandardElementBase\l::CFEMStandardElementBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#ab252022cac9a818a45ec31472ee8c5f3",tooltip="Alternative constructor. "];
+}

@@ -1,0 +1,25 @@
+digraph "CMultiGridIntegration::NonDimensional_Parameters"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node423 [label="CMultiGridIntegration\l::NonDimensional_Parameters",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node423 -> Node424 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node424 [label="CSolver::Pressure_Forces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a44a622ee7f6e3d47ffee693551321a31",tooltip="A virtual member. "];
+  Node423 -> Node425 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node425 [label="CSolver::Momentum_Forces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a2a0ed07b925494b83f8ea3b8c3c3d35a",tooltip="A virtual member. "];
+  Node423 -> Node426 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node426 [label="CSolver::Friction_Forces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#afba08e1e28ec82a8c493b621d261d114",tooltip="A virtual member. "];
+  Node423 -> Node427 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node427 [label="CConfig::GetBuffet\l_Monitoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#af207953f13ef34165399d63bfe851a34",tooltip="Provides the buffet monitoring information. "];
+  Node423 -> Node428 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node428 [label="CConfig::GetKind_ObjFunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2d4389021feaed9f2e62f0475f73a718",tooltip="Get the kind of objective function. There are several options: Drag coefficient, Lift coefficient..."];
+  Node423 -> Node429 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node429 [label="CSolver::Buffet_Monitoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a1f4904fee789899633b0af08b30eb838",tooltip="A virtual member. "];
+  Node423 -> Node430 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node430 [label="CSolver::Inviscid_Sensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a886ab4f3fe494222b1dcd6ca8a24e0ad",tooltip="A virtual member. "];
+  Node423 -> Node431 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node431 [label="CSolver::Viscous_Sensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ab90b05855d8263c5ee4a022b7628a0ac",tooltip="A virtual member. "];
+  Node423 -> Node432 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node432 [label="CConfig::GetKind_SensSmooth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae4b88883ec9a0e55c67e09e6aa9917b3",tooltip="Get the kind of sensitivity smoothing technique. "];
+}

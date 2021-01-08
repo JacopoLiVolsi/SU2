@@ -1,0 +1,19 @@
+digraph "CGridAdaptation::SetSupShock_Refinement"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node316 [label="CGridAdaptation::SetSupShock\l_Refinement",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node316 -> Node317 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node317 [label="CConfig::GetMach",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a624138f0bb5ee7494459b8e25c5d6287",tooltip="Get the value of the Mach number (velocity divided by speed of sound). "];
+  Node316 -> Node318 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node318 [label="CGeometry::GetnElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a4ae48ec038df1f5ee7c1daadabea5e99",tooltip="Get number of elements. "];
+  Node316 -> Node319 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node319 [label="CPrimalGrid::GetnNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a0efbf2f8391d5177d92bd850016a3783",tooltip="A pure virtual member. "];
+  Node316 -> Node320 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node320 [label="CPrimalGrid::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a4fc7b6b6ac5025325c7e68fb56fbeef8",tooltip="A pure virtual member. "];
+  Node316 -> Node321 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node321 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node316 -> Node322 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node322 [label="CPrimalGrid::SetDivide",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#af6977fd1339b8f9cc82448c464a389e1",tooltip="Set that an element must be divided in the adaptation stage. "];
+}

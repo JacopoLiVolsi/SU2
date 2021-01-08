@@ -116,56 +116,82 @@ inline void CPrimalGrid::SetDonorsWallFunctions(const vector<unsigned long> &don
 inline void CPrimalGrid::RemoveMultipleDonorsWallFunctions(void) {}
 
 inline unsigned short CVertexMPI::GetnNodes(void) { return nNodes; }
+inline unsigned short CVertexBound::GetnNodes(void) { return nNodes; }
 
 inline unsigned long CVertexMPI::GetNode(unsigned short val_node) { return Nodes[val_node]; }
+inline unsigned long CVertexBound::GetNode(unsigned short val_node) { return Nodes[val_node]; }
 
 inline void CVertexMPI::SetNode(unsigned short val_node, unsigned long val_point) { Nodes[val_node] = val_point; }
+inline void CVertexBound::SetNode(unsigned short val_node, unsigned long val_point) { Nodes[val_node] = val_point; }
 
 inline unsigned short CVertexMPI::GetVTK_Type(void) { return VTK_Type; }
+inline unsigned short CVertexBound::GetVTK_Type(void) { return VTK_Type; }
 
 inline unsigned short CVertexMPI::GetRotation_Type(void) { return Rotation_Type; }
+inline unsigned short CVertexBound::GetRotation_Type(void) { return Rotation_Type; }
 
 inline void CVertexMPI::SetRotation_Type(unsigned short val_rotation_type) { Rotation_Type = val_rotation_type; }
+inline void CVertexBound::SetRotation_Type(unsigned short val_rotation_type) { Rotation_Type = val_rotation_type; }
 
 inline unsigned short CVertexMPI::GetnNeighbor_Nodes(unsigned short val_node) { return 0; }
+inline unsigned short CVertexBound::GetnNeighbor_Nodes(unsigned short val_node) { return 0; }
 
 inline unsigned short CVertexMPI::GetnNeighbor_Elements(void) { return 0; }
+inline unsigned short CVertexBound::GetnNeighbor_Elements(void) { return 0; }
 
 inline unsigned short CVertexMPI::GetnFaces(void) { return 0; }
+inline unsigned short CVertexBound::GetnFaces(void) { return 0; }
 
 inline unsigned short CVertexMPI::GetnNodesFace(unsigned short val_face) { return 0; }
+inline unsigned short CVertexBound::GetnNodesFace(unsigned short val_face) { return 0; }
 
 inline unsigned short CVertexMPI::GetMaxNodesFace(void) { return 0; }
+inline unsigned short CVertexBound::GetMaxNodesFace(void) { return 0; }
 
 inline unsigned short CVertexMPI::GetFaces(unsigned short val_face, unsigned short val_index) { return 0; }
+inline unsigned short CVertexBound::GetFaces(unsigned short val_face, unsigned short val_index) { return 0; }
 
 inline unsigned short CVertexMPI::GetNeighbor_Nodes(unsigned short val_node, unsigned short val_index) { return 0; }
+inline unsigned short CVertexBound::GetNeighbor_Nodes(unsigned short val_node, unsigned short val_index) { return 0; }
 
 inline unsigned short CLine::GetFaces(unsigned short val_face, unsigned short val_index) { return Faces[val_face][val_index]; }
+inline unsigned short CLineVol::GetFaces(unsigned short val_face, unsigned short val_index) { return Faces[val_face][val_index]; }
 
 inline unsigned short CLine::GetNeighbor_Nodes(unsigned short val_node, unsigned short val_index) { return Neighbor_Nodes[val_node][val_index]; }
+inline unsigned short CLineVol::GetNeighbor_Nodes(unsigned short val_node, unsigned short val_index) { return Neighbor_Nodes[val_node][val_index]; }
 
 inline unsigned short CLine::GetnNodesFace(unsigned short val_face) { return nNodesFace[val_face]; }
+inline unsigned short CLineVol::GetnNodesFace(unsigned short val_face) { return nNodesFace[val_face]; }
 
 inline unsigned short CLine::GetnNeighbor_Nodes(unsigned short val_node) { return nNeighbor_Nodes[val_node]; }
+inline unsigned short CLineVol::GetnNeighbor_Nodes(unsigned short val_node) { return nNeighbor_Nodes[val_node]; }
 
 inline unsigned long CLine::GetNode(unsigned short val_node) { return Nodes[val_node]; }
+inline unsigned long CLineVol::GetNode(unsigned short val_node) { return Nodes[val_node]; }
 
 inline void CLine::SetNode(unsigned short val_node, unsigned long val_point) { Nodes[val_node] = val_point; }
+inline void CLineVol::SetNode(unsigned short val_node, unsigned long val_point) { Nodes[val_node] = val_point; }
 
 inline unsigned short CLine::GetnNodes(void) { return nNodes; }
+inline unsigned short CLineVol::GetnNodes(void) { return nNodes; }
 
 inline unsigned short CLine::GetnFaces(void) { return nFaces; }
+inline unsigned short CLineVol::GetnFaces(void) { return nFaces; }
 
 inline unsigned short CLine::GetVTK_Type(void) { return VTK_Type; }
+inline unsigned short CLineVol::GetVTK_Type(void) { return VTK_Type; }
 
 inline unsigned short CLine::GetMaxNodesFace(void) { return maxNodesFace; }
+inline unsigned short CLineVol::GetMaxNodesFace(void) { return maxNodesFace; }
 
 inline unsigned short CLine::GetnNeighbor_Elements(void) { return nNeighbor_Elements; }
+inline unsigned short CLineVol::GetnNeighbor_Elements(void) { return nNeighbor_Elements; }
 
 inline void CLine::SetDomainElement(unsigned long val_domainelement) {DomainElement = val_domainelement; }
+inline void CLineVol::SetDomainElement(unsigned long val_domainelement) {DomainElement = val_domainelement; }
 
 inline unsigned long CLine::GetDomainElement(void) { return DomainElement; }
+inline unsigned long CLineVol::GetDomainElement(void) { return DomainElement; }
 
 inline unsigned short CTriangle::GetFaces(unsigned short val_face, unsigned short val_index) { return Faces[val_face][val_index]; }
 

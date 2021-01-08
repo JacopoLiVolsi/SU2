@@ -1,0 +1,19 @@
+digraph "CDiscAdjMeshSolver"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="CDiscAdjMeshSolver",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html",tooltip="Main class for defining the PDE solution, it requires a child class for each particular solver (Euler..."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" StiffMatrix" ,fontname="Helvetica"];
+  Node4 [label="CSysMatrix\< su2double \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" OutputVariables\nLinSysAux\nLinSysSol\nLinSysRes" ,fontname="Helvetica"];
+  Node5 [label="CSysVector\< su2double \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" System" ,fontname="Helvetica"];
+  Node6 [label="CSysSolve\< passivedouble \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_solve.html"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" VerificationSolution" ,fontname="Helvetica"];
+  Node7 [label="CVerificationSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_verification_solution.html",tooltip="Class for holding verification PDE solutions, e.g., phi = phi(x,y,z,t), used for initial conditions..."];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Jacobian" ,fontname="Helvetica"];
+  Node8 [label="CSysMatrix\< passivedouble \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html"];
+}

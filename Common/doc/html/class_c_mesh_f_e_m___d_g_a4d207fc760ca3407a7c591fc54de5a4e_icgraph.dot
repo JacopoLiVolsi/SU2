@@ -1,0 +1,19 @@
+digraph "CMeshFEM_DG::CreateConnectivitiesTriangleAdjacentPyramid"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node103 [label="CMeshFEM_DG::CreateConnectivities\lTriangleAdjacentPyramid",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node103 -> Node104 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="CMeshFEM_DG::CreateConnectivitiesFace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a6640834bb680287577c101d1982f524e",tooltip="Function, which computes the correct sequence of the connectivities of a face, such that it matches t..."];
+  Node104 -> Node105 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node105 [label="CMeshFEM_DG::CreateFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m___d_g.html#a1f627fc4d40b545b139486a83396874d",tooltip="Function to create the faces used in the DG formulation. "];
+  Node105 -> Node106 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node106 [label="CDriver::Geometrical\l_Preprocessing_DGFEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a2d9ea1c3d957f03fa5e22fa55e3369a6",tooltip="Do the geometrical preprocessing for the DG FEM solver. "];
+  Node106 -> Node107 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="CDriver::Geometrical\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#ad3d55fa299acdb779a7772bcee249004",tooltip="Construction of the edge-based data structure and the multigrid structure. "];
+  Node107 -> Node108 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node105 -> Node109 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node109 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_o_t_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+}

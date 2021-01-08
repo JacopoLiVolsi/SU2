@@ -34,8 +34,10 @@ CSurfaceFVMDataSorter::CSurfaceFVMDataSorter(CConfig *config, CGeometry *geometr
 
   connectivity_sorted = false;
 
-  nGlobalPoint_Sort = geometry->GetGlobal_nPointDomain();
-  nLocalPoint_Sort  = geometry->GetnPointDomain();
+  unsigned short nLayer = config->GetnLayer();
+
+  nGlobalPoint_Sort = nLayer*geometry->GetGlobal_nPointDomain();
+  nLocalPoint_Sort  = nLayer*geometry->GetnPointDomain();
 
   /*--- Create the linear partitioner --- */
 
@@ -83,6 +85,29 @@ void CSurfaceFVMDataSorter::SortOutputData() {
 
   /*--- Loop through our local line elements and check where each
    of the grid nodes resides based on global index. ---*/
+
+  for (int ii = 0; ii < (int)nParallel_Vertex; ii++) {
+    for ( int jj = 0; jj < N_POINTS_POINT; jj++ ) {
+
+      /*--- Get global index. Note the -1 since it was 1-based for viz. ---*/
+
+      iNode = ii*N_POINTS_POINT+jj;
+      Global_Index = Conn_Vertex_Par[iNode]-1;
+
+      /*--- Search for the processor that owns this point ---*/
+
+      iProcessor = linearPartitioner->GetRankContainingIndex(Global_Index);
+
+      /*--- If we have not visited this element yet, increment our
+       number of elements that must be sent to a particular proc. ---*/
+
+      if ((nElem_Flag[iProcessor] != iNode)) {
+        nElem_Flag[iProcessor] = iNode;
+        nElem_Send[iProcessor+1]++;
+      }
+
+    }
+  }
 
   for (int ii = 0; ii < (int)nParallel_Line; ii++) {
     for ( int jj = 0; jj < N_POINTS_LINE; jj++ ) {
@@ -202,6 +227,38 @@ void CSurfaceFVMDataSorter::SortOutputData() {
 
   /*--- Now loop back through the local connectivities for the surface
    elements and load up the global IDs for sending to their home proc. ---*/
+ 
+ for (int ii = 0; ii < (int)nParallel_Vertex; ii++) {
+    for ( int jj = 0; jj < N_POINTS_POINT; jj++ ) {
+
+      /*--- Get global index. Note the -1 since it was 1-based for viz. ---*/
+
+      iNode = ii*N_POINTS_POINT+jj;
+      Global_Index = Conn_Vertex_Par[iNode]-1;
+
+      /*--- Search for the processor that owns this point ---*/
+
+      iProcessor = linearPartitioner->GetRankContainingIndex(Global_Index);
+
+      /*--- Load global ID into the buffer for sending ---*/
+
+      if (nElem_Flag[iProcessor] != iNode) {
+
+        nElem_Flag[iProcessor] = iNode;
+        unsigned long nn = idIndex[iProcessor];
+
+        /*--- Load the connectivity values. ---*/
+
+        idSend[nn] = Global_Index; nn++;
+
+        /*--- Increment the index by the message length ---*/
+
+        idIndex[iProcessor]++;
+
+      }
+
+    }
+  }
 
   for (int ii = 0; ii < (int)nParallel_Line; ii++) {
     for ( int jj = 0; jj < N_POINTS_LINE; jj++ ) {
@@ -456,6 +513,10 @@ void CSurfaceFVMDataSorter::SortOutputData() {
 
 #ifndef HAVE_MPI
   nGlobal_Poin_Par = nParallel_Poin;
+  if(multilayer_film){
+   nParallel_Poin *= nLayer;
+   nGlobal_Poin_Par = nParallel_Poin;
+  }
 #else
   SU2_MPI::Allreduce(&nParallel_Poin, &nGlobal_Poin_Par, 1,
                      MPI_UNSIGNED_LONG, MPI_SUM, MPI_COMM_WORLD);
@@ -594,7 +655,7 @@ void CSurfaceFVMDataSorter::SortOutputData() {
 
   /*--- Free memory after loading up the send buffer. ---*/
 
-  delete [] index;
+  if(index != NULL) delete [] index;
 
   /*--- Allocate the memory that we need for receiving the
    values and then cue up the non-blocking receives. Note that
@@ -729,6 +790,27 @@ void CSurfaceFVMDataSorter::SortOutputData() {
   vector<unsigned long>::iterator it;
   vector<unsigned long> outliers;
 
+  for (int ii = 0; ii < (int)nParallel_Vertex; ii++) {
+    for ( int jj = 0; jj < N_POINTS_POINT; jj++ ) {
+
+      iNode = ii*N_POINTS_POINT+jj;
+      Global_Index = Conn_Vertex_Par[iNode]-1;
+
+      /*--- Search for the processor that owns this point ---*/
+
+      iProcessor = linearPartitioner->GetRankContainingIndex(Global_Index);
+
+      /*--- Store the global ID if it is outside our own linear partition. ---*/
+
+      if ((iProcessor != (unsigned long)rank)) {
+        outliers.push_back(Global_Index);
+      }
+
+    }
+  }
+
+  for (int ii=0; ii < size; ii++) nElem_Flag[ii]= -1;
+
   for (int ii = 0; ii < (int)nParallel_Line; ii++) {
     for ( int jj = 0; jj < N_POINTS_LINE; jj++ ) {
 
@@ -853,7 +935,7 @@ void CSurfaceFVMDataSorter::SortOutputData() {
     nElem_Recv[ii+1] += nElem_Recv[ii];
   }
 
-  delete [] idSend;
+  if(idSend != NULL) delete [] idSend;
   idSend = new unsigned long[nElem_Send[size]];
   for (int ii = 0; ii < nElem_Send[size]; ii++)
     idSend[ii] = 0;
@@ -896,7 +978,7 @@ void CSurfaceFVMDataSorter::SortOutputData() {
    we do not include our own rank in the communications. We will
    directly copy our own data later. ---*/
 
-  delete [] idRecv;
+  if(idRecv != NULL) delete [] idRecv;
   idRecv = new unsigned long[nElem_Recv[size]]();
 
 #ifdef HAVE_MPI
@@ -1051,6 +1133,12 @@ void CSurfaceFVMDataSorter::SortOutputData() {
    using our completed map with the new global renumbering. Whew!! Note
    the -1 when accessing the conn from the map. ---*/
 
+  for (iElem = 0; iElem < nParallel_Vertex; iElem++) {
+    iNode = (int)iElem*N_POINTS_POINT;
+    Conn_Vertex_Par[iNode+0] = (int)Global2Renumber[Conn_Vertex_Par[iNode+0]-1];
+    //Conn_Vertex_Par[iNode+1] = (int)Global2Renumber[Conn_Vertex_Par[iNode+1]-1];
+  }
+
   for (iElem = 0; iElem < nParallel_Line; iElem++) {
     iNode = (int)iElem*N_POINTS_LINE;
     Conn_Line_Par[iNode+0] = (int)Global2Renumber[Conn_Line_Par[iNode+0]-1];
@@ -1074,23 +1162,23 @@ void CSurfaceFVMDataSorter::SortOutputData() {
 
   /*--- Free temporary memory ---*/
 
-  delete [] idIndex;
-  delete [] surfPoint;
-  delete [] globalP;
-  delete [] renumbP;
+  if(idIndex != NULL) delete [] idIndex;
+  if(surfPoint != NULL) delete [] surfPoint;
+  if(globalP != NULL) delete [] globalP;
+  if(renumbP != NULL) delete [] renumbP;
 
-  delete [] idSend;
-  delete [] idRecv;
-  delete [] globalSend;
-  delete [] globalRecv;
-  delete [] renumbSend;
-  delete [] renumbRecv;
-  delete [] nElem_Recv;
-  delete [] nElem_Send;
-  delete [] nElem_Flag;
-  delete [] Local_Halo;
-  delete [] nPoint_Send;
-  delete [] nPoint_Recv;
+  if(idSend != NULL) delete [] idSend;
+  if(idRecv != NULL) delete [] idRecv;
+  if(globalSend != NULL) delete [] globalSend;
+  if(globalRecv != NULL) delete [] globalRecv;
+  if(renumbSend != NULL) delete [] renumbSend;
+  if(renumbRecv != NULL) delete [] renumbRecv;
+  if(nElem_Recv != NULL) delete [] nElem_Recv;
+  if(nElem_Send != NULL) delete [] nElem_Send;
+  //if(nElem_Flag != NULL) delete [] nElem_Flag; // free(): invalid next size (fast)
+  if(Local_Halo != NULL) delete [] Local_Halo;
+  if(nPoint_Send != NULL) delete [] nPoint_Send;
+  if(nPoint_Recv != NULL) delete [] nPoint_Recv;
 
 }
 
@@ -1102,12 +1190,13 @@ void CSurfaceFVMDataSorter::SortConnectivity(CConfig *config, CGeometry *geometr
 
   /*--- Sort volumetric grid connectivity. ---*/
 
+  SortSurfaceConnectivity(config, geometry, VERTEX       );
   SortSurfaceConnectivity(config, geometry, LINE         );
   SortSurfaceConnectivity(config, geometry, TRIANGLE     );
   SortSurfaceConnectivity(config, geometry, QUADRILATERAL);
 
 
-  unsigned long nTotal_Surf_Elem = nParallel_Line + nParallel_Tria + nParallel_Quad;
+  unsigned long nTotal_Surf_Elem =  nParallel_Vertex + nParallel_Line + nParallel_Tria + nParallel_Quad;
 #ifndef HAVE_MPI
   nGlobal_Elem_Par   = nTotal_Surf_Elem;
 #else
@@ -1141,6 +1230,9 @@ void CSurfaceFVMDataSorter::SortSurfaceConnectivity(CConfig *config, CGeometry *
    the current partition. ---*/
 
   switch (Elem_Type) {
+    case VERTEX:
+      NODES_PER_ELEMENT = N_POINTS_POINT;
+      break;
     case LINE:
       NODES_PER_ELEMENT = N_POINTS_LINE;
       break;
@@ -1470,6 +1562,11 @@ void CSurfaceFVMDataSorter::SortSurfaceConnectivity(CConfig *config, CGeometry *
    and set the class data pointer to the connectivity array. ---*/
 
   switch (Elem_Type) {
+    case VERTEX:
+      nParallel_Vertex = nElem_Total;
+      if (Conn_Vertex_Par != NULL) delete [] Conn_Vertex_Par;
+      if (nParallel_Vertex > 0) Conn_Vertex_Par = Conn_Elem;
+      break;
     case LINE:
       nParallel_Line = nElem_Total;
       if (Conn_Line_Par != NULL) delete [] Conn_Line_Par;

@@ -1,0 +1,15 @@
+digraph "CFluidModel::Getdhdrho_P"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node89 [label="CFluidModel::Getdhdrho_P",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node89 -> Node90 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node90 [label="CNumerics::ComputeResJacobian\lGiles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a78cd865849c3fe3accd1e977c836acec",tooltip="Computation of the flow Residual Jacoboan Matrix for Non Reflecting BC. "];
+  Node90 -> Node91 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node91 [label="CEulerSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aa4c3988e3ce0c18460b5c069650c57b0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node89 -> Node92 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node92 [label="CEulerSolver::MixedOut\l_Average",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a95fde7eb83f98a71c61b45c369b6e6e0",tooltip="it performs a mixed out average of the nodes of a boundary. "];
+  Node92 -> Node93 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node93 [label="CEulerSolver::TurboAverage\lProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ab408049d3b4fecc224653176c8d7885a",tooltip="It computes average quantities along the span for turbomachinery analysis. "];
+}

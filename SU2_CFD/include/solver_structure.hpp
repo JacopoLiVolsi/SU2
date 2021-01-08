@@ -68,6 +68,7 @@
 #include "variables/CDiscAdjVariable.hpp"
 #include "variables/CDiscAdjFEABoundVariable.hpp"
 #include "variables/CMeshElement.hpp"
+#include "variables/CFilmVariable.hpp"
 
 using namespace std;
 
@@ -1401,6 +1402,23 @@ public:
    */
   virtual void ComputeUnderRelaxationFactor(CSolver **solver, CConfig *config);
   
+  /*!
+   * \brief Virtual member used in CFilmOutput.
+   * \param[in] iLayer - Layer index.
+   * \param[in] iPoint - Layer index.
+   * \return Return layer coordinates per point.
+   */
+  virtual CMultilayerPoint*** GetLayerNode(){};
+  virtual CMultilayerPoint*  GetLayerNode(unsigned short iLayer, unsigned long iPoint);
+  virtual su2double GetTotal_thickness(unsigned short iLayer, unsigned long iPoint){};
+  virtual su2double GetInterfaceVar(unsigned short val_marker, unsigned long iPoint, unsigned short iVar){};
+  /*!
+   * \brief Read the topography below a geometry.
+   * \param[in] topography - Vecotr containing the topography.
+   * \param[in] config - Configuration file.
+   */
+  inline virtual void ReadTopography(su2double **topography, CGeometry* geometry, CConfig* config){};
+
   /*!
    * \brief Adapt the CFL number based on the local under-relaxation parameters
    *        computed for each nonlinear iteration.
@@ -11760,6 +11778,14 @@ public:
   void Compute_MassRes(CGeometry *geometry, CNumerics **numerics, CConfig *config);
 
   /*!
+   * \brief Get the residual for FEM structural analysis.
+   * \param[in] val_var - Index of the variable.
+   * \return Value of the residual for the variable in the position <i>val_var</i>.
+   */
+  su2double GetRes_FEM(unsigned short val_var);
+  
+
+  /*!
    * \brief Compute the nodal stress terms and add them to the residual.
    * \param[in] geometry - Geometrical definition of the problem.
    * \param[in] solver - Description of the numerical method.
@@ -11972,13 +11998,6 @@ public:
    * \param[in] config - Definition of the particular problem.
    */
   void Solve_System(CGeometry *geometry, CConfig *config);
-  
-  /*!
-   * \brief Get the residual for FEM structural analysis.
-   * \param[in] val_var - Index of the variable.
-   * \return Value of the residual for the variable in the position <i>val_var</i>.
-   */
-  su2double GetRes_FEM(unsigned short val_var);
   
   /*!
    * \brief Provide the maximum Von Mises Stress for structural analysis.

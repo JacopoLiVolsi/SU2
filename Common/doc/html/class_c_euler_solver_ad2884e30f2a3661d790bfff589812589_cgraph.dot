@@ -1,0 +1,39 @@
+digraph "CEulerSolver::FixedCL_Convergence"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1477 [label="CEulerSolver::FixedCL\l_Convergence",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1477 -> Node1478 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1478 [label="CConfig::GetTarget_CL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a655e91bd2d444bb4c46b4244e2d814ae",tooltip="Get the value specified for the target CL. "];
+  Node1477 -> Node1479 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1479 [label="CConfig::GetInnerIter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#afb04e3794a1a3cef3c5897f31f2efd2d",tooltip="Get the current FSI iteration number. "];
+  Node1477 -> Node1480 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1480 [label="CConfig::GetIter_dCL\l_dAlpha",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a34bf17feea716750107a54b9a8be4a97",tooltip="Number of iterations to evaluate dCL_dAlpha. "];
+  Node1477 -> Node1481 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1481 [label="CConfig::GetCauchy_Eps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2e7e59dcbe7f5ff2b74e5ab7fd6ce54c",tooltip="Get the value of convergence criteria for the Cauchy method in the direct, adjoint or linearized prob..."];
+  Node1477 -> Node1482 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1482 [label="CConfig::GetStartConv_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a31f05501521eae78c33bf19374b5e0de",tooltip="Get the number of iterations that are not considered in the convergence criteria. ..."];
+  Node1477 -> Node1483 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1483 [label="CConfig::GetUpdate\l_AoA_Iter_Limit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a55c85a04f4126297f247d5414618ae02",tooltip="Get the maximum number of iterations between AoA updates for fixed C_L mode. "];
+  Node1477 -> Node1484 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1484 [label="CConfig::GetnInner_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a448aa905877c21aae95be81e73fbb27c",tooltip="Get the number of inner iterations. "];
+  Node1477 -> Node1485 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1485 [label="CConfig::SetHistory\l_Wrt_Freq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2ed91082f7ef2637634986e35e9f1cdc",tooltip="SetHistory_Wrt_Freq_Inner. "];
+  Node1477 -> Node1486 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1486 [label="CEulerSolver::SetCoefficient\l_Gradients",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#af82d8f5bce7b113ade28ecbfc9cc01d8",tooltip="Set gradients of coefficients for fixed CL mode. "];
+  Node1486 -> Node1487 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1487 [label="CConfig::GetAoA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6020a5df7025ffb286f9b9f55f3f2773",tooltip="Get the angle of attack of the body. This is the angle between a reference line on a lifting body (of..."];
+  Node1486 -> Node1488 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1488 [label="CConfig::SetdCD_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae2a0ddd50ec6acbd74f76c7f9f167c66",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node1486 -> Node1489 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1489 [label="CConfig::SetdCMx_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#afd39f185663752b3a48f73ff05ce89e2",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node1486 -> Node1490 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1490 [label="CConfig::SetdCMy_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad7f68b41f4633cff714b1b983d90d8ea",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node1486 -> Node1491 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1491 [label="CConfig::SetdCMz_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8dd670373454018b59e99a11804d4477",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node1486 -> Node1492 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1492 [label="CConfig::SetdCL_dAlpha",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6d8949230a604c04494dc5c1089d5236",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node1477 -> Node1493 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1493 [label="CConfig::SetAoA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a32f628d1d3d3e2e4888886e4cadf167b",tooltip="Set the angle of attack. "];
+}

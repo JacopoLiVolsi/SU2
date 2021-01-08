@@ -1,0 +1,29 @@
+digraph "CConfig::GetKind_TurboMachinery"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5933 [label="CConfig::GetKind_TurboMachinery",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5933 -> Node5934 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5934 [label="CPhysicalGeometry::\lComputeNSpan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a9aa84f4877184465391ad944264e2c12",tooltip="Set number of span wise level for turbomachinery computation. "];
+  Node5933 -> Node5935 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5935 [label="CPhysicalGeometry::\lSetTurboVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a51481bb8173c15758a94838d29c7f0c7",tooltip="Set turbo boundary vertex. "];
+  Node5933 -> Node5936 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5936 [label="CPhysicalGeometry::\lUpdateTurboVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#af127c1132d94b681e79427672637c0fa",tooltip="update turbo boundary vertex. "];
+  Node5933 -> Node5937 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5937 [label="CPhysicalGeometry::\lSetAvgTurboValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a9b42df38be11e404f3f2f8e729d0af74",tooltip="Set turbo boundary vertex. "];
+  Node5933 -> Node5938 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5938 [label="CPhysicalGeometry::\lGatherInOutAverageValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a217e5337523ba85579c8a3d209bf25d9",tooltip="Set turbo boundary vertex. "];
+  Node5933 -> Node5939 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5939 [label="CEulerSolver::BC_TurboRiemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a0066305803a18511fb89b8951f4e4866",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node5933 -> Node5940 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5940 [label="CEulerSolver::Preprocess\lBC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a33402619b740bfe68350c50bba14c6ab",tooltip="It computes Fourier transformation for the needed quantities along the pitch for each span in turboma..."];
+  Node5933 -> Node5941 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5941 [label="CEulerSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aa4c3988e3ce0c18460b5c069650c57b0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node5933 -> Node5942 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5942 [label="CEulerSolver::SetFreeStream\l_TurboSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac116e43e6c7eef751bc807908f235c31",tooltip="Set the solution using the Freestream values. "];
+  Node5933 -> Node5943 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5943 [label="CEulerSolver::Preprocess\lAverage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ab13b628bfb33a1701ff0807195f953ef",tooltip="It computes average quantities along the span for turbomachinery analysis. "];
+  Node5933 -> Node5944 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5944 [label="CEulerSolver::TurboAverage\lProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ab408049d3b4fecc224653176c8d7885a",tooltip="It computes average quantities along the span for turbomachinery analysis. "];
+}

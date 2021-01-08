@@ -50,5 +50,6 @@
 #include "../include/definition_structure.hpp"
 #include "../include/iteration_structure.hpp"
 #include "../include/interfaces/CInterface.hpp"
+#include "utilities.hpp"
 
 using namespace std;

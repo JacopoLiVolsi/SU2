@@ -1,0 +1,9 @@
+digraph "CDiscAdjVariable::Set_BGSSolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node45 [label="CDiscAdjVariable::Set\l_BGSSolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node45 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="CDiscAdjSolver::ComputeResidual\l_Multizone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#a0571227566a9d9d7c6c1e92cae9258cc",tooltip="Compute the multizone residual. "];
+}

@@ -1,0 +1,19 @@
+digraph "CNSSolver::SetRoe_Dissipation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node958 [label="CNSSolver::SetRoe_Dissipation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node958 -> Node959 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node959 [label="CConfig::GetKind_RoeLowDiss",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac5bec4548aaef1effa84ad7a3a038e35",tooltip="Get the Kind of Roe Low Dissipation Scheme for Unsteady flows. "];
+  Node958 -> Node960 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node960 [label="CPoint::GetWall_Distance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a2ec241bcb847e4bae03e8df907a18b15",tooltip="Get the value of the distance to the nearest wall. "];
+  Node958 -> Node961 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node961 [label="CVariable::SetRoe_Dissipation_FD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a6c11863ae865239023f11f568b00ef39",tooltip="A virtual member. "];
+  Node958 -> Node962 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node962 [label="CPoint::GetMaxLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a786e7c18e968c5e833b41c60ed427a35",tooltip="Get the maximum cell-center to cell-center length. "];
+  Node958 -> Node963 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node963 [label="CVariable::SetRoe_Dissipation_NTS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#add6cdd497dae4e2f2abe2a7c2a6b2e52",tooltip="A virtual member. "];
+  Node958 -> Node964 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node964 [label="CConfig::GetConst_DES",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2498a45dc1967f0ca273371ed7e89711",tooltip="Get the DES Constant. "];
+}

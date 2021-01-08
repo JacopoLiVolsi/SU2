@@ -1,0 +1,27 @@
+digraph "CConfig::CConfig"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node110 [label="CConfig::CConfig",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node110 -> Node111 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 [label="CBaseMPIWrapper::GetRank",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a801c6612161d6960c5cf25435f244101"];
+  Node110 -> Node112 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node112 [label="CBaseMPIWrapper::GetSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a1e80850252f6e4bfc8cd5275d6e3a615"];
+  Node110 -> Node113 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node113 [label="CConfig::SetPointersNull",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae840f486f3e95ed9e90c989bd48c1aed",tooltip="Initializes pointers to null. "];
+  Node110 -> Node114 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node114 [label="CConfig::SetRunTime\l_Options",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aea45b469511efbc4dc650d214472d805",tooltip="Set the config options. "];
+  Node110 -> Node115 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node115 [label="CConfig::SetRunTime\l_Parsing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a465360c75d8aad2e3977bfa6a584b775",tooltip="Set the config file parsing. "];
+  Node115 -> Node116 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node116 [label="CConfig::TokenizeString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab7c2fcf154bfeb412452d60f4df48263",tooltip="breaks an input line from the config file into a set of tokens "];
+  Node116 -> Node117 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 [label="StringToUpperCase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$option__structure_8hpp.html#a3a58d5861158c51c97ad06b00e0c390c",tooltip="utility function for converting strings to uppercase "];
+  Node115 -> Node118 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node118 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node118 -> Node119 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node119 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node110 -> Node120 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node120 [label="CConfig::SetnTime_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a9ca068df51062eb954ff855f27893236",tooltip="Set the number of time iterations. "];
+}

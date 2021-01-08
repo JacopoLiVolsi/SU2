@@ -1,0 +1,21 @@
+digraph "CIncEulerSolver::SetBeta_Parameter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1653 [label="CIncEulerSolver::SetBeta\l_Parameter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1653 -> Node1654 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1654 [label="CConfig::GetBeta_Factor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a99b815e1412230bd5a044709983acbea",tooltip="Get the epsilon^2 multiplier for Beta in the incompressible preconditioner. "];
+  Node1653 -> Node1655 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1655 [label="CIncEulerVariable::\lGetVelocity2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_variable.html#a1a9d60d2fae80684e2adea403ac553c8",tooltip="Get the norm 2 of the velocity. "];
+  Node1653 -> Node1656 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1656 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node1656 -> Node1657 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1657 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node1653 -> Node1658 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1658 [label="CConfig::SetMax_Vel2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aee462e868b4c14e214d71538c28b12d8",tooltip="Set the maximum velocity^2 in the domain for the incompressible preconditioner. "];
+  Node1653 -> Node1659 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1659 [label="CIncEulerVariable::\lSetBetaInc2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_variable.html#a5ef5e664324a07a75a6e96139ae03472",tooltip="Set the value of the beta coeffient for incompressible flows. "];
+  Node1653 -> Node1660 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1660 [label="CConfig::GetMax_Vel2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#afddeba836f1bf4d4c239f7344d855b74",tooltip="Get the maximum velocity^2 in the domain for the incompressible preconditioner. "];
+}

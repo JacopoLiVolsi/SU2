@@ -1,0 +1,39 @@
+digraph "CEulerSolver::Set_MPI_Nearfield"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2796 [label="CEulerSolver::Set_MPI\l_Nearfield",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2796 -> Node2797 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2797 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node2796 -> Node2798 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2798 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node2796 -> Node2799 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2799 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node2796 -> Node2800 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2800 [label="CVertex::GetDonorProcessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a1c860d25d051c6ea687b2d902db73d23",tooltip="Get the value of the periodic point of a vertex. "];
+  Node2796 -> Node2801 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2801 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node2796 -> Node2802 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2802 [label="CBaseMPIWrapper::Bsend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#ae1799e80fcdb8d1e8839e99ef7b397c3"];
+  Node2796 -> Node2803 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2803 [label="CBaseMPIWrapper::Recv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a2a0cf206352327fc745b3848b8c6d130"];
+  Node2796 -> Node2804 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2804 [label="CBaseMPIWrapper::Barrier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a07f24df31c87ac960540ce8ac2b407d2"];
+  Node2796 -> Node2805 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2805 [label="CPoint::GetGlobalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ab546170a5a03ef210a75fc5531910050",tooltip="Get the global index in a parallel computation. "];
+  Node2796 -> Node2806 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2806 [label="CVertex::GetDonorVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a6e6ff4870d0ae0c6e3dd67490351160d",tooltip="Get the value of the periodic point of a vertex. "];
+  Node2796 -> Node2807 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2807 [label="CVertex::GetDonorMarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#ad8b1c0f6c36a72692bc49fe1cd91f783",tooltip="Get the value of the periodic point of a vertex. "];
+  Node2796 -> Node2808 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2808 [label="CEulerVariable::GetPrimitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_variable.html#ac74de02753701aa447cd3e125d8cab7d",tooltip="Get the primitive variables. "];
+  Node2796 -> Node2809 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2809 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node2809 -> Node2810 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2810 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node2796 -> Node2811 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2811 [label="CEulerSolver::SetDonorPrimVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aabc77a8dfb4330dbb2f53fd6e8269f9f",tooltip="Value of the characteristic variables at the boundaries. "];
+  Node2796 -> Node2812 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2812 [label="CEulerSolver::SetDonorGlobal\lIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad45a18e30a56b0ec019b43770be08d1e",tooltip="Value of the characteristic global index at the boundaries. "];
+}

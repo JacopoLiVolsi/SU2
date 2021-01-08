@@ -138,6 +138,14 @@ inline void CNumerics::SetSecondary(su2double *val_s_i, su2double *val_s_j) {
     S_j = val_s_j;
 }
 
+inline void CNumerics::SetProfileOrder(unsigned short ord){};
+
+inline void CNumerics::SetMultilayer_Interaction(CVariable* nodes, unsigned long iPoint, unsigned short iLayer){};
+
+inline void CNumerics::SetPressureBC(su2double *p_coeff, su2double delta_k, su2double delta_km1){};
+
+inline void CNumerics::SetStressBC(su2double **v_coeff, su2double delta_k, su2double delta_km1){};
+
 inline void CNumerics::SetConservative(su2double *val_u_0, su2double *val_u_1, su2double *val_u_2) {
   U_0 = val_u_0;
   U_1 = val_u_1;

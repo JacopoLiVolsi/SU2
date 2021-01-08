@@ -1,0 +1,15 @@
+digraph "CDiscAdjFEAIteration::SetDependencies"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node135 [label="CDiscAdjFEAIteration\l::SetDependencies",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node135 -> Node136 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node136 [label="CConfig::GetFSI_Simulation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a9776c63953c047138e0f81d5b51cd895",tooltip="Check if the simulation we are running is a FSI simulation. "];
+  Node135 -> Node137 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node137 [label="CConfig::GetGeometricConditions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac036c2fe542984a827ea2f21b3b4d4a6",tooltip="Geometric conditions for the structural solver. "];
+  Node135 -> Node138 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node138 [label="CConfig::GetDE_Effects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8ad45b179ddabec5652dbf4b517fbbf0",tooltip="Decide whether to apply DE effects to the model. "];
+  Node135 -> Node139 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node139 [label="CConfig::GetnElasticityMod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a292a8a8ba384f7fa5393af48de954fed",tooltip="Get the number of different values for the elasticity modulus. "];
+}

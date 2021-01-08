@@ -1,0 +1,29 @@
+digraph "CConfig::SetVelocity_FreeStreamND"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node15806 [label="CConfig::SetVelocity\l_FreeStreamND",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node15806 -> Node15807 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15807 [label="CEulerSolver::SetNondimensionalization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a1c633d6e77fefb2e76308e2ba0af0c2c",tooltip="Set the solver nondimensionalization. "];
+  Node15807 -> Node15808 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15808 [label="CEulerSolver::CEulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ae1e74218b4e943111b100d7ddcbd4db9"];
+  Node15807 -> Node15809 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15809 [label="CNSSolver::CNSSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a2a8ad49c42b4546696e631cf44b7788b"];
+  Node15806 -> Node15810 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15810 [label="CEulerSolver::SetFarfield_AoA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ae9346f0feebb8b28613bfc7838d3d121",tooltip="Update the AoA and freestream velocity at the farfield. "];
+  Node15810 -> Node15811 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15811 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node15810 -> Node15812 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15812 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+  Node15806 -> Node15813 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15813 [label="CFEM_DG_EulerSolver\l::SetNondimensionalization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a31316dc2fe564329d9bb372961b10a3a",tooltip="Set the fluid solver nondimensionalization. "];
+  Node15813 -> Node15814 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15814 [label="CFEM_DG_EulerSolver\l::CFEM_DG_EulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a70d30ef9e7cd7620d54ec73f4b1ed28c"];
+  Node15806 -> Node15815 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15815 [label="CIncEulerSolver::SetNondimensionalization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a2cffaa24417cb3803d36d38b3874d6d0",tooltip="Set the solver nondimensionalization. "];
+  Node15815 -> Node15816 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15816 [label="CIncEulerSolver::CIncEuler\lSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a91f644b8f9a00215bac5bcd31dfc06d8"];
+  Node15815 -> Node15817 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15817 [label="CIncNSSolver::CIncNSSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#a82152ac7e91fb1c5c073d98a1f08e2aa"];
+}

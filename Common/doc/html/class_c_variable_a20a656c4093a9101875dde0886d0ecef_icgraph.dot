@@ -1,0 +1,11 @@
+digraph "CVariable::SetEnergy_ResTruncError_Zero"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4725 [label="CVariable::SetEnergy\l_ResTruncError_Zero",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4725 -> Node4726 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4726 [label="CAdjNSSolver::BC_Isothermal_Wall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#a20cd2fa256386da7791e11f40b701003",tooltip="Impose via the residual or brute force the Navier-Stokes adjoint boundary condition (heat flux)..."];
+  Node4725 -> Node4727 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4727 [label="CIncNSSolver::BC_Conjugate\lHeat_Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#a63488a5dc1ba150b2b0d74b389c9cfa7",tooltip="Impose the (received) conjugate heat variables. "];
+}

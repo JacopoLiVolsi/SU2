@@ -1,0 +1,33 @@
+digraph "CGridAdaptation::SetIndicator_Robust"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node268 [label="CGridAdaptation::SetIndicator\l_Robust",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node268 -> Node269 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node269 [label="CConfig::GetDualVol\l_Power",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2797c1033dce3a5a205e31c503694456",tooltip="Get the power of the dual volume in the grid adaptation sensor. "];
+  Node268 -> Node270 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node270 [label="CGeometry::GetnElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a4ae48ec038df1f5ee7c1daadabea5e99",tooltip="Get number of elements. "];
+  Node268 -> Node271 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node271 [label="CPrimalGrid::SetDivide",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#af6977fd1339b8f9cc82448c464a389e1",tooltip="Set that an element must be divided in the adaptation stage. "];
+  Node268 -> Node272 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node272 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node268 -> Node273 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node273 [label="CPoint::GetVolume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a3c526a15e767c7de9cf163800aa581e5",tooltip="Get area or volume of the control volume. "];
+  Node268 -> Node274 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node274 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node274 -> Node275 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node275 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node268 -> Node276 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node276 [label="CConfig::GetNew_Elem\l_Adapt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aefa3bcdd90a121f4542a4e88b32c51db",tooltip="Get the number of new elements added in the adaptation process. "];
+  Node268 -> Node277 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node277 [label="CGridAdaptation::SetSensorElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_grid_adaptation.html#abe648dc71ea25acf41b46a87af9a2eff",tooltip="Read the flow solution from the restart file. "];
+  Node277 -> Node270 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node277 -> Node278 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node278 [label="CPrimalGrid::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a4fc7b6b6ac5025325c7e68fb56fbeef8",tooltip="A pure virtual member. "];
+  Node277 -> Node279 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node279 [label="CPrimalGrid::GetVTK_Type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#adb676897e7cf4a83ceb83065e7c6a04f",tooltip="A pure virtual member. "];
+  Node277 -> Node280 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node280 [label="CPrimalGrid::GetDivide",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a8f953145c5ddd2fdff64146fe9bb85d9",tooltip="Get if an element must be divided in the adaptation stage. "];
+  Node277 -> Node271 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

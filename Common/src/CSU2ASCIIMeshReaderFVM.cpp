@@ -42,6 +42,8 @@ CSU2ASCIIMeshReaderFVM::CSU2ASCIIMeshReaderFVM(CConfig        *val_config,
   if (config->GetActDisk_DoubleSurface()) actuator_disk = false;
   ActDiskNewPoints = 0;
   Xloc = 0.0; Yloc = 0.0; Zloc = 0.0;
+  film = false;
+  if(config->GetKind_Solver() == THIN_FILM) film = true;
   
   /* Store the current zone to be read and the total number of zones. */
   myZone = val_iZone;
@@ -851,7 +853,34 @@ void CSU2ASCIIMeshReaderFVM::ReadVolumeElementConnectivity() {
         elem_line >> VTK_Type;
         
         switch(VTK_Type) {
+          
+          /*--- For average problem we add the fictitious volume created by a line ---*/  
+          case LINE:
+
+            /*--- Store the connectivity for this element more clearly. ---*/            
+            elem_line >> connectivity[0];
+            elem_line >> connectivity[1];
+
+            /* Check whether any of the points reside in our linear partition. */
+            isOwned = false;
+            for (unsigned short i = 0; i < N_POINTS_LINE; i++) {
+              if ((int)pointPartitioner.GetRankContainingIndex(connectivity[i]) == rank) {
+                isOwned = true;
+              }
+            }
             
+            /* If so, we need to store the element locally. */
+            if (isOwned) {
+              localVolumeElementConnectivity.push_back(GlobalIndex);
+              localVolumeElementConnectivity.push_back(VTK_Type);
+              for (unsigned short i = 0; i < N_POINTS_HEXAHEDRON; i++) {
+                localVolumeElementConnectivity.push_back(connectivity[i]);
+              }
+              numberOfLocalElements++;
+            }
+            GlobalIndex++;
+           break;
+
           case TRIANGLE:
             
             /*--- Store the connectivity for this element more clearly. ---*/
@@ -1247,9 +1276,28 @@ void CSU2ASCIIMeshReaderFVM::ReadSurfaceElementConnectivity() {
             unsigned short VTK_Type;
             bound_line >> VTK_Type;
             switch(VTK_Type) {
+              
+              /*--- For average problem we add the fictitious surface created by a vertex ---*/ 
+              case VERTEX:
+                
+                if (dimension == 3 ) {
+                  SU2_MPI::Error(string("Vertex boundary conditions are not possible for 3D calculations.") +
+                                 string("Please check the SU2 ASCII mesh file."), CURRENT_FUNCTION);
+                }
+
+                bound_line >> connectivity[0];
+                
+                surfaceElementConnectivity[iMarker].push_back(0);
+                surfaceElementConnectivity[iMarker].push_back(VTK_Type);
+                for (unsigned short i = 0; i < N_POINTS_HEXAHEDRON; i++)
+                  surfaceElementConnectivity[iMarker].push_back(connectivity[i]);
+                
+                break;
+
               case LINE:
                 
-                if (dimension == 3) {
+                
+                if (dimension == 3 && !film) {
                   SU2_MPI::Error(string("Line boundary conditions are not possible for 3D calculations.") +
                                  string("Please check the SU2 ASCII mesh file."), CURRENT_FUNCTION);
                 }

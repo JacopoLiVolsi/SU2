@@ -51,12 +51,14 @@ protected:
   unsigned long nGlobal_Elem_Par;  //!< Global number of elems without halos before sorting
   unsigned long nParallel_Poin;    //!< Local number of points after sorting on this proc
   unsigned long nParallel_Line,    //!< Local number of line elements after sorting on this proc
+  nParallel_Vertex,                //!< Local number of vertex elements after sorting on this proc
   nParallel_Tria,                  //!< Local number of triangle elements after sorting on this proc
   nParallel_Quad,                  //!< Local number of quad elements after sorting on this proc
   nParallel_Tetr,                  //!< Local number of tetrahedral elements after sorting on this proc
   nParallel_Hexa,                  //!< Local number of hexhedral elements after sorting on this proc
   nParallel_Pris,                  //!< Local number of prism elements after sorting on this proc
   nParallel_Pyra;                  //!< Local number of pyramid elements after sorting on this proc
+  int *Conn_Vertex_Par;            //!< Local connectivity of vertex elements after sorting on this proc
   int *Conn_Line_Par;              //!< Local connectivity of line elements after sorting on this proc
   int *Conn_Tria_Par;              //!< Local connectivity of triangle elements after sorting on this proc
   int *Conn_Quad_Par;              //!< Local connectivity of quad elements after sorting on this proc
@@ -71,7 +73,9 @@ protected:
 
   CLinearPartitioner* linearPartitioner;  //!< Linear partitioner based on the global number of points.
 
-  unsigned short GlobalField_Counter;  //!< Number of output fields
+  unsigned short GlobalField_Counter;  //!< Number of output fields.
+  unsigned short nLayer;               //!< Number of layers in multilayer film problems.
+  bool multilayer_film;                //!< Boolean to recognize multilayer film problems.
 
   bool connectivity_sorted;            //!< Boolean to store information on whether the connectivity is sorted
 
@@ -128,6 +132,9 @@ public:
    */
   unsigned long GetnPoints(){return nParallel_Poin;}
 
+  void SetnLayer(unsigned short nlayer){ nLayer = nlayer;}
+  unsigned short GetnLayer(){ return nLayer;}
+  bool GetMultilayer(){return multilayer_film;}
   /*!
    * \brief Get the number of points to sort.
    * \return local number of points.

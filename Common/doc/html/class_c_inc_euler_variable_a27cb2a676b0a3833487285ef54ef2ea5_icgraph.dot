@@ -1,0 +1,15 @@
+digraph "CIncEulerVariable::GetGradient_Reconstruction"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node82 [label="CIncEulerVariable::\lGetGradient_Reconstruction",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node82 -> Node83 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="CIncEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a935da79a4e1b1fe9c59bc86024164256",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node82 -> Node84 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 [label="CIncEulerSolver::SetPrimitive\l_Limiter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a00bd56828c4e41ec3ff1e8753cb320ec",tooltip="Compute the limiter of the primitive variables. "];
+  Node84 -> Node85 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 [label="CIncEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aabd902b10cc9b41b6b2c406efba0ac41",tooltip="Compute primitive variables and their gradients. "];
+  Node84 -> Node86 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node86 [label="CIncNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#ae84f6e86313acd1da80c505b4eab81e5",tooltip="Restart residual and compute gradients. "];
+}

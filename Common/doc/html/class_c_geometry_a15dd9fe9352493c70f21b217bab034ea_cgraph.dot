@@ -1,0 +1,17 @@
+digraph "CGeometry::SetCustomBoundary"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2643 [label="CGeometry::SetCustomBoundary",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2643 -> Node2644 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2644 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node2643 -> Node2645 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2645 [label="CConfig::GetMarker\l_All_PyCustom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5c4f3fe48fe141bcea832b12fa7f7588",tooltip="Get the Python customization for a marker val_marker. "];
+  Node2643 -> Node2646 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2646 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node2643 -> Node2647 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2647 [label="CConfig::GetWall_HeatFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a13a89ffbaf099f490fb7080163879e55",tooltip="Get the wall heat flux on a constant heat flux boundary. "];
+  Node2643 -> Node2648 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2648 [label="CConfig::GetIsothermal\l_Temperature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a714590a2565d2a339ee22009ada1c7f9",tooltip="Get the wall temperature (static) at an isothermal boundary. "];
+}

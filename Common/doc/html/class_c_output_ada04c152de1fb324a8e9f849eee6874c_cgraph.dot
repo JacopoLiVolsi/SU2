@@ -1,0 +1,17 @@
+digraph "COutput::WriteHistoryFile_Output"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1265 [label="COutput::WriteHistoryFile\l_Output",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1265 -> Node1266 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1266 [label="CConfig::GetHistory\l_Wrt_Freq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6e95e3892463f68063c546d65d8c375c",tooltip="GetHistory_Wrt_Freq_Inner. "];
+  Node1265 -> Node1267 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1267 [label="COutput::PrintOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#af0c23405e1093223066c9c79ee13985a",tooltip="Check whether we should print output. "];
+  Node1265 -> Node1268 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1268 [label="CConfig::GetnTime_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ace224394bbd9137de2367a6bd1cc9dcd",tooltip="Get the number of time iterations. "];
+  Node1265 -> Node1269 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1269 [label="CConfig::GetnOuter_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac064f9d284f2fd5d74beaf2f046f82fd",tooltip="Get the number of outer iterations. "];
+  Node1265 -> Node1270 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1270 [label="CConfig::GetnInner_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a448aa905877c21aae95be81e73fbb27c",tooltip="Get the number of inner iterations. "];
+}

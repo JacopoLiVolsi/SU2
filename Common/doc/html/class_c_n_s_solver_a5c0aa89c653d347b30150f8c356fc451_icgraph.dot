@@ -1,0 +1,9 @@
+digraph "CNSSolver::GetConjugateHeatVariable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node504 [label="CNSSolver::GetConjugateHeat\lVariable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node504 -> Node505 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node505 [label="CNSSolver::BC_ConjugateHeat\l_Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#ad7c717280b27282a9e02bb1c0b50480a",tooltip="Impose the Navier-Stokes boundary condition (strong) with values from a CHT coupling. "];
+}

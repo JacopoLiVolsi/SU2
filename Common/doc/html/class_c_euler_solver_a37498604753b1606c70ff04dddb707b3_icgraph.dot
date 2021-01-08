@@ -1,0 +1,15 @@
+digraph "CEulerSolver::ComputeVerificationError"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1249 [label="CEulerSolver::ComputeVerification\lError",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1249 -> Node1250 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1250 [label="CEulerSolver::ExplicitRK\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac3d1b3a1fee6613906b56a9698bfe680",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node1249 -> Node1251 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1251 [label="CEulerSolver::ClassicalRK4\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad87a9109a645f0ea9e38336d2a6bf196",tooltip="Update the solution using the classical fourth-order Runge-Kutta scheme. "];
+  Node1249 -> Node1252 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1252 [label="CEulerSolver::ExplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a1f798a3f88873d6d634b90f8816eccde",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node1249 -> Node1253 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1253 [label="CEulerSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a4e8277fc44dc97c8d73fbe3347204372",tooltip="Update the solution using an implicit Euler scheme. "];
+}

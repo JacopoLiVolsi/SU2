@@ -1,0 +1,21 @@
+digraph "COutput::WriteScreen_Output"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1341 [label="COutput::WriteScreen\l_Output",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1341 -> Node1342 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1342 [label="CConfig::GetScreen\l_Wrt_Freq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ade360779f0fcdd59ba60da1a35efe2ec",tooltip="GetScreen_Wrt_Freq_Inner. "];
+  Node1341 -> Node1343 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1343 [label="CConfig::GetMultizone\l_Problem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad9233b666b21e43c18592925be61cc9b",tooltip="Get whether the simulation we are running is a multizone simulation. "];
+  Node1341 -> Node1344 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1344 [label="CConfig::GetWrt_ZoneConv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a622aa3de73830f881a1320e64676acd5",tooltip="Check if the convergence history of each individual zone is written to screen. "];
+  Node1341 -> Node1345 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1345 [label="COutput::PrintOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#af0c23405e1093223066c9c79ee13985a",tooltip="Check whether we should print output. "];
+  Node1341 -> Node1346 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1346 [label="CConfig::GetnTime_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ace224394bbd9137de2367a6bd1cc9dcd",tooltip="Get the number of time iterations. "];
+  Node1341 -> Node1347 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1347 [label="CConfig::GetnOuter_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac064f9d284f2fd5d74beaf2f046f82fd",tooltip="Get the number of outer iterations. "];
+  Node1341 -> Node1348 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1348 [label="CConfig::GetnInner_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a448aa905877c21aae95be81e73fbb27c",tooltip="Get the number of inner iterations. "];
+}

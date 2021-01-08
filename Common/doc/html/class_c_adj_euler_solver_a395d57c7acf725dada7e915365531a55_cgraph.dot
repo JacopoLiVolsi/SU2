@@ -1,0 +1,39 @@
+digraph "CAdjEulerSolver::BC_Engine_Inflow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node154 [label="CAdjEulerSolver::BC\l_Engine_Inflow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node154 -> Node155 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node155 [label="CConfig::GetKind_TimeInt\lScheme_AdjFlow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab9d0e23db2d8f044b0b09915e92ef003",tooltip="Get the kind of integration scheme (explicit or implicit) for the adjoint flow equations. "];
+  Node154 -> Node156 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node156 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node154 -> Node157 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node157 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node154 -> Node158 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node158 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node154 -> Node159 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node159 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node154 -> Node160 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node160 [label="CNumerics::SetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a41903d97957f351cd9ee63ca404985b1",tooltip="Set the value of the normal vector to the face between two points. "];
+  Node154 -> Node161 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node161 [label="CSolver::GetCharacPrimVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ad25c13b6587f8a1a71f84a37fdb5b213",tooltip="A virtual member. "];
+  Node154 -> Node162 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node162 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node154 -> Node163 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node163 [label="CVariable::GetPrimitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#abe38982ec51efc8391ef27fc434f37ad",tooltip="A virtual member. "];
+  Node154 -> Node164 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node164 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node154 -> Node165 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node165 [label="CConfig::GetInflow\l_Pressure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8d539297c64281b0f39e8755748c0cb8",tooltip="Get the back pressure (static) at an engine inflow boundary. "];
+  Node154 -> Node166 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node166 [label="CNumerics::SetPrimitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#af72b17d397adf09beed2e99e2daf895c",tooltip="Set the value of the primitive variables. "];
+  Node154 -> Node167 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node167 [label="CNumerics::SetAdjointVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a4eb3867ed99a8fd200f96da877e64313",tooltip="Set the value of the adjoint variable. "];
+  Node154 -> Node168 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node168 [label="CNumerics::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#abe734316e0047f463f059fd77a281958",tooltip="Compute the numerical residual. "];
+  Node154 -> Node169 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 [label="CSysVector::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a732b302ca148d38b442bfe7e096a81be",tooltip="Subtract val_residual to the residual. "];
+  Node154 -> Node170 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node170 [label="CSysMatrix::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#af913d33707e948c30fff5a62773ef5c6",tooltip="Subtracts the specified block to the sparse matrix. "];
+}

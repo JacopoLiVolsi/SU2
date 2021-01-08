@@ -1,0 +1,9 @@
+digraph "CConfig::GetVisualize_Volume_Def"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13570 [label="CConfig::GetVisualize\l_Volume_Def",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13570 -> Node13571 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13571 [label="COutputLegacy::SetMesh\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9301e0b2ff5e38a8337127ce74c49ac8",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+}

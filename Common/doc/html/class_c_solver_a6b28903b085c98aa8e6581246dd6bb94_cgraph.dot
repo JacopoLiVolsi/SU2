@@ -1,0 +1,27 @@
+digraph "CSolver::SetAuxVar_Surface_Gradient"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4415 [label="CSolver::SetAuxVar\l_Surface_Gradient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4415 -> Node4416 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4416 [label="CGeometry::GetnDim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a2af01006c0c4f74ba089582f1a3587fe",tooltip="Get number of coordinates. "];
+  Node4415 -> Node4417 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4417 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node4415 -> Node4418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4418 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node4415 -> Node4419 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4419 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node4415 -> Node4420 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4420 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node4415 -> Node4421 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4421 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node4415 -> Node4422 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4422 [label="CVariable::GetAuxVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a943861eca1259f4b5e95c5e828c25ea6",tooltip="Get the value of the auxiliary variable. "];
+  Node4415 -> Node4423 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4423 [label="CPoint::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#adbb78f3c01711ed0349897f845e3f2d8",tooltip="Get the number of points that compose the control volume. "];
+  Node4415 -> Node4424 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4424 [label="CPoint::GetPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#aab08fdab4e59c01d822afca5335a86af",tooltip="Get all the points that compose the control volume. "];
+  Node4415 -> Node4425 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4425 [label="CVariable::SetAuxVarGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a03a0b006cd76898e2cdcae71a21b6f41",tooltip="Set the value of the auxiliary variable gradient. "];
+}

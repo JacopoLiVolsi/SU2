@@ -1,0 +1,44 @@
+digraph "CDiscAdjHeatIteration::Preprocess"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node71 [label="CDiscAdjHeatIteration\l::Preprocess",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node71 -> Node72 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="CConfig::GetTimeIter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa659f28a1d71b0924944a9fb248e3d6e",tooltip="Get the current time iteration number. "];
+  Node71 -> Node73 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="CConfig::GetTime_Marching",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a864d499ce740184803607801c47abda7",tooltip="Provides information about the time integration, and change the write in the output files information..."];
+  Node71 -> Node74 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node74 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node74 -> Node75 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node75 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node71 -> Node76 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node76 [label="CDiscAdjHeatIteration\l::LoadUnsteady_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_heat_iteration.html#aa43a5608e0c159791331a9e46380502a",tooltip="load unsteady solution for unsteady problems "];
+  Node76 -> Node77 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node77 [label="CSolver::LoadRestart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a61c87a4ff51926361e18797c49204e72",tooltip="A virtual member. "];
+  Node76 -> Node78 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node78 [label="CConfig::GetnMGLevels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aea7f78497a5cd863bd065391232329fd",tooltip="Get the number of multigrid levels. "];
+  Node76 -> Node79 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node79 [label="CSolver::SetFreeStream\l_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a4bc8bb39473a7a584e76067e86ed90d3",tooltip="A virtual member. "];
+  Node76 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node80 [label="CSolver::Postprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a4417611bfa1a44467e40f47025e2a573",tooltip="A virtual member. "];
+  Node71 -> Node78 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node71 -> Node81 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node81 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node71 -> Node82 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 [label="CVariable::Set_Solution\l_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#abf55f051089ec13d9c0422ed3389a9dc",tooltip="Set the variable solution at time n. "];
+  Node71 -> Node83 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="CVariable::Set_Solution\l_time_n1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a527a337871bb37c3bb2df40c2b946884",tooltip="Set the variable solution at time n-1. "];
+  Node71 -> Node84 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 [label="CSolver::Set_OldSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a971b9e376be0fabf1866edf370836e7b",tooltip="Set the old solution variables to the current solution value for Runge-Kutta iteration. It is a virtual function, because for the DG-FEM solver a different version is needed. "];
+  Node84 -> Node85 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 [label="CVariable::Set_OldSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#af7ab5687fab17a8840ebcbf1f1927634",tooltip="Set old variables to the value of the current variables. "];
+  Node71 -> Node86 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node86 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node71 -> Node87 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node87 [label="CVariable::SetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a22fbbd7bc6491672843000644a05c6a5",tooltip="Set the value of the solution, all variables. "];
+  Node71 -> Node88 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node88 [label="CVariable::SetSolution\l_Direct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a9f3ef1f059e9a051019e34b2510e4873",tooltip="A virtual member. Set the direct solution for the adjoint solver. "];
+  Node71 -> Node89 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node89 [label="CSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a5c530a5946aeeceb039c841115dd4b9b",tooltip="A virtual member. "];
+}

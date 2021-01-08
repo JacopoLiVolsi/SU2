@@ -1,0 +1,24 @@
+digraph "COutputLegacy::MergeSolution_FEM"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node562 [label="COutputLegacy::MergeSolution_FEM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node562 -> Node563 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node563 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node562 -> Node564 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node564 [label="CSolver::GetnVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a65c22046b0cf1938ba22648912d04680",tooltip="Get the number of variables of the problem. "];
+  Node562 -> Node565 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node565 [label="CMeshFEM::GetNVolElemOwned",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a665c7319b3d55a66ba83cd074b35f9a5",tooltip="Function, which makes available the number of owned volume elements in the local FEM mesh..."];
+  Node562 -> Node566 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node566 [label="CMeshFEM::GetVolElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_mesh_f_e_m.html#a838a7b4f4ad6edcf019a90113a09b290",tooltip="Function, which makes available the volume elements in the local FEM mesh. "];
+  Node562 -> Node567 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node567 [label="CSolver::GetVecSolDOFs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ab98d0d3ee8733415aa84554f26b8ff9d",tooltip="A virtual member. "];
+  Node562 -> Node568 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node568 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node568 -> Node569 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node569 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node562 -> Node570 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node570 [label="CBaseMPIWrapper::Gather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a39e59958c13f7fefc74062ba2ff149f1"];
+  Node570 -> Node569 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

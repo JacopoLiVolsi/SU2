@@ -1,0 +1,17 @@
+digraph "CPhysicalGeometry::DistributeMarkerTags"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node490 [label="CPhysicalGeometry::\lDistributeMarkerTags",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node490 -> Node491 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node491 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node490 -> Node492 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node492 [label="CBaseMPIWrapper::Bcast",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#ae816a2f124ea5ae95337418462514df5"];
+  Node490 -> Node493 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node493 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node490 -> Node494 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node494 [label="CConfig::SetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3d64a9bbafa5f87e2559f34cc297a9c4",tooltip="Set the value of the index val_index (read from the geometry file) for the marker val_marker..."];
+  Node490 -> Node495 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node495 [label="CConfig::SetMarker\l_All_SendRecv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a82bd1f76cf9574ecfc48c44bef277cd5",tooltip="Set if a marker val_marker is going to be sent or receive val_index from another domain. "];
+}

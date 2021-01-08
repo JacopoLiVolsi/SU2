@@ -1,0 +1,9 @@
+digraph "CSolver::GetnPrimVarGrad"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1919 [label="CSolver::GetnPrimVarGrad",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1919 -> Node1920 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1920 [label="CTurbSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_solver.html#a4816dd8b43bdb4abd3f8f7168879e902",tooltip="Compute the spatial integration using a upwind scheme. "];
+}

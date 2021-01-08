@@ -1,0 +1,15 @@
+digraph "CTurbSolver::ComputeUnderRelaxationFactor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node95 [label="CTurbSolver::ComputeUnder\lRelaxationFactor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node95 -> Node96 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="CConfig::GetKind_Turb\l_Model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a40aaed07fc5844d505d2c0b7076594d7",tooltip="Get the kind of the turbulence model. "];
+  Node95 -> Node97 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node97 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node95 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node98 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node95 -> Node99 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 [label="CVariable::SetUnderRelaxation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a9b8011eec0bc306643d276db7fd39413",tooltip="Set the value of the under-relaxation parameter for the current control volume (CV). "];
+}

@@ -1,0 +1,11 @@
+digraph "CFlowCompOutput::SetUpdate_Averages"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node274 [label="CFlowCompOutput::SetUpdate\l_Averages",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node274 -> Node275 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node275 [label="CConfig::GetTime_Marching",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a864d499ce740184803607801c47abda7",tooltip="Provides information about the time integration, and change the write in the output files information..."];
+  Node274 -> Node276 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node276 [label="CConfig::GetnInner_Iter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a448aa905877c21aae95be81e73fbb27c",tooltip="Get the number of inner iterations. "];
+}

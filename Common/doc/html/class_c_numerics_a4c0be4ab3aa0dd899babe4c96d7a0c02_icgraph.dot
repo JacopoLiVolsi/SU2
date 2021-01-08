@@ -1,0 +1,27 @@
+digraph "CNumerics::GetPMatrix"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node270 [label="CNumerics::GetPMatrix",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node270 -> Node271 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node271 [label="CUpwRoe_AdjFlow::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_roe___adj_flow.html#aea2a7b2e88d273c5526f221cac0a3709",tooltip="Compute the adjoint Roe&#39;s flux between two nodes i and j. "];
+  Node270 -> Node272 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node272 [label="CUpwAUSM_Flow::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_a_u_s_m___flow.html#a9c1945f5d13295b5d887fb1ba3b553b4",tooltip="Compute the Roe&#39;s flux between two nodes i and j. "];
+  Node270 -> Node273 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node273 [label="CUpwAUSMPLUS_SLAU_Base\l_Flow::ApproximateJacobian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_a_u_s_m_p_l_u_s___s_l_a_u___base___flow.html#aa7dc3470a927c6b9e31d8b6dcef00b96",tooltip="Compute the flux Jacobians of the Roe scheme to use as an approximation. "];
+  Node273 -> Node274 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node274 [label="CUpwAUSMPLUS_SLAU_Base\l_Flow::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_a_u_s_m_p_l_u_s___s_l_a_u___base___flow.html#a67066d02de15ea3fb19170543956a31c",tooltip="Compute the AUSM+ and SLAU family of schemes. "];
+  Node270 -> Node275 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node275 [label="CUpwRoeBase_Flow::Compute\lResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_roe_base___flow.html#ac4fcfe9dea7d4e5fc2d12fd5bb261ad4",tooltip="Compute the flux from node i to node j, part common to most Roe schemes. "];
+  Node270 -> Node276 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node276 [label="CUpwGeneralRoe_Flow\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_general_roe___flow.html#ac7f91b1543d87015361d69539cfecfe9",tooltip="Compute the Roe&#39;s flux between two nodes i and j. "];
+  Node270 -> Node277 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node277 [label="CUpwMSW_Flow::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_m_s_w___flow.html#af6758f6d7bc4bd534904668b617c0f9e",tooltip="Compute the Roe&#39;s flux between two nodes i and j. "];
+  Node270 -> Node278 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node278 [label="CConvective_Template\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_convective___template.html#af3b4a6e55cab59b0585989dbc9f71c5c",tooltip="Compute the Roe&#39;s flux between two nodes i and j. "];
+  Node270 -> Node279 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node279 [label="CEulerSolver::BC_Riemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a22c21d18fa626d489db9a387234bd9d0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node270 -> Node280 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node280 [label="CEulerSolver::BC_TurboRiemann",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a0066305803a18511fb89b8951f4e4866",tooltip="Impose the boundary condition using characteristic recostruction. "];
+}

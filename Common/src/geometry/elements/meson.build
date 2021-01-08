@@ -1,4 +1,5 @@
 common_src += files(['CElement.cpp',
+                     'CLINE1.cpp',
                      'CTRIA1.cpp',
                      'CQUAD4.cpp',
                      'CTETRA1.cpp',

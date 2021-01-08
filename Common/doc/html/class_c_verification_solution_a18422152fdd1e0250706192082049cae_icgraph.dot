@@ -1,0 +1,31 @@
+digraph "CVerificationSolution::ExactSolutionKnown"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node39 [label="CVerificationSolution\l::ExactSolutionKnown",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node39 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="CEulerSolver::ComputeVerification\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a37498604753b1606c70ff04dddb707b3",tooltip="Compute the global error measures (L2, Linf) for verification cases. "];
+  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="CEulerSolver::ExplicitRK\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac3d1b3a1fee6613906b56a9698bfe680",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node40 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="CEulerSolver::ClassicalRK4\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad87a9109a645f0ea9e38336d2a6bf196",tooltip="Update the solution using the classical fourth-order Runge-Kutta scheme. "];
+  Node40 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="CEulerSolver::ExplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a1f798a3f88873d6d634b90f8816eccde",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node40 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="CEulerSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a4e8277fc44dc97c8d73fbe3347204372",tooltip="Update the solution using an implicit Euler scheme. "];
+  Node39 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="CFEM_DG_EulerSolver\l::ComputeVerificationError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a2a94a8ade876c40822b65e81719d4331",tooltip="Compute the global error measures (L2, Linf) for verification cases. "];
+  Node45 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="CFEM_DG_EulerSolver\l::ExplicitRK_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a5f3702ec7e07a248211a10b94068af41",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node45 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="CFEM_DG_EulerSolver\l::ClassicalRK4_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#add195fe8af6532465c2b677c7a625b3e",tooltip="Update the solution using the classical fourth-order Runge-Kutta scheme. "];
+  Node39 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="CIncEulerSolver::Compute\lVerificationError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#abadd4cbdfd6257aedf667081237b232a",tooltip="Compute the global error measures (L2, Linf) for verification cases. "];
+  Node48 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="CIncEulerSolver::Explicit\lRK_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a2f6c1370f17da44680c1ff1b6be6c9a1",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node48 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="CIncEulerSolver::Explicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a66aac46e83451e30828ad808becb1f73",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node48 -> Node51 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="CIncEulerSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#ad84dd4225bb9d158c52b26e2f30f6fa7",tooltip="Update the solution using an implicit Euler scheme. "];
+}

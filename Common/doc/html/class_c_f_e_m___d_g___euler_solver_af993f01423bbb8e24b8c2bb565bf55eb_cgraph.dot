@@ -1,0 +1,29 @@
+digraph "CFEM_DG_EulerSolver::BoundaryStates_Inlet"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node813 [label="CFEM_DG_EulerSolver\l::BoundaryStates_Inlet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node813 -> Node814 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node814 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node813 -> Node815 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node815 [label="CConfig::GetInlet_Ptotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2f650d295acb30ca08709eafab7f01fb",tooltip="Get the total pressure at an inlet boundary. "];
+  Node813 -> Node816 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node816 [label="CConfig::GetInlet_Ttotal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a65fda2155cdc4ac10c448e4322e5d04e",tooltip="Get the total temperature at an inlet boundary. "];
+  Node813 -> Node817 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node817 [label="CConfig::GetInlet_FlowDir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a238624f1ee47bacb9d016b78071f3a87",tooltip="Get the flow direction unit vector at an inlet boundary. "];
+  Node813 -> Node818 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node818 [label="CConfig::GetPressure_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a39147c417b27ad7df00efea4ea1fcecc",tooltip="Get the value of the reference pressure for non-dimensionalization. "];
+  Node813 -> Node819 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node819 [label="CConfig::GetTemperature_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8ec4a0951d9a432dadffad665a9892b3",tooltip="Get the value of the reference temperature for non-dimensionalization. "];
+  Node813 -> Node820 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node820 [label="CConfig::GetGas_ConstantND",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6d835a954bb5e99c5a3de6db5ed24ff3",tooltip="Get the value of specific gas constant. "];
+  Node813 -> Node821 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node821 [label="CFEMStandardElementBase\l::GetNIntegration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m_standard_element_base.html#aa5ad06a05a1d7b66bccca65521168a3b",tooltip="Function, which makes available the number of integration points for this standard element..."];
+  Node813 -> Node822 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node822 [label="CFluidModel::SetTDState_rhoe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a90fdefd3a55d97d55d5211988c9a7ab1",tooltip="virtual member that would be different for each gas model implemented "];
+  Node813 -> Node823 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node823 [label="CFluidModel::GetSoundSpeed2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a8c0910de10905f2ddcf02f1a9bb7ff61",tooltip="Get fluid speed of sound squared. "];
+  Node813 -> Node824 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node824 [label="CFluidModel::GetPressure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a169d9e9a0c7f8b5d35642940c62c4ecb",tooltip="Get fluid pressure. "];
+}

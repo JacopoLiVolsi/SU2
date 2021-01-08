@@ -531,7 +531,7 @@ void CFluidIteration::Iterate(COutput *output,
     case EULER: case DISC_ADJ_EULER: case INC_EULER: case DISC_ADJ_INC_EULER:
       config[val_iZone]->SetGlobalParam(EULER, RUNTIME_FLOW_SYS); break;
       
-    case NAVIER_STOKES: case DISC_ADJ_NAVIER_STOKES: case INC_NAVIER_STOKES: case DISC_ADJ_INC_NAVIER_STOKES:
+    case NAVIER_STOKES: case DISC_ADJ_NAVIER_STOKES: case INC_NAVIER_STOKES: case DISC_ADJ_INC_NAVIER_STOKES: case THIN_FILM:
       config[val_iZone]->SetGlobalParam(NAVIER_STOKES, RUNTIME_FLOW_SYS); break;
       
     case RANS: case DISC_ADJ_RANS: case INC_RANS: case DISC_ADJ_INC_RANS:

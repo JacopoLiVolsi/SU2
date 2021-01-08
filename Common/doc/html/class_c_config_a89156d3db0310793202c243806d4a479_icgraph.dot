@@ -1,0 +1,17 @@
+digraph "CConfig::GetKind_SlopeLimit_AdjFlow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5300 [label="CConfig::GetKind_SlopeLimit\l_AdjFlow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5300 -> Node5301 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5301 [label="CAdjEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a4ae0ed840dc8335fd921399625ba794f",tooltip="Initialize the residual vectors. "];
+  Node5300 -> Node5302 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5302 [label="CAdjEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#adb4102935a0144846d17a35a62769c09",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node5300 -> Node5303 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5303 [label="CAdjNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#ac16dab76e2c1d86bc7d70ca9f41fd668",tooltip="Restart residual and compute gradients. "];
+  Node5300 -> Node5304 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5304 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+  Node5300 -> Node5305 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5305 [label="CIncNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#ae84f6e86313acd1da80c505b4eab81e5",tooltip="Restart residual and compute gradients. "];
+}

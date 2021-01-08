@@ -1,0 +1,29 @@
+digraph "CConfig::GetKind_Upwind_Flow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5959 [label="CConfig::GetKind_Upwind_Flow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5959 -> Node5960 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5960 [label="CDriver::Numerics_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a5c0a3e0cf9f6c3931d307aef1aba7bf4",tooltip="Definition and allocation of all solver classes. "];
+  Node5960 -> Node5961 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5961 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node5959 -> Node5962 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5962 [label="CDriver::Numerics_Postprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#ad38828d99fb5a34bded15212178fc7bd",tooltip="Definition and allocation of all solver classes. "];
+  Node5962 -> Node5963 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5963 [label="CDriver::Postprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a6ad9df8d8a8de75033ef296fed39c213",tooltip="Deallocation routine. "];
+  Node5963 -> Node5964 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5964 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___c_f_d_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node5959 -> Node5965 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5965 [label="CEulerSolver::CEulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ae1e74218b4e943111b100d7ddcbd4db9"];
+  Node5959 -> Node5966 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5966 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node5959 -> Node5967 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5967 [label="CEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a9cb1da16bea732300854a351ebca2ed3",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node5959 -> Node5968 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5968 [label="CEulerSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a4e8277fc44dc97c8d73fbe3347204372",tooltip="Update the solution using an implicit Euler scheme. "];
+  Node5959 -> Node5969 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5969 [label="CNSSolver::CNSSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a2a8ad49c42b4546696e631cf44b7788b"];
+  Node5959 -> Node5970 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5970 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+}

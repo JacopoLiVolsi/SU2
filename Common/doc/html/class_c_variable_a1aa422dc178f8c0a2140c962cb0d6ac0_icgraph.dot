@@ -1,0 +1,24 @@
+digraph "CVariable::GetUnderRelaxation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3783 [label="CVariable::GetUnderRelaxation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3783 -> Node3784 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3784 [label="CEulerSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a4e8277fc44dc97c8d73fbe3347204372",tooltip="Update the solution using an implicit Euler scheme. "];
+  Node3783 -> Node3785 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3785 [label="CEulerSolver::ComputeUnder\lRelaxationFactor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a9b18b41858c2aca89a75e82a89ef9bb0",tooltip="Compute a suitable under-relaxation parameter to limit the change in the solution variables over a no..."];
+  Node3785 -> Node3784 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3783 -> Node3786 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3786 [label="CIncEulerSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#ad84dd4225bb9d158c52b26e2f30f6fa7",tooltip="Update the solution using an implicit Euler scheme. "];
+  Node3783 -> Node3787 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3787 [label="CIncEulerSolver::Compute\lUnderRelaxationFactor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#adb90224fe637f1f9e86e4ac69bfad1fb",tooltip="Compute a suitable under-relaxation parameter to limit the change in the solution variables over a no..."];
+  Node3783 -> Node3788 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3788 [label="CTurbSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_solver.html#af7a0ab68fbb2925c56863df97b3ea4ee",tooltip="Update the solution using an implicit solver. "];
+  Node3783 -> Node3789 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3789 [label="CSolver::AdaptCFLNumber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a7db35f21bf505e35cce4bcdf38af3b2a",tooltip="Adapt the CFL number based on the local under-relaxation parameters computed for each nonlinear itera..."];
+  Node3789 -> Node3790 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3790 [label="CFluidIteration::Iterate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_iteration.html#ab1379b4cba3d8c893395123fb6030986",tooltip="Perform a single iteration of the fluid system. "];
+  Node3790 -> Node3791 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3791 [label="CFluidIteration::Solve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_iteration.html#ae22cd342c9c9d2ea5ac3f5103394ff80",tooltip="Iterate the fluid system for a number of Inner_Iter iterations. "];
+}

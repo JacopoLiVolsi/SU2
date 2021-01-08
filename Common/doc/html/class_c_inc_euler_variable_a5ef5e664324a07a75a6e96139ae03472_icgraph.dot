@@ -1,0 +1,13 @@
+digraph "CIncEulerVariable::SetBetaInc2"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node172 [label="CIncEulerVariable::\lSetBetaInc2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node172 -> Node173 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node173 [label="CIncEulerSolver::SetBeta\l_Parameter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a3e20d6912dc1a1806424e31b12bd80f4",tooltip="Update the Beta parameter for the incompressible preconditioner. "];
+  Node173 -> Node174 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node174 [label="CIncEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#aabd902b10cc9b41b6b2c406efba0ac41",tooltip="Compute primitive variables and their gradients. "];
+  Node173 -> Node175 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node175 [label="CIncNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_n_s_solver.html#ae84f6e86313acd1da80c505b4eab81e5",tooltip="Restart residual and compute gradients. "];
+}

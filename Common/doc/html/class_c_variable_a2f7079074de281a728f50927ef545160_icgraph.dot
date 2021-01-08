@@ -1,0 +1,9 @@
+digraph "CVariable::GetTauWall"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3742 [label="CVariable::GetTauWall",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3742 -> Node3743 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3743 [label="CNSSolver::Viscous\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a4b946463a9868faaa73fa1f40ee5e675",tooltip="Compute the viscous residuals. "];
+}

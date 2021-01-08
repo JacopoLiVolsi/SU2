@@ -1,0 +1,35 @@
+digraph "CPhysicalGeometry::MatchActuator_Disk"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node759 [label="CPhysicalGeometry::\lMatchActuator_Disk",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node759 -> Node760 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node760 [label="CConfig::GetnMarker\l_ActDiskInlet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a4b00905a119f01898988cd633c4d7d5b",tooltip="Get the total number of boundary markers. "];
+  Node759 -> Node761 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node761 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node759 -> Node762 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node762 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node759 -> Node763 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node763 [label="CGeometry::GetnVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a55427e474834af1941e13750b17975be",tooltip="Get number of vertices. "];
+  Node759 -> Node764 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node764 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node759 -> Node765 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node765 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node765 -> Node766 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node766 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node759 -> Node767 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node767 [label="CBaseMPIWrapper::Allgather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a55195abbb7206e08a4933fa53cd41923"];
+  Node767 -> Node766 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node759 -> Node768 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node768 [label="CPoint::GetGlobalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ab546170a5a03ef210a75fc5531910050",tooltip="Get the global index in a parallel computation. "];
+  Node759 -> Node769 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node769 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node759 -> Node770 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node770 [label="CVertex::SetDonorPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#ae0fd51e8962899e5cd25dfe21fe2d7d6"];
+  Node759 -> Node771 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node771 [label="CVertex::SetActDisk\l_Perimeter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a44ee6917a3b441d95867e87311a6967e"];
+  Node759 -> Node772 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node772 [label="CBaseMPIWrapper::Reduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a860dfcee07be04be175e06d342e0fc68"];
+  Node772 -> Node766 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

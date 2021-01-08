@@ -1,0 +1,13 @@
+digraph "CSolver::GetnDOFsGlobal"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1652 [label="CSolver::GetnDOFsGlobal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1652 -> Node1653 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1653 [label="COutputLegacy::SetRestart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#adadfc4d06c13f5fa3d6c9e21688329f4",tooltip="Write a native SU2 restart file. "];
+  Node1653 -> Node1654 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1654 [label="COutputLegacy::SetResult\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aa817439538e8cf82f82acbfa0bf7e735",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+  Node1653 -> Node1655 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1655 [label="COutputLegacy::SetResult\l_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a25b90eb5e2bd0f05f92a89f0768f2181",tooltip="Writes and organizes the all the output files, except the history one, for serial computations with t..."];
+}

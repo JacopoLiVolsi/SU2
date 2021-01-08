@@ -1,0 +1,21 @@
+digraph "CIntegration::SetStructural_Solver"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node132 [label="CIntegration::SetStructural\l_Solver",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node132 -> Node133 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node133 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node132 -> Node134 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node134 [label="CVariable::Set_Solution\l_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#abf55f051089ec13d9c0422ed3389a9dc",tooltip="Set the variable solution at time n. "];
+  Node132 -> Node135 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node135 [label="CVariable::SetSolution\l_Vel_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a889d87f62b6ffa72ca8b3f7cec792753",tooltip="Set the value of the velocity (Structural Analysis) at time n. "];
+  Node132 -> Node136 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node136 [label="CVariable::SetSolution\l_Accel_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a3448962f8d6a3867336dd139d552b225",tooltip="Set the value of the acceleration (Structural Analysis) at time n. "];
+  Node132 -> Node137 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node137 [label="CConfig::GetFSI_Simulation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a9776c63953c047138e0f81d5b51cd895",tooltip="Check if the simulation we are running is a FSI simulation. "];
+  Node132 -> Node138 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node138 [label="CSolver::GetWAitken_Dyn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#abb2ce000ca52a117db996a9579c060c9",tooltip="A virtual member. "];
+  Node132 -> Node139 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node139 [label="CSolver::SetWAitken\l_Dyn_tn1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ac04105381a6459f440cd01bd86602637",tooltip="A virtual member. "];
+}

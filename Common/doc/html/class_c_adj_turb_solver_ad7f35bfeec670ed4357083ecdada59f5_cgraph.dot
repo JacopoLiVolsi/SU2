@@ -1,0 +1,33 @@
+digraph "CAdjTurbSolver::Upwind_Residual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node322 [label="CAdjTurbSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node322 -> Node323 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node323 [label="CGeometry::GetnEdge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a7d6e1e1d1e46da8f55ecbe1a9380530a",tooltip="Get number of edges. "];
+  Node322 -> Node324 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node324 [label="CEdge::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#aee33b61d646e3fe59a4e23284ab1bf33",tooltip="Get the nodes of the edge. "];
+  Node322 -> Node325 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node325 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node322 -> Node326 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node326 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node322 -> Node327 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node327 [label="CNumerics::SetConservative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a604ce85ec9e2d43769acacc7d03ae0f7",tooltip="Set the value of the conservative variables. "];
+  Node322 -> Node328 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node328 [label="CNumerics::SetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a41903d97957f351cd9ee63ca404985b1",tooltip="Set the value of the normal vector to the face between two points. "];
+  Node322 -> Node329 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node329 [label="CEdge::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_edge.html#ada210a6f0643f444e7e491fc4ed9e662",tooltip="Copy the the normal vector of a face. "];
+  Node322 -> Node330 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node330 [label="CNumerics::SetTurbAdjointVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#aa1653854225eaa24a152d9c2813e99b4",tooltip="Set the value of the adjoint turbulent variable. "];
+  Node322 -> Node331 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node331 [label="CVariable::GetGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a7b58da4a928d622e7c2d4b4db047769d",tooltip="Get the value of the solution gradient. "];
+  Node322 -> Node332 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node332 [label="CNumerics::SetTurbVarGradient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a42a39ae6557a400a4d811820c61de3cb",tooltip="Set the gradient of the turbulent variables. "];
+  Node322 -> Node333 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node333 [label="CNumerics::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#abe734316e0047f463f059fd77a281958",tooltip="Compute the numerical residual. "];
+  Node322 -> Node334 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node334 [label="CSysVector::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#acd4c36df2ea0b7ad473944cff9bf5d72",tooltip="Add val_residual to the residual. "];
+  Node322 -> Node335 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node335 [label="CSysMatrix::AddBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_matrix.html#a85def3109e5aa5307268ca830a8f6522",tooltip="Adds the specified block to the sparse matrix. "];
+}

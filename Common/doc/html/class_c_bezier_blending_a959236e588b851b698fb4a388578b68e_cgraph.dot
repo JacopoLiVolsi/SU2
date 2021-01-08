@@ -1,0 +1,9 @@
+digraph "CBezierBlending::CBezierBlending"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CBezierBlending::CBezier\lBlending",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="CBSplineBlending::SetOrder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_b_spline_blending.html#a2e5b452b1bc31877688b56739bc95c31",tooltip="Set the order and number of control points. "];
+}

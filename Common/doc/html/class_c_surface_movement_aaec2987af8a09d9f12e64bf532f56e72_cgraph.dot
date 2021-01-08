@@ -1,0 +1,35 @@
+digraph "CSurfaceMovement::SetFFDCamber"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node467 [label="CSurfaceMovement::SetFFDCamber",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node467 -> Node468 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node468 [label="CConfig::GetOpt_RelaxFactor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#affef7bc6016955cb0cf49b3f774bc45a",tooltip="Get the scale factor for the line search. "];
+  Node467 -> Node469 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node469 [label="CConfig::GetFFDTag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aac151bc1508af471b8bd6cf67c82bff1",tooltip="Get the FFD Tag of a particular design variable. "];
+  Node467 -> Node470 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node470 [label="CFreeFormDefBox::GetTag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#a39f3ec89ecaa4c20ca0bf115153f1fb5",tooltip="Get the tag that identify a FFDBox. "];
+  Node467 -> Node471 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node471 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node471 -> Node472 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node472 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node467 -> Node473 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node473 [label="CConfig::GetParamDV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a55ab8fc511c17d4b07ef0b5eea793e61",tooltip="Get a parameter of the particular design variable. "];
+  Node467 -> Node474 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node474 [label="CFreeFormDefBox::Get\l_nFix_IPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#a6b8ff65cc97f1dc3197f1bbf66f042a2",tooltip="Define the I planes to to fix in a FFD box. "];
+  Node467 -> Node475 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node475 [label="CFreeFormDefBox::Get\l_Fix_IPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#a378f6cbeb8c62956a9bd9e3c8ba318f7",tooltip="Define the I planes to to fix in a FFD box. "];
+  Node467 -> Node476 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node476 [label="CFreeFormDefBox::Get\l_nFix_JPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#a15483c5ccbe6bb2d8efd1db0ee47f291",tooltip="Define the I planes to to fix in a FFD box. "];
+  Node467 -> Node477 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node477 [label="CFreeFormDefBox::Get\l_Fix_JPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#aaea48205eeab5e59fc82824a3272d3fe",tooltip="Define the I planes to to fix in a FFD box. "];
+  Node467 -> Node478 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node478 [label="CFreeFormDefBox::Get\l_nFix_KPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#a5231193062a8d1bb9d486c4e6bb92812",tooltip="Define the I planes to to fix in a FFD box. "];
+  Node467 -> Node479 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node479 [label="CFreeFormDefBox::Get\l_Fix_KPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#aca911efe2b1562e4cca8ad9e3798b75f",tooltip="Define the I planes to to fix in a FFD box. "];
+  Node467 -> Node480 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node480 [label="CConfig::GetDV_Value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac50165b44d1c286c810585b89cd68f33",tooltip="Value of the design variable step, we use this value in design problems. "];
+  Node467 -> Node481 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node481 [label="CFreeFormDefBox::SetControl\lPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#aed1fd6c02ebdf7d2124e6b509179e8ad",tooltip="Set the new value of the coordinates of the control points. "];
+}

@@ -1,0 +1,19 @@
+digraph "CFEAMeshElasticity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="CFEAMeshElasticity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CFEALinearElasticity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_linear_elasticity.html",tooltip="Class for computing the stiffness matrix of a linear, elastic problem. "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CFEAElasticity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_elasticity.html",tooltip="Abstract class for computing the tangent matrix and the residual for structural problems. "];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CNumerics",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html",tooltip="Class for defining the numerical methods. "];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nodalDisplacement" ,fontname="Helvetica"];
+  Node8 [label="C2DContainer\< su2double \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c2_d_container.html"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="container_helpers::\lAccessorImpl\< su2double,\l Scalar_t, Store, AlignSize,\l StaticRows, StaticCols \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcontainer__helpers_1_1_accessor_impl.html"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_data" ,fontname="Helvetica"];
+  Node10 [label="Scalar_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

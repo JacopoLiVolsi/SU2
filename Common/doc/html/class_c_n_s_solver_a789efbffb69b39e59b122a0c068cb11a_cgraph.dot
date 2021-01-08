@@ -1,0 +1,31 @@
+digraph "CNSSolver::Buffet_Monitoring"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node406 [label="CNSSolver::Buffet_Monitoring",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node406 -> Node407 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node407 [label="CConfig::GetVelocity\l_FreeStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#af0723b9f35c1762a4c8edacb35f98984",tooltip="Get the vector of the dimensionalized freestream velocity. "];
+  Node406 -> Node408 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node408 [label="CConfig::GetRefArea",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad1d22f6d4f0225e3281d826a4c866779",tooltip="Get the reference area for non dimensional coefficient computation. If the value from the is 0 then..."];
+  Node406 -> Node409 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node409 [label="CConfig::GetBuffet_k",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a7676a75ae323ab159c96800ab9182635",tooltip="Get the buffet sensor sharpness coefficient. "];
+  Node406 -> Node410 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node410 [label="CConfig::GetBuffet\l_lambda",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a4b867cf8dcdc9c12ba2d108aa1773aa6",tooltip="Get the buffet sensor offset parameter. "];
+  Node406 -> Node411 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node411 [label="CConfig::GetnMarker\l_Monitoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a62a92b26c1300323f4a4a035ec19af1a",tooltip="Get the total number of monitoring markers. "];
+  Node406 -> Node412 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node412 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node406 -> Node413 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node413 [label="CConfig::GetMarker\l_All_Monitoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a942619938b389de95268bce31434c276",tooltip="Get the monitoring information for a marker val_marker. "];
+  Node406 -> Node414 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node414 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node406 -> Node415 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node415 [label="CConfig::GetMarker\l_Monitoring_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5bf47083eec0b00543d3d8c387f41ab2",tooltip="Get the name of the surface defined in the geometry file. "];
+  Node406 -> Node416 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node416 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node406 -> Node417 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node417 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node417 -> Node418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node418 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+}

@@ -1,0 +1,15 @@
+digraph "CConfig::GetKind_Data_Giles"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4772 [label="CConfig::GetKind_Data\l_Giles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4772 -> Node4773 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4773 [label="CTurbomachineryDriver\l::Monitor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turbomachinery_driver.html#a41d7b50bbacef68eb5436293ebb2da4f",tooltip="Monitor the computation. "];
+  Node4772 -> Node4774 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4774 [label="CEulerSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aa4c3988e3ce0c18460b5c069650c57b0",tooltip="Impose the boundary condition using characteristic recostruction. "];
+  Node4772 -> Node4775 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4775 [label="CEulerSolver::TurboAverage\lProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ab408049d3b4fecc224653176c8d7885a",tooltip="It computes average quantities along the span for turbomachinery analysis. "];
+  Node4772 -> Node4776 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4776 [label="CTurbSolver::BC_Giles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_solver.html#a38c6b619e04b33b19ac586845bdb4c82",tooltip="Impose via the residual the Euler wall boundary condition. "];
+}

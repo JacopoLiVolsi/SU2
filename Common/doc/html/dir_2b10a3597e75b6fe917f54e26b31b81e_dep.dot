@@ -1,0 +1,11 @@
+digraph "/home/boyd/Scrivania/Thesis/SU2/SU2_CFD/include/output/filewriter" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d8beb746e2226fd5f8de32cb0a6789ef {
+    graph [ bgcolor="#ddddee", pencolor="black", label="output" fontname="Helvetica", fontsize="10", URL="dir_d8beb746e2226fd5f8de32cb0a6789ef.html"]
+  dir_2b10a3597e75b6fe917f54e26b31b81e [shape=box, label="filewriter", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2b10a3597e75b6fe917f54e26b31b81e.html"];
+  }
+  dir_92cb2900980f09bf257878861626e98f [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_92cb2900980f09bf257878861626e98f.html"];
+  dir_2b10a3597e75b6fe917f54e26b31b81e->dir_92cb2900980f09bf257878861626e98f [headlabel="5", labeldistance=1.5 headhref="dir_000024_000000.html"];
+}

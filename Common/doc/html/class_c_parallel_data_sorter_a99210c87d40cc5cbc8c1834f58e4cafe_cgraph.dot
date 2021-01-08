@@ -1,0 +1,9 @@
+digraph "CParallelDataSorter::GetnPointCumulative"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node65 [label="CParallelDataSorter\l::GetnPointCumulative",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node65 -> Node66 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node66 [label="CLinearPartitioner\l::GetCumulativeSizeBeforeRank",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_linear_partitioner.html#af007be2221f32566413acdd146ba96e6",tooltip="Get the cumulative size of all linear partitions before the current rank. "];
+}

@@ -1,0 +1,35 @@
+digraph "CFEASolver::ComputeAitken_Coefficient"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node470 [label="CFEASolver::ComputeAitken\l_Coefficient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node470 -> Node471 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node471 [label="CConfig::GetRelaxation\l_Method_FSI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3d41cea93d8e5e917b1c1dc42cfcdbf9",tooltip="Get the relaxation method chosen for the simulation. "];
+  Node470 -> Node472 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node472 [label="CFEASolver::SetWAitken_Dyn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_solver.html#a49971e0e19c3b78afe1a1cfd34c71659",tooltip="Set the value of the dynamic Aitken relaxation factor. "];
+  Node470 -> Node473 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node473 [label="CConfig::GetAitkenStatRelax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5b95a87f29d55981d1b951c6b1fb011d",tooltip="Get Aitken&#39;s relaxation parameter for static relaxation cases. "];
+  Node470 -> Node474 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node474 [label="CFEASolver::GetWAitken\l_Dyn_tn1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_solver.html#a24b3df228a0602abefd0c3b59fdb2bd2",tooltip="Retrieve the value of the last Aitken relaxation factor in the previous time step. "];
+  Node470 -> Node475 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node475 [label="CConfig::GetAitkenDynMaxInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3fe523b51cc71404bcb575b824c9b1a1",tooltip="Get Aitken&#39;s maximum relaxation parameter for dynamic relaxation cases and first iteration. "];
+  Node470 -> Node476 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node476 [label="CConfig::GetAitkenDynMinInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb64921cc58fd028b2315a2f6ea286d3",tooltip="Get Aitken&#39;s maximum relaxation parameter for dynamic relaxation cases and first iteration. "];
+  Node470 -> Node477 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node477 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node470 -> Node478 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node478 [label="CVariable::GetSolution_Pred",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#adba4a8e082e70a9a6fe5d1d9c6e5c820",tooltip="A virtual member. Get the value of the solution predictor. "];
+  Node470 -> Node479 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node479 [label="CVariable::GetSolution\l_Pred_Old",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a626f4cad3d20be125e844b9076e44e07",tooltip="A virtual member. Get the value of the solution predictor. "];
+  Node470 -> Node480 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node480 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node470 -> Node481 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node481 [label="CVariable::GetSolution_Old",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a70a9df6b6cc631f9c3b9a3ef7b3ecfe4",tooltip="Get the old solution of the problem (Runge-Kutta method) "];
+  Node470 -> Node482 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node482 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node482 -> Node483 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node483 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node470 -> Node484 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node484 [label="CFEASolver::GetWAitken_Dyn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_solver.html#a29130714ba235f1516851ae2e3642f52",tooltip="Retrieve the value of the dynamic Aitken relaxation factor. "];
+}

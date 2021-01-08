@@ -1,0 +1,42 @@
+digraph "CPhysicalGeometry::ComputeNSpan"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node374 [label="CPhysicalGeometry::\lComputeNSpan",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node374 -> Node375 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node375 [label="CConfig::GetKind_SpanWise",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a82156f8de91eb405694780e1f9c1e880",tooltip="Get the kind of turbomachinery architecture. "];
+  Node374 -> Node376 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node376 [label="CConfig::SetnSpanWiseSections",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab5e52685061a782a735e43cf371d9473",tooltip="set number span-wise sections to compute 3D BC and performance for turbomachinery. "];
+  Node374 -> Node377 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node377 [label="CConfig::GetnMarker\l_Turbomachinery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8f0ce5b4f605f885ae5391f567e3ae20",tooltip="number Turbomachinery performance option specified from config file. "];
+  Node374 -> Node378 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node378 [label="CConfig::GetMarker\l_All_Turbomachinery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2989859c3fb041c6b83c1d3bf64f2f34",tooltip="Get the Turbomachinery information for a marker val_marker. "];
+  Node374 -> Node379 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node379 [label="CConfig::GetMarker\l_All_TurbomachineryFlag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab74c164cca94a37de37dd2322c53f98c",tooltip="Get the Turbomachinery flag information for a marker val_marker. "];
+  Node374 -> Node380 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node380 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node374 -> Node381 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node381 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node374 -> Node382 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node382 [label="CConfig::GetMarker\l_All_PerBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aaceb5e9828499b666e6970e06d898ecc",tooltip="Get an internal index that identify the periodic boundary conditions. "];
+  Node374 -> Node383 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node383 [label="CPoint::GetVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#aceac27af50af6500a034b86b329532a0",tooltip="Get the vertex that compose the control volume for a marker. "];
+  Node374 -> Node384 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node384 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node384 -> Node385 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node385 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node374 -> Node386 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node386 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node374 -> Node387 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node387 [label="CConfig::GetKind_TurboMachinery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#afa3df6ff19988c7d4cc7bb350928e12b",tooltip="Get the kind of turbomachinery architecture. "];
+  Node374 -> Node388 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node388 [label="CBaseMPIWrapper::Allgather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a55195abbb7206e08a4933fa53cd41923"];
+  Node388 -> Node385 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node374 -> Node389 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node389 [label="CConfig::Get_nSpanWiseSections_User",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb9dba36e9ccb1ef5d7fccfb33913292",tooltip="number span-wise sections to compute 3D BC and performance for turbomachinery specified by the user..."];
+  Node374 -> Node390 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node390 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node390 -> Node391 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node391 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+}

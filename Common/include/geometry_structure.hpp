@@ -56,6 +56,7 @@ extern "C" {
 #include "config_structure.hpp"
 #include "fem_standard_element.hpp"
 #include "CMeshReaderFVM.hpp"
+#include "CMultilayerGeometry.hpp"
 
 using namespace std;
 
@@ -270,6 +271,8 @@ protected:
   nFace,				 /*!< \brief Number of faces of the mesh. */
   nelem_edge,            /*!< \brief Number of edges in the mesh. */
   Global_nelem_edge,     /*!< \brief Total number of edges in the mesh across all processors. */
+  Global_nelem_line,     /*!< \brief Total number of lines in the mesh across all processors. */
+  nelem_line,            /*!< \brief Number of lines in the mesh. */
   nelem_triangle,        /*!< \brief Number of triangles in the mesh. */
   Global_nelem_triangle, /*!< \brief Total number of triangles in the mesh across all processors. */
   nelem_quad,            /*!< \brief Number of quadrangles in the mesh. */
@@ -282,6 +285,7 @@ protected:
   Global_nelem_prism,    /*!< \brief Total number of prisms in the mesh across all processors. */
   nelem_pyramid,         /*!< \brief Number of pyramids in the mesh. */
   Global_nelem_pyramid,  /*!< \brief Total number of pyramids in the mesh across all processors. */
+  nelem_vertex_bound,    /*!< \brief Number of vertices on the mesh boundaries. */
   nelem_edge_bound,      /*!< \brief Number of edges on the mesh boundaries. */
   Global_nelem_edge_bound,        /*!< \brief Total number of edges on the mesh boundaries across all processors. */
   nelem_triangle_bound,           /*!< \brief Number of triangles on the mesh boundaries. */
@@ -1737,9 +1741,12 @@ class CPhysicalGeometry : public CGeometry {
   nLocal_Bound_Elem,
   nGlobal_Elem,
   nGlobal_Bound_Elem,
+  nLocal_Vertex,
   nLocal_Line,
+  nLocal_Line_Vol,
   nLocal_BoundTria,
   nLocal_BoundQuad,
+  nLinear_Vertex,
   nLinear_Line,
   nLinear_BoundTria,
   nLinear_BoundQuad,
@@ -1753,9 +1760,12 @@ class CPhysicalGeometry : public CGeometry {
   su2double *Local_Coords;
   unsigned long *Local_Points;
   unsigned long *Local_Colors;
+  unsigned long *Conn_Vertex;
   unsigned long *Conn_Line;
+  unsigned long *Conn_Line_Vol;
   unsigned long *Conn_BoundTria;
   unsigned long *Conn_BoundQuad;
+  unsigned long *Conn_Vertex_Linear;
   unsigned long *Conn_Line_Linear;
   unsigned long *Conn_BoundTria_Linear;
   unsigned long *Conn_BoundQuad_Linear;
@@ -1765,9 +1775,12 @@ class CPhysicalGeometry : public CGeometry {
   unsigned long *Conn_Hexa;
   unsigned long *Conn_Pris;
   unsigned long *Conn_Pyra;
+  unsigned long *ID_Vertex;
+  unsigned long *ID_Line_Vol;
   unsigned long *ID_Line;
   unsigned long *ID_BoundTria;
   unsigned long *ID_BoundQuad;
+  unsigned long *ID_Vertex_Linear;
   unsigned long *ID_Line_Linear;
   unsigned long *ID_BoundTria_Linear;
   unsigned long *ID_BoundQuad_Linear;
@@ -1777,9 +1790,11 @@ class CPhysicalGeometry : public CGeometry {
   unsigned long *ID_Hexa;
   unsigned long *ID_Pris;
   unsigned long *ID_Pyra;
+  unsigned long *Elem_ID_Vertex;
   unsigned long *Elem_ID_Line;
   unsigned long *Elem_ID_BoundTria;
   unsigned long *Elem_ID_BoundQuad;
+  unsigned long *Elem_ID_Vertex_Linear;
   unsigned long *Elem_ID_Line_Linear;
   unsigned long *Elem_ID_BoundTria_Linear;
   unsigned long *Elem_ID_BoundQuad_Linear;

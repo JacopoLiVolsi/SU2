@@ -1,0 +1,19 @@
+digraph "CDiscAdjSolver::ExtractAdjoint_CrossTerm_Geometry"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node46 [label="CDiscAdjSolver::ExtractAdjoint\l_CrossTerm_Geometry",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node46 -> Node47 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="CConfig::GetMultizone\l_Problem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad9233b666b21e43c18592925be61cc9b",tooltip="Get whether the simulation we are running is a multizone simulation. "];
+  Node46 -> Node48 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="CPoint::GetAdjointCoord\l_LocalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ad869d5e41f20b0685e9cc6dce96c8dfc",tooltip="Get the adjoint values of the coordinates. "];
+  Node48 -> Node49 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="AD::GetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a305f38ce692ce2f4269c05a022fe2ff5",tooltip="Extracts the adjoint value at index. "];
+  Node46 -> Node50 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="CPoint::GetAdjointCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ac9320f072c0a562a58bccdf6df92779a",tooltip="Get the adjoint values of the coordinates. "];
+  Node50 -> Node51 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="SU2_TYPE::GetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#aaf4331164217013b2f05dda28329fcb1",tooltip="Get the derivative value of the datatype (needs to be implemented for each new type). "];
+  Node46 -> Node52 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="CDiscAdjVariable::SetGeometry\l_CrossTerm_Derivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_variable.html#a35e90daad149ebe9d4332b9b8b59b50f",tooltip="A virtual member. Set the value of the mesh solution (adjoint). "];
+}

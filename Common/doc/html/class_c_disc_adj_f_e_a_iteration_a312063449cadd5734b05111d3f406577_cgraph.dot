@@ -1,0 +1,21 @@
+digraph "CDiscAdjFEAIteration::LoadDynamic_Solution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node25 [label="CDiscAdjFEAIteration\l::LoadDynamic_Solution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node25 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="CSolver::LoadRestart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a61c87a4ff51926361e18797c49204e72",tooltip="A virtual member. "];
+  Node25 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node25 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="CSolver::GetnVar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a65c22046b0cf1938ba22648912d04680",tooltip="Get the number of variables of the problem. "];
+  Node25 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node25 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="CVariable::SetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a22fbbd7bc6491672843000644a05c6a5",tooltip="Set the value of the solution, all variables. "];
+  Node25 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="CVariable::SetSolution\l_Accel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#af87029baec777039085fb1ff17ee9555",tooltip="Set the value of the acceleration (Structural Analysis). "];
+  Node25 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="CVariable::SetSolution_Vel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a5c1430d98acd399f1371f23e6fae053f",tooltip="Set the value of the velocity (Structural Analysis). "];
+}

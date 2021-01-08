@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CMultiGridQueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_queue.html",tooltip="Class for a multigrid queue system for the finite volume solver. "];
+}

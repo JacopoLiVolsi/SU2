@@ -1,0 +1,19 @@
+digraph "CTurbSASolver::Postprocessing"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node373 [label="CTurbSASolver::Postprocessing",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node373 -> Node374 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node374 [label="CConfig::GetKind_Turb\l_Model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a40aaed07fc5844d505d2c0b7076594d7",tooltip="Get the kind of the turbulence model. "];
+  Node373 -> Node375 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node375 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node373 -> Node376 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node376 [label="CVariable::GetDensity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a4892ca545884011b7903a8e35c43b43f",tooltip="A virtual member. "];
+  Node373 -> Node377 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node377 [label="CVariable::GetLaminarViscosity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a0acbe55ca86de2c0205ae921193e9e95",tooltip="A virtual member. "];
+  Node373 -> Node378 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node378 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node373 -> Node379 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node379 [label="CTurbVariable::SetmuT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_variable.html#acde5a428d211d2a34e677c8e4f4584ff",tooltip="Set the value of the eddy viscosity. "];
+}

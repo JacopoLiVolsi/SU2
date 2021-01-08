@@ -150,7 +150,47 @@ CVertexMPI::~CVertexMPI() {
 
 }
 
+
+unsigned short CVertexBound::nNodes = 1;
+
+unsigned short CVertexBound::Neighbor_Nodes[1][1] = {{0}};
+
+unsigned short CVertexBound::nNeighbor_Elements = 0;
+
+unsigned short CVertexBound::VTK_Type = 1;
+
+unsigned short CVertexBound::maxNodesFace = 0;
+
+unsigned short CVertexBound::nFaces = 0;
+
+CVertexBound::CVertexBound(unsigned long val_point, unsigned short val_nDim) : CPrimalGrid() {
+	unsigned short iDim;
+	
+	/*--- Allocate CG coordinates ---*/
+	nDim = val_nDim;
+	Coord_CG = new su2double[nDim];
+	for (iDim = 0; iDim < nDim; iDim++) Coord_CG[iDim] = 0.0;
+	
+	/*--- Allocate and define face structure of the element ---*/
+	Nodes = new unsigned long[nNodes];
+	Nodes[0] = val_point;
+	
+	/*--- By default, no rotation in the solution ---*/
+	Rotation_Type = 0;
+	
+}
+
+CVertexBound::~CVertexBound() {
+  unsigned short iFaces;
+  
+    for (iFaces = 0; iFaces < nFaces; iFaces++)
+      if (Coord_FaceElems_CG[iFaces] != NULL) delete[] Coord_FaceElems_CG[iFaces];
+    if (Coord_FaceElems_CG != NULL) delete[] Coord_FaceElems_CG;
+
+}
+
 void CVertexMPI::Change_Orientation(void) { }
+void CVertexBound::Change_Orientation(void) { }
 
 unsigned short CLine::Faces[1][2]={{0,1}};
 
@@ -213,6 +253,79 @@ void CLine::Change_Orientation(void) {
 	Nodes[1] = Point_0;
 
 }
+
+unsigned short CLineVol::Faces[1][2]={{0,1}};
+
+unsigned short CLineVol::nNodesFace[1]={2};
+
+unsigned short CLineVol::nFaces = 1;
+
+unsigned short CLineVol::maxNodesFace = 2;
+
+unsigned short CLineVol::Neighbor_Nodes[2][1]={{1},{0}};
+
+unsigned short CLineVol::nNeighbor_Nodes[2]={1,1};
+
+unsigned short CLineVol::nNodes = 2;
+
+unsigned short CLineVol::nNeighbor_Elements = 1;
+
+unsigned short CLineVol::VTK_Type = 3;
+
+CLineVol::CLineVol(unsigned long val_point_0, unsigned long val_point_1,
+             unsigned short val_nDim) : CPrimalGrid(){
+
+ unsigned short iDim, iFace, iNeighbor_Elements;
+
+ /*--- Allocate CG coordinates ---*/
+  
+ nDim = val_nDim;
+ Coord_CG = new su2double[nDim];
+ for (iDim = 0; iDim < nDim; iDim++)
+   Coord_CG[iDim] = 0.0;
+
+  Coord_FaceElems_CG = new su2double* [nFaces];
+
+ for (iFace = 0; iFace < nFaces; iFace++) {
+  Coord_FaceElems_CG[iFace] = new su2double [nDim];
+  for (iDim = 0; iDim < nDim; iDim++)
+   Coord_FaceElems_CG[iFace][iDim] = 0.0;
+ }
+	
+ /*--- Allocate and define face structure of the element ---*/
+  
+ Nodes = new unsigned long[nNodes];
+ Nodes[0] = val_point_0;
+ Nodes[1] = val_point_1;
+/*--- Allocate and define neighbor elements to a element ---*/
+ nNeighbor_Elements = nFaces;
+ Neighbor_Elements = new long[nNeighbor_Elements];
+ for (iNeighbor_Elements = 0; iNeighbor_Elements < nNeighbor_Elements; iNeighbor_Elements++) {
+  Neighbor_Elements[iNeighbor_Elements]=-1;
+ }
+
+}
+
+CLineVol::~CLineVol(){ 
+
+  unsigned short iFaces;
+  
+  for (iFaces = 0; iFaces < nFaces; iFaces++)
+    if (Coord_FaceElems_CG[iFaces] != NULL) delete[] Coord_FaceElems_CG[iFaces];
+  if (Coord_FaceElems_CG != NULL) delete[] Coord_FaceElems_CG;
+
+}
+
+void CLineVol::Change_Orientation(void) {
+	unsigned long Point_0, Point_1;
+  
+	Point_0 = Nodes[0];
+	Point_1 = Nodes[1];
+	Nodes[0] = Point_1;
+	Nodes[1] = Point_0;
+
+}
+
 
 unsigned short CTriangle::Faces[3][2] = {{0,1},{1,2},{2,0}};
 

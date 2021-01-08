@@ -1,0 +1,9 @@
+digraph "CFreeFormDefBox::SetUnitCornerPoints"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1050 [label="CFreeFormDefBox::SetUnit\lCornerPoints",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1050 -> Node1051 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1051 [label="CFreeFormDefBox::SetCoord\lCornerPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#ad581a25126d89af176e2a0e450f4c38c",tooltip="Set the coordinates of the corner points. "];
+}

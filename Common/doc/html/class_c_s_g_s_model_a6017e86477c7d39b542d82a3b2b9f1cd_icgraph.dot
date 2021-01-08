@@ -1,0 +1,13 @@
+digraph "CSGSModel::ComputeEddyViscosity_3D"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="CSGSModel::ComputeEddyViscosity_3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CFEM_DG_NSSolver::SetTime_Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a993de2bb61a532e9d1508bae98dd3a12",tooltip="Function to compute the time step for solving the Navier-Stokes equations. "];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CFEM_DG_NSSolver::Volume\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#ac62df058348ffee37a945bcc3a66745b",tooltip="Compute the volume contributions to the spatial residual. "];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CFEM_DG_NSSolver::Residual\lFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a5afc06c0edede6e3917a6b24158930ba",tooltip="Compute the spatial residual for the given range of faces. "];
+}

@@ -1,0 +1,9 @@
+digraph "CConfig::SetHeader"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14629 [label="CConfig::SetHeader",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14629 -> Node14630 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14630 [label="CConfig::CConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac63c6ea789ff9d50a25aa508d71cae4a",tooltip="Constructor of the class which reads the input file. "];
+}

@@ -1,0 +1,39 @@
+digraph "CTurbSASolver::SetDES_LengthScale"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node532 [label="CTurbSASolver::SetDES\l_LengthScale",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node532 -> Node533 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node533 [label="CConfig::GetKind_HybridRANSLES",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2dae056d1f8e3385d25e6fbc251f0100",tooltip="Get the Kind of Hybrid RANS/LES. "];
+  Node532 -> Node534 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node534 [label="CConfig::GetConst_DES",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2498a45dc1967f0ca273371ed7e89711",tooltip="Get the DES Constant. "];
+  Node532 -> Node535 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node535 [label="CPoint::GetCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a95fe081d22e96e190cb3edcbf0d6525f",tooltip="Get the coordinates dor the control volume. "];
+  Node532 -> Node536 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node536 [label="CPoint::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#adbb78f3c01711ed0349897f845e3f2d8",tooltip="Get the number of points that compose the control volume. "];
+  Node532 -> Node537 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node537 [label="CPoint::GetWall_Distance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a2ec241bcb847e4bae03e8df907a18b15",tooltip="Get the value of the distance to the nearest wall. "];
+  Node532 -> Node538 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node538 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node532 -> Node539 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node539 [label="CVariable::GetGradient\l_Primitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a8b7f4e020a837b1fe639e8d875f964d5",tooltip="A virtual member. "];
+  Node532 -> Node540 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node540 [label="CVariable::GetVorticity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a047fd769c6eae7a44a98f71319ef39ae",tooltip="A virtual member. "];
+  Node532 -> Node541 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node541 [label="CVariable::GetDensity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a4892ca545884011b7903a8e35c43b43f",tooltip="A virtual member. "];
+  Node532 -> Node542 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node542 [label="CVariable::GetLaminarViscosity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a0acbe55ca86de2c0205ae921193e9e95",tooltip="A virtual member. "];
+  Node532 -> Node543 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node543 [label="CVariable::GetmuT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#ad35ee29420764dda0bbb574f7a7253e7",tooltip="Get the value of the eddy viscosity. "];
+  Node532 -> Node544 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node544 [label="CVariable::GetSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a261483e39c23c1de7cb9aea7e917c121",tooltip="Get the solution. "];
+  Node532 -> Node545 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node545 [label="CPoint::GetMaxLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a786e7c18e968c5e833b41c60ed427a35",tooltip="Get the maximum cell-center to cell-center length. "];
+  Node532 -> Node546 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node546 [label="CPoint::GetPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#aab08fdab4e59c01d822afca5335a86af",tooltip="Get all the points that compose the control volume. "];
+  Node532 -> Node547 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node547 [label="CVariable::GetVortex\l_Tilting",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a4bae800ac1bc7951986a9ff27ef1a323"];
+  Node532 -> Node548 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node548 [label="CVariable::SetDES_Length\lScale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a6d5cc5cc96f650554012b9ec7bcaf605",tooltip="A virtual member. "];
+}

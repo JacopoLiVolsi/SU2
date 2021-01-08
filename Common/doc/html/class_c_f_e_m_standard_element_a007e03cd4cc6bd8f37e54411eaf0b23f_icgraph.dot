@@ -1,0 +1,21 @@
+digraph "CFEMStandardElement::GetNPoly"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node123 [label="CFEMStandardElement\l::GetNPoly",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node123 -> Node124 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node124 [label="CFEM_DG_EulerSolver\l::SetTime_Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a041ecaba8cd8d9bcfcec123c27bf9a7a",tooltip="Function to compute the time step for solving the Euler equations. "];
+  Node123 -> Node125 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node125 [label="CFEM_DG_NSSolver::SetTime_Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a993de2bb61a532e9d1508bae98dd3a12",tooltip="Function to compute the time step for solving the Navier-Stokes equations. "];
+  Node123 -> Node126 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node126 [label="CFEM_DG_NSSolver::Shock\l_Capturing_DG_Persson",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a04fa3111afb642b208d97efe113ff1cf",tooltip="Per-Olof Persson&#39;s method for capturing shock in DG. "];
+  Node126 -> Node127 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node127 [label="CFEM_DG_NSSolver::Shock\l_Capturing_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a6c6944d7036c9cb3e9664f938543b52b",tooltip="Compute the artificial viscosity for shock capturing in DG. "];
+  Node123 -> Node128 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node128 [label="CFEM_DG_NSSolver::Volume\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#ac62df058348ffee37a945bcc3a66745b",tooltip="Compute the volume contributions to the spatial residual. "];
+  Node123 -> Node129 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node129 [label="CFEM_DG_NSSolver::Residual\lFaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a5afc06c0edede6e3917a6b24158930ba",tooltip="Compute the spatial residual for the given range of faces. "];
+  Node123 -> Node130 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node130 [label="CFEM_DG_NSSolver::BC\l_Sym_Plane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___n_s_solver.html#a148134abb8821df7c68a8f9adedbe851",tooltip="Impose the symmetry boundary condition using the residual. "];
+}

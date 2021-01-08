@@ -1,0 +1,17 @@
+digraph "CEulerSolver::InitTurboContainers"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2168 [label="CEulerSolver::InitTurboContainers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2168 -> Node2169 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2169 [label="CConfig::GetnSpanMaxAllZones",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a5f9d28d610a51f1c4bdb50d366d510c8",tooltip="number span-wise sections to compute performance for turbomachinery. "];
+  Node2168 -> Node2170 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2170 [label="CConfig::GetnSpanWiseSections",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2afa29aab61d4f49387cec759b7735ea",tooltip="number span-wise sections to compute 3D BC and performance for turbomachinery. "];
+  Node2168 -> Node2171 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2171 [label="CConfig::GetnMarker\l_TurboPerformance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a9a665d90306ed49db16ac85e4d7acbb4",tooltip="number Turbomachinery performance option specified from config file. "];
+  Node2168 -> Node2172 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2172 [label="CConfig::GetBoolGiles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0acc36f5e0ad66f5ed7f6c0e6ffe036e",tooltip="Verify if there is any Giles Boundary Condition option specified from config file. "];
+  Node2168 -> Node2173 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2173 [label="CGeometry::GetnFreqSpanMax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#ac34d6d17098103734e167bbb08c73a60",tooltip="Get number of max frequencies for initializing the Fourier Coefficient for NR BC. ..."];
+}

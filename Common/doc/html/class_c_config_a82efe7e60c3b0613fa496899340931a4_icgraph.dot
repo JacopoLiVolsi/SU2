@@ -1,0 +1,27 @@
+digraph "CConfig::GetKind_TimeIntScheme_Turb"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5766 [label="CConfig::GetKind_TimeInt\lScheme_Turb",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5766 -> Node5767 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5767 [label="CUpwSca_Heat::CUpwSca_Heat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_sca___heat.html#ac5402ae0b47f2c21d43a937caa6aefee",tooltip="Constructor of the class. "];
+  Node5766 -> Node5768 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5768 [label="CCentSca_Heat::CCentSca_Heat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_cent_sca___heat.html#a32dc690389c97f55249ecb4b91de06b6",tooltip="Constructor of the class. "];
+  Node5766 -> Node5769 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5769 [label="CUpwLin_TransLM::CUpwLin\l_TransLM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_lin___trans_l_m.html#ae850e6e378228c20da7ae1f63d29bdab",tooltip="Constructor of the class. "];
+  Node5766 -> Node5770 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5770 [label="CUpwSca_TransLM::CUpwSca\l_TransLM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_sca___trans_l_m.html#a0eaaa53c02bb82873bcb5040520e80f0",tooltip="Constructor of the class. "];
+  Node5766 -> Node5771 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5771 [label="CAvgGrad_TransLM::CAvgGrad\l_TransLM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___trans_l_m.html#ad3b18ef4ef054200d36fae7980f40b11",tooltip="Constructor of the class. "];
+  Node5766 -> Node5772 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5772 [label="CAvgGradCorrected_TransLM\l::CAvgGradCorrected_TransLM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad_corrected___trans_l_m.html#a3740ad3408ee9f6b8be815f8e226d713",tooltip="Constructor of the class. "];
+  Node5766 -> Node5773 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5773 [label="CUpwScalar::CUpwScalar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_scalar.html#aa733bdfbbb14f49b74c275921827d469",tooltip="Constructor of the class. "];
+  Node5766 -> Node5774 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5774 [label="CAvgGrad_Scalar::CAvgGrad\l_Scalar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_avg_grad___scalar.html#a767d15c30f77b3ccb0494d899a722e3f",tooltip="Constructor of the class. "];
+  Node5766 -> Node5775 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5775 [label="CTransLMSolver::CTransLMSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_trans_l_m_solver.html#a4975cbf30f2954e3da1244832999eda0"];
+  Node5766 -> Node5776 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5776 [label="CTurbSolver::SetResidual\l_DualTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_solver.html#a2840547596044fd5b2242bb9199b1abe",tooltip="Set the total residual adding the term that comes from the Dual Time-Stepping Strategy. "];
+}

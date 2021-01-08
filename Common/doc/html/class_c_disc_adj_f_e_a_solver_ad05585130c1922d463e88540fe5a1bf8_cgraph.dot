@@ -1,0 +1,31 @@
+digraph "CDiscAdjFEASolver::RegisterSolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node241 [label="CDiscAdjFEASolver::\lRegisterSolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node241 -> Node242 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node242 [label="CConfig::GetTime_Domain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6a11350b3c8d7577318be43cda6f7292",tooltip="Check if the multizone problem is solved for time domain. "];
+  Node241 -> Node243 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node243 [label="CConfig::GetMultizone\l_Problem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad9233b666b21e43c18592925be61cc9b",tooltip="Get whether the simulation we are running is a multizone simulation. "];
+  Node241 -> Node244 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node244 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node241 -> Node245 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node245 [label="CVariable::RegisterSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a5d8ee15634fe43e299092ff882ffa796",tooltip="Register the variables in the solution array as input/output variable. "];
+  Node245 -> Node246 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node246 [label="AD::RegisterInput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a05310227c195f7e83d394ce9cae8b73e",tooltip="Registers the variable as an input and saves internal data (indices). I.e. as a leaf of the computati..."];
+  Node245 -> Node247 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node247 [label="AD::SetIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a93909396dd20444ea1ad3100003ff08c",tooltip="Evaluates and saves gradient data from a variable. "];
+  Node245 -> Node248 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node248 [label="AD::RegisterOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#ae381e45797545e980376c4aeb3f5afdc",tooltip="Registers the variable as an output. I.e. as the root of the computational graph. ..."];
+  Node241 -> Node249 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node249 [label="CVariable::RegisterSolution\l_Accel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a627a08400f6ff5215f4b6def84f5aef4",tooltip="A virtual member. "];
+  Node241 -> Node250 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node250 [label="CVariable::RegisterSolution_Vel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#aff358fcc7d93c0664f92b1d8262ff767",tooltip="A virtual member. "];
+  Node241 -> Node251 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node251 [label="CVariable::Register\l_femSolution_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a989fffe7364ef656d32d28b36cea5507",tooltip="A virtual member. "];
+  Node241 -> Node252 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node252 [label="CVariable::RegisterSolution\l_Accel_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#a9e788535dabc523802db60bafc175d2f",tooltip="A virtual member. "];
+  Node241 -> Node253 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node253 [label="CVariable::RegisterSolution\l_Vel_time_n",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#adf63527218426d3bf1ebb07741f15b88",tooltip="A virtual member. "];
+}

@@ -1,0 +1,30 @@
+digraph "CConfig::GetFilename"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3123 [label="CConfig::GetFilename",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3123 -> Node3124 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3124 [label="CConfig::GetMultizone\l_FileName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#af4d81fc4ec805bb4a89f3739048d8824",tooltip="Append the zone index to the restart or the solution files. "];
+  Node3124 -> Node3125 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3125 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node3125 -> Node3126 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3126 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node3123 -> Node3127 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3127 [label="CConfig::GetiZone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ac09e21f44792b38adb3f933a4426b25f",tooltip="Provides the number of varaibles. "];
+  Node3123 -> Node3128 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3128 [label="CConfig::GetnTimeInstances",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2e52fd45c8b5179c9cb3ce5fff935f11",tooltip="Retrieves the number of periodic time instances for Harmonic Balance. "];
+  Node3123 -> Node3129 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3129 [label="CConfig::GetMultiInstance\l_FileName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#aa09a28009de12d84ac2e640489bc70fe",tooltip="Append the instance index to the restart or the solution files. "];
+  Node3129 -> Node3125 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3123 -> Node3130 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3130 [label="CConfig::GetiInst",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a13643de8d58ed6b848b193eae54c97e8",tooltip="Get the current instance. "];
+  Node3123 -> Node3131 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3131 [label="CConfig::GetTime_Domain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6a11350b3c8d7577318be43cda6f7292",tooltip="Check if the multizone problem is solved for time domain. "];
+  Node3123 -> Node3132 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3132 [label="CConfig::GetUnsteady\l_FileName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a58c909cea24176adb2b2e9115fa6de7f",tooltip="Augment the input filename with the iteration number for an unsteady file. "];
+  Node3132 -> Node3133 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3133 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node3133 -> Node3134 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3134 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+}

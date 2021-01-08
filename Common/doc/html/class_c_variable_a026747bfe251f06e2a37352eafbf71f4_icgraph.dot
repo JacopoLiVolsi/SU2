@@ -1,0 +1,37 @@
+digraph "CVariable::GetResTruncError"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2078 [label="CVariable::GetResTruncError",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2078 -> Node2079 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2079 [label="CMultiGridIntegration\l::SetResidual_Term",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#aa3be397d17e3a69d2d1a77ee4ee95716",tooltip="Add the truncation error to the residual. "];
+  Node2079 -> Node2080 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2080 [label="CMultiGridIntegration\l::MultiGrid_Cycle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#aa9a52a00a3417c465307ae6aea035f41",tooltip="Perform a Full-Approximation Storage (FAS) Multigrid. "];
+  Node2080 -> Node2081 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2081 [label="CMultiGridIntegration\l::MultiGrid_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_multi_grid_integration.html#af0b4014222a37402257b735d2ca32a81",tooltip="This subroutine calls the MultiGrid_Cycle and also prepare the multigrid levels and the monitoring..."];
+  Node2078 -> Node2082 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2082 [label="CAdjEulerSolver::Explicit\lRK_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a83de159f4bd062c776f07d087414a9cf",tooltip="Update the solution using a Runge-Kutta strategy. "];
+  Node2078 -> Node2083 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2083 [label="CAdjEulerSolver::Explicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a2863f1ed56105b595204ac31b3dab66b",tooltip="Update the solution using a explicit Euler scheme. "];
+  Node2078 -> Node2084 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2084 [label="CAdjEulerSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#af64f459bce9498b1d19d8a645d0bc2c3",tooltip="Update the solution using an implicit solver. "];
+  Node2078 -> Node2085 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2085 [label="CHeatSolverFVM::Explicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#ac72e3e231d74967d368bf1cb7345535a",tooltip="Update the solution using an explicit solver. "];
+  Node2078 -> Node2086 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2086 [label="CHeatSolverFVM::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_solver_f_v_m.html#a604f660ae9da06eae59363f83a98843e",tooltip="Update the solution using an implicit solver. "];
+  Node2078 -> Node2087 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2087 [label="CEulerSolver::ExplicitRK\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ac3d1b3a1fee6613906b56a9698bfe680",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node2078 -> Node2088 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2088 [label="CEulerSolver::ClassicalRK4\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#ad87a9109a645f0ea9e38336d2a6bf196",tooltip="Update the solution using the classical fourth-order Runge-Kutta scheme. "];
+  Node2078 -> Node2089 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2089 [label="CEulerSolver::ExplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a1f798a3f88873d6d634b90f8816eccde",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node2078 -> Node2090 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2090 [label="CEulerSolver::ImplicitEuler\l_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a4e8277fc44dc97c8d73fbe3347204372",tooltip="Update the solution using an implicit Euler scheme. "];
+  Node2078 -> Node2091 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2091 [label="CIncEulerSolver::Explicit\lRK_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a2f6c1370f17da44680c1ff1b6be6c9a1",tooltip="Update the solution using a Runge-Kutta scheme. "];
+  Node2078 -> Node2092 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2092 [label="CIncEulerSolver::Explicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#a66aac46e83451e30828ad808becb1f73",tooltip="Update the solution using the explicit Euler scheme. "];
+  Node2078 -> Node2093 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2093 [label="CIncEulerSolver::Implicit\lEuler_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_inc_euler_solver.html#ad84dd4225bb9d158c52b26e2f30f6fa7",tooltip="Update the solution using an implicit Euler scheme. "];
+}

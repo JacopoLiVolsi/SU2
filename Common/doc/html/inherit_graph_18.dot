@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CFaceOfElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_face_of_element.html",tooltip="Class used in the partitioning of the FEM grid as well as the building of the faces of DG..."];
+}

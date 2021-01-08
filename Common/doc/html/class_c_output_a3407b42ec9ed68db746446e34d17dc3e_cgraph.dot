@@ -1,0 +1,27 @@
+digraph "COutput::PrepareHistoryFile"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node515 [label="COutput::PrepareHistoryFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node515 -> Node516 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node516 [label="PrintingToolbox::CTablePrinter\l::SetInnerSeparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#ab56b5f776cf03b72d6730508ee943ca8",tooltip="Set the separator between columns (inner decoration) "];
+  Node515 -> Node517 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node517 [label="PrintingToolbox::CTablePrinter\l::SetAlign",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#ad3691499a7bfa024bf97a7fc00ef33c7",tooltip="Set the alignment of the table entries (CENTER only works for the header at the moment). "];
+  Node515 -> Node518 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node518 [label="PrintingToolbox::CTablePrinter\l::SetPrintHeaderTopLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#a137252437fa62fe6445dc7f203867fa3",tooltip="Set whether to print the line at the top of the table. "];
+  Node515 -> Node519 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node519 [label="PrintingToolbox::CTablePrinter\l::SetPrintHeaderBottomLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#a4c36695262ac33182aee4e88546a3c2e",tooltip="Set whether to print the line at the bottom of the table. "];
+  Node515 -> Node520 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node520 [label="PrintingToolbox::CTablePrinter\l::SetPrecision",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#a99b7d9fa9a270d8da75ccdaf2bf62a0e",tooltip="Set the floating point precision. "];
+  Node515 -> Node521 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node521 [label="COutput::SetHistoryFile\l_Header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output.html#afd561768ed879474e38e855369e91576",tooltip="Set the history file header. "];
+  Node521 -> Node522 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node522 [label="PrintingToolbox::CTablePrinter\l::AddColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#af3ddbf0da1a37cc37be7caac031dd4c4",tooltip="Add a column to the table by specifiying the header name and the width. "];
+  Node521 -> Node523 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node523 [label="CConfig::GetTabular\l_FileFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ada7c747b29da89590dfbcc33e62e8f3e",tooltip="Get the format of the output solution. "];
+  Node521 -> Node524 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node524 [label="PrintingToolbox::CTablePrinter\l::PrintHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#a475fafce69bdc78e973a2546e6e6be76",tooltip="Print the header. "];
+  Node524 -> Node525 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node525 [label="PrintingToolbox::CTablePrinter\l::GetNumColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_printing_toolbox_1_1_c_table_printer.html#ace0a256a0479f734c338ae3648f28ed3",tooltip="Get number of columns of the table. "];
+}

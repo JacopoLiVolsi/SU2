@@ -1,0 +1,35 @@
+digraph "CFreeFormDefBox::GetDerivative4"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node303 [label="CFreeFormDefBox::GetDerivative4",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node303 -> Node304 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node304 [label="CFreeFormDefBox::GetDerivative5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#a74f3d04c16fcbb9ccb3eec420b606748",tooltip="An auxiliary routine to help us compute the Hessian of F(u, v, w) = ||X(u, v, w)-(x, y, z)||^2 = (Sum_ijk^lmn P1_ijk Bi Bj Bk -x)^2+(Sum_ijk^lmn P2_ijk Bi Bj Bk -y)+(Sum_ijk^lmn P3_ijk Bi Bj Bk -z) Input: (u, v, w), dim , diff_this, diff_this_also, xyz=(x, y, z), l, m, n Output: Sum_{i, j, k}^{l, m, n} [two of them with -1, depending on diff_this, diff_this_also=0,1 or 2] P_{ijk}[dim] * (B_i^l[u] B_j^m[v] B_k^n[w])–one of them diffrentiated; which? diff_thiss will tell us ; E.G.: dim=2, diff_this=1 => we use the third coordinate of the control points, and derivate de v-Bersntein polynomial (use m-1 when summing!!). "];
+  Node304 -> Node305 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node305 [label="CFreeFormDefBox::GetFFDHessian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#ae7e30b9f7e4e1d5683fc02c9097cb521",tooltip="The routine that computes the Hessian of F(u, v, w) = ||X(u, v, w)-(x, y, z)||^2 evaluated at (u..."];
+  Node305 -> Node306 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node306 [label="CFreeFormDefBox::GetParametric\lCoord_Iterative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#a011c6d7a5d805990775f0ee28d827a7f",tooltip="Iterative strategy for computing the parametric coordinates. "];
+  Node306 -> Node307 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node307 [label="CSurfaceMovement::SetParametric\lCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_surface_movement.html#aba4574819df11175b382e0e765ec2f92",tooltip="Compute the parametric coordinates of a grid point using a point inversion strategy in the free form ..."];
+  Node307 -> Node308 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node308 [label="CSurfaceMovement::SetSurface\l_Deformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_surface_movement.html#a23bec9fbe1bcd7f6117100de93381ac3",tooltip="Set the surface/boundary deformation. "];
+  Node308 -> Node309 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node309 [label="CSurfaceMovement::SetSurface\l_Derivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_surface_movement.html#af6aac73d04565bf6e9b81305b66e97e7",tooltip="Set derivatives of the surface/boundary deformation. "];
+  Node309 -> Node310 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node310 [label="CDriver::DynamicMesh\l_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#af585d91d9c08dbddcc2b3e67dd5f5af9",tooltip="GridMovement_Preprocessing. "];
+  Node310 -> Node311 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node311 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node308 -> Node312 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node312 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_e_f_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node308 -> Node313 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node313 [label="SetProjection_AD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_o_t_8cpp.html#a3fceed882e8eb3d6796c8e8396af7d87",tooltip="Projection of the surface sensitivity using algorithmic differentiation (AD). "];
+  Node313 -> Node314 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node314 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_u2___d_o_t_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node306 -> Node315 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node315 [label="CSurfaceMovement::SetParametric\lCoordCP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_surface_movement.html#aa2807f008a1580a5eafd712a7051b548",tooltip="Set the Parametric coordinates. "];
+  Node315 -> Node308 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node306 -> Node316 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node316 [label="CSurfaceMovement::Update\lParametricCoord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_surface_movement.html#a955774953bd11927bcfcaec014125126",tooltip="Update the parametric coordinates of a grid point using a point inversion strategy in the free form F..."];
+  Node316 -> Node308 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

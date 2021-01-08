@@ -1,0 +1,19 @@
+digraph "CEulerSolver::GatherInOutAverageValues"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1495 [label="CEulerSolver::GatherInOut\lAverageValues",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1495 -> Node1496 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1496 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node1495 -> Node1497 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1497 [label="CConfig::GetnMarker\l_Turbomachinery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8f0ce5b4f605f885ae5391f567e3ae20",tooltip="number Turbomachinery performance option specified from config file. "];
+  Node1495 -> Node1498 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1498 [label="CConfig::GetMarker\l_All_Turbomachinery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a2989859c3fb041c6b83c1d3bf64f2f34",tooltip="Get the Turbomachinery information for a marker val_marker. "];
+  Node1495 -> Node1499 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1499 [label="CConfig::GetMarker\l_All_TurbomachineryFlag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab74c164cca94a37de37dd2322c53f98c",tooltip="Get the Turbomachinery flag information for a marker val_marker. "];
+  Node1495 -> Node1500 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1500 [label="CBaseMPIWrapper::Gather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a39e59958c13f7fefc74062ba2ff149f1"];
+  Node1500 -> Node1501 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1501 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+}

@@ -1,0 +1,27 @@
+digraph "CHeatSolverFVM::BC_HeatFlux_Wall"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node123 [label="CHeatSolverFVM::BC\l_HeatFlux_Wall",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node123 -> Node124 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node124 [label="CConfig::GetMarker\l_All_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a967e969a3beb24bb6e57d7036af003be",tooltip="Get the index of the surface defined in the geometry file. "];
+  Node123 -> Node125 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node125 [label="CConfig::GetWall_HeatFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a13a89ffbaf099f490fb7080163879e55",tooltip="Get the wall heat flux on a constant heat flux boundary. "];
+  Node123 -> Node126 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node126 [label="CConfig::GetIntegrated\l_HeatFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab39f8562d63e7a6bb311e9839c050b9b",tooltip="Check if values passed to the BC_HeatFlux-Routine are already integrated. "];
+  Node123 -> Node127 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node127 [label="CConfig::GetnMarker\l_HeatFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a32440bdf444c3187c2b45f6f6d509a86",tooltip="Get the total number of heat flux markers. "];
+  Node123 -> Node128 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node128 [label="CConfig::GetMarker\l_HeatFlux_TagBound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae6abb511ad2253421790537537101753",tooltip="Get the name of the surface defined in the geometry file. "];
+  Node123 -> Node129 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node129 [label="CConfig::GetHeat_Flux_Ref",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab15b7c9cc25b9bbb52b08dbbf319f26e",tooltip="Get the reference value for the heat flux. "];
+  Node123 -> Node130 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node130 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node123 -> Node131 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node131 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node123 -> Node132 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node132 [label="CVertex::GetNormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a0d289163c6f3384822fcb9ae86fc1c39",tooltip="Copy the the normal vector of a face. "];
+  Node123 -> Node133 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node133 [label="CSysVector::SubtractBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_sys_vector.html#a732b302ca148d38b442bfe7e096a81be",tooltip="Subtract val_residual to the residual. "];
+}

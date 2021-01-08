@@ -1,0 +1,11 @@
+digraph "CConfig::GetRelaxation_Method_FSI"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node11070 [label="CConfig::GetRelaxation\l_Method_FSI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node11070 -> Node11071 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11071 [label="CFEASolver::ComputeAitken\l_Coefficient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_solver.html#acd4cf27002608bdb084324e0077fb1fb",tooltip="Computation of Aitken&#39;s coefficient. "];
+  Node11070 -> Node11072 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11072 [label="CFEASolver::SetAitken\l_Relaxation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_solver.html#a470f19d181ea34a811f82c309d261244",tooltip="Aitken&#39;s relaxation of the solution. "];
+}

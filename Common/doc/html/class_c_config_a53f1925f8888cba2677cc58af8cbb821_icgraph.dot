@@ -1,0 +1,20 @@
+digraph "CConfig::GetWrt_Dynamic"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13795 [label="CConfig::GetWrt_Dynamic",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13795 -> Node13796 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13796 [label="COutputLegacy::SetRestart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#adadfc4d06c13f5fa3d6c9e21688329f4",tooltip="Write a native SU2 restart file. "];
+  Node13796 -> Node13797 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13797 [label="COutputLegacy::SetResult\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aa817439538e8cf82f82acbfa0bf7e735",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+  Node13796 -> Node13798 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13798 [label="COutputLegacy::SetResult\l_Files_FEM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a25b90eb5e2bd0f05f92a89f0768f2181",tooltip="Writes and organizes the all the output files, except the history one, for serial computations with t..."];
+  Node13795 -> Node13799 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13799 [label="COutputLegacy::WriteRestart\l_Parallel_ASCII",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a6511b32d9b2fd3198c1de49256469fa0",tooltip="Write a native SU2 restart file (ASCII) in parallel. "];
+  Node13799 -> Node13800 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13800 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+  Node13795 -> Node13801 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13801 [label="COutputLegacy::WriteRestart\l_Parallel_Binary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a7bfa3a24fa48b0771e55199bf7ad7145",tooltip="Write a native SU2 restart file (binary) in parallel. "];
+  Node13801 -> Node13800 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

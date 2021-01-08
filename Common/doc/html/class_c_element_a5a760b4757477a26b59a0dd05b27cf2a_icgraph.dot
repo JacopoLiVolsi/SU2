@@ -1,0 +1,30 @@
+digraph "CElement::GetGradNi_X"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node200 [label="CElement::GetGradNi_X",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node200 -> Node201 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node201 [label="CElasticityMovement\l::Compute_Element_Contribution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_elasticity_movement.html#adc83d302c1cd754eb3415072e41aa9c1",tooltip="Compute the stiffness of the element and the parameters Lambda and Mu. "];
+  Node201 -> Node202 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node202 [label="CElasticityMovement\l::SetStiffnessMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_elasticity_movement.html#a7d559792126521cdca7d4ceab1f55984",tooltip="Compute the min and max volume for the stiffness matrix for grid deformation. "];
+  Node202 -> Node203 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node203 [label="CElasticityMovement\l::SetVolume_Deformation_Elas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_elasticity_movement.html#a214b75ab52f6238cf321ec5834289b8e",tooltip="Grid deformation using the linear elasticity equations. "];
+  Node200 -> Node204 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node204 [label="CFEALinearElasticity\l::Compute_Tangent_Matrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_linear_elasticity.html#af3fc69e4a168dab7498e4ec0e2ddcb94",tooltip="Build the tangent stiffness matrix of an element. "];
+  Node204 -> Node205 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node205 [label="CFEALinearElasticity\l::CFEALinearElasticity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_linear_elasticity.html#afc4e93c9775f406d2d42de15d96a5ab6",tooltip="Default constructor, protected to avoid instantiation without arguments. "];
+  Node200 -> Node206 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node206 [label="CFEALinearElasticity\l::Compute_Averaged_NodalStress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_linear_elasticity.html#a2cc48aea4ff625882e1d2d74c9b7366b",tooltip="Compute averaged nodal stresses (for post processing). "];
+  Node206 -> Node205 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node200 -> Node207 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node207 [label="CFEANonlinearElasticity\l::Compute_Tangent_Matrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_nonlinear_elasticity.html#aa3c19d9fd3b94bd3f56dfdbd2092ea30",tooltip="Build the tangent stiffness matrix of an element. "];
+  Node207 -> Node208 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node208 [label="CFEANonlinearElasticity\l::Set_ElectricField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_nonlinear_elasticity.html#a96b3b63c3a15e622116f747c6a03ab89",tooltip="Set element electric field. "];
+  Node200 -> Node209 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node209 [label="CFEANonlinearElasticity\l::Compute_NodalStress_Term",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_nonlinear_elasticity.html#a2b9889b9b500f66aab3183221434c87d",tooltip="Compute the nodal stress terms for an element. "];
+  Node209 -> Node208 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node200 -> Node210 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node210 [label="CFEANonlinearElasticity\l::Compute_Averaged_NodalStress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_a_nonlinear_elasticity.html#a07bc84d420b04c530d1c3240e8014e53",tooltip="Compute averaged nodal stresses (for post processing). "];
+  Node210 -> Node208 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

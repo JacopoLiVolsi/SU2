@@ -1,0 +1,16 @@
+digraph "CPoint::GetColor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node111 [label="CPoint::GetColor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node111 -> Node112 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node112 [label="CPhysicalGeometry::\lDistributeColoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a62179e920f6a9f5e5f9e687ca41c4a63",tooltip="Distributes the coloring from ParMETIS so that each rank has complete information about the local gri..."];
+  Node112 -> Node113 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node113 [label="CPhysicalGeometry::\lCPhysicalGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#addad3f466423ba9243a396763d442f9a",tooltip="Accepts a geometry container holding a linearly partitioned grid with coloring performed by ParMETIS..."];
+  Node111 -> Node114 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node114 [label="CPhysicalGeometry::\lDistributePoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a1657020a6334a6be8770a8d3b3fccbad",tooltip="Distribute the grid points, including ghost points, across all ranks based on a ParMETIS coloring..."];
+  Node114 -> Node113 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 -> Node115 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node115 [label="CPhysicalGeometry::\lSetSendReceive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_physical_geometry.html#a3c1bbd5f039bb9cab24a42ecc8aefa46",tooltip="Set the send receive boundaries of the grid. "];
+}

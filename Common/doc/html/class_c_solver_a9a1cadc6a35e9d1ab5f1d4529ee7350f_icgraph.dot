@@ -1,0 +1,11 @@
+digraph "CSolver::ProcessTaskList_DG"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4041 [label="CSolver::ProcessTaskList_DG",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4041 -> Node4042 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4042 [label="CFEM_DG_Integration\l::Space_Integration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___integration.html#afc451695bf272f195982e44553099cb8",tooltip="Perform the spatial integration of the numerical system. "];
+  Node4042 -> Node4043 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4043 [label="CFEM_DG_Integration\l::SingleGrid_Iteration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___integration.html#a257b5aa24534c1864ea47c069edf1f1d",tooltip="Do the numerical integration (implicit) of the turbulence solver. "];
+}

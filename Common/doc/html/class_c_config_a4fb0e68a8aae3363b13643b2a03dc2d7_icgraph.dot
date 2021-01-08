@@ -1,0 +1,11 @@
+digraph "CConfig::GetKind_Matrix_Coloring"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5104 [label="CConfig::GetKind_Matrix\l_Coloring",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5104 -> Node5105 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5105 [label="CGraphColoringStructure\l::GraphVertexColoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_graph_coloring_structure.html#af201979cd95be98ba34369bb30629956",tooltip="Function, which determines the colors for the vertices of the given graph. "];
+  Node5105 -> Node5106 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5106 [label="CFEM_DG_EulerSolver\l::CFEM_DG_EulerSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_f_e_m___d_g___euler_solver.html#a677fa998b78bd489a3f8bee0d56623dd"];
+}

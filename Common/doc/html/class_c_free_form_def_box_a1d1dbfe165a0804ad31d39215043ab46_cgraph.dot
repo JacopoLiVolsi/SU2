@@ -1,0 +1,13 @@
+digraph "CFreeFormDefBox::SetSupportCP"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1000 [label="CFreeFormDefBox::SetSupportCP",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1000 -> Node1001 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1001 [label="CFreeFormDefBox::GetlOrder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#a41ba3a93be7707d12dd8582aac84b28b",tooltip="Get the order in the l direction of the FFD FFDBox. "];
+  Node1000 -> Node1002 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1002 [label="CFreeFormDefBox::GetmOrder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#ad0a84141a7cc5d231050ed04a3eb1a5d",tooltip="Get the order in the m direction of the FFD FFDBox. "];
+  Node1000 -> Node1003 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1003 [label="CFreeFormDefBox::GetnOrder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_free_form_def_box.html#ab077841e1b5c6d82234c5c0f92a61e35",tooltip="Get the order in the n direction of the FFD FFDBox. "];
+}

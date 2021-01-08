@@ -1,0 +1,14 @@
+digraph "CVanDerWaalsGas"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="CVanDerWaalsGas",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CIdealGas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_ideal_gas.html",tooltip="Child class for defining ideal gas model. "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CFluidModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html",tooltip="Main class for defining the Thermo-Physical Model a child class for each particular Model (Ideal-Gas..."];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ThermalConductivity" ,fontname="Helvetica"];
+  Node6 [label="CConductivityModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_conductivity_model.html"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" LaminarViscosity" ,fontname="Helvetica"];
+  Node7 [label="CViscosityModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_viscosity_model.html",tooltip="Main class for defining the Transport-Physical Model a child class for each particular Model (Power l..."];
+}

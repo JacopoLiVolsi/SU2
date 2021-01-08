@@ -1,0 +1,23 @@
+digraph "CEulerSolver::MixedOut_Average"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2292 [label="CEulerSolver::MixedOut\l_Average",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2292 -> Node2293 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2293 [label="CConfig::GetMixedout\l_Coeff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a44c9cce8aee0c8224ab8aea064d66442",tooltip="Get mixedout coefficients. "];
+  Node2292 -> Node2294 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2294 [label="SU2_TYPE::Int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a6b48817766d8a6486caa2807a52f6bae",tooltip="Casts the primitive value to int (uses GetValue, already implemented for each type). "];
+  Node2294 -> Node2295 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2295 [label="SU2_TYPE::GetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_s_u2___t_y_p_e.html#a0ed43473f5a450ce028d088427bf10cb",tooltip="Get the (primitive) value of the datatype (needs to be implemented for each new type). "];
+  Node2292 -> Node2296 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2296 [label="CFluidModel::SetTDState_Prho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#ad93e74a6cc6610e9c31c180040bda4e6",tooltip="virtual member that would be different for each gas model implemented "];
+  Node2292 -> Node2297 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2297 [label="CFluidModel::GetStaticEnergy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a99d4d8c322ea4f1072e0326f09154318",tooltip="Get fluid internal energy. "];
+  Node2292 -> Node2298 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2298 [label="CFluidModel::ComputeDerivative\lNRBC_Prho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#ab04cf03715d3492c04e7325de844720e",tooltip="virtual member that would be different for each gas model implemented "];
+  Node2292 -> Node2299 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2299 [label="CFluidModel::GetdhdP_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#a76eb9ee1ffc8ad2cc2f8289be1484882",tooltip="Get fluid pressure partial derivative. "];
+  Node2292 -> Node2300 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2300 [label="CFluidModel::Getdhdrho_P",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_model.html#afb3b014f5a7b1ebbbd670e0e0bca6a14",tooltip="Get fluid pressure partial derivative. "];
+}

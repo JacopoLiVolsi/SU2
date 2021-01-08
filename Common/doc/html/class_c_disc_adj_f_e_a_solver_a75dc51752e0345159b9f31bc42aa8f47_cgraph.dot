@@ -1,0 +1,15 @@
+digraph "CDiscAdjFEASolver::ExtractAdjoint_CrossTerm"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node62 [label="CDiscAdjFEASolver::\lExtractAdjoint_CrossTerm",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node62 -> Node63 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node63 [label="CSolver::GetNodes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#af3198e52a2ea377bb765647b5e697197",tooltip="Allow outside access to the nodes of the solver, containing conservatives, primitives, etc. "];
+  Node62 -> Node64 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 [label="CVariable::GetAdjointSolution\l_LocalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_variable.html#ac5984c894a267f112858ea45ec48a544",tooltip="Get the adjoint values of the solution. "];
+  Node64 -> Node65 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 [label="AD::GetDerivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_a_d.html#a305f38ce692ce2f4269c05a022fe2ff5",tooltip="Extracts the adjoint value at index. "];
+  Node62 -> Node66 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node66 [label="CDiscAdjFEAVariable\l::SetCross_Term_Derivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_variable.html#a4263328f92bc3f9438064d3837a8f84e",tooltip="Set the contribution of crossed terms into the derivative. "];
+}

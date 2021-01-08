@@ -1,0 +1,15 @@
+digraph "/home/boyd/Scrivania/Thesis/SU2/Common/include/geometry" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_92cb2900980f09bf257878861626e98f {
+    graph [ bgcolor="#ddddee", pencolor="black", label="include" fontname="Helvetica", fontsize="10", URL="dir_92cb2900980f09bf257878861626e98f.html"]
+  subgraph clusterdir_d2620a12595a4ed2b3ca54ea91488fbc {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d2620a12595a4ed2b3ca54ea91488fbc.html"];
+    dir_d2620a12595a4ed2b3ca54ea91488fbc [shape=plaintext label="geometry"];
+    dir_78367e8851a4bb7c171d8447e5cb1671 [shape=box label="elements" color="black" fillcolor="white" style="filled" URL="dir_78367e8851a4bb7c171d8447e5cb1671.html"];
+  }
+  }
+  dir_c2bcda47e72dfcfa068320c4822b9fe0 [shape=box label="toolboxes" fillcolor="white" style="filled" color="red" URL="dir_c2bcda47e72dfcfa068320c4822b9fe0.html"];
+  dir_78367e8851a4bb7c171d8447e5cb1671->dir_c2bcda47e72dfcfa068320c4822b9fe0 [headlabel="1", labeldistance=1.5 headhref="dir_000003_000005.html"];
+}

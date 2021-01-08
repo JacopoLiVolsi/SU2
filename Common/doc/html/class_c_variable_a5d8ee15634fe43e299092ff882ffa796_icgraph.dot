@@ -1,0 +1,15 @@
+digraph "CVariable::RegisterSolution"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4006 [label="CVariable::RegisterSolution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4006 -> Node4007 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4007 [label="CDiscAdjSolver::Register\lSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#a6c097e27287f199bcc8972baabd59ae8",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables on the t..."];
+  Node4006 -> Node4008 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4008 [label="CDiscAdjSolver::Register\lOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#a7ae8400ddf2c185e6c9b01aa08aec792",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables that are..."];
+  Node4006 -> Node4009 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4009 [label="CDiscAdjFEASolver::\lRegisterSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#ad05585130c1922d463e88540fe5a1bf8",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables on the t..."];
+  Node4006 -> Node4010 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4010 [label="CDiscAdjFEASolver::\lRegisterOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_f_e_a_solver.html#a40c2aba093a93b2caf87ab7ced5c3fd0",tooltip="Performs the preprocessing of the adjoint AD-based solver. Registers all necessary variables that are..."];
+}

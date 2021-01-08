@@ -1,0 +1,19 @@
+digraph "CEulerSolver::SetCoefficient_Gradients"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2981 [label="CEulerSolver::SetCoefficient\l_Gradients",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2981 -> Node2982 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2982 [label="CConfig::GetAoA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6020a5df7025ffb286f9b9f55f3f2773",tooltip="Get the angle of attack of the body. This is the angle between a reference line on a lifting body (of..."];
+  Node2981 -> Node2983 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2983 [label="CConfig::SetdCD_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ae2a0ddd50ec6acbd74f76c7f9f167c66",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node2981 -> Node2984 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2984 [label="CConfig::SetdCMx_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#afd39f185663752b3a48f73ff05ce89e2",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node2981 -> Node2985 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2985 [label="CConfig::SetdCMy_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ad7f68b41f4633cff714b1b983d90d8ea",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node2981 -> Node2986 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2986 [label="CConfig::SetdCMz_dCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a8dd670373454018b59e99a11804d4477",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+  Node2981 -> Node2987 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2987 [label="CConfig::SetdCL_dAlpha",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a6d8949230a604c04494dc5c1089d5236",tooltip="Value of the weight of the CD, CL, CM optimization. "];
+}

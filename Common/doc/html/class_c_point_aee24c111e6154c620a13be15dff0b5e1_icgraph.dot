@@ -1,0 +1,42 @@
+digraph "CPoint::GetSharpEdge_Distance"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1724 [label="CPoint::GetSharpEdge\l_Distance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1724 -> Node1725 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1725 [label="COutputLegacy::MergeSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#af30cc9d6a1d32da2af7043901a5914cf",tooltip="Merge the solution into a data structure used for output file writing. "];
+  Node1725 -> Node1726 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1726 [label="COutputLegacy::SetResult\l_Files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#aa817439538e8cf82f82acbfa0bf7e735",tooltip="Writes and organizes the all the output files, except the history one, for serial computations..."];
+  Node1724 -> Node1727 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1727 [label="COutputLegacy::LoadLocal\lData_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a83e5de863b29fe3a222074d93d696d57",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node1727 -> Node1728 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1728 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+  Node1724 -> Node1729 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1729 [label="COutputLegacy::LoadLocal\lData_IncFlow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a2d955089c8894a2eb795970f06e7900d",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node1729 -> Node1728 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1724 -> Node1730 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1730 [label="CDiscAdjSolver::SetSensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_solver.html#a4ebcf3eed43458a8960948210dc7444f",tooltip="Extract and set the geometrical sensitivity. "];
+  Node1724 -> Node1731 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1731 [label="CAdjEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a4ae0ed840dc8335fd921399625ba794f",tooltip="Initialize the residual vectors. "];
+  Node1724 -> Node1732 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1732 [label="CAdjEulerSolver::SetCentered\l_Dissipation_Sensor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#af1b72ed76900f821d2f51942cb4252db",tooltip="Compute the sensor for higher order dissipation control in rotating problems. "];
+  Node1732 -> Node1731 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1732 -> Node1733 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1733 [label="CAdjNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#ac16dab76e2c1d86bc7d70ca9f41fd668",tooltip="Restart residual and compute gradients. "];
+  Node1724 -> Node1734 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1734 [label="CAdjEulerSolver::Inviscid\l_Sensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_euler_solver.html#a35fcc75148b249c56e3625ba23196856",tooltip="Compute the inviscid sensitivity of the functional. "];
+  Node1724 -> Node1733 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1724 -> Node1735 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1735 [label="CAdjNSSolver::Viscous\l_Sensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_n_s_solver.html#ab05613f9de871991f55c2e1f12eac8dd",tooltip="Compute the viscous sensitivity of the functional. "];
+  Node1724 -> Node1736 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1736 [label="CSolver::SetSolution\l_Limiter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a641e9c59698ab9c7c2fb91107ad70d77",tooltip="Compute slope limiter. "];
+  Node1736 -> Node1731 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1736 -> Node1733 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1736 -> Node1737 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1737 [label="CTurbSASolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_a_solver.html#a225518dc5f0ca6ed894add826aaa16ea",tooltip="Restart residual and compute gradients. "];
+  Node1736 -> Node1738 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1738 [label="CTurbSSTSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_turb_s_s_t_solver.html#a653cf05307f24374fda6f523ce3130bf",tooltip="Restart residual and compute gradients. "];
+  Node1724 -> Node1739 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1739 [label="CDiscAdjMeshSolver\l::SetSensitivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_disc_adj_mesh_solver.html#af4974e3eef0efa3bbfeba565a051a179",tooltip="Extract and set the geometrical sensitivity. "];
+}

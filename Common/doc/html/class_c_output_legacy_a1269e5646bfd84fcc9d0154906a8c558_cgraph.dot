@@ -1,0 +1,47 @@
+digraph "COutputLegacy::MergeSurfaceConnectivity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node573 [label="COutputLegacy::MergeSurface\lConnectivity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node573 -> Node574 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node574 [label="CConfig::GetWrt_Halo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a3d32189ce78a3e64358b9d5030606ffa",tooltip="Get information about writing rind layers to the solution files. "];
+  Node573 -> Node575 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node575 [label="CConfig::GetnMarker_All",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a300c4884edfc0c2acf395036439004f4",tooltip="Get the total number of boundary markers including send/receive domains. "];
+  Node573 -> Node576 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node576 [label="CConfig::GetMarker\l_All_Plotting",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a842c696afec970f97c070b32cae79d37",tooltip="Get the plotting information for a marker val_marker. "];
+  Node573 -> Node577 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node577 [label="CGeometry::GetnElem\l_Bound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#a4b903006a657111168bcfd5ad5ff2a35",tooltip="Get the number of boundary elements. "];
+  Node573 -> Node578 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node578 [label="CPrimalGrid::GetVTK_Type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#adb676897e7cf4a83ceb83065e7c6a04f",tooltip="A pure virtual member. "];
+  Node573 -> Node579 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node579 [label="CBaseMPIWrapper::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a04457c47629bda56704e6a8804833eeb"];
+  Node579 -> Node580 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node580 [label="CBaseMPIWrapper::Abort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a21ef5681e2acb532d345e9bab173ef07"];
+  Node573 -> Node581 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node581 [label="CBaseMPIWrapper::Allreduce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a637b6fd917a8ca91ce748ba88e0d66b6"];
+  Node581 -> Node582 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node582 [label="CBaseMPIWrapper::CopyData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a4725cc1dd65b161b483e812a538a5e36"];
+  Node573 -> Node583 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node583 [label="CBaseMPIWrapper::Gather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a39e59958c13f7fefc74062ba2ff149f1"];
+  Node583 -> Node582 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node573 -> Node584 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node584 [label="CConfig::GetMarker\l_All_KindBC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a57d43acc1457d2d27095ce006218862e",tooltip="Get the kind of boundary for each marker. "];
+  Node573 -> Node585 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node585 [label="CConfig::GetMarker\l_All_SendRecv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a778a77ff2b9e1d359eab9b2d2106fa81",tooltip="Get the send-receive information for a marker val_marker. "];
+  Node573 -> Node586 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node586 [label="CVertex::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a95c513bf927464157ed96b6c79779a1f",tooltip="Get the node of the vertex. "];
+  Node573 -> Node587 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node587 [label="CVertex::GetRotation_Type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_vertex.html#a4f79701d89ed5eaaf6c4c41566a319d7",tooltip="Get the type of rotation associated to the vertex. "];
+  Node573 -> Node588 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node588 [label="CPoint::GetGlobalIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#ab546170a5a03ef210a75fc5531910050",tooltip="Get the global index in a parallel computation. "];
+  Node573 -> Node589 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node589 [label="CBaseMPIWrapper::Allgather",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a55195abbb7206e08a4933fa53cd41923"];
+  Node589 -> Node582 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node573 -> Node590 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node590 [label="CGeometry::GetnPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_geometry.html#aa68b666b38f4d2c7021736ae86940f44",tooltip="Get number of points. "];
+  Node573 -> Node591 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node591 [label="CPoint::GetDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_point.html#a1d7e22a60d4cfef356af1cba2bab3e55",tooltip="For parallel computation, its indicates if a point must be computed or not. "];
+  Node573 -> Node592 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node592 [label="CPrimalGrid::GetNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_primal_grid.html#a4fc7b6b6ac5025325c7e68fb56fbeef8",tooltip="A pure virtual member. "];
+}

@@ -1,0 +1,15 @@
+digraph "CFEM_DG_EulerSolver::Initiate_MPI_Communication"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1218 [label="CFEM_DG_EulerSolver\l::Initiate_MPI_Communication",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1218 -> Node1219 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1219 [label="CConfig::GetKind_TimeInt\lScheme_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a20e5fd7b43cfd2bf2bcf5137f12bc635",tooltip="Get the kind of integration scheme (explicit or implicit) for the flow equations. ..."];
+  Node1218 -> Node1220 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1220 [label="CConfig::GetnTimeDOFsADER_DG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#ab110ba67babf383e40ac4896bc65a599",tooltip="Get the number time DOFs for ADER-DG. "];
+  Node1218 -> Node1221 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1221 [label="CBaseMPIWrapper::Isend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#a43a415ec11a029ade218eaf8c807a817"];
+  Node1218 -> Node1222 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1222 [label="CBaseMPIWrapper::Irecv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_base_m_p_i_wrapper.html#ae41565b441aee76e1b48eb03e5ac86dd"];
+}

@@ -1,0 +1,42 @@
+digraph "CConfig::GetKind_RoeLowDiss"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5264 [label="CConfig::GetKind_RoeLowDiss",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5264 -> Node5265 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5265 [label="CDriver::Numerics_Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a5c0a3e0cf9f6c3931d307aef1aba7bf4",tooltip="Definition and allocation of all solver classes. "];
+  Node5265 -> Node5266 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5266 [label="CDriver::CDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_driver.html#a3fca4a013a6efa9bbb38fe78a86b5f3d",tooltip="Constructor of the class. "];
+  Node5264 -> Node5267 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5267 [label="CNumerics::SetRoe_Dissipation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#aa3b798e3e337fbc5d36553cc875c1700",tooltip="Calculate the central/upwind blending function for a face "];
+  Node5267 -> Node5268 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5268 [label="CUpwSLAU_Flow::ComputeMass\lAndPressureFluxes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_s_l_a_u___flow.html#af477940ba68830abef054ef8f3673127",tooltip="Mass flux and pressure for the SLAU and SLAU2 schemes. "];
+  Node5267 -> Node5269 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5269 [label="CUpwRoe_Flow::~CUpwRoe_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_upw_roe___flow.html#a6754e6fe0979e83279ef5fa9ce2a3d63",tooltip="Destructor of the class. "];
+  Node5264 -> Node5270 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5270 [label="CFlowCompOutput::SetVolume\lOutputFields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_flow_comp_output.html#a1724bb8ece7b49ccc08b1a9ebd227f85",tooltip="Set the available volume output fields. "];
+  Node5264 -> Node5271 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5271 [label="CFlowCompOutput::LoadVolumeData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_flow_comp_output.html#a4dbb2657e6ea72800af13ddf08789276",tooltip="Set the values of the volume output fields for a point. "];
+  Node5264 -> Node5272 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5272 [label="CFlowIncOutput::SetVolume\lOutputFields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_flow_inc_output.html#a2d50d4d3b55a195d431eb426a381bcf8",tooltip="Set the available volume output fields. "];
+  Node5264 -> Node5273 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5273 [label="CFlowIncOutput::LoadVolumeData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_flow_inc_output.html#a72e2584bbcbcf7e3a94dae5344953f08",tooltip="Set the values of the volume output fields for a point. "];
+  Node5264 -> Node5274 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5274 [label="COutputLegacy::LoadLocal\lData_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a83e5de863b29fe3a222074d93d696d57",tooltip="Load the desired solution data into a structure used for parallel reordering and output file writing ..."];
+  Node5274 -> Node5275 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5275 [label="COutputLegacy::SetResult\l_Files_Parallel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_output_legacy.html#a9e7832982d8237df4df455b027fd203b",tooltip="Writes and organizes the all the output files, except the history one, for parallel computations..."];
+  Node5264 -> Node5276 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5276 [label="CEulerSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a8b89e1bfce33284c2d8f5f00f82f3f3f",tooltip="Compute primitive variables and their gradients. "];
+  Node5264 -> Node5277 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5277 [label="CEulerSolver::Upwind\l_Residual",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#a9cb1da16bea732300854a351ebca2ed3",tooltip="Compute the spatial integration using a upwind scheme. "];
+  Node5264 -> Node5278 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5278 [label="CEulerSolver::SetUpwind\l_Ducros_Sensor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_euler_solver.html#aad67b818e2f5c133118d2a4cca7845f3",tooltip="Compute Ducros Sensor for Roe Dissipation. "];
+  Node5278 -> Node5276 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5278 -> Node5279 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5279 [label="CNSSolver::Preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a028c83d18cf8520dff2f9628d8a04e4b",tooltip="Restart residual and compute gradients. "];
+  Node5264 -> Node5279 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5264 -> Node5280 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5280 [label="CNSSolver::SetRoe_Dissipation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_n_s_solver.html#a00e58d4ca2020dcbf449003c71dab6a2",tooltip="A virtual member. "];
+  Node5280 -> Node5279 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

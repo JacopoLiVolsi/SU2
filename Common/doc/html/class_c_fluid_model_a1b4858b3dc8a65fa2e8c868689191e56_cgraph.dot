@@ -1,0 +1,17 @@
+digraph "CFluidModel::GetThermalConductivity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node437 [label="CFluidModel::GetThermalConductivity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node437 -> Node438 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node438 [label="CConductivityModel\l::SetConductivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_conductivity_model.html#a58cb994cf13e8357da2a15eda1556e16",tooltip="Set Thermal conductivity. "];
+  Node437 -> Node439 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node439 [label="CConductivityModel\l::GetConductivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_conductivity_model.html#a3c663a2108a65b2b492b3be55e49780a",tooltip="return viscosity value. "];
+  Node437 -> Node440 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node440 [label="CConductivityModel\l::SetDerConductivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_conductivity_model.html#a6b91a51f4f12f6dc2d0cd406f436ea75",tooltip="Set Thermal conductivity derivatives. "];
+  Node437 -> Node441 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node441 [label="CConductivityModel\l::Getdktdrho_T",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_conductivity_model.html#a2efda2dbfd949aa7e95a79615534b64a",tooltip="return viscosity partial derivative value. "];
+  Node437 -> Node442 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node442 [label="CConductivityModel\l::GetdktdT_rho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_conductivity_model.html#adb5148c59f247f56818036047ff832fc",tooltip="return viscosity partial derivative value. "];
+}

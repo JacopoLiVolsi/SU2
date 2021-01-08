@@ -1,0 +1,15 @@
+digraph "/home/boyd/Scrivania/Thesis/SU2/SU2_CFD" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6f9fd837e39f246a8f0c94f670ad0309 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6f9fd837e39f246a8f0c94f670ad0309.html"];
+    dir_6f9fd837e39f246a8f0c94f670ad0309 [shape=plaintext label="SU2_CFD"];
+    dir_3b735dd5547717c34264cbbbba892a8a [shape=box label="include" color="red" fillcolor="white" style="filled" URL="dir_3b735dd5547717c34264cbbbba892a8a.html"];
+    dir_74ad77d76f42ded9212b1c5616a2ad50 [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_74ad77d76f42ded9212b1c5616a2ad50.html"];
+  }
+  dir_92cb2900980f09bf257878861626e98f [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_92cb2900980f09bf257878861626e98f.html"];
+  dir_3b735dd5547717c34264cbbbba892a8a->dir_92cb2900980f09bf257878861626e98f [headlabel="68", labeldistance=1.5 headhref="dir_000015_000000.html"];
+  dir_74ad77d76f42ded9212b1c5616a2ad50->dir_3b735dd5547717c34264cbbbba892a8a [headlabel="173", labeldistance=1.5 headhref="dir_000027_000015.html"];
+  dir_74ad77d76f42ded9212b1c5616a2ad50->dir_92cb2900980f09bf257878861626e98f [headlabel="38", labeldistance=1.5 headhref="dir_000027_000000.html"];
+}

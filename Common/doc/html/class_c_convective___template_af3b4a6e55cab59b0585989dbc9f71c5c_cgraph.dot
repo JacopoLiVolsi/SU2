@@ -1,0 +1,15 @@
+digraph "CConvective_Template::ComputeResidual"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6 [label="CConvective_Template\l::ComputeResidual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CNumerics::GetInviscidProjFlux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a1a9e44996dede2330af84349204dc312",tooltip="Compute the projected inviscid flux vector. "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CNumerics::GetPMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a4c0be4ab3aa0dd899babe4c96d7a0c02",tooltip="Computation of the matrix P for a generic fluid model. "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CNumerics::GetPMatrix_inv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#a04a93dceeb13c4738d6c9ce357575257",tooltip="Computation of the matrix P^{-1}, this matrix diagonalize the conservative Jacobians in the form $P^{..."];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CNumerics::GetInviscidProjJac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_numerics.html#ae0225b473263a9547a2445c423ba7dce",tooltip="Compute the projection of the inviscid Jacobian matrices. "];
+}

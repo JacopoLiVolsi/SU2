@@ -1,0 +1,21 @@
+digraph "CDiscAdjFSIDriver::ExtractAdjoint"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node417 [label="CDiscAdjFSIDriver::\lExtractAdjoint",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node417 -> Node418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node418 [label="CConfig::GetKind_Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#a0e2628fc803f14ec6179427ee02e8655",tooltip="Governing equations of the flow (it can be different from the run time equation). ..."];
+  Node417 -> Node419 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node419 [label="CConfig::GetFrozen\l_Visc_Disc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_config.html#adb146862f57545364350419287581bbc",tooltip="Provides information about the way in which the turbulence will be treated by the disc..."];
+  Node417 -> Node420 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node420 [label="CSolver::ExtractAdjoint\l_Solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a0b7f25a4fd331448b0d5e45687d30744",tooltip="A virtual member. "];
+  Node417 -> Node421 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node421 [label="CSolver::ExtractAdjoint\l_Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a679c7c6937c728fb502fa1d725947379",tooltip="A virtual member. "];
+  Node417 -> Node422 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node422 [label="CSolver::ExtractAdjoint\l_CrossTerm_Geometry_Flow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a767b6705c93a272100f268304e78cb22",tooltip="A virtual member. "];
+  Node417 -> Node423 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node423 [label="CSolver::ExtractAdjoint\l_CrossTerm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#ae7fe2a6cafee589d5d1172b8a15fda97",tooltip="A virtual member. "];
+  Node417 -> Node424 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node424 [label="CSolver::ExtractAdjoint\l_CrossTerm_Geometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_solver.html#a2bec4f5c2629bc10f984443de8b51f1c",tooltip="A virtual member. "];
+}

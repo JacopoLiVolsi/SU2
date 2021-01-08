@@ -1,0 +1,13 @@
+digraph "CIntegration::SetDualTime_Solver"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node93 [label="CIntegration::SetDualTime\l_Solver",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node93 -> Node94 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node94 [label="CFluidIteration::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_fluid_iteration.html#a1f7edb619d88f256bda0b760cec6fce6",tooltip="Updates the containers for the fluid system. "];
+  Node93 -> Node95 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node95 [label="CHeatIteration::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_heat_iteration.html#af7c562e073a23871938c3e87002016b6",tooltip="Updates the containers for the heat system. "];
+  Node93 -> Node96 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="CAdjFluidIteration\l::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_adj_fluid_iteration.html#a1c9e8c2470c6256a7aa9d69776c83a3b",tooltip="Updates the containers for the adjoint fluid system. "];
+}
